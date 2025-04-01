@@ -12,13 +12,11 @@ public class main {
         try{
             HttpClient client       = HttpClient.newHttpClient();
             HttpRequest request     = HttpRequest.newBuilder()
-                .uri(URI.create("https://gutendex.com/books")).build();
+                .uri(URI.create("https://gutendex.com/books/")).GET().build();
 
-            client.sendAsync(request, BodyHandlers.ofString())
-                .thenApply(HttpResponse::body)
-                .thenAccept(System.out::println);
-        
-            System.out.println(request);
+            HttpResponse response = client.send(request, BodyHandlers.ofString());
+
+            System.out.println(response.body());
 
         } catch (Exception e) {
             System.exit(1);
