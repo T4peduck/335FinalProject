@@ -17,12 +17,20 @@ public class Librarian extends User{
     public void removeBorrower() {
 
     }
-
-    public ArrayList<String> getAvalBookList() {
+    
+    public void addBook() {
+    	
+    }
+    
+    public void removeBook() {
+    	
+    }
+    
+    public ArrayList<String> getAvailBookList() {
         return null;
     }
 
-    public ArrayList<String> getUnavalBookList() {
+    public ArrayList<String> getUnavailBookList() {
         return null;
     }
 }
