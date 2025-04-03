@@ -1,6 +1,7 @@
 /*
  * Used for testing API and parsing of ParseBook.java
  */
+package model;
 
 import org.json.simple.JSONObject;
 
