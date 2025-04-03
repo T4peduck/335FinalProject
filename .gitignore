@@ -1,2 +1,12 @@
 #used to import json-jar, not sure how it works on eclipse
 .vscode
+
+/Book.class
+/Borrower.class
+/Librarian.class
+/Library.class
+/User.class
+/parseBook.class
+/PaperBack.class
+/Paperback.class
+
