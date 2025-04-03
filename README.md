@@ -1,6 +1,7 @@
 # 355FinalProject
 Final Project for CSC355
 
+In this project, we used Project Gutenberg, a free public elibrary, and the associated API https://gutendex.com/.
 
 Inorder to use the json package,
 Follow this video for vscode
