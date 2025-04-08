@@ -5,7 +5,7 @@ package model;
 
 import org.json.simple.JSONObject;
 
-public class testParseBook {
+public class TestParseBook {
     public static void main(String[] args) {
         System.out.println("hopefully api works");
         
