@@ -26,33 +26,45 @@ public class Library {
     	
     }
     
+    public void checkLateBooks() {
+    	
+    }
+    
     // also take strings, or a Book?
     public void checkout(Borrower b) {
     	
     }
     
-    public String searchAllBooksByTitle(String title) {
-    	return "";
+    public void hold(Borrower b) {
+    	
     }
     
-    public String searchAvailBooksByTitle(String title) {
-    	return "";
+    public void checkin(Borrower b) {
+    	
     }
     
-    public String searchAllBooksByAuthor(String author) {
-    	return "";
+    public ArrayList<Book> searchAllBooksByTitle(String title) {
+    	return new ArrayList<Book>();
     }
     
-    public String searchAvailBooksByAuthor(String author) {
-    	return "";
+    public ArrayList<Book> searchAvailBooksByTitle(String title) {
+    	return new ArrayList<Book>();
     }
     
-    public String searchAllBooksByCallNumber(String callNumber) {
-    	return "";
+    public ArrayList<Book> searchAllBooksByAuthor(String author) {
+    	return new ArrayList<Book>();
     }
     
-    public String searchAvailBooksByCallNumber(String callNumber) {
-    	return "";
+    public ArrayList<Book> searchAvailBooksByAuthor(String author) {
+    	return new ArrayList<Book>();
+    }
+    
+    public ArrayList<Book> searchAllBooksByCallNumber(String callNumber) {
+    	return new ArrayList<Book>();
+    }
+    
+    public ArrayList<Book> searchAvailBooksByCallNumber(String callNumber) {
+    	return new ArrayList<Book>();
     }
     
     /*
