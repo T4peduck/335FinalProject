@@ -17,4 +17,8 @@ public class User {
     public boolean checkAvailable(String id) {
         return false;
     }
+    
+    public String getUserName() {
+    	return username;
+    }
 }
