@@ -7,12 +7,12 @@ import java.util.ArrayList;
 
 public class User {
     private String username;
-    private String password;
-    private byte[] salted;
+    private byte[] password;
+    private byte[] salt;
 
-    public User(String username, String password) {
+    public User(String username, String password) throws NoSuchAlgorithmException {
         this.username = username;
-        this.password = password;
+        createAccount(password);
     }
 
     public ArrayList<Book> searchBook(String name, String author) {
@@ -27,24 +27,27 @@ public class User {
     	return username;
     }
     
-    public void hashPassword() throws NoSuchAlgorithmException {
-    	try {
-    		byte[] salt;
-        	SecureRandom saltGen = new SecureRandom();
-            salt = new byte[2];
-            saltGen.nextBytes(salt);
-            MessageDigest hashFunct = MessageDigest.getInstance("MD5");
-            salted = new byte[2 + password.length()];
-            for (int i = 0; i < 2; i++)
-                salted[i] = salt[i];
-
-            for (int i = 2; i < 2 + password.length(); i++)
-                salted[i] = password.getBytes()[i - 2];
-    	}
-    	
-    	catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-    	
+    public void createAccount(String password) throws NoSuchAlgorithmException {
+    	SecureRandom saltGen = new SecureRandom();
+        salt = new byte[2];
+        saltGen.nextBytes(salt);
+        this.password = getHashPassword(password, salt);
     }
+    
+	public byte[] getHashPassword(String password, byte[] salt) throws NoSuchAlgorithmException {
+		MessageDigest hashFunct = MessageDigest.getInstance("MD5");
+		byte[] digest = new byte[2 + password.length()];
+		for (int i = 0; i < 2; i++)
+			digest[i] = salt[i];
+
+		for (int i = 2; i < 2 + password.length(); i++)
+			digest[i] = password.getBytes()[i - 2];
+
+		digest = hashFunct.digest(digest);
+		return digest;
+	}
+    
+//    public boolean passwordMatched(String password) {
+//    	
+//    }
 }
