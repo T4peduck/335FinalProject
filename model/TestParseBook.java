@@ -30,15 +30,15 @@ public class TestParseBook {
             System.out.println(result.get("formats"));
            
             String bookurl = (String) ((JSONObject) result.get("formats"))
-					.get("text/html");
+					.get("text/plain; charset=us-ascii");
             
             System.out.println(bookurl);
-
+            
+        
             
             
-            
-            ParseBook.addId("4");
-            JSONObject obj2 = ParseBook.makeRequest();
+            ParseBook.addId("84");
+            System.out.println(ParseBook.downloadBook());
 
             //System.out.println(obj2);
 

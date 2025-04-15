@@ -10,6 +10,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.io.File;
+import java.io.FileWriter;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -76,33 +77,33 @@ public class ParseBook {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
     	
-    	if(results == null) {
+    	if(result == null) {
     		System.out.println("ERROR: no results found");
     		return false;
     	}
     	
     	JSONArray arr = (JSONArray) result.get("results");
     	JSONObject book = (JSONObject) arr.get(0);
-    	
+    	//add book to libary database
     	Book b = makeBook(book);
     	
-    	String bookurl = (String) ((JSONObject) result.get("formats"))
+    	String bookurl = (String) ((JSONObject) book.get("formats"))
 				.get("text/plain; charset=us-ascii");
     	if(bookurl.equals("null")) {
     		System.out.println("ERROR: no url found");
     		return false;
     	}
-    	
     	addBookToLibary(b, bookurl);
     	
-    	return false;
+    	return true;
     	
     }
     
     private static Book makeBook(JSONObject book) {
     	String title = (String) book.get("title");
-    	String author = (String) book.get("authors");
+    	String author = (String) book.get("authors").toString();
     	String summary = (String) ((JSONArray) book.get("summaries")).get(0);
     	String callNumber = (String) book.get("ids");
     	
@@ -112,6 +113,7 @@ public class ParseBook {
     private static void addBookToLibary(Book b, String bookurl) {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(bookurl)).GET().build();
         try {
+        	System.out.println("here");
         	//casts the response to a type of input stream (which can be read line by line)
 			HttpResponse<InputStream> response = client.send(request, BodyHandlers.ofInputStream());
 			InputStream is = response.body();
@@ -119,11 +121,12 @@ public class ParseBook {
 			//casts to a buffered reader so readLine can be used easily
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			
-			PrintWriter pw = new PrintWriter(new File(b.filePath));
+			//using a printwriter as has a println() function, so \n perserved
+			FileWriter pw = new FileWriter(new File(b.filePath), true);
 			
 			String line = "";
 			while((line = br.readLine()) != null) {
-				pw.println(line);
+				pw.write(line + "\n");
 			}
 			
 			br.close();
