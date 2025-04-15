@@ -14,6 +14,18 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
+    public ArrayList<Book> searchBook(String name, String author) {
+        return null;
+    }
+
+    public boolean checkAvailable(String id) {
+        return false;
+    }
+    
+    public String getUserName() {
+    	return username;
+    }
     
     public void hashPassword() throws NoSuchAlgorithmException {
     	try {
@@ -34,17 +46,5 @@ public class User {
             throw new RuntimeException(e);
         }
     	
-    }
-
-    public ArrayList<Book> searchBook(String name, String author) {
-        return null;
-    }
-
-    public boolean checkAvailable(String id) {
-        return false;
-    }
-    
-    public String getUserName() {
-    	return username;
     }
 }
