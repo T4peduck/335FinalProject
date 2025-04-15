@@ -22,36 +22,21 @@ public class Book {
 				&& Objects.equals(title, other.title);
 	}
 
-	private String title;
-	private String author;
-	private String callNumber;
+	public final String title;
+	public final String author;
+	public final String callNumber;
 
-    private String summary;
-    private String file;
+	public final String summary;
+	public final String filePath;
 	
-    public Book(String title, String author, String callNumber) {
+    public Book(String title, String author, String callNumber, 
+    			String summary, String filePath) {
         this.title = title;
         this.author = author;
         this.callNumber = callNumber;
+        this.summary = summary;
+        this.filePath = filePath;
     }
-
-	public Book(Book b) {
-		this.title = b.title;
-		this.author = b.author;
-		this.callNumber = b.callNumber;
-	}
-
-	public String getTitle() {
-		return this.title;
-	}
-	
-	public String getAuthor() {
-		return this.author;
-	}
-	
-	public String getCallNumber() {
-		return this.callNumber;
-	}
 	
 	public static Comparator<Book> authorFirstComparator() {
 		return new Comparator<Book>() {
