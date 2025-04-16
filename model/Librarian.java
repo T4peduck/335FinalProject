@@ -1,10 +1,15 @@
 package model;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 public class Librarian extends User{
-    public Librarian(String username, String password) {
+    public Librarian(String username, String password) throws NoSuchAlgorithmException {
         super(username, password);
+    }
+    
+    public Librarian (Librarian librarian) {
+    	super(librarian);
     }
 
     public ArrayList<String> getBorrowerList() {
