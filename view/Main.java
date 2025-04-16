@@ -29,5 +29,8 @@ public class Main {
 		}
 		
 		System.out.println("Account Created");
+		
+		// Use passwordMatched to login
+		// Use setPassword to reset password
 	}
 }

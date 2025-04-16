@@ -14,10 +14,10 @@ public class User {
 
     public User(String username, String password) throws NoSuchAlgorithmException {
         this.username = username;
-        updatePassword(password);
+        setPassword(password);
     }
-
-    public ArrayList<Book> searchBook(String name, String author) {
+    
+	public ArrayList<Book> searchBook(String name, String author) {
         return null;
     }
 
@@ -25,19 +25,27 @@ public class User {
         return false;
     }
     
+    public boolean passwordMatched(String password) throws NoSuchAlgorithmException {
+    	return Arrays.equals(getHashPassword(password, salt), this.password);
+    }
+    
     public String getUserName() {
     	return username;
     }
     
-    public void updatePassword(String password) throws NoSuchAlgorithmException {
+    public byte[] getPassword() {
+		return password;
+	}
+
+	public byte[] getSalt() {
+		return salt;
+	}
+    
+	public void setPassword(String password) throws NoSuchAlgorithmException {
     	SecureRandom saltGen = new SecureRandom();
         salt = new byte[2];
         saltGen.nextBytes(salt);
         this.password = getHashPassword(password, salt);
-    }
-    
-    public boolean passwordMatched(String password) throws NoSuchAlgorithmException {
-    	return Arrays.equals(getHashPassword(password, salt), this.password);
     }
         
 	private byte[] getHashPassword(String password, byte[] salt) throws NoSuchAlgorithmException {
