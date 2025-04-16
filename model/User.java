@@ -10,11 +10,16 @@ public class User {
     private String username;
     private byte[] password;
     private byte[] salt;
-    private int test;
 
     public User(String username, String password) throws NoSuchAlgorithmException {
         this.username = username;
         setPassword(password);
+    }
+    
+    public User(User user) {
+    	username = user.getUserName();
+    	password = user.getPassword();
+    	salt = user.getSalt();
     }
     
 	public ArrayList<Book> searchBook(String name, String author) {
@@ -34,11 +39,11 @@ public class User {
     }
     
     public byte[] getPassword() {
-		return password;
+		return password.clone();
 	}
 
 	public byte[] getSalt() {
-		return salt;
+		return salt.clone();
 	}
     
 	public void setPassword(String password) throws NoSuchAlgorithmException {
