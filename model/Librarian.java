@@ -7,6 +7,10 @@ public class Librarian extends User{
     public Librarian(String username, String password) throws NoSuchAlgorithmException {
         super(username, password);
     }
+    
+    public Librarian (Librarian librarian) {
+    	super(librarian);
+    }
 
     public ArrayList<String> getBorrowerList() {
         return null;

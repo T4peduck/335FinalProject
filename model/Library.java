@@ -29,7 +29,7 @@ public class Library {
 	}
 
 	public void addBorrower(Borrower b) {
-		borrowerList.put(b.getUserName(), b);
+		borrowerList.put(b.getUserName(), new Borrower(b));
 	}
 
 	// also take strings, or a Book?
