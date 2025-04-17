@@ -95,6 +95,8 @@ public class ParseBook {
     		System.out.println("ERROR: no url found");
     		return false;
     	}
+    	
+    	System.out.println(bookurl);
     	addBookToLibary(b, bookurl);
     	
     	return true;
@@ -105,15 +107,23 @@ public class ParseBook {
     	String title = (String) book.get("title");
     	String author = (String) book.get("authors").toString();
     	String summary = (String) ((JSONArray) book.get("summaries")).get(0);
-    	String callNumber = (String) book.get("ids");
     	
-    	return new Book(title, author, callNumber, summary, "Libary/" + title + ".txt");
+    	return new Book(title, author, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
+    }
+    
+    private static String cleanTitle(String title) {
+    	String rstr = "";
+    	for(int i = 0; i < title.length(); i++) {
+    		if(!"*\"\\/<>:|?;, ".contains(Character.toString(title.charAt(i)))) {
+    			rstr += Character.toString(title.charAt(i));
+    		}
+    	}
+    	return rstr;
     }
     
     private static void addBookToLibary(Book b, String bookurl) {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(bookurl)).GET().build();
         try {
-        	System.out.println("here");
         	//casts the response to a type of input stream (which can be read line by line)
 			HttpResponse<InputStream> response = client.send(request, BodyHandlers.ofInputStream());
 			InputStream is = response.body();
@@ -122,7 +132,7 @@ public class ParseBook {
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			
 			//using a printwriter as has a println() function, so \n perserved
-			FileWriter pw = new FileWriter(new File(b.filePath), true);
+			FileWriter pw = new FileWriter(new File(b.filePath));
 			
 			String line = "";
 			while((line = br.readLine()) != null) {
