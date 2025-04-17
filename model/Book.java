@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Book {
 	@Override
 	public int hashCode() {
-		return Objects.hash(author, callNumber, title);
+		return Objects.hash(author, title);
 	}
 
 	@Override
@@ -18,22 +18,20 @@ public class Book {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		return Objects.equals(author, other.author) && Objects.equals(callNumber, other.callNumber)
+		return Objects.equals(author, other.author)
 				&& Objects.equals(title, other.title);
 	}
 
 	public final String title;
 	public final String author;
-	public final String callNumber;
 
 	public final String summary;
 	public final String filePath;
 	
-    public Book(String title, String author, String callNumber, 
+    public Book(String title, String author, 
     			String summary, String filePath) {
         this.title = title;
         this.author = author;
-        this.callNumber = callNumber;
         this.summary = summary;
         this.filePath = filePath;
     }
