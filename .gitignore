@@ -11,3 +11,5 @@
 /testParseBook.class
 /test123.class
 .DS_Store
+test/UserTest.class
+view/Main.class
