@@ -13,6 +13,9 @@ public class Library {
 
 	private HashMap<String, ArrayList<Book>> booksByAuthor;
 
+	// keep track of how often a book is checked out?
+	private HashMap<Book, int> checkoutNums;
+
 	public Library() {
 		borrowerList = new HashMap<>();
 		librarianList = new HashMap<>();
@@ -40,11 +43,11 @@ public class Library {
 
 	}
 
-	public void hold(Borrower b) {
+	public void hold(Book b) {
 
 	}
 
-	public void checkin(Borrower b) {
+	public void checkin(Book b) {
 
 	}
 
@@ -60,16 +63,14 @@ public class Library {
 		// copy available books with this title
 		ArrayList<Book> avail = availableBooks.get(title);
 		if (avail != null) {
-			for (Book b : avail) {
-				found.add(new Book(b));
-			}
+			found.addAll(avail);
+
 		}
 		// copy unavailable books with this title
 		ArrayList<Book> unavail = availableBooks.get(title);
 		if (unavail != null) {
-			for (Book b : unavail) {
-				found.add(new Book(b));
-			}
+			found.addAll(unavail);
+
 		}
 		return found;
 	}
@@ -86,9 +87,7 @@ public class Library {
 		// copy available books with this title
 		ArrayList<Book> avail = availableBooks.get(title);
 		if (avail != null) {
-			for (Book b : avail) {
-				found.add(new Book(b));
-			}
+			found.addAll(avail);
 		}
 		return found;
 	}
@@ -104,10 +103,9 @@ public class Library {
 		ArrayList<Book> found = new ArrayList<>();
 		// copy available books with this title
 		ArrayList<Book> books = booksByAuthor.get(author);
-		if (books != null) {
-			for (Book b : books) {
-				found.add(new Book(b));
-			}
+		if (books != null) { {
+				found.addAll(books);
+			
 		}
 		return found;
 	}
@@ -124,16 +122,15 @@ public class Library {
 		// copy available books with this title
 		ArrayList<Book> books = booksByAuthor.get(author);
 		if (books != null) {
-			for (Book b : books) {
-				found.add(new Book(b));
-			}
+			found.addAll(books);
+
 		}
 		return found;
 	}
 
 	/*
-	 * getAllBooksByAuthor() - returns a sorted ArrayList of all books in the library
-	 * sorted by author first, then title (full of copies)
+	 * getAllBooksByAuthor() - returns a sorted ArrayList of all books in the
+	 * library sorted by author first, then title (full of copies)
 	 */
 	public ArrayList<Book> getAllBooksByAuthor() {
 		ArrayList<Book> sorted = getAllBooks();
@@ -157,10 +154,9 @@ public class Library {
 	private ArrayList<Book> getAllBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : booksByAuthor.values()) {
-			ArrayList<Book> listCopy = new ArrayList<>();
-			for (Book b : list) {
-				listCopy.add(new Book(b));
-			}
+
+			listCopy.addAll(list);
+
 		}
 		return books;
 	}
@@ -181,35 +177,28 @@ public class Library {
 		return new ArrayList<Borrower>(borrowerList.values());
 	}
 
-	// librarian specific?
-
-	void checkLateBooks() {
-		// somehow puts a hold on borrowers with late books?
-	}
 
 	// Librarian deals with finding/creating Book object
 	void addBook(Book b) {
 		String title = b.getTitle().toLowerCase();
 		String author = b.getAuthor().toLowerCase();
 
-		Book copy = new Book(b);
-
 		ArrayList<Book> booksWithTitle = availableBooks.get(title);
 		if (booksWithTitle == null) {
 			ArrayList<Book> list = new ArrayList<>();
-			list.add(copy);
+			list.add(b);
 			availableBooks.put(title, list);
 		} else {
-			booksWithTitle.add(copy);
+			booksWithTitle.add(b);
 		}
 
 		ArrayList<Book> booksWithAuthor = booksByAuthor.get(author);
 		if (booksWithAuthor == null) {
 			ArrayList<Book> list = new ArrayList<>();
-			list.add(copy);
+			list.add(b);
 			booksByAuthor.put(title, list);
 		} else {
-			booksWithAuthor.add(copy);
+			booksWithAuthor.add(b);
 		}
 
 	}
@@ -268,11 +257,7 @@ public class Library {
 	ArrayList<Book> getAvailBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : availableBooks.values()) {
-			ArrayList<Book> bookCopy = new ArrayList<>();
-			for (Book b : list) {
-				bookCopy.add(new Book(b));
-			}
-			books.addAll(bookCopy);
+			books.addAll(list);
 		}
 		return books;
 	}
@@ -280,11 +265,7 @@ public class Library {
 	ArrayList<Book> getUnavailBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : unavailableBooks.values()) {
-			ArrayList<Book> bookCopy = new ArrayList<>();
-			for (Book b : list) {
-				bookCopy.add(new Book(b));
-			}
-			books.addAll(bookCopy);
+			books.addAll(list);
 		}
 		return books;
 	}
