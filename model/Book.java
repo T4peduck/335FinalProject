@@ -1,12 +1,15 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Objects;
 
 public class Book {
 	@Override
 	public int hashCode() {
-		return Objects.hash(author, title);
+		return Objects.hash(authors.get(0), title);
 	}
 
 	@Override
@@ -18,28 +21,32 @@ public class Book {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		return Objects.equals(author, other.author) && Objects.equals(title, other.title);
+		return Objects.equals(authors.get(0), other.authors.get(0))
+				&& Objects.equals(title, other.title);
 	}
 
 	public final String title;
-	public final String author;
+	public final List<Author> authors;
+	public final String id;
+	
 
 	public final String summary;
 	public final String filePath;
-
-	public Book(String title, String author, String summary, String filePath) {
-		this.title = title;
-		this.author = author;
-		this.summary = summary;
-		this.filePath = filePath;
-	}
-
+	
+    public Book(String title, ArrayList<Author> authors, String id, 
+    			String summary, String filePath) {
+        this.title = title;
+        this.authors = Collections.unmodifiableList(new ArrayList<Author>(authors));
+        this.id = id;
+        this.summary = summary;
+        this.filePath = filePath;
+    }
+	
 	public static Comparator<Book> authorFirstComparator() {
 		return new Comparator<Book>() {
 			public int compare(Book book1, Book book2) {
-
-				int comp = book1.author.compareTo(book2.author);
-
+				
+				int comp = book1.authors.get(0).compareTo(book2.authors.get(0));
 				if (comp != 0) {
 					return comp;
 				}
@@ -58,23 +65,15 @@ public class Book {
 				if (comp != 0) {
 					return comp;
 				}
-
-				return book1.author.compareTo(book2.author);
+				
+				return book1.authors.get(0).compareTo(book2.authors.get(0));
 			}
 		};
 	}
-
-	public String getTitle() {
-		// TODO Auto-generated method stub
-		return title;
-	}
-
-	public String getAuthor() {
-		return author;
-	}
 	
-	public String getSummary() {
-		return summary;
+	@Override
+	public String toString() {
+		return title + " by " + authors.toString();
 	}
-
+   
 }

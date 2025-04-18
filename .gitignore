@@ -13,3 +13,5 @@
 .DS_Store
 test/UserTest.class
 view/Main.class
+
+model.LibraryText/*

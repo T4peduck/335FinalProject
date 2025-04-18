@@ -9,6 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
 
@@ -17,15 +18,17 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 //TODO: may need to add "@pre to a couple"
+//TODO: may need a public method to search and see if book alr in libary
 public class ParseBook {
     private static final String APIENDPOINT = "https://gutendex.com/books/?";
     private static String URIbuilder = APIENDPOINT;
     private static HttpClient client = HttpClient.newHttpClient();
     private static JSONParser parser = new JSONParser();
     
-    private static JSONObject results;
-    
-
+/*
+ * THESE FUNCTIONS BUILD AND SEND THE REQUEST
+ * -----------------------------------------------
+ */
     public static JSONObject makeRequest() throws Exception{
         System.out.println(URIbuilder);
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(URIbuilder)).GET().build();
@@ -33,7 +36,7 @@ public class ParseBook {
 
         URIbuilder = APIENDPOINT;
 
-        return results = (JSONObject) parser.parse(response.body());
+        return (JSONObject) parser.parse(response.body());
     }
 
     //augment search
@@ -68,52 +71,96 @@ public class ParseBook {
         URIbuilder += "topic=" + topic + "&";
     }
 
-    //parse result
-    public static boolean downloadBook() {
+    /*
+     * THIS FUNCTION RETURNS A LIST OF BOOKS THAT MATCHED SEARCH
+     * AND ADDS THE THE BOOKS MODEL.LIBRARYTEXT AS A TEXT FILE
+     * ----------------------------------------------------------
+     * returns a book object holding the metadata for the book
+     */
+    public static ArrayList<Book> downloadBooks() {
     	JSONObject result = null;
+    	
     	try {
 			result = makeRequest();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		} catch (Exception e) {e.printStackTrace();}
     	
     	if(result == null) {
     		System.out.println("ERROR: no results found");
-    		return false;
+    		return null;
     	}
-    	
+ 
     	JSONArray arr = (JSONArray) result.get("results");
-    	JSONObject book = (JSONObject) arr.get(0);
-    	//add book to libary database
-    	Book b = makeBook(book);
-    	
-    	String bookurl = (String) ((JSONObject) book.get("formats"))
-				.get("text/plain; charset=us-ascii");
-    	if(bookurl.equals("null")) {
-    		System.out.println("ERROR: no url found");
-    		return false;
+    	if(arr.isEmpty()) {
+    		System.out.println("ERROR: no results found");
+    		return null;
     	}
-    	addBookToLibary(b, bookurl);
+    	ArrayList<Book> bookList = new ArrayList<>();
     	
-    	return true;
+    	for(Object n: arr) {
+			JSONObject book = (JSONObject) n;
+			Book b = makeBook(book);
+			
+			String bookurl = "https://www.gutenberg.org/cache/epub/" + 
+							book.get("id") + "/pg" + book.get("id") + ".txt";
+			
+			if(!bookList.contains(b)) {
+				addBookToLibaryFolder(b, bookurl);
+				bookList.add(b);
+			}
+    	}
     	
+    	return bookList;
     }
     
+    /*
+     * makes the book to return
+     */
     private static Book makeBook(JSONObject book) {
-    	String title = (String) book.get("title");
-    	String author = (String) book.get("authors").toString();
-    	String summary = (String) ((JSONArray) book.get("summaries")).get(0);
-    	String callNumber = (String) book.get("ids");
+    	String title = book.get("title").toString();
+    	ArrayList<Author> alist = formatAuthor(book);
+    	String summary = ((JSONArray) book.get("summaries")).get(0).toString();
+    	String id = book.get("id").toString();
     	
-    	return new Book(title, author, callNumber, summary, "Libary/" + title + ".txt");
+    	return new Book(title, alist, id, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
     }
     
-    private static void addBookToLibary(Book b, String bookurl) {
+    /*
+     * removes illegal-file characters from title
+     */
+    private static String cleanTitle(String title) {
+    	String rstr = "";
+    	for(int i = 0; i < title.length(); i++) {
+    		if(!"*\"\\/<>:|?;, ".contains(Character.toString(title.charAt(i)))) {
+    			rstr += Character.toString(title.charAt(i));
+    		}
+    	}
+    	return rstr;
+    }
+    
+    /*
+     * creates a list of authors if book has multiple
+     */
+    private static ArrayList<Author> formatAuthor(JSONObject book) {
+    	ArrayList<Author> alist = new ArrayList<Author>();
+    	JSONArray authorList = (JSONArray) book.get("authors");
+    	
+    	for(Object a : authorList) {
+    		JSONObject author = (JSONObject) a;
+    		String name = (String) author.get("name");
+    		String birthYear = author.get("birth_year").toString();
+    		String deathYear = author.get("death_year").toString();
+    		alist.add(new Author(name, Integer.parseInt(birthYear), Integer.parseInt(deathYear)));
+    	}
+    	return alist;
+    }
+    
+    /*
+     * Downloads the book from Project Gutenberg and adds it
+     * to the Model.LibraryText folder
+     */
+    private static void addBookToLibaryFolder(Book b, String bookurl) {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(bookurl)).GET().build();
         try {
-        	System.out.println("here");
         	//casts the response to a type of input stream (which can be read line by line)
 			HttpResponse<InputStream> response = client.send(request, BodyHandlers.ofInputStream());
 			InputStream is = response.body();
@@ -122,7 +169,7 @@ public class ParseBook {
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			
 			//using a printwriter as has a println() function, so \n perserved
-			FileWriter pw = new FileWriter(new File(b.filePath), true);
+			FileWriter pw = new FileWriter(new File(b.filePath));
 			
 			String line = "";
 			while((line = br.readLine()) != null) {
@@ -140,7 +187,6 @@ public class ParseBook {
 			e.printStackTrace();
 		}
 
-        
     	return;
     }
     
