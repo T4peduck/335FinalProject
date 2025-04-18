@@ -4,6 +4,9 @@
 package model;
 
 import org.json.simple.JSONObject;
+
+import java.util.ArrayList;
+
 import org.json.simple.JSONArray;
 
 public class TestParseBook {
@@ -30,15 +33,14 @@ public class TestParseBook {
             System.out.println(result.get("formats"));
             
             
-            ParseBook.addId("84");
-            Book b = ParseBook.downloadBook();
-            System.out.println(b.title);
-            System.out.println(b.author);
-            System.out.println(b.summary);
-            
+            ParseBook.addYearEnd("1950");
+            ParseBook.addYearEnd("1960");
+            ArrayList<Book> bl = ParseBook.downloadBooks();
+            if(bl == null) {
+            	System.out.println("BOOK LIST IS NULL");
+            }
 
-            //System.out.println(obj2);
-
+            System.out.println(bl.toString());
         } catch (Exception e) {
             System.exit(1);
         }

@@ -9,6 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
 
@@ -17,13 +18,12 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 //TODO: may need to add "@pre to a couple"
+//TODO: may need a public method to search and see if book alr in libary
 public class ParseBook {
     private static final String APIENDPOINT = "https://gutendex.com/books/?";
     private static String URIbuilder = APIENDPOINT;
     private static HttpClient client = HttpClient.newHttpClient();
     private static JSONParser parser = new JSONParser();
-    
-    private static JSONObject results;
     
 /*
  * THESE FUNCTIONS BUILD AND SEND THE REQUEST
@@ -36,7 +36,7 @@ public class ParseBook {
 
         URIbuilder = APIENDPOINT;
 
-        return results = (JSONObject) parser.parse(response.body());
+        return (JSONObject) parser.parse(response.body());
     }
 
     //augment search
@@ -72,47 +72,56 @@ public class ParseBook {
     }
 
     /*
-     * THIS FUNCTION RETURNS A BOOK AND ADDS THE SAME BOOK TO
-     * MODEL.LIBRARYTEXT AS A TEXT FILE
+     * THIS FUNCTION RETURNS A LIST OF BOOKS THAT MATCHED SEARCH
+     * AND ADDS THE THE BOOKS MODEL.LIBRARYTEXT AS A TEXT FILE
      * ----------------------------------------------------------
      * returns a book object holding the metadata for the book
      */
-    public static Book downloadBook() {
+    public static ArrayList<Book> downloadBooks() {
     	JSONObject result = null;
+    	
     	try {
 			result = makeRequest();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		} catch (Exception e) {e.printStackTrace();}
+    	
     	if(result == null) {
     		System.out.println("ERROR: no results found");
     		return null;
     	}
-    	
+ 
     	JSONArray arr = (JSONArray) result.get("results");
-    	JSONObject book = (JSONObject) arr.get(0);
-    	//add book to libary database
-    	Book b = makeBook(book);
+    	if(arr.isEmpty()) {
+    		System.out.println("ERROR: no results found");
+    		return null;
+    	}
+    	ArrayList<Book> bookList = new ArrayList<>();
     	
-    	String bookurl = "https://www.gutenberg.org/cache/epub/" + 
-    					book.get("id") + "/pg" + book.get("id") + ".txt";
+    	for(Object n: arr) {
+			JSONObject book = (JSONObject) n;
+			Book b = makeBook(book);
+			
+			String bookurl = "https://www.gutenberg.org/cache/epub/" + 
+							book.get("id") + "/pg" + book.get("id") + ".txt";
+			
+			if(!bookList.contains(b)) {
+				addBookToLibaryFolder(b, bookurl);
+				bookList.add(b);
+			}
+    	}
     	
-    	addBookToLibaryFolder(b, bookurl);
-    	
-    	return b;
+    	return bookList;
     }
     
     /*
      * makes the book to return
      */
     private static Book makeBook(JSONObject book) {
-    	String title = (String) book.get("title");
-    	String author = (String) book.get("authors").toString();
-    	String summary = (String) ((JSONArray) book.get("summaries")).get(0);
+    	String title = book.get("title").toString();
+    	ArrayList<Author> alist = formatAuthor(book);
+    	String summary = ((JSONArray) book.get("summaries")).get(0).toString();
+    	String id = book.get("id").toString();
     	
-    	return new Book(title, author, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
+    	return new Book(title, alist, id, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
     }
     
     /*
@@ -126,6 +135,23 @@ public class ParseBook {
     		}
     	}
     	return rstr;
+    }
+    
+    /*
+     * creates a list of authors if book has multiple
+     */
+    private static ArrayList<Author> formatAuthor(JSONObject book) {
+    	ArrayList<Author> alist = new ArrayList<Author>();
+    	JSONArray authorList = (JSONArray) book.get("authors");
+    	
+    	for(Object a : authorList) {
+    		JSONObject author = (JSONObject) a;
+    		String name = (String) author.get("name");
+    		String birthYear = author.get("birth_year").toString();
+    		String deathYear = author.get("death_year").toString();
+    		alist.add(new Author(name, Integer.parseInt(birthYear), Integer.parseInt(deathYear)));
+    	}
+    	return alist;
     }
     
     /*
