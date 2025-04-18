@@ -47,22 +47,21 @@ public class Book {
 			public int compare(Book book1, Book book2) {
 				
 				int comp = book1.authors.get(0).compareTo(book2.authors.get(0));
-				
 				if (comp != 0) {
 					return comp;
 				}
-				
+
 				return book1.title.compareTo(book2.title);
 			}
 		};
 	}
-	
+
 	public static Comparator<Book> titleFirstComparator() {
 		return new Comparator<Book>() {
 			public int compare(Book book1, Book book2) {
-				
+
 				int comp = book1.title.compareTo(book2.title);
-				
+
 				if (comp != 0) {
 					return comp;
 				}
@@ -76,7 +75,5 @@ public class Book {
 	public String toString() {
 		return title + " by " + authors.toString();
 	}
-    
    
-    
 }
