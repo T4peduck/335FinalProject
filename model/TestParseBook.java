@@ -28,17 +28,14 @@ public class TestParseBook {
             System.out.println(result.get("bookshelves"));
             System.out.println(result.get("language"));
             System.out.println(result.get("formats"));
-           
-            String bookurl = (String) ((JSONObject) result.get("formats"))
-					.get("text/plain; charset=us-ascii");
-            
-            System.out.println(bookurl);
-            
-        
             
             
             ParseBook.addId("84");
-            System.out.println(ParseBook.downloadBook());
+            Book b = ParseBook.downloadBook();
+            System.out.println(b.title);
+            System.out.println(b.author);
+            System.out.println(b.summary);
+            
 
             //System.out.println(obj2);
 

@@ -25,7 +25,10 @@ public class ParseBook {
     
     private static JSONObject results;
     
-
+/*
+ * THESE FUNCTIONS BUILD AND SEND THE REQUEST
+ * -----------------------------------------------
+ */
     public static JSONObject makeRequest() throws Exception{
         System.out.println(URIbuilder);
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(URIbuilder)).GET().build();
@@ -68,8 +71,13 @@ public class ParseBook {
         URIbuilder += "topic=" + topic + "&";
     }
 
-    //parse result
-    public static boolean downloadBook() {
+    /*
+     * THIS FUNCTION RETURNS A BOOK AND ADDS THE SAME BOOK TO
+     * MODEL.LIBRARYTEXT AS A TEXT FILE
+     * ----------------------------------------------------------
+     * returns a book object holding the metadata for the book
+     */
+    public static Book downloadBook() {
     	JSONObject result = null;
     	try {
 			result = makeRequest();
@@ -78,10 +86,9 @@ public class ParseBook {
 			e.printStackTrace();
 		}
 
-    	
     	if(result == null) {
     		System.out.println("ERROR: no results found");
-    		return false;
+    		return null;
     	}
     	
     	JSONArray arr = (JSONArray) result.get("results");
@@ -89,20 +96,17 @@ public class ParseBook {
     	//add book to libary database
     	Book b = makeBook(book);
     	
-    	String bookurl = (String) ((JSONObject) book.get("formats"))
-				.get("text/plain; charset=us-ascii");
-    	if(bookurl.equals("null")) {
-    		System.out.println("ERROR: no url found");
-    		return false;
-    	}
+    	String bookurl = "https://www.gutenberg.org/cache/epub/" + 
+    					book.get("id") + "/pg" + book.get("id") + ".txt";
     	
-    	System.out.println(bookurl);
-    	addBookToLibary(b, bookurl);
+    	addBookToLibaryFolder(b, bookurl);
     	
-    	return true;
-    	
+    	return b;
     }
     
+    /*
+     * makes the book to return
+     */
     private static Book makeBook(JSONObject book) {
     	String title = (String) book.get("title");
     	String author = (String) book.get("authors").toString();
@@ -111,6 +115,9 @@ public class ParseBook {
     	return new Book(title, author, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
     }
     
+    /*
+     * removes illegal-file characters from title
+     */
     private static String cleanTitle(String title) {
     	String rstr = "";
     	for(int i = 0; i < title.length(); i++) {
@@ -121,7 +128,11 @@ public class ParseBook {
     	return rstr;
     }
     
-    private static void addBookToLibary(Book b, String bookurl) {
+    /*
+     * Downloads the book from Project Gutenberg and adds it
+     * to the Model.LibraryText folder
+     */
+    private static void addBookToLibaryFolder(Book b, String bookurl) {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(bookurl)).GET().build();
         try {
         	//casts the response to a type of input stream (which can be read line by line)
@@ -150,7 +161,6 @@ public class ParseBook {
 			e.printStackTrace();
 		}
 
-        
     	return;
     }
     

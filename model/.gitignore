@@ -6,10 +6,7 @@
 /ParseBook.class
 /User.class
 /testParseBook.class
-<<<<<<< HEAD
 /TestParseBook.class
 /LibraryController.class
-=======
-/Book$1.class
-/Book$2.class
->>>>>>> main
+/model.LibraryText/*
+
