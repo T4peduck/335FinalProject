@@ -29,6 +29,11 @@ public class ParseBook {
  * THESE FUNCTIONS BUILD AND SEND THE REQUEST
  * -----------------------------------------------
  */
+ 
+/*
+ * NOTE: 	THIS FUNCTION IS ONLY PUBLIC FOR TESTING PURPOSES,
+ * 			THIS IS NOT ACTUALLY CALLED
+ */
     public static JSONObject makeRequest() throws Exception{
         System.out.println(URIbuilder);
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(URIbuilder)).GET().build();
@@ -189,8 +194,4 @@ public class ParseBook {
 
     	return;
     }
-    
-
-
-
 }
