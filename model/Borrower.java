@@ -28,7 +28,7 @@ public class Borrower extends User {
     	// use the library method for checking out
     	
     	// update checkedOut
-        return null;
+        return;
     }
     
     public void checkinBook() {
@@ -41,7 +41,7 @@ public class Borrower extends User {
 
     public void putBookOnHold(String id) {
     	// use the library method for holding?
-        return null;
+        return;
     }
     
     public ArrayList<Book> getRecommendations(){
@@ -49,6 +49,11 @@ public class Borrower extends User {
     	
     	// call a library method for getting books from this genre
     }
+
+	public void checkOutHold(Book b) {
+		// TODO Auto-generated method stub
+		
+	}
     
     // geters? History with the different comparators, searching history
     

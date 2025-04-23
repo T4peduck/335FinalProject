@@ -1,6 +1,8 @@
 package model;
 
 import java.util.HashMap;
+import model.Book;
+import model.Borrower;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -16,18 +18,16 @@ public class Library {
 	private HashMap<Book, Integer> checkoutNums;
 
 	public Library() {
-		borrowerList = new HashMap<>();
-		librarianList = new HashMap<>();
-
 		availableBooks = new HashMap<>();
 		unavailableBooks = new HashMap<>();
 		booksByAuthor = new HashMap<>();
+		holds = new HashMap<>();
 	}
 
 	// TODO: possibly should also be package private, since they are Borrower
 	// specific
 	public int checkout(Book b) {
-		String title = b.getTitle().toLowerCase();
+		String title = b.title.toLowerCase();
 		ArrayList<Book> foundBooks = availableBooks.get(title);
 		if (foundBooks == null) {
 			return 0; // 0 - cannot check out this book
@@ -98,7 +98,7 @@ public class Library {
 	 * should be checked when a borrower tries to check in a book.
 	 */
 	public void checkin(Book b) {
-		String title = b.getTitle().toLowerCase();
+		String title = b.title.toLowerCase();
 		ArrayList<Book> foundBooks = unavailableBooks.get(title);
 
 		for (Book book : foundBooks) {
@@ -122,6 +122,7 @@ public class Library {
 				}
 				// check if it will be checked out to a waiting person
 				updateHolds(b);
+				break;
 			}
 		}
 	}
@@ -176,11 +177,11 @@ public class Library {
 		author = author.toLowerCase().trim();
 
 		ArrayList<Book> found = new ArrayList<>();
+		
 		// copy available books with this title
 		ArrayList<Book> books = booksByAuthor.get(author);
-		if (books != null) { {
-				found.addAll(books);
-			
+		if (books != null) { 
+			found.addAll(books);
 		}
 		return found;
 	}
@@ -198,7 +199,6 @@ public class Library {
 		ArrayList<Book> books = booksByAuthor.get(author);
 		if (books != null) {
 			found.addAll(books);
-
 		}
 		return found;
 	}
@@ -211,6 +211,10 @@ public class Library {
 		ArrayList<Book> sorted = getAllBooks();
 		Collections.sort(sorted, Book.authorFirstComparator());
 		return sorted;
+	}
+	
+	public ArrayList<Book> getAvailBooksByAuthor(){
+		ArrayList<Book> available = 
 	}
 
 	/*
@@ -229,7 +233,23 @@ public class Library {
 	private ArrayList<Book> getAllBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : booksByAuthor.values()) {
-			listCopy.addAll(list);
+			books.addAll(list);
+		}
+		return books;
+	}
+	
+	private ArrayList<Book> getAvailBooks(){
+		ArrayList<Book> books = new ArrayList<>();
+		for (ArrayList<Book> list : availableBooks.values()) {
+			books.addAll(list);
+		}
+		return books;
+	}
+	
+	private ArrayList<Book> getAvailBooks(){
+		ArrayList<Book> books = new ArrayList<>();
+		for (ArrayList<Book> list : availableBooks.values()) {
+			books.addAll(list);
 		}
 		return books;
 	}
@@ -240,8 +260,8 @@ public class Library {
 
 	// Librarian deals with finding/creating Book object
 	void addBook(Book b) {
-		String title = b.getTitle().toLowerCase();
-		String author = b.getAuthor().toLowerCase();
+		String title = b.title.toLowerCase();
+		String author = b.authors.get(0).NAME.toLowerCase();
 
 		ArrayList<Book> booksWithTitle = availableBooks.get(title);
 		if (booksWithTitle == null) {
@@ -256,7 +276,7 @@ public class Library {
 		if (booksWithAuthor == null) {
 			ArrayList<Book> list = new ArrayList<>();
 			list.add(b);
-			booksByAuthor.put(title, list);
+			booksByAuthor.put(author, list);
 		} else {
 			booksWithAuthor.add(b);
 		}
@@ -264,8 +284,8 @@ public class Library {
 	}
 
 	void removeBook(Book b) {
-		String title = b.getTitle().toLowerCase();
-		String author = b.getAuthor().toLowerCase();
+		String title = b.title.toLowerCase();
+		String author = b.authors.get(0).NAME.toLowerCase();
 
 		// remove from availbooks
 		ArrayList<Book> booksWithTitle = availableBooks.get(title);
