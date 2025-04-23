@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Author {
 	public final String NAME;
 	public final int BIRTH_YEAR;
@@ -20,4 +22,23 @@ public class Author {
 		// TODO Auto-generated method stub
 		return NAME.compareTo(other.NAME);
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(BIRTH_YEAR, DEATH_YEAR, NAME);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Author other = (Author) obj;
+		return BIRTH_YEAR == other.BIRTH_YEAR && DEATH_YEAR == other.DEATH_YEAR && Objects.equals(NAME, other.NAME);
+	}
+	
+	
 }

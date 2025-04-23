@@ -34,7 +34,7 @@ public class ParseBook {
  * NOTE: 	THIS FUNCTION IS ONLY PUBLIC FOR TESTING PURPOSES,
  * 			THIS IS NOT ACTUALLY CALLED
  */
-    public static JSONObject makeRequest() throws Exception{
+    private static JSONObject makeRequest() throws Exception{
         System.out.println(URIbuilder);
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(URIbuilder)).GET().build();
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
@@ -73,7 +73,7 @@ public class ParseBook {
     }
 
     public static void addTopic(String topic) {
-        URIbuilder += "topic=" + topic + "&";
+        URIbuilder += "topic=" + replaceSpaces(topic) + "&";
     }
 
     /*
@@ -88,7 +88,7 @@ public class ParseBook {
     	try {
 			result = makeRequest();
 		} catch (Exception e) {e.printStackTrace();}
-    	
+    	    	
     	if(result == null) {
     		System.out.println("ERROR: no results found");
     		return null;
@@ -99,22 +99,24 @@ public class ParseBook {
     		System.out.println("ERROR: no results found");
     		return null;
     	}
-    	ArrayList<Book> bookList = new ArrayList<>();
+    	
+    	ArrayList<Book> resultList = new ArrayList<>();
     	
     	for(Object n: arr) {
 			JSONObject book = (JSONObject) n;
+			
 			Book b = makeBook(book);
 			
 			String bookurl = "https://www.gutenberg.org/cache/epub/" + 
 							book.get("id") + "/pg" + book.get("id") + ".txt";
 			
-			if(!bookList.contains(b)) {
+			if(!resultList.contains(b)) {
 				addBookToLibaryFolder(b, bookurl);
-				bookList.add(b);
+				resultList.add(b);
 			}
     	}
     	
-    	return bookList;
+    	return resultList;
     }
     
     /*
@@ -123,7 +125,12 @@ public class ParseBook {
     private static Book makeBook(JSONObject book) {
     	String title = book.get("title").toString();
     	ArrayList<Author> alist = formatAuthor(book);
-    	String summary = ((JSONArray) book.get("summaries")).get(0).toString();
+    	String summary;
+    	if(((JSONArray) book.get("summaries")).isEmpty()) {
+    		summary = "";
+    	} else {
+    		summary = ((JSONArray) book.get("summaries")).get(0).toString();
+    	}
     	String id = book.get("id").toString();
     	
     	return new Book(title, alist, id, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
@@ -135,7 +142,7 @@ public class ParseBook {
     private static String cleanTitle(String title) {
     	String rstr = "";
     	for(int i = 0; i < title.length(); i++) {
-    		if(!"*\"\\/<>:|?;, ".contains(Character.toString(title.charAt(i)))) {
+    		if(!"*\"\\/<>:|?;,. ".contains(Character.toString(title.charAt(i)))) {
     			rstr += Character.toString(title.charAt(i));
     		}
     	}

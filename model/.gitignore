@@ -8,8 +8,9 @@
 /testParseBook.class
 /TestParseBook.class
 /LibraryController.class
-/model.LibraryText/*
+/model.LibraryText/*.txt
 
 /Author.class
 /Book$1.class
 /Book$2.class
+/TestLibrary.class
