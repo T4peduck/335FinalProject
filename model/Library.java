@@ -5,16 +5,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Library {
-	private HashMap<String, Borrower> borrowerList;
-	private HashMap<String, Librarian> librarianList;
 
 	private HashMap<String, ArrayList<Book>> availableBooks;
 	private HashMap<String, ArrayList<Book>> unavailableBooks;
 
 	private HashMap<String, ArrayList<Book>> booksByAuthor;
+	private HashMap<Book, ArrayList<Borrower>> holds;
 
 	// keep track of how often a book is checked out?
-	private HashMap<Book, int> checkoutNums;
+	private HashMap<Book, Integer> checkoutNums;
 
 	public Library() {
 		borrowerList = new HashMap<>();
@@ -25,30 +24,106 @@ public class Library {
 		booksByAuthor = new HashMap<>();
 	}
 
-	// TODO: add a copy for Users? or construct users HERE instead of outside of
-	// this class
-	public void addLibrarian(Librarian l) {
-		librarianList.put(l.getUserName(), new Librarian(l));
-	}
-
-	public void addBorrower(Borrower b) {
-		borrowerList.put(b.getUserName(), new Borrower(b));
-	}
-
-	// also take strings, or a Book?
-
 	// TODO: possibly should also be package private, since they are Borrower
 	// specific
-	public void checkout(Borrower b) {
+	public int checkout(Book b) {
+		String title = b.getTitle().toLowerCase();
+		ArrayList<Book> foundBooks = availableBooks.get(title);
+		if (foundBooks == null) {
+			return 0; // 0 - cannot check out this book
+		}
+		for (Book book : foundBooks) {
+			if (book.equals(b)) {
+				// make it unavailable
+				foundBooks.remove(b);
 
+				if (foundBooks.size() == 0) { // remove key if necessary
+					availableBooks.remove(title);
+				}
+
+				// add to unavailable book list
+				foundBooks = unavailableBooks.get(title);
+
+				if (foundBooks == null) {
+					ArrayList<Book> list = new ArrayList<>();
+					list.add(b);
+					unavailableBooks.put(title, list);
+				} else {
+					foundBooks.add(b);
+				}
+				// show it was successfully checked out
+				return 1;
+			}
+		}
+		return 0;
 	}
 
-	public void hold(Book b) {
-
+	/*
+	 * @pre - the book put on hold should be checked out currently
+	 */
+	public void hold(Book b, Borrower user) {
+		ArrayList<Borrower> waiting = holds.get(b);
+		// no one currently waiting: create new pair
+		if (waiting == null) {
+			waiting = new ArrayList<>();
+			waiting.add(user);
+			holds.put(b, waiting);
+		} else {
+			// someone is already waiting, add current person to the end of the list
+			waiting.add(user);
+		}
 	}
 
+	public void updateHolds(Book b) {
+		ArrayList<Borrower> waiting = holds.get(b);
+		// no one is waiting for this book
+		if (waiting == null) {
+			return;
+		} else {
+			// check out to the first person
+			Borrower user = waiting.remove(0);
+			user.checkOutHold(b); // check in to the user
+
+			checkout(b); // check it out of the library
+
+			// remove from holds if no one is waiting anymore
+			if (waiting.size() == 0) {
+				holds.remove(b);
+			}
+		}
+	}
+
+	/*
+	 * @pre - Book b is a book that has been checked out, so it is unavailable. This
+	 * should be checked when a borrower tries to check in a book.
+	 */
 	public void checkin(Book b) {
+		String title = b.getTitle().toLowerCase();
+		ArrayList<Book> foundBooks = unavailableBooks.get(title);
 
+		for (Book book : foundBooks) {
+			if (book.equals(b)) {
+				// remove it from unavailable books
+				foundBooks.remove(b);
+
+				if (foundBooks.size() == 0) { // remove key if necessary
+					unavailableBooks.remove(title);
+				}
+
+				// add to available book list
+				foundBooks = availableBooks.get(title);
+
+				if (foundBooks == null) {
+					ArrayList<Book> list = new ArrayList<>();
+					list.add(b);
+					availableBooks.put(title, list);
+				} else {
+					foundBooks.add(b);
+				}
+				// check if it will be checked out to a waiting person
+				updateHolds(b);
+			}
+		}
 	}
 
 	/*
@@ -154,29 +229,14 @@ public class Library {
 	private ArrayList<Book> getAllBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : booksByAuthor.values()) {
-
 			listCopy.addAll(list);
-
 		}
 		return books;
-	}
-
-	// TODO: will we be keeping track of callNumber?
-	public ArrayList<Book> searchAllBooksByCallNumber(String callNumber) {
-		return new ArrayList<Book>();
-	}
-
-	public ArrayList<Book> searchAvailBooksByCallNumber(String callNumber) {
-		return new ArrayList<Book>();
 	}
 
 	/*
 	 * package private methods for the other classes in the model to use
 	 */
-	ArrayList<Borrower> getBorrowerList() {
-		return new ArrayList<Borrower>(borrowerList.values());
-	}
-
 
 	// Librarian deals with finding/creating Book object
 	void addBook(Book b) {
@@ -252,6 +312,9 @@ public class Library {
 				booksByAuthor.remove(author);
 			}
 		}
+		
+		// remove from holds
+		holds.remove(b);
 	}
 
 	ArrayList<Book> getAvailBooks() {
