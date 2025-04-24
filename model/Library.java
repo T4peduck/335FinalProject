@@ -19,6 +19,8 @@ public class Library {
 
 	// keep track of how often a book is checked out?
 	private HashMap<Book, Integer> checkoutNums;
+	
+	private HashMap<String, ArrayList<Book>> librarianRecs;
 
 	public Library() {
 		availableBooks = new HashMap<>();
@@ -26,6 +28,7 @@ public class Library {
 		booksByAuthor = new HashMap<>();
 		checkoutNums = new HashMap<>();
 		holds = new HashMap<>();
+		librarianRecs = new HashMap<>();
 	}
 
 	// TODO: possibly should also be package private, since they are Borrower
@@ -184,7 +187,7 @@ public class Library {
 	 * searchAvailBooksByTitle(String title) - returns an arrayList with a copy of
 	 * all available books with the given title (case-insensitive)
 	 */
-	public ArrayList<Book> searchUnvailBooksByTitle(String title) {
+	public ArrayList<Book> searchUnavailBooksByTitle(String title) {
 		// normalize title
 		title = title.toLowerCase().trim();
 
@@ -241,7 +244,7 @@ public class Library {
 	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
 	 * of all unavailable books with the given author (case-insensitive)
 	 */
-	public ArrayList<Book> searchUnvailBooksByAuthor(String author) {
+	public ArrayList<Book> searchUnavailBooksByAuthor(String author) {
 		// normalize author
 		author = author.toLowerCase().trim();
 
@@ -257,6 +260,39 @@ public class Library {
 			}
 		}
 		return found;
+	}
+	
+	public Book searchAllBookByID(String id) {
+		Book book = null;
+		for (Book b : getAllBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
+	public Book searchAvailBookByID(String id) {
+		Book book = null;
+		for (Book b : getAvailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
+	public Book searchUnavailBookByID(String id) {
+		Book book = null;
+		for (Book b : getUnavailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
 	}
 
 	/*
@@ -275,10 +311,16 @@ public class Library {
 		return available;
 	}
 
-	public ArrayList<Book> getUnvailBooksByAuthor() {
+	public ArrayList<Book> getUnavailBooksByAuthor() {
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.authorFirstComparator());
 		return unavailable;
+	}
+	
+	public ArrayList<Book> getRecBooksByAuthor() {
+		ArrayList<Book> recs = getRecBooks();
+		Collections.sort(recs, Book.authorFirstComparator());
+		return recs;
 	}
 
 	/*
@@ -298,9 +340,16 @@ public class Library {
 	}
 
 	public ArrayList<Book> getUnavailBooksByTitle() {
+
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.titleFirstComparator());
 		return unavailable;
+	}
+	
+	public ArrayList<Book> getRecBooksByTitle() {
+		ArrayList<Book> recs = getRecBooks();
+		Collections.sort(recs, Book.titleFirstComparator());
+		return recs;
 	}
 
 	/*
@@ -327,6 +376,14 @@ public class Library {
 		for (ArrayList<Book> list : unavailableBooks.values()) {
 			books.addAll(list);
 		}
+		return books;
+	}
+	
+	private ArrayList<Book> getRecBooks() {
+		ArrayList<Book> books = new ArrayList<>();
+		for (ArrayList<Book> list : librarianRecs.values())
+			books.addAll(list);
+		
 		return books;
 	}
 
@@ -415,6 +472,32 @@ public class Library {
 
 		// remove from holds
 		holds.remove(b);
+	}
+	
+	void recommend(String recommender, Book book) {
+		if (librarianRecs.containsKey(recommender))
+			librarianRecs.get(recommender).add(book);
+		
+		else {
+			ArrayList<Book> recs = new ArrayList<>();
+			recs.add(book);
+			librarianRecs.put(recommender, recs);
+		}
+	}
+	
+	void removeRecommend(String recommender, Book book) {
+		// Won't crash if recommender doesn't exist
+		if (librarianRecs.containsKey(recommender)) {
+			librarianRecs.get(recommender).remove(book);
+			if (librarianRecs.get(recommender).size() == 0)
+				librarianRecs.remove(recommender);
+		}
+	}
+	
+	void removeLibraryRec(String recommender) {
+		if (librarianRecs.containsKey(recommender)) {
+			librarianRecs.remove(recommender);
+		}
 	}
 	
 	// Since both Books and Integers are immutable, we can just return a simple copy

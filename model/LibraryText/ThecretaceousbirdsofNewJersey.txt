@@ -1,0 +1,2218 @@
+﻿The Project Gutenberg eBook of The cretaceous birds of New Jersey
+    
+This ebook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this ebook or online
+at www.gutenberg.org. If you are not located in the United States,
+you will have to check the laws of the country where you are located
+before using this eBook.
+
+Title: The cretaceous birds of New Jersey
+
+Author: Storrs L. Olson
+        David C. Parris
+
+Release date: October 7, 2022 [eBook #69109]
+                Most recently updated: October 19, 2024
+
+Language: English
+
+Original publication: United States: Smithsonian Institution Press, 1987
+
+Credits: Tom Cosmas compiled from materials made available at The Internet Archive and placed in the Public Domain.
+
+
+*** START OF THE PROJECT GUTENBERG EBOOK THE CRETACEOUS BIRDS OF NEW JERSEY ***
+
+Transcriber Note: Text emphasis denoted as _Italics_ and =Bold=.
+
+
+
+                         The Cretaceous Birds
+                             of New Jersey
+
+
+                            STORRS L. OLSON
+
+                                  and
+
+                            DAVID C. PARRIS
+
+
+         SMITHSONIAN CONTRIBUTIONS TO PALEOBIOLOGY • NUMBER 63
+
+
+          SERIES PUBLICATIONS OF THE SMITHSONIAN INSTITUTION
+
+Emphasis upon publication as a means of "diffusing knowledge" was
+expressed by the first Secretary of the Smithsonian. In his formal plan
+for the Institution, Joseph Henry outlined a program that included the
+following statement: "It is proposed to publish a series of reports,
+giving an account of the new discoveries in science, and of the changes
+made from year to year in all branches of knowledge." This theme of
+basic research has been adhered to through the years by thousands of
+titles issued in series publications under the Smithsonian imprint,
+commencing with Smithsonian Contributions to Knowledge in 1848 and
+continuing with the following active series:
+
+               _Smithsonian Contributions to Astrophysics_
+                  _Smithsonian Contributions to Botany_
+            _Smithsonian Contributions to the Earth Sciences_
+           _Smithsonian Contributions to the Marine Sciences_
+               _Smithsonian Contributions to Paleobiology_
+                 _Smithsonian Contributions to Zoology_
+                     _Smithsonian Folklife Studies_
+                 _Smithsonian Studies in Air and Space_
+             _Smithsonian Studies in History and Technology_
+
+In these series, the Institution publishes small papers and full-scale
+monographs that report the research and collections of its various
+museums and bureaux or of professional colleagues in the world of
+science and scholarship. The publications are distributed by mailing
+lists to libraries, universities, and similar institutions throughout
+the world.
+
+Papers or monographs submitted for series publication are received by
+the Smithsonian Institution Press, subject to its own review for format
+and style, only through departments of the various Smithsonian museums
+or bureaux, where the manuscripts are given substantive review. Press
+requirements for manuscript and art preparation are outlined on the
+inside back cover.
+
+                                               Robert McC. Adams
+                                               Secretary
+                                               Smithsonian Institution
+
+
+SMITHSONIAN CONTRIBUTIONS TO PALEOBIOLOGY · NUMBER 63
+
+
+
+
+The Cretaceous Birds of New Jersey
+
+
+Storrs L. Olson and David C. Parris
+
+
+[Illustration]
+
+SMITHSONIAN INSTITUTION PRESS
+
+Washington, D.C.
+
+1987
+
+
+
+
+ABSTRACT
+
+
+Olson, Storrs L., and David C. Parris. The Cretaceous Birds of New
+Jersey. Smithsonian Contributions to Paleobiology, number 63, 22
+pages, 11 figures, 1987.--This is a revision of the fossil birds from
+Late Cretaceous (Maastrichtian; Hornerstown and Navesink formations)
+deposits in New Jersey. Material of previously named taxa, described
+over a century ago, is augmented by more recently collected specimens
+from a new locality at the Inversand Company marl pits near Sewell,
+Gloucester County. With about 8 genera and 9 species, this is the most
+diverse Cretaceous avifauna yet known. Most species belong to a group
+of primitive Charadriiformes resembling in limb morphology the fossil
+family Presbyornithidae and the living family Burhinidae. These are
+tentatively referred to the “form family” Graculavidae Fürbringer,
+1888, with its provisional synonyms Palaeotringinae Wetmore, 1940;
+Telmatornithidae Cracraft, 1972, and Laornithidae Cracraft, 1972. The
+species included are: _Graculavus velox_ Marsh, 1872; _Telmatornis
+priscus_ Marsh, 1870 (synonyms: _Telmatornis affinis_ Marsh, 1870;
+_Graculavus pumilis_ Marsh, 1872; _Palaeotringa vetus_ Marsh, 1870);
+_Anatalavis rex_ (Shufeldt, 1915); _Laornis edvardsianus_ Marsh, 1870;
+_Palaeotringa littoralis_ Marsh, 1870; _P. vagans_ Marsh, 1872; and
+an undescribed genus and species probably different from any of the
+preceding. _Anatalavis_ is proposed as a new genus for Telmatornis rex
+Shufeldt, 1915. A new family, genus, and species (Tytthostonychidae,
+_Tytthostonyx glauconiticus_) is proposed for a humerus showing
+similarities to the Pelecaniformes and Procellariiformes and
+tentatively referred to the latter, along with an ulna of a much
+smaller species. The species in this fauna appear to be part of the
+modern radiation of neognathous birds, but none can be referred to
+modern families.
+
+
+Official publication date is handstamped in a limited number of initial
+copies and is recorded in the Institution's annual report, _Smithsonian
+Year_. Series cover design: The trilobite _Phacops rana_ Green. /X
+Library of Congress Cataloging-in-Publication Data Olson, Storrs
+L. The cretaceous birds of New Jersey. (Smithsonian contributions
+to paleobiology; no. 63) Bibliography: p. 1 Birds Fossil. 2.
+Paleontology--Cretaceous. 3. Paleontology--New Jersey. I. Parris, David
+C. II. Title. III. Series. QE701.S56 no. 63 560 s 86-29837 [QE871]
+[568’.09749] X/
+
+
+
+
+Contents
+
+
+                                                           Page
+
+  Introduction                                                1
+
+      Acknowledgments                                         1
+
+  The Fossil Localities and Their Stratigraphy                1
+
+  Order Charadriiformes                                       4
+
+    “Form Family” Graculavidae Fürbringer, 1888               4
+
+      Genus _Graculavus_ Marsh, 1872                          4
+
+        _Graculavus velox_ Marsh, 1872                        4
+
+        _Graculavus velox?_                                   6
+
+      Genus _Telmatornis_ Marsh, 1870                         6
+
+        _Telmatornis priscus_ Marsh, 1870                     6
+
+      Genus _Anatalavis_, new genus                          11
+
+        _Anatalavis rex_ (Shufeldt, 1915), new combination   11
+
+      Genus _Laornis_ Marsh, 1870                            12
+
+        _Laornis edvardsianus_ Marsh, 1870                   12
+
+      Genus _Palaeotringa_ Marsh, 1870                       12
+
+        _Palaeotringa littoralis_ Marsh, 1870                12
+
+        _Palaeotringa littoralis?_                           14
+
+        _Palaeotringa vagans_ Marsh, 1872                    14
+
+      Graculavidae, Genus and Species Indeterminate          14
+
+  Order Procellariiformes?                                   14
+
+    Family Tytthostonychidae, new family                     16
+
+      Genus _Tytthostonyx_, new genus                        16
+
+        _Tytthostonyx glauconiticus_, new species            16
+
+    Family and Genus Indeterminate                           16
+
+  Aves, incertae sedis                                       19
+
+  Discussion                                                 19
+
+  Appendix                                                   20
+
+  Literature Cited                                           21
+
+
+
+
+The Cretaceous Birds of New Jersey
+
+
+_Storrs L. Olson and David C. Parris_[1]
+
+[Footnote 1: _Storrs L. Olson, Department of Vertebrate Zoology,
+National Museum of Natural History, Smithsonian Institution,
+Washington, D.C. 20560. David C. Parris, New Jersey State Museum, 205
+West State Street, Trenton, New Jersey 08625-0530._]
+
+
+
+
+Introduction
+
+
+Fossils of Cretaceous birds are scarce and usually difficult
+to interpret. The better known forms such as _Hesperornis_ and
+_Ichthyornis_ belong to strange and archaic groups having little or
+nothing to do with the modern avian radiation. The only areas that have
+yielded Cretaceous birds of essentially modern aspect in sufficient
+quantities to be regarded as avifaunal assemblages are the inland
+deposits of the Lance Formation and strata of similar age in Wyoming
+(Brodkorb, 1963a) and the marine deposits of New Jersey. Of these, the
+assemblage from New Jersey is the more diverse.
+
+Fossil birds were described from the Cretaceous greensands of southern
+New Jersey over a century ago by Marsh (1870, 1872). These have been
+carried, largely uncritically, in lists and compilations ever since
+(e.g. Hay, 1902; Lambrecht, 1933; Rapp, 1943; Miller, 1955; Brodkorb,
+1963b, 1967). Although some of these specimens were subsequently
+re-examined and their status altered (Shufeldt, 1915; Cracraft, 1972,
+1973), there has been no modern comprehensive revision of all of the
+avian taxa that have been named from the Cretaceous of New Jersey. In
+recent years, additional fossil birds have been recovered from these
+deposits that add further to our knowledge of late Mesozoic avifaunas,
+making a review of this material all the more desirable.
+
+In spite of the relative diversity of the New Jersey Cretaceous
+avifauna, the total number of specimens is still small. The decline
+of the glauconite greensand industry and the difficulty of recovering
+small fossils have contributed to this paucity of specimens. The
+glauconite industry is now confined to a single operation, the
+Inversand Company in Sewell, Mantua Township, Gloucester County, New
+Jersey. Fortunately, the late owner of the company, Mr. Churchill
+Hungerford, Jr., generously allowed fossils to be recovered on his
+property by the New Jersey State Museum, which houses most of the newly
+discovered specimens, the Academy of Natural Sciences of Philadelphia
+being the repository of the rest. Another specimen came from a locality
+in Upper Freehold Township, Monmouth County, New Jersey and was donated
+to the New Jersey State Museum by Gerard R. Case.
+
+Acknowledgments.--We gratefully acknowledge the late Churchill
+Hungerford, Jr., for permitting fossil material to be recovered from
+his property by the New Jersey State Museum (NJSM). We are much
+indebted to John H. Ostrom, Peabody Museum of Natural History, Yale
+University (YPM), and Gay Vostreys and Charles Smart of the Academy
+of Natural Sciences of Philadelphia (ANSP) for their patience in
+lending types and other material from their collections for a very
+extended period. Pat V. Rich, Monash University, assisted Parris in
+the early stages of this study. Comparative material of _Presbyornis_
+was obtained from the collection of the University of California
+Museum of Paleontology (UCMP), the University of Wyoming (UW), and the
+National Museum of Natural History, Smithsonian Institution (USNM).
+The photographs are by Victor E. Krantz, Smithsonian Institution. For
+valuable comments on the manuscript we are grateful to Donald Baird,
+Princeton University, and Jonathan Becker, Smithsonian Institution.
+
+
+=The Fossil Localities and Their Stratigraphy=
+
+The extensive deposits of Cretaceous age in eastern North America
+have been widely studied for over 150 years. These generally poorly
+consolidated sediments have provided valuable resources, notably
+glauconite, fire clay, and chalk. As the publications by Morton (1829),
+Vanuxem (1829), Conrad (1869), and other early authors showed, the
+sediments are also quite fossiliferous.
+
+In the eastern United States, significant Cretaceous deposits occur
+from New Jersey to Texas (Figure 1), with extensive outcrop and
+subsurface records in both Atlantic and Gulf coastal plains. The
+surface distribution and correlations were first summarized by
+Stephenson et al. (1942). Subsequent works by various authorities
+have refined, but not substantially altered his views of outcrop
+stratigraphy. Petroleum exploration has encouraged more recent restudy
+of the subsurface stratigraphy, notably along the east coast (Minard et
+al., 1974; Perry et al., 1975; Petters, 1976).
+
+[Illustration: Figure 1.--Distribution of Cretaceous rocks in the
+eastern United States. Arrow indicates New Jersey. (Modified after
+Moore, 1958, fig. 15.2).]
+
+In New Jersey, the latest Cretaceous deposits are remarkably rich
+in glauconite, especially the Navesink and Hornerstown formations.
+Besides providing a local industry in agricultural fertilizers, the
+glauconite greensands, locally called “marl,” yielded many specimens to
+the fiercely competitive vertebrate paleontologists of the nineteenth
+century. Preservation of vertebrate fossils in a glauconite deposit may
+be excellent, apparently due to autochthonous formation of the mineral
+and the probable quiescence of the depositional environment. The
+Hornerstown Formation, for example, contains few grains of terrigenous
+origin and little evidence of disturbance by water currents.
+Such depositional environments were apparently favorable for the
+preservation of small and delicate bones. The accumulation of sediment
+occurred during a period of marine transgression with the shoreline not
+far to the northwest but at sufficient distance to prevent deposition
+of terrigenous material.
+
+During their great rivalry, E.D. Cope and O.C. Marsh sought greensand
+fossils vigorously. Marsh, however, obtained all of the Cretaceous
+birds (Marsh, 1870, 1872), largely due to efforts of marl pit owner
+J.G. Meirs. Although in the years subsequent to Marsh's original
+descriptions of the New Jersey birds from the Navesink and Hornerstown
+formations there was some confusion regarding their probable age
+(Wetmore, 1930), this was later definitely established as Cretaceous
+by Baird (1967), who attributed the specimens to the Navesink and
+Hornerstown formations.
+
+The summary of Petters (1976) represents current ideas of the
+Cretaceous stratigraphy of New Jersey. Baird's (1967) discussion is
+consistent with Petters's view that the Hornerstown Formation is
+regarded as partly Cretaceous and partly Tertiary. Some authors have
+used the term New Egypt Formation instead of Navesink in more southerly
+outcrops.
+
+Cretaceous birds have been recovered from three geographically
+distinct localities in New Jersey (Figure 2). With the exception of
+_Laornis_, all of the specimens described by Marsh (1870, 1872) came
+from Upper Freehold Township, Monmouth County, in the area including
+the settlements of Hornerstown, Arneytown, and Cream Ridge. The Meirs
+family operated a number of pits in this area and it is no longer
+possible to ascertain the exact provenance of specimens labelled only
+as being from Hornerstown. These could have come either from the
+basal Hornerstown Formation or the underlying Navesink Formation,
+both of which are Maastrichtian in age. Baird (1967:261) ascertained
+that the holotype of _Palaeotringa vetus_, from “friable green marl
+near Arneytown” was from the lower (i.e., Cretaceous) part of the
+Hornerstown Formation. The holotypes of _Telmatornis priscus_ and _T.
+affinis_, from the Cream Ridge Marl Company pits, on the other hand,
+are from the Navesink Formation. A more recently collected specimen
+from this area is the proximal end of an ulna (NJSM 11900) collected
+by Gerard R. Case from “marl piles near junction of Rtes. 537 and
+539 in Upper Freehold Twp., Monmouth County, near Hornerstown.” This
+definitely came from the Hornerstown Formation but it cannot be said
+whether from the Cretaceous or Paleocene sediments included therein.
+
+[Illustration: Figure 2.--Localities in southern New Jersey of the
+main fossiliferous deposits that have yielded Cretaceous birds. (The
+bold line demarcates the inner and outer coastal plain physiographic
+provinces; B = Birmingham; H = Hornerstown; S = Sewell.)]
+
+The second general locality is near Birmingham, Burlington County,
+where the type of _Laornis edvardsianus_ was obtained from “greensand
+of the upper, Cretaceous marl bed ... in the pits of the Pemberton Marl
+Company” (Marsh, 1870:208). There is nothing to be added to Baird's
+(1967) conclusion that this specimen is latest Cretaceous in age.
+
+The third locality, and that yielding most of the recently obtained
+specimens, is the Inversand Company marl pit, located near Sewell,
+Gloucester County. In accordance with the wishes of the Inversand
+Company, the precise locality of this pit will not be disclosed,
+although this information is preserved in records sufficient in number
+and distribution to assure that it will not be lost. The Inversand
+specimens came from the main fossiliferous layer within the basal
+portion of the Hornerstown Formation (Figure 3). This layer is of late
+Maastrichtian age (latest Cretaceous), on the basis of invertebrate
+fossils, including three genera of ammonites, and a substantial
+vertebrate fauna, including mosasaurs (see Appendix). It is probable
+that the upper part of the Hornerstown Formation within the pit is of
+Paleocene age, as it is known to be elsewhere, but most paleontologists
+believe the basal portion to be Cretaceous in age (Gaffney, 1975; Koch
+and Olsson, 1977). One avian specimen is from an unknown level in the
+pit.
+
+[Illustration: Figure 3.--Stratigraphic diagram of the Inversand
+Company marl pit at Sewell, Gloucester County, New Jersey.]
+
+
+=Order Charadriiformes=
+
+=“Form Family” Graculavidae Fürbringer, 1888=
+
+
+Type Genus.--Graculavus Marsh, 1872.
+
+Included Genera.--_Graculavus_ Marsh, 1872; _Telmatornis_ Marsh, 1870;
+_Anatalavis_, new genus; _Laornis_ Marsh, 1870; _Palaeotringa_ Marsh,
+1870; and an additional unnamed genus.
+
+Remarks.--Most of the birds from the New Jersey deposits belong with
+what Olson (1985) has termed the “transitional Charadriiformes,” a
+group that seemingly tends to connect the Gruiformes and the more
+typical Charadriiformes. The only living family in this group that
+has traditionally been considered charadriiform is the Burhinidae,
+the thick-knees or stone curlews. Other apparent descendants include
+ibises (Plataleidae) and the ducks and geese of the order Anseriformes.
+The latter are linked with the “transitional Charadriiformes” through
+the Paleocene and Eocene genus _Presbyornis_, which is known from
+abundant material from widely scattered areas of the world (Olson and
+Feduccia, 1980b; Olson, 1985). _Presbyornis_ combines a long-legged
+shorebird-like body with the head of a duck. The fragmentary Cretaceous
+fossils from New Jersey, all of which are postcranial, usually show
+more similarity to _Presbyornis_ than to any modern group of birds
+except the Burhinidae. Therefore, our comparisons have been made
+chiefly with these two groups.
+
+With the fragmentary material at hand it is difficult, well nigh
+impossible, to make hard and fast taxonomic judgments concerning the
+number of species, genera, or families represented. Birds with very
+similar wing or leg elements could have had completely different
+feeding adaptations and could represent ancestral forms leading to
+different modern groups not considered to be closely related. For
+example, without the skull, _Presbyornis_ could not be determined as
+having anything to do with the Anseriformes (Olson and Feduccia, 1980b:
+12-13).
+
+Late Cretaceous fossil birds of modern aspect have been described in
+a variety of genera, most of which have been used as the basis for
+family-group names. Taxa from New Jersey that appear to belong with
+the “transitional Charadriiformes” for which family-group names are
+available include: Graculavinae Fürbringer, 1888; Palaeotringinae
+Wetmore, 1940; Telmatornithidae Cracraft, 1972; and Laornithidae
+Cracraft, 1973.
+
+Taxa from Upper Cretaceous deposits in western North America that
+appear to fall in the same category (Olson and Feduccia, 1980a)
+include: Apatornithidae Fürbringer, 1888; Cimolopterygidae Brodkorb,
+1963a; Torotigidae Brodkorb, 1963a; and Lonchodytidae Brodkorb, 1963a.
+
+Tertiary taxa that may possibly be related to the “transitional
+Charadriiformes” and that have been used as the basis of family-group
+names are: Presbyornithidae Wetmore, 1926 (Nautilornithinae Wetmore,
+1926, and Telmabatidae Howard, 1955, are definitely synonyms);
+Scaniornithidae Lambrecht, 1933; and Dakotornithidae Erickson, 1975.
+
+Doubtless there are others that we have overlooked. How many families
+are actually represented here and what their interrelationships may
+be is purely a matter of conjecture in the absence of better fossil
+material. Because the entire skeleton of _Presbyornis_ is known, the
+familial name Presbyornithidae may justifiably be retained and used for
+that genus.
+
+In the case of the Cretaceous birds under consideration here, we
+have decided for the time being to adopt a version of paleobotanical
+convention in recognizing a “form family” Graculavidae, which implies a
+general similarity in morphology of the constituent taxa, although the
+material available is simply not sufficient for determining phylogeny
+or key adaptations.
+
+
+
+
+=Genus Graculavus Marsh, 1872=
+
+
+  _Limosavis_ Shufeldt, 1915:19.
+
+Type-Species.--_Graculavus velox_ Marsh 1872, by subsequent designation
+(Hay, 1902).
+
+Included Species.--Type species only.
+
+Remarks.--_Limosavis_ Shufeldt, 1915, substitute name for _Graculavus_,
+considered inappropriate; not used in direct combination with any
+specific name when originally proposed.
+
+
+=_Graculavus velox_ Marsh, 1872=
+
+Figure 4 _b,d,f,h_
+
+
+  _Graculavus velox_ Marsh, 1872:363.
+
+  _Limosavis velox_ (Marsh).--Lambrecht, 1933:546.
+
+Holotype.--Proximal end of left humerus, YPM 855.
+
+Locality and Horizon.--From Hornerstown, Upper Freehold Township,
+Monmouth County, New Jersey; collected by J.G. Meirs; Late Cretaceous
+(Maastrichtian), either basal Hornerstown Formation or Navesink
+Formation.
+
+Measurements (in mm).--Proximal end of humerus, YPM 855: proximal width
+through dorsal and ventral tubercles 21.1, depth through bicipital
+surface and tuberculum ventrale 11.6, depth of head 5.7.
+
+[Illustration: Figure 4.--Proximal ends of left humeri of _Graculavus
+velox_ and related birds: _a_, _Esacus magnirostris_ (Burhinidae), USNM
+19649; _b,d,f,h_, _Graculavus velox_, holotype, YPM 855; _c,e,g, i_,
+_Presbyornis_ sp., UCMP 126205. _a-c_, anconal view; _d,e_, anconal
+view with distal portion tilted upwards; _f,g_, palmar view; _h,i_,
+proximal view. All figures × 2; specimens coated with ammonium chloride
+to enhance detail.]
+
+Comparisons.--Marsh (1872) originally described this as a species of
+cormorant (Phalacrocoracidae, Pelecaniformes) and included the species
+_G. pumilis_ Marsh, 1872, also from New Jersey, and _G. anceps_ Marsh,
+1872, from the Late Cretaceous of Kansas, in the same genus. Marsh
+(1880) later referred _G. anceps_ to the genus _Ichthyornis_, where it
+has remained. Shufeldt (1915:17-19) went into considerable detail to
+show that the species of _Graculavus_, particularly _G. velox_, were
+not cormorants, instead being limicoline shorebirds with similarities
+to the Burhinidae, Haematopodidae, and Charadriidae. Accordingly,
+Lambrecht (1933:540, 546) placed these taxa among the charadriiform
+birds, but rather inexplicably listed velox under Shufeldt's substitute
+name _Limosavis_ in the suborder Laro-Limicolae, while retaining
+_pumilis_ in the genus _Graculavus_ in the suborder Limicolae.
+Brodkorb (1963b:249) ignored Shufeldt's assessment of relationships
+and placed _G. velox_ and _G. pumilis_ in the Phalacrocoracidae,
+subfamily Graculavinae. Cracraft (1972) did not examine the specimens
+attributed to _Graculavus_ in his consideration of the relationships of
+_Telmatornis_.
+
+We have synonymized _Graculavus pumilis_ Marsh, 1872, with
+_Telmatornis priscus_ Marsh, 1870, and discuss below the characters
+by which _Graculavus_ (restricted to _G. velox_) may be separated
+from _Telmatornis_. Shufeldt (1915) has already presented adequate
+evidence that _Graculavus_ is not a cormorant and is instead a
+charadriiform. The following combination of characters of the proximal
+end of the humerus is shared by _Graculavus_ and _Presbyornis_ and
+distinguishes these genera from other Charadriiformes: (1) lack of
+a distinct lanceolate scar for M. coracobrachialis cranialis; (2)
+lack of a distinctly excavated second (dorsal) tricipital fossa; (3)
+presence of a distinct tumescence in the proximoventral portion of the
+tricipital fossa; scars for (4) M. scapulohumeralis caudalis and (5)
+M. scapulohumeralis cranialis very large and distinct; (6) attachment
+of M. latissimus dorsi cranialis a well-defined, raised protuberance
+situated dorsal to the median ridge of the shaft; (7) tuberculum
+dorsale well defined, distinctly pointed. In most of the preceding
+characters that it preserves, the single proximal end of humerus
+referred to _Telmatornis_ (the holotype of _G. pumilis_) agrees with
+_Graculavus_ and _Presbyornis_.
+
+Among living families, the Burhinidae are the most similar to
+_Graculavus_; both agree in characters 1, 2, 4, and 7, with certain
+species of _Burhinus_ also having characters 3 and 6 present but less
+developed. _Graculavus_ differs from Burhinus mainly in having (8) the
+head not as deep and bulbous; (9) distance from head to tuberculum
+dorsale greater; (10) tuberculum dorsale smaller, much less projecting;
+(11) tuberculum ventrale in ventral view more elongate; and (12) scar
+on tuberculum ventrale for M. coracobrachialis caudalis much larger and
+more distinct.
+
+_Graculavus_ is very similar to _Presbyornis_, agreeing with that
+genus in characters 8 and 10 but differing in characters 11 and 12
+and in (13) having the head more deeply undercut. _Presbyornis_ is
+intermediate between _Graculavus_ and the _Burhinidae_ in character 9.
+
+_Graculavus velox_ was a fairly large bird, being approximately the
+size of _Presbyornis_ cf. _pervetus_ and somewhat larger than the large
+living burhinid _Esacus magnirostris_.
+
+
+=Graculavus velox?=
+
+Figure 9_d_
+
+
+Referred Material.--Abraded right carpometacarpus consisting mainly of
+the major metacarpal, NJSM 11854.
+
+Locality and Horizon.--Collected from the main fossiliferous layer of
+the Inversand Company marl pit, Sewell, Gloucester County, New Jersey;
+Hornerstown Formation, latest Cretaceous (Maastrichtian); collected 25
+February 1976 by David C. Parris.
+
+Measurements (in mm).--Length 51.0.
+
+Comparisons.--Nothing can be said about this very poor specimen except
+that it came from a bird with a carpometacarpus slightly larger than
+that of a modern specimen of the burhinid _Esacus magnirostris_.
+Because _Graculavus velox_ is the only bird yet known in the New Jersey
+fossil fauna that was of this same size, the present specimen may
+possibly be referable to that species.
+
+
+
+
+=Genus _Telmatornis_ Marsh, 1870=
+
+
+Type-Species.--_Telmatornis priscus_ Marsh, 1870, by subsequent
+designation (Hay, 1902:528).
+
+Included Species.--Type species only.
+
+
+=_Telmatornis priscus_ Marsh, 1870=
+
+Figures 5_b-j_, 6_c,e,g_, 7_a,d,g,j,n_
+
+
+  _Telmatornis priscus_ Marsh, 1870:210.
+
+  _Telmatornis affinis_ Marsh, 1870:211.
+
+  _Graculavus pumilis_ Marsh, 1872:364.
+
+  _?Palaeotringa vetus_ Marsh, 1870:209.
+
+Holotype.--Distal end of left humerus (Figure 5_e,h_), YPM 840;
+collected in pits of the Cream Ridge Marl Company, near Hornerstown,
+New Jersey by J.G. Meirs. Navesink Formation, Maastrichtian, Late
+Cretaceous (Baird, 1967).
+
+Referred Specimens.--Distal end of right humerus (Figure 5_f,g_),
+YPM 845 (holotype of _Telmatornis affinis_ Marsh 1870); same data as
+holotype of _T. priscus_.
+
+Proximal end of right humerus (Figure 5_b-d_), YPM 850, with distal
+end of right carpometacarpus (Figure 5_i_) and several fragments of
+shafts of long bones apparently associated (holotypical material of
+_Graculavus pumilis_ Marsh, 1872); collected near Hornerstown, New
+Jersey, by J.G. Meirs; probably from the basal Hornerstown Formation,
+Maastrichtian, Late Cretaceous.
+
+Distal end of left tibiotarsus (Figure 7_n_), ANSP 13361 (holotype
+of _Palaeotringa vetus_), collected near Arneytown, on the
+Monmouth-Burlington county boundary, New Jersey; Basal Hornerstown
+Formation, Maastrichtian, Late Cretaceous (Baird, 1967).
+
+Left humerus lacking proximal end (Figure 6_c,e,g_), ANSP 15360;
+collected in 1971 from the Inversand Company marl pit, Sewell,
+Gloucester County, New Jersey, by Keith Madden. Basal Hornerstown
+Formation, Maastrichtian, Late Cretaceous.
+
+Distal end of left tarsometatarsus (Figure 7_d,g,j_), NJSM 11853;
+collected 27 March 1975 by David C. Parris from the main fossiliferous
+layer of the Inversand Company marl pit.
+
+[Illustration: Figure 5.--Wing elements of _Burhinus_ and
+_Telmatornis_. _a_, _Burhinus vermiculatus_ (USNM 488870), proximal end
+of right humerus, anconal view, _b-d_, Telmatornis priscus (holotype
+of _Graculavus pumilis_, YPM 850), proximal end of right humerus
+(_b_, anconal view; _c_, palmar view; _d_, proximal view), _e,h_, _T.
+priscus_ (holotype, YPM 840), distal end of left humerus (_e_, anconal
+view; _h_, palmar view), _f,g_, _T. priscus_ (holotype of _Telmatornis
+affinis_, YPM 845), distal end of right humerus (_f_, aconal view; _g_,
+palmar view), _i_, _T. priscus_ (associated with YPM 850), distal end
+of left carpometacarpus, dorsal view; _j_, _T. priscus_ (NJSM 11900),
+proximal end of right ulna. (All figures x 2; specimens coated with
+ammonium chloride to enhance detail.)]
+
+[Illustration: Figure 6.--Humeri of _Anatalavis_, new genus, and
+_Telmatornis_. _a_, _Anatalavis rex_ (holotype, YPM 902), right
+humerus, palmar view; × 1.5. _b,d,f_, _A. rex_, (YPM 948), left
+humerus (_b_, palmar view, × 1.5; _d_, enlarged, anconal view, × 2;
+_f_, enlarged, palmar view, × 2). _c,e,g_, _Telmatornis priscus_,
+(ANSP 15360), left humerus (_c_, palmar view, × 1.5; _e_, enlarged,
+anconal view, × 2; _g_, enlarged, palmar view, × 2); _h_, _Burhinus
+vermiculatus_ (USNM 430630), left humerus, palmar view, × 2. (Specimens
+coated with ammonium chloride to enhance detail.)]
+
+[Illustration: Figure 7.--Hindlimb elements. _a,b_, Right pedal
+phalanx 1 of digit II (_a_, _Telmatornis priscus_, ANSP 15541; _b_,
+_Presbyornis_ sp., USNM uncatalogued; part of associated foot), _c-k_,
+Distal end of left tarsometatarsus, anterior, posterior, and distal
+views, respectively (_c,f,i_, _Presbyornis_ sp., UCMP 126178; _d,g,j_,
+_T. priscus_, NJSM 11853; _e,h,k_, _Burhinus vermiculalus_, USNM
+488870). _l-n_, Distal portions of left tibiotarsi (_l_, _Palaeotringa
+littoralis_, holotype, YPM 830; _m_, _P. vagans_, holotype, YPM 835;
+_n_, _T. priscus_, holotype of _P. vetus_, ANSP 13361). (All figures ×
+2; specimens coated with ammonium chloride to enhance detail.)]
+
+Right pedal phalanx 1 of digit II (Figure 7_a_), ANSP 15541; collected
+in 1972 by Richard White at the Inversand Company marl pit.
+
+Proximal end of right ulna (Figure 5_j_), NJSM 11900; collected 14
+July 1978 from spoil piles near junction of Routes 537 and 539, near
+Hornerstown, Upper Freehold Township, Monmouth County, New Jersey, by
+Gerard R. Case; presumably from the Hornerstown Formation but whether
+from Cretaceous or Tertiary sediments is not known.
+
+Miller (1955) lists an additional specimen from near Arneytown under
+the name _Palaeotringa vetus_ (YPM 2808). This was cataloged in 1937
+as “part of a tibia” of “Eocene” age but the specimen cannot now be
+located in the Yale collections and its age and identity must be
+considered very doubtful.
+
+Measurements (in mm).--Distal ends of humeri (YPM 840, YPM 845, ANSP
+15360, respectively): distal width 10.9, 10.1, 11.3; depth through
+dorsal condyle 5.7, 5.2, 5.5; width of shaft at proximal extent of
+brachial fossa 6.3, 5.5,6.4; length from distal end of pectoral crest
+to ventral condyle (ANSP 15360 only) 45.1; shaft width at midpoint
+(ANSP 15360 only) 4.7.
+
+Proximal end of humerus YPM 850: proximal width through dorsal and
+ventral tubercles 13.1; depth through bicipital surface and ventral
+condyle 7.5, depth of head approximately 3.5.
+
+Proximal end of ulna NJSM 11900: depth through dorsal cotyla 7.0.
+
+Distal end of carpometacarpus YPM 840: depth at distal end 5.3; shaft
+width 2.9.
+
+Distal end of tibiotarsus ANSP 13361: shaft width 3.5, approximate
+depth through medial condyle 6.9.
+
+Distal end of tarsometatarsus NJSM 11853: distal width 6.1+; shaft
+width 2.7.
+
+Pedal phalanx 1 of digit II: length 14.6; proximal width 3.0.
+
+Comparisons.--This is evidently the most abundant bird in the
+New Jersey Cretaceous deposits. Hitherto it had been known only
+from the two distal ends of humeri that are the holotypes of
+_Telmatornis priscus_ and _T. affinis_. Marsh (1870) did not clearly
+place _Telmatornis_ with any living family but mentioned species
+of Rallidae, Scolopacidae, and Ardeidae in his comparisons. Hay
+(1902:528) listed the genus under the Rallidae. Shufeldt (1915:26)
+considered that _Telmatornis_ was not a heron but might be related
+either to rail-like or charadriiform birds, the material, according
+to him, being insufficient for positive determination. He (1915:27)
+also described a larger species, _Telmatornis rex_, which we have
+removed to a new genus. Lambrecht (1933:489) maintained _Telmatornis_
+as a genus incertae sedis in his order Ralliformes. Brodkorb (1967)
+placed the genus in the family Rallidae, subfamily Rallinae, without
+comment. Cracraft (1972) established that Telmatornis did not belong
+in the Rallidae but was instead very similar to the Burhinidae. He
+synonymized _T. affinis_ with _T. priscus_ and created a new family,
+Telmatornithidae, for _T. priscus_ and _T. rex_.
+
+We concur in synonymizing _T. affinis_ with _T. priscus_. The holotypes
+and the new specimen of humerus (ANSP 15360), which is instructive in
+that it preserves much more of the shaft (Figure 6_c_), are indeed
+very similar to the humeri in the Burhinidae. In size they are closely
+comparable to the small living species _Burhinus vermiculatus_ (cf.
+Figure 6_g,h_). The fossils differ from _Burhinus_ in having (1) the
+shaft less curved, both in dorsal and in lateral views; (2) brachial
+depression shorter, wider, and slightly more distally located; in
+distal view (3) the ventral condyle smaller and less rounded; and (4)
+the dorsal tricipital groove shallower.
+
+The distal portion of the humerus of _Telmatornis_ is similar to that
+in _Presbyornis_ but differs in having (1) the dorsal condyle decidedly
+more elongate; (2) olecranal fossa much shallower; (3) ventral
+epicondyle in ventral view less distinctly demarcated but (4) more
+protrudent in lateral or medial view.
+
+The proximal end of humerus (YPM 850) that is the holotype of
+_Graculavus pumilis_ was considered by Shufeldt (1915:19) definitely
+to be from a limicoline charadriiform. It is from a bird exactly the
+size of _Telmatornis priscus_ and its coloration and preservation would
+not be incompatible with its being the opposite end of the same bone
+as the holotype of _T. affinis_ (Figure 5_b,c,f,g_). The following
+differences between the holotypical humeri of _G. velox_ and _“G.”
+pumilis_ establish that these belong to different genera: (1) in
+_velox_ the area dorsal to the ventral tubercle and distal to the head
+is much more excavated, undercutting the head; (2) the dorsal tubercle
+is more pronounced; (3) there is a distinct excavation distomedial to
+the ventral tubercle, lacking in _pumilis_; (4) the ventral tubercle in
+ventral view is much more produced in _velox_ than in _pumilis_.
+
+The holotype of _G. pumilis_ is very similar to the humerus in the
+Burhinidae but differs from that family and agrees with _Graculavus_
+in characters 8, 9, and 10 (p. 6). It differs further from the
+Burhinidae in having the area for the attachment of M. scapulohumeralis
+caudalis extending farther distally in ventral view. It differs from
+_Presbyornis_ mainly in lacking the excavation to and undercutting
+the head. Because pumilis is not congeneric with _Graculavus velox_
+and because of its size and similarities with the Burhinidae and
+_Presbyornis_, we have no hesitation about considering Graculavus
+pumilis Marsh, 1872, to be a junior subjective synonym of _Telmatornis
+priscus_ Marsh, 1870.
+
+The proximal end of an ulna, NJSM 11900 (Figure 5_j_), is from a bird
+the size of _Burhinus vermiculatus_ and not too dissimilar to it
+except that the shaft is more robust in the fossil. The specimen is
+too imperfect to merit detailed study and is referred to Telmatornis
+priscus only on size and probability.
+
+The very fragmentary distal end of carpometacarpus associated with the
+type of _G. pumilis_ (Figure 5_i_) is slightly larger and more robust
+than in _Burhinus vermiculatus_, but not so much as to be incompatible
+with _T. priscus_. Compared to _Burhinus_ (1) the symphysial area
+is deeper and (2) the articular surface for the major digit is
+proportionately larger, the specimen being somewhat more similar to the
+carpometacarpus in _Presbyornis_.
+
+The three specimens of _Palaeotringa_ Marsh from the Cretaceous of New
+Jersey are based on poorly preserved distal ends of tibiotarsi. The
+holotype of _Palaeotringa vetus_ Marsh, 1870 (Figure 7_n_) is similar
+in size to the comparable element in _Burhinus vermiculatus_, though
+with a relatively more slender shaft, and hence is from a bird the
+size of _T. priscus_, being smaller than any of the other species of
+_Palaeotringa_. It is more similar to _Presbyornis_ than to _Burhinus_.
+Because it is from a charadriiform the size of _T. priscus_, as first
+revisers we tentatively consider _Palaeotringa vetus_ Marsh, 1870,
+to be a subjective synonym of _Telmatornis priscus_ Marsh, 1870. The
+only alternative would be to consign it to Aves incertae sedis. It is
+of passing historical interest to recall Marsh's (1870:209) comment
+that the type of _Palaeotringa vetus_ “apparently was the first fossil
+bird-bone discovered in this country,” having been mentioned both by
+Morton (1834) and Harlan (1835) as belonging to the genus _Scolopax_
+(Charadriiformes: Scolopacidae).
+
+The distal portion of tarsometatarsus NJSM 11853 (Figure 7_d,g,f_)
+is unfortunately quite abraded. It is from a small charadriiform and
+has a shaft width about the same as in _Burhinus vermiculatus_. If
+this fossil came from an individual of _Telmatornis priscus_, as we
+assume, _T. priscus_ being the smallest and most abundant “graculavid”
+in the New Jersey Cretaceous deposits, then it is a very instructive
+specimen, for it differs much more from Burhinus than does the humerus
+of Telmatornis. NJSM 11853 differs from the Burhinidae and agrees with
+_Presbyornis_ in having (1) the distal foramen proportionately large
+and oval, not very small and circular; (2) a large, well-developed scar
+for the hallux (hallux absent in Burhinidae); (3) external trochlea
+proximodistally more elongate. That which remains of the inner trochlea
+indicates that it was (1) somewhat more posteriorly retracted than
+in _Burhinus_ but (2) not nearly as elevated and retracted as in
+_Presbyornis_.
+
+Pedal phalanx ANSP 15541 (Figure 7_a_) is from a bird the size of _T.
+priscus_. This specimen is much longer and more slender than phalanx 1
+of digit II in _Burhinus vermiculatus_ but has almost exactly the shape
+and proportions of the same element in _Presbyornis_ (Figure 7_b_),
+although being much smaller. Although its assignment to _Telmatornis_
+is very tentative, the length of this element seems to indicate a
+wading bird as opposed to one with the terrestrially adapted shorter
+toes of the Burhinidae.
+
+
+
+
+=Genus _Anatalavis_, new genus=
+
+
+Type-Species.--Telmatornis rex Shufeldt, 1915.
+
+Included Species.--Type-species only.
+
+Diagnosis.--Differs from _Telmatornis_ and _Presbyornis_ in (1) having
+the shaft very short, stout, and much more curved, both in dorsoventral
+and lateromedial views. Differs from _Telmatornis_ and agrees with
+_Presbyornis_ in (2) having the distal end in distal view deeper, with
+(3) a narrower and much deeper olecranal fossa. Also, (4) the brachial
+depression is smaller and narrower than in _Telmatornis_ but not as
+deep, nor as proximally situated as in _Presbyornis_.
+
+Etymology.--“Duck-winged bird,” from Latin _anas_, duck, _ala_, wing,
+and _avis_, bird. The gender is feminine.
+
+
+=_Anatalavis rex_ (Shufeldt, 1915), new combination=
+
+Figure 6_a,b,d_J
+
+
+  Telmatornis rex Shufeldt, 1915:27, fig. 101.
+
+Holotype.--Right humerus lacking proximal end, YPM 902 (Figure 6_a_).
+
+Locality and Horizon.--From Hornerstown, Upper Freehold Township,
+Monmouth County, New Jersey; collected by W. Ross in 1878; probably
+Late Cretaceous (Maastrichtian), basal Hornerstown Formation.
+
+Referred Specimen.--Paratypical left humerus lacking proximal end,
+YPM 948 (Figure 6_b,d,f_). From Hornerstown, Upper Freehold Township,
+Monmouth County, New Jersey; collected by J.G. Meirs in 1869; probably
+Late Cretaceous (Maastrichtian), basal Hornerstown Formation.
+
+Measurements (in mm).--Humeri (YPM 902, YPM 948, respectively): distal
+width 13.6, 13.2; depth through dorsal condyle 7.3, 7.5; width of shaft
+at proximal extent of brachial fossa 7.2,7.5; length from distal end of
+pectoral crest to ventral condyle 49.1, 50.7; shaft width at midpoint
+5.4, 5.6.
+
+Remarks.--Shufeldt (1915:27) described this species in the same genus
+as _T. priscus_ and _T. affinis_ but correctly noted that the humerus
+“is a short one ... its sigmoid curve very pronounced.” Cracraft
+(1972:41) considered that “except for its decidedly larger size, _T.
+rex_ does not differ from _T. priscus_ in any significant features.”
+In fairness to these authors, it should be noted that the great
+differences between Anatalavis and Telmatornis are much more apparent
+in comparisons with the new humerus of _T. priscus_ (ANSP 15360), which
+preserves much more of the shaft than the previously known specimens.
+Both Shufeldt and Cracraft considered YPM 948 to belong to the same
+species as the holotype of _T. rex_, and we concur.
+
+The specimens of _A. rex_ are not comparable with the type of
+_Graculavus velox_, which was from a larger bird. _Anatalavis rex_
+was a larger, heavier bird than _Telmatornis priscus_, with the
+humerus remarkably short and robust, so that the overall length of the
+humerus in _A. rex_ would scarcely have exceeded that of _T. priscus_.
+_Anatalavis_ must have been a bird of considerably different flight
+habits from _Telmatornis_ or _Presbyornis_. The overall appearance of
+its humerus is in fact rather duck-like, except for the more expanded
+distal end. It is still quite short and stout even for a duck.
+
+
+=Genus _Laornis_ Marsh, 1870=
+
+
+Type-Species.--_Laornis edvardsianus_ Marsh, 1870, by monotypy.
+
+Included Species.--Type species only.
+
+
+=_Laornis edvardsianus_ Marsh, 1870=
+
+Figure 8_a,c,e_
+
+
+  _Laornis edvardsianus_ Marsh, 1870:206.
+
+Holotype.--Distal end of right tibiotarsus, YPM 820.
+
+Locality and Horizon.--From pits of the Pemberton Marl Company at
+Birmingham, Burlington County, New Jersey; collected by J.C. Gaskill;
+Late Cretaceous (Maastrichtian), basal Hornerstown Formation.
+
+Measurements (in mm).--Distal end of tibiotarsus, YPM 820: distal width
+across condyles 22.6, depth of external condyle 19.3, depth of internal
+condyle 21.1, least shaft width 11.7, least shaft depth 9.6.
+
+Comparisons.--The very large size of this specimen has undoubtedly
+been a factor in misleading those who have attempted to identify
+it, as it came from a bird the size of a swan or a large crane.
+The affinities of this fossil have long been questioned and the
+species has for most of its history been in limbo. Marsh (1870:207)
+concluded only that _Laornis_ “shows a strong resemblance in several
+respects to the _Lamellirostres_ [Anseriformes], and also to the
+_Longipennes_ [Charadriiformes (Lari) and Procellariiformes], but
+differs essentially from the typical forms of both of these groups.” In
+its own nebulous way, this assessment is concordant with our placement
+of _Laornis_ in a charadriiform group that was near the ancestry of
+the Anseriformes. Doubtless only on the strength of Marsh's comments.
+Cope (1869-1870:237) placed _Laornis_ in the “Lamellirostres.” Hay
+(1902:531) included _Laornis_ in the Anatidae. Shufeldt (1915:23)
+hardly clarified matters when he characterized _Laornis_ as “at least
+one of the generalized types of waders,” being a “remarkable type,
+which seems to have, judging from this piece of the tibiotarsus,
+Turkey, Swan, Crane, and even other groups all combined in it.”
+Lambrecht (1933:526) included _Laornis_ as a genus incertae sedis in
+his “Telmatoformes,” between the Aramidae and Otididae.
+
+The type was restudied by Cracraft (1973:46) who put _Laornis_ in the
+Gruiformes and created a new family (Laornithidae) and superfamily
+(Laornithoidea) for it. He included it in his suborder Ralli, the only
+other member of which was the Rallidae. After preliminary comparisons,
+Olson (1974) ventured that _Laornis_ belonged in the suborder Lari
+of the Charadriiformes. Brodkorb (1978:214) listed _Laornis_ under
+Aves incertae sedis and guessed that it might be related to the
+Pelecaniformes.
+
+Except for the extreme difference in size, the tibiotarsus of _Laornis_
+is in many respects similar to that of _Presbyornis_ (Figure 8),
+especially in (1) the shape and position of the tubercle proximal to
+the external condyle; (2) the transverse pit in the intercondylar
+sulcus; and (3) the broad, shallow intercondylar sulcus as seen in
+distal view. It differs in a seemingly minor but quite characteristic
+feature, the large nutrient foramen situated in the groove for M.
+peroneus brevis (Figure 8_c_). This is absent in _Presbyornis_ but is
+present in both of the tibiotarsi from the Cretaceous of New Jersey
+in which that portion of the bone is preserved (the holotypes of
+Palaeotringa littoralis and _P. vagans_), as well as in a tibiotarsus
+(Science Museum of Minnesota P75.22.25) from the type-locality of
+_Dakotornis cooperi_ Erickson, 1975, that may be referable to that
+graculavid-like species. The foramen in the peroneus brevis groove
+may also be found in at least some specimens of Stercorariidae, which
+is partly what led Olson (1974) to suggest a relationship between
+_Laornis_ and the Lari. _Laornis_ appears to have been an extremely
+large member of the “transitional Charadriiformes,” though where its
+relationships may lie within that group cannot be determined.
+
+
+
+
+=Genus _Palaeotringa_ Marsh, 1870=
+
+
+Type-Species.--_Palaeotringa littoralis_ Marsh, 1870; by subsequent
+designation (Hay, 1902:527).
+
+Included Species.--_Palaeotringa littoralis_ Marsh, 1870, and
+_Palaeotringa vagans_ Marsh, 1872.
+
+
+=_Palaeotringa littoralis_ Marsh, 1870=
+
+Figure 7_l_
+
+
+  _Palaeotringa littoralis_ Marsh, 1870:208.
+
+Holotype.--Distal portion of left tibiotarsus lacking most of the inner
+condyle, YPM 830.
+
+Locality and Horizon.--Collected in the “middle marl beds” by Nicolas
+Wain from his marl pits near Hornerstown, New Jersey; Late Cretaceous
+(Maastrichtian), either basal Hornerstown Formation or Navesink
+Formation.
+
+Measurements (in mm).--Depth through outer condyle 8.2; width of shaft
+just proximal to outer condyle 7.0.
+
+Comparisons.--This specimen and that of _P. vagans_ are too fragmentary
+for useful comparison. Both have the foramen in the groove for
+M. peroneus brevis, mentioned above. Their overall similarity to
+_Presbyornis_ and to charadriiform birds in general justifies retaining
+them with the other “graculavids” but other than this little else can
+be said. In size, _Palaeotringa littoralis_ would have been about
+equal to _Burhinus bistriatus vocifer_ and smaller than _Esacus
+magnirostris_. Hence it would seem to be too small to belong to the
+same species as _Graculavus velox_ and is definitely too large to be
+referable to _Telmatornis priscus_.
+
+[Illustration: Figure 8.--Distal end of right tibiotarsus of (_a,c,e_)
+_Laornis edvardsianus_, holotype, YPM 820, compared with (_b,d,f_) the
+same element enlarged in _Presbyornis_ sp., UW BQ305: _a,b_, anterior
+views; _c,d_, lateral views (note large foramen in peroneus brevis
+groove of _Laornis_); _e,f_, distal views. (_a,c,e_, × 1.5, _b,d,f_, ×
+4; specimens coated with ammonium chloride to enhance detail.)]
+
+
+=_Palaeotringa littoralis?_=
+
+Figure 9_a_
+
+
+Referred Material.--Distal portion of a left humerus, NJSM 11303.
+
+Locality and Horizon.--Collected from the main fossiliferous layer of
+the Inversand Company marl pit, Sewell, Gloucester County, New Jersey;
+Hornerstown Formation, latest Cretaceous (Maastrichtian); collected 27
+September 1972 by David C. Parris.
+
+Measurements (in mm).--Distal width 12.8, depth through dorsal condyle
+6.9, width of shaft at proximal extent of brachial fossa 8.2.
+
+Comparisons.--This interesting specimen, although considerably worn,
+clearly has the overall “graculavid” morphology but shows sufficient
+differences from the humeri of _Telmatornis_ or _Anatalavis_ to warrant
+its generic separation from them. In size it is about equal to the
+modern form _Burhinus bistriatus vocifer_ and hence would be compatible
+with _P. littoralis_. It differs from _Telmatornis_, _Anatalavis_, or
+_Presbyornis_, and is more similar to _Burhinus_ in having (1) the
+brachial depression wider, shallower, and more proximally situated.
+Although affected by wear, (2) the dorsal condyle is nevertheless
+considerably smaller and not produced as far proximally as in any of
+the preceding genera, although _Presbyornis_ is more similar in this
+respect than the others. In distal view the specimen is more similar
+to _Presbyornis_ than to the other Cretaceous humeri, although (3) the
+olecranal fossa is shallower. If this specimen is correctly referred
+to _Palaeotringa_, it shows that genus to be distinct from any of the
+others yet known in the fauna except possibly _Graculavus_, for which
+the distal end of the humerus is unknown.
+
+
+=_Palaeotringa vagans_ Marsh, 1872=
+
+Figure 7_m_
+
+
+  _Palaeotringa vagans_ Marsh, 1872:365.
+
+Holotype.--Fragmented distal two-thirds of a left tibiotarsus lacking
+the external condyle and the anterior portion of the internal condyle,
+YPM 835.
+
+Locality and Horizon.--From Hornerstown, Upper Freehold Township,
+Monmouth County, New Jersey; collected by J.G. Meirs; Late Cretaceous
+(Maastrichtian), “about ten feet below the surface of the marl” (Marsh,
+1872:365), either basal Hornerstown Formation or Navesink Formation.
+
+Measurements (in mm).--Width of shaft just proximal to external condyle
+5.8.
+
+Comparisons.--This very unsatisfactory specimen comes from a species
+smaller than _P. littoralis_ and larger than _P. vetus_ (= _Telmatornis
+priscus_). It differs from the latter and agrees with _P. littoralis_
+in having the distal tendinal opening of a flattened oval shape, rather
+than decidedly rounded. If we have correctly referred _P. vetus_ to
+_Telmatornis priscus_, then it is certain that neither of the other
+two species of _Palaeotringa_ can be referred to _Telmatornis_. In _P.
+vagans_ the tendinal groove appears to be much narrower and the bridge
+much deeper than in _P. littoralis_, but this is in part due to damage
+and possible immaturity in the latter specimen, so it remains possible
+that these species are in fact congeneric. The species _P. vagans_ can
+be retained as it is smaller than any of the other graculavids in the
+fauna except _T. priscus_, from which it is generically distinct.
+
+
+=Graculavidae, Genus and Species Indeterminate=
+
+Figure 9_b,c_
+
+
+Referred Material.--Abraded distal end of left humerus and associated
+proximal portion of humeral shaft, proximal end of radius, and fragment
+of shaft of ulna, NJSM 11302.
+
+Locality and Horizon.--Collected from the main fossiliferous layer of
+the Inversand Company marl pit, Sewell, Gloucester County, New Jersey;
+Hornerstown Formation, latest Cretaceous (Maastrichtian); collected 15
+August 1972 by David C. Parris.
+
+Measurements (in mm).--Humerus: distal width 19 mm, depth through
+dorsal condyle 9.7, width of shaft at proximal extent of brachial fossa
+11.0; greatest proximal diameter of radius 7.0.
+
+Comparisons.--The distal end of the humerus is the only reasonably
+diagnostic element in this assortment and indicates a large, robust
+species that would have exceeded in size any of the others known in
+this Cretaceous avifauna except _Laornis edvardsianus_, which was
+much larger still. In size this bird would have approximated the
+modern flamingo _Phoeniconaias minor_, which it somewhat resembles in
+morphology as well. The humerus is not greatly different from that
+of other Graculavidae in general aspect but is distinct in having a
+larger, much deeper, and more proximally situated brachial depression.
+It represents a species distinct from any of the others yet known
+in the fauna and is certainly generically distinct from all except
+possibly _Graculavus_, for which comparable elements are unknown.
+
+
+
+
+=Order Procellariiformes?=
+
+
+Among the newly collected material from the Inversand pit is a singular
+avian humerus that cannot be assigned to the Graculavidae or to
+any other known family, fossil or modern. Although it is generally
+inadvisable to name even Paleogene birds on single elements, to say
+nothing of Cretaceous ones, the specimen under consideration here is
+superior to any of the other avian fossils yet collected from the
+Cretaceous of New Jersey, both in preservation and in diagnostic
+qualities, and it would seem incongruous to leave it innominate when
+practically all the other fragments from the same deposits have
+received names.
+
+[Illustration: Figure 9.--Miscellaneous elements, _a_, _Palaeotringa
+littoralis?_ (NJSM 11303), distal end of left humerus, palmar view;
+_b_, Graculavidae, genus and species indeterminate (NJSM 11302),
+distal end of left humerus, palmar view; _c_, proximal end of
+radius associated with _b_; _d_, _Graculavus velox?_ (NJSM 11854),
+right carpometacarpus; _e,f_, Procellariiformes?, genus and species
+indeterminate (ANSP 15713), distal end of left ulna (_e_, external
+view;/dorsal view); _g_, Aves, incertae sedis (NJSM 12119), distal end
+of left femur, posterior view. (_a,b,c,d_, × 2; _e,f,g_, × 5; specimens
+coated with ammonium chloride to enhance detail.)]
+
+The most distinctive features of this specimen are the deep brachial
+depression and the incipient ectepicondylar spur, thus calling to mind
+both the Lari (Charadriiformes) and the Procellariiformes among modern
+birds. Among the Pelecaniformes it also bears a resemblance to the
+Phaethontidae and especially to the Eocene frigatebird _Limnofregata_
+(Fregatidae) (Olson, 1977).
+
+
+
+
+=Family Tytthostonychidae, new family=
+
+
+Type Genus.--_Tytthostonyx_, new genus.
+
+Included Genera.--Type genus only.
+
+Diagnosis.--Differs from the Lari and other Charadriiformes in (1)
+the low, narrow head; (2) the very large, long pectoral crest; (3)
+the virtual absence of the incisura capitis or any excavation for M.
+coracobrachialis cranialis; and (4) the shallow, indistinct tricipital
+grooves. It agrees with the Procellariiformes and differs from
+_Phaethon_ and _Limnofregata_ in characters 2 and 4, and in the large,
+deeply excavated brachial depression. The ectepicondylar spur is better
+developed than in any of the Pelecaniformes but not as well developed
+as in the Procellariiformes. The apparently very broad pectoral crest
+extends much farther distally than in any of the Procellariiformes or
+even in _Limnofregata_, to which the fossil is somewhat more similar
+in this respect. Tytthostonyx differs from any of the taxa compared in
+having the ventral condyle very rounded, extending distally well past
+the dorsal condyle.
+
+
+
+
+=Genus _Tytthostonyx_, new genus=
+
+
+Type-Species.--_Tytthostonyx glauconiticus_, new species.
+
+Included Species.--Type species only.
+
+Diagnosis.--As for the family.
+
+Etymology.--Greek, _tytthos_, little, plus _stonyx_, any sharp point.
+The name is masculine in gender and refers to the small, presumably
+rudimentary, ectepicondylar spur. It should not be confused with the
+coleopteran genus _Tytthonyx_, based on _onyx_, claw.
+
+
+=_Tytthostonyx glauconiticus_, new species=
+
+Figures 10, 11
+
+
+Holotype.--Right humerus lacking the ventral tubercle, portions of the
+pectoral crest, and other parts of the proximal end, where partially
+reconstructed, NJSM 11341.
+
+Locality and Horizon.--Main fossiliferous layer of the Inversand
+Company marl pit, Sewell, Gloucester County, New Jersey; basal portion
+of the Hornerstown Formation, latest Cretaceous (Maastrichtian);
+collected 11 October 1973 by David C. Parris.
+
+Measurements of Holotype (in mm).--Length as reconstructed, 110; width
+and depth of shaft at midpoint 7.0 × 5.6; distal width 14.8; depth
+through dorsal condyle 8.7.
+
+Etymology.--From Latin, _glaucus_ (Greek, _glaukos_), bluish green
+or gray, sea-colored, applied to greensands because of their color,
+although appropriate because of their marine origins as well; in
+reference to the holotype having been recovered from beds of glauconite.
+
+Remarks.--A possible relationship between the Procellariiformes and
+Pelecaniformes has been previously suggested (Sibley and Ahlquist,
+1972:70; Olson, 1985:142), and among the pelecaniform taxa most often
+mentioned as being procellariiform-like are the Fregatidae. It is
+tempting to regard the humerus of _Tytthostonyx_ as being similar
+to that possessed by the ancestral stock that gave rise to the
+Procellariiformes. Its similarities also to the Eocene frigatebird
+_Limnofregata_ would thus be seen as corroborating the primitiveness
+of the Fregatidae within the Pelecaniformes. Whereas _Tytthostonyx_
+definitely has not achieved the highly distinctive and presumably
+derived morphology of the humerus of modern Procellariiformes, the
+incipient development of the ectepicondylar spur and deep brachial
+depression could be interpreted as tending in that direction.
+
+On the other hand, we must admit that we are dealing with only a
+single bone and one of very great age at that, so that the risk of
+overinterpreting the fossil is correspondingly great. We can only
+discern the overall similarities of the specimen and phylogenetic
+inferences can therefore be only tentative at best.
+
+
+
+
+=Family and Genus Indeterminate=
+
+Figure 9_e,f_
+
+
+Referred Material.--Distal portion of left ulna ANSP 15713.
+
+Locality and Horizon.--Inversand Company marl pit, near Sewell,
+Gloucester County, New Jersey; Hornerstown Formation, Late Cretaceous
+(Maastrichtian); not found in situ, collected on shelf formed by “blue
+bed”; collected 31 August 1977 by Richard S. White.
+
+Measurements (in mm).--Distal width 2.6, distal depth 3.1, width and
+depth of shaft near point of break 1.8 × 1.9.
+
+Comparisons.--This specimen comes from a very small bird. The only
+modern pelagic birds in this size range are the storm-petrels of
+the family Oceanitidae and the fossil resembles this family in the
+extremely straight shaft of the ulna, the shape and depth of the
+tendinal grooves, and the relatively well-developed scars for the
+attachment of the secondaries. It differs from the Oceanitidae in
+having the ventral lip of the external condyle much more rounded and
+protrudent past the plane of the shaft, whereas the carpal tubercle in
+dorsal view is markedly smaller. On this basis, the fossil certainly
+could not be referred to the Oceanitidae and that it should be
+associated with the Procellariiformes may be doubted as well.
+
+[Illustration: Figure 10.--_Tytthostonyx glauconiticus_, new genus
+and species (holotype, NJSM 11341), right humerus: _a,b_, anconal and
+palmar views of uncoated specimen to show reconstructed areas, × 0.8;
+_c,d_, stereophotographs of coated specimen in anconal and palmar
+views, × 1.3.]
+
+[Illustration: Figure 11.--_Tytthostonyx glauconiticus_, new genus and
+species (holotype, NJSM 11341), stereophotographs of distal end of
+right humerus: _a_, anconal view; _b_, palmar view; _c_, ventral view;
+_d_, dorsal view; _e_, distal view. (All figures × 2; specimens coated
+with ammonium chloride to enhance detail.)]
+
+
+
+
+=Aves, incertae sedis=
+
+Figure 9_g_
+
+
+Referred Material.--Distal end of left femur, NJSM 12119.
+
+Locality and Horizon.--Inversand Company marl pit, Sewell, Gloucester
+County, New Jersey; from processed spoil piles, precise stratum
+unknown; collected 12 December 1981 by Cynthia Miller. Presumably
+from the Hornerstown Formation but could be either Late Cretaceous or
+Paleocene.
+
+Measurements (in mm).--Distal width 4.3, distal depth 3.8.
+
+Comparisons.--This is also from a very small bird, possibly the same
+size as the species represented by the preceding ulna (ANSP 15713;
+Figure 9_e,f_) but probably somewhat larger. It is characterized
+by an extremely well-developed tubercle for the attachment of M.
+gastrocnemius lateralis. A perfunctory perusal of modern taxa revealed
+nothing similar.
+
+
+
+
+=Discussion=
+
+
+Because the specimens treated here are avian and of Mesozoic age, it is
+almost certain that too much importance will be made of them by some
+future authors. Indeed, it will probably be years before the literature
+can be expunged of the records of presumed occurrences that arose from
+previous misidentifications of these fossils. Therefore, in an effort
+to forestall overenthusiasm for these fragments we shall present our
+own brief assessment of their significance.
+
+Unlike most other Cretaceous birds, such as the Hesperornithiformes,
+Ichthyornithiformes, and Enantiornithiformes, which represent totally
+extinct lineages (Olson, 1985), the Cretaceous birds of New Jersey are
+of essentially modern aspect. However, there are no modern families
+of birds represented in the fauna. The differences among the fossils
+suggest that at least two orders are represented, but whether any or
+all of the species can be placed in modern orders is more difficult
+to say. This stems as much from the unsatisfactory state of the
+ordinal classification of modern birds (Olson, 1981, 1985), as from
+the incompleteness of the fossils. There are certain modern birds, for
+example the Burhinidae, with sufficient similarities to some of the
+Cretaceous fossils that there would be no problem with associating them
+in the same ordinal-level taxon, though it would be more difficult to
+say which other modern families should also be included.
+
+The material is too poor to state how many families are represented
+in the fauna, although if the various members of the “form-family”
+Graculavidae were better known there can scarcely be any doubt that
+more than one family would be recognized in this group. Within
+the Graculavidae from New Jersey there appear to be six genera
+(_Graculavus_, _Telmatornis_, _Palaeotringa_, _Laornis_, _Anatalavis_,
+and an unnamed genus). These are diverse, ranging in size from the
+smallest of the modern Burhinidae to that of a large crane. The very
+short, robust, curved humeri of _Anatalavis_ indicate some diversity in
+mode of flight as well. The greatest similarity of most of these forms
+is to the early Paleogene bird _Presbyornis_, and then to the modern
+family Burhinidae. Because these two groups are very different in their
+habits and feeding adaptations we may expect that the various members
+of the Graculavidae were probably as divergent from one another as are
+_Presbyornis_ and _Burhinus_, their similarities being almost certainly
+due to the retention of primitive characters.
+
+Including the two genera and species that show some similarities to the
+Procellariiformes, along with the small indeterminate femur, the total
+avifauna from the New Jersey greensands comprises 8 or 9 genera and 9
+or 10 species. As far as can be determined, all of the birds in this
+assemblage were probably marine or littoral in habits. We certainly
+would not interpret this as indicating that waterbirds are primitive
+and that they gave rise to land birds, as suggested by Thulborn and
+Hamley (1985) in their fantastic and highly improbable conjectures as
+to the mode of life of _Archaeopteryx_. Indeed, just the opposite is
+probably the case (Olson, 1985), the lack of Late Cretaceous fossils of
+truly terrestrial or arboreal birds most likely being due to sampling
+bias.
+
+
+
+
+Appendix
+
+
+The nonavian megafauna of the main fossiliferous layer (Basal
+Hornerstown Formation), at the Inversand Company marl pit, Sewell,
+Gloucester County, New Jersey is listed below. Also found in the
+deposits were numerous coprolites of sharks and crocodilians, some
+amber, phosphatized wood, and a few seeds. Voucher specimens are in the
+collections of the New Jersey State Museum, Academy of Natural Sciences
+of Philadelphia, and Yale University (Princeton University collections).
+
+
+Brachiopoda
+
+  _Terebratulina atlantica_ (Morton)
+
+
+Gastropoda
+
+  _Gyrodes abyssinus_ (Morton)
+  _Acteon cretacea_ Gabb
+  _Anchura abrupta_ Conrad
+  _Turbinella parva_ Gabb
+  _Lunatia halli_ Gabb
+  _Pyropsis trochiformis_ (Tuomey)
+  _Volutoderma ovata_ Whitfield
+  _Turbinella subconica_ Gabb
+  _Turritella vertebroides_ Morton
+
+
+Pelecypoda
+
+  _Cardium tenuistriatum_ Whitfield
+  _Glycymeris mortoni_ (Conrad)
+  _Gryphaea convexa_ (Say)
+  _Gervilliopsis ensiformis_ (Conrad)
+  _Panopea decisa_ Conrad
+  _Veniella conradi_ Morton
+  _Crassatella vadosa_ Morton
+  _Cucullaea vulgaris_ Morton
+  _Lithophaga ripleyana_ Gabb
+  _Xylophagella irregularis_ (Gabb)
+  _Nuculana stephensoni_ Richards
+  _Etea delawarensis_ (Gabb)
+
+
+Nautiloidea
+
+  _Eutrephoceras dekayi_ (Morton)
+
+
+Ammonoidea
+
+  _Baculites ovatus_ Say
+  _Sphenodiscus lobatus_ (Tuomey)
+  _Pachydiscus_ (_Neodesmoceras_) sp.
+
+
+Crustacea
+
+  cf. _Hoploparia_ sp.
+
+
+Chondrichthyes
+
+  _Lamma appendiculata_ (Agassiz)
+  _Odontaspis cuspidata_ (Agassiz)
+  _Squalicorax pristodontus_ (Morton)
+  _Hexanchus_ sp.
+  _Edaphodon stenobryus_ (Cope)
+  _Edaphodon mirificus_ Leidy
+  _Ischyodus_ cf. _I. thurmanni_ Pictet and Campiche
+  _Squatina_ sp.
+  _Myliobatis_ cf. _M. leidyi_ Hay
+  _Ischyrhiza mira_ Leidy
+  _Rhinoptera_ sp.
+  cf. _Rhombodus levis_ Cappetta and Case
+
+
+Osteichthyes
+
+  _Enchodus_ cf. _E. ferox_ Leidy
+  _Enchodus_ cf. _E. serrulalus_ Fowler
+  _Paralbula casei_ Estes
+
+
+Chelonia
+
+  _Adocus beatus_ Leidy
+  _Osteopygis emarginatus_ Cope
+  _Taphrospys sulcatus_ (Leidy)
+  _Dollochelys atlantica_ (Zangerl)
+
+
+Crocodilia
+
+  cf. _Procaimanoidea_ sp.
+  _Hyposaurus rogersii_ Owen
+  _Thoracosaurus_ sp.
+  _Bottosaurus harlani_ Meyer
+  _Diplocynodon_ sp.
+
+
+Lacertilia
+
+  _Mosasaurus_ sp.
+  _Plioplatecarpus_ sp.
+
+
+
+
+Literature Cited
+
+
+Baird, Donald
+
+  1967. Age of Fossil Birds from the Greensands of New Jersey. _Auk_,
+       84:260-262.
+
+Brodkorb, Pierce
+
+  1963a. Birds from the Upper Cretaceous of Wyoming. _Proceedings
+       of the XIIIth International Ornithological Congress_, pages
+       55-70, 10 figures.
+
+  1963b. Catalogue of Fossil Birds, Part 1 (Archaeopterygiformes
+       through Ardeiformes). _Bulletin of the Florida Slate Museum_,
+       _Biological Sciences_, 7(4):179-293.
+
+  1967. Catalogue of Fossil Birds, Part 3 (Ralliformes,
+       Ichthyornithiformes, Charadriiformes). _Bulletin of the
+       Florida Slate Museum_, _Biological Sciences_, 11(3):99-220.
+
+  1978. Catalogue of Fossil Birds, Part 5 (Passeriformes). _Bulletin
+       of the Florida Stale Museum_, _Biological Sciences_,
+       23(3):140-228.
+
+Conrad, Timothy A.
+
+  1869. Notes on American Fossiliferous Strata. _American Journal of
+       Science_, series 2, 47:358-364.
+
+Cope, Edward Drinker
+
+  1869-1870. Synopsis of the Extinct Batrachia, Reptilia and Aves of
+       North America. _Transactions of the American Philosophical
+       Society_ [for 1871], new series, 14:252 pages, 55 figures, 14
+       plates.
+
+Cracraft, Joel
+
+  1972. A New Cretaceous Charadriiform Family. _Auk_, 89:36-46, 3
+       figures, 2 tables.
+
+  1973. Systematics and Evolution of the Gruiformes (Class Aves), 3:
+       Phylogeny of the Suborder Grues. _Bulletin of the American
+       Museum of Natural History_, 151:1-128, 51 figures, 49 tables.
+
+Erickson, Bruce R.
+
+  1975. _Dakotornis cooperi_, a New Paleocene Bird from North Dakota.
+       _Scientific Publications of the Science Museum of Minnesota_,
+       new series, 3(1):7 pages, 3 figures.
+
+Fürbringer, Max
+
+  1888. _Untersuchungen zur Morphologie und Systematik der
+       Vögel, zugleich ein Beitrag zur Anatomie der Stütz- und
+       Bewegungsorgane._ 2 volumes, 1751 pages, 30 plates. Amsterdam:
+       Von Holkema. [Issued as _Koninklijk Zoölogisch Genootschap
+       "Natura Artis Magistra," Bijdragen tot de Dierkunde_
+       (Amsterdam), 15.]
+
+Gaffney, Eugene
+
+  1975. A Revision of the Side-necked Turtle _Taphrosphys sulcatus_
+       (Leidy) from the Cretaceous of New Jersey. _American Museum
+       Novitates_, 2751:24 pages.
+
+Harlan, Richard
+
+  1835. _Medical and Physical Researches: or Original Memoirs
+       in Medicine, Surgery, Physiology, Geology, Zoology, and
+       Comparative Anatomy,_ xxxix + 9-653 pages, illustrated.
+       Philadelphia: L.R. Bailey.
+
+Hay, Oliver P.
+
+  1902. Bibliography and Catalogue of the Fossil Vertebrata of North
+       America. _Bulletin of the United States Geological Survey_,
+       179:868 pages.
+
+Howard, Hildegarde
+
+  1955. A New Wading Bird from the Eocene of Patagonia. _American
+       Museum Novitates_, 1710:25 pages, 8 figures, 3 tables.
+
+Koch, Robert C., and Richard K. Olsson
+
+  1977. Dinoflagellate and Planktonic Foraminiferal Biostratigraphy
+       of the Uppermost Cretaceous of New Jersey. _Journal of
+       Paleontology_, 51:480-491, 4 figures.
+
+Lambrecht, Kalman
+
+  1933. _Handbuch der Palaeornithologie._ 1024 pages, 209 figures, 4
+       plates. Berlin: Gebrüder Borntraeger.
+
+Marsh, O.C.
+
+  1870. Notice of Some Fossil Birds from the Cretaceous and Tertiary
+       Formations of the United States. _American Journal of
+       Science_, series 2, 49:205-217.
+
+  1872. Preliminary Description of _Hesperornis regalis_, with
+       Notices of Four Other New Species of Cretaceous Birds.
+       _American Journal of Science_, series 3, 3:360-365.
+
+  1880. Odontornithes: A Monograph on the Extinct Toothed Birds of
+       North America. _Report of the Geological Exploration of the
+       Fortieth Parallel_, volume 7: xv + 201 pages, 40 figures, 34
+       plates.
+
+Miller, Halsey W., Jr.
+
+  1955. A Check-list of the Cretaceous and Tertiary Vertebrates of
+       New Jersey. _Journal of Paleontology_, 29(5):903-914.
+
+Minard, J.P., W.J. Perry, E.G.A. Weed, E.C. Rhodehamel, E.I. Robbins,
+and R.B. Mixon
+
+  1974. Preliminary Report on Geology along Atlantic Coastal Margin
+       of Northeastern United States. _American Association of
+       Petroleum Geologists Bulletin_, 58(6):1169-1178, 7 figures.
+
+Moore, Raymond C.
+
+  1958. _Introduction to Historical Geology._ 2nd edition, 656 pages,
+       593 figures. New York: McGraw Hill.
+
+Morton, Samuel G.
+
+  1829. Description of the Fossil Shells Which Characterize the
+       Atlantic Secondary Formation of New Jersey and Delaware,
+       Including Four New Species. _Journal of the Academy of Natural
+       Sciences of Philadelphia_, series 1, 6:72-100.
+
+  1834. _Synopsis of the Organic Remains of the Cretaceous Group of
+       the United States._ 96 pages, 19 plates. Philadelphia: Key and
+       Biddle.
+
+Olson, Storrs L.
+
+  1974. [Review of] Joel Cracraft. Systematics and Evolution of the
+       Gruiformes (Class Aves), 3: Phylogeny of the Suborder Grues.
+       _Auk_, 91(4):862-865.
+
+  1977. A Lower Eocene Frigatebird from the Green River Formation
+       of Wyoming (Pelecaniformes: Fregatidae). _Smithsonian
+       Contributions to Paleobiology_, 35:33 pages, 31 figures.
+
+  1981. The Museum Tradition in Ornithology--A Response to Ricklefs.
+       _Auk_, 98(1):193-195.
+
+  1985. The Fossil Record of Birds. In Donald S. Farner, James
+       R. King, and Kenneth C. Parkes, editors. _Avian Biology_,
+       8:79-238, 11 figures. New York: Academic Press.
+
+Olson, Storrs L., and Alan Feduccia
+
+  1980a. Relationships and Evolution of Flamingos (Aves:
+       Phoenicopteridae). _Smithsonian Contributions to Zoology_,
+       316:73 pages, 40 figures, 2 tables.
+
+  1980b. Presbyornis and the Origin of the Anseriformes (Aves:
+       Charadriomorphae). _Smithsonian Contributions to Zoology_,
+       323:24 pages, 15 figures.
+
+Perry, W.J., Jr, J.P. Minard, E.G.A. Weed, S.L. Robbins, and E.C.
+Rhodehamel
+
+  1975. Stratigraphy of Atlantic Coastal Margin of United States
+       North of Cape Hatteras--Brief Survey. _American Association of
+       Petroleum Geologists Bulletin_, 59(9):1529-1548, 12 figures.
+
+Petters, Sunday W.
+
+  1976. Upper Cretaceous Subsurface Stratigraphy of Atlantic Coastal
+       Plain of New Jersey. _American Association of Petroleum
+       Geologists Bulletin_, 60(1):87-107, 7 figures.
+
+Rapp, William F., Jr.
+
+  1943. List of the Fossil Birds of New Jersey. _Journal of
+       Paleontology_, 17(1):124.
+
+Shufeldt, R.W.
+
+  1915. Fossil Birds in the Marsh Collection of Yale University.
+       _Transactions of the Connecticut Academy of Arts and
+       Sciences_, 19:1-109, 15 plates.
+
+Sibley, Charles G., and Jon E. Ahlquist
+
+  1972. A Comparative Study of the Egg White Proteins of
+       Non-Passerine Birds. _Peabody Museum of Natural History, Yale
+       University, Bulletin_, 39:276 pages, 37 figures.
+
+Stephenson, L.W., P.B. King, W.H. Monroe, and R.W. Imlay
+
+  1942. Correlation of the Outcropping Cretaceous Formations of
+       the Atlantic and Gulf Coastal Plain and Trans-Pecos, Texas.
+       _Geological Society of America Bulletin_, 53:435-448, 1 plate.
+
+Thulborn, Richard A., and Tim L. Hamley
+
+  1985. A New Palaeoecological Role for _Archaeopteryx_. _In_ M.K.
+       Hecht, J.H. Ostrom, G. Viohl, and P. Wellnhofer, editors,
+       _The Beginnings of Birds: Proceedings of the International
+       Archaeopteryx Conference Eichstätt 1984_, pages 81-89, 2
+       figures. Eichstätt: Freunde des Jura-Museums.
+
+Vanuxem, Lardner
+
+  1829. Remark on the Characters and Classification of Certain Rock
+       Formations. _American Journal of Science_, 16:254-256.
+
+Wetmore, Alexander
+
+  1926. Fossil Birds from the Green River Deposits of Eastern Utah.
+       _Annals of the Carnegie Museum_, 16(3-4):391-402, plates 36-37.
+
+  1930. The Age of the Supposed Cretaceous Birds from New Jersey.
+       _Auk_, 47(2):186-188.
+
+  1940. A Check-list of the Fossil Birds of North America.
+       _Smithsonian Miscellaneous Collections_, 99(4):1-81.
+
+☆ U.S. GOVERNMENT PRINTING OFFICE: 1987-181-717/60004
+
+
+
+
+=REQUIREMENTS FOR SMITHSONIAN SERIES PUBLICATION=
+
+
+=Manuscripts= intended for series publication receive substantive
+review (conducted by their originating Smithsonian museums or offices)
+and are submitted to the Smithsonian Institution Press with Form SI-36,
+which must show the approval of the appropriate authority designated by
+the sponsoring organizational unit. Requests for special treatment--use
+of color, foldouts, case-bound covers, etc.--require, on the same form,
+the added approval of the sponsoring authority.
+
+=Review= of manuscripts and art by the Press for requirements of series
+format and style, completeness and clarity of copy, and arrangement of
+all material, as outlined below, will govern, within the judgment of
+the Press, acceptance or rejection of manuscripts and art.
+
+=Copy= must be prepared on typewriter or word processor, double-spaced,
+on one side of standard white bond paper (not erasable), with 1¼"
+margins, submitted as ribbon copy (not carbon or xerox), in loose
+sheets (not stapled or bound), and accompanied by original art. Minimum
+acceptable length is 30 pages.
+
+=Front matter= (preceding the text) should include: =title page= with
+only title and author and no other information, =abstract page= with
+author, title, series, etc., following the established format; table of
+=contents= with indents reflecting the hierarchy of heads in the paper;
+also, =foreword= and/or =preface=, if appropriate.
+
+=First page of text= should carry the title and author at the top
+of the page; =second page= should have only the author's name and
+professional mailing address, to be used as an unnumbered footnote on
+the first page of printed text.
+
+=Center heads= of whatever level should be typed with initial caps of
+major words, with extra space above and below the head, but no other
+preparation (such as all caps or underline, except for the underline
+necessary for generic and specific epithets). Run-in paragraph heads
+should use period/dashes or colons as necessary.
+
+=Tabulations= within text (lists of data, often in parallel columns)
+can be typed on the text page where they occur, but they should not
+contain rules or numbered table captions.
+
+=Formal tables= (numbered, with captions, boxheads, stubs, rules)
+should be submitted as carefully typed, double-spaced copy separate
+from the text; they will be typeset unless otherwise requested. If
+camera-copy use is anticipated, do not draw rules on manuscript copy.
+
+=Taxonomic keys= in natural history papers should use the
+aligned-couplet form for zoology and may use the multi-level indent
+form for botany. If cross referencing is required between key and text,
+do not include page references within the key, but number the keyed-out
+taxa, using the same numbers with their corresponding heads in the text.
+
+=Synonymy= in zoology must use the short form (taxon, author,
+year:page), with full reference at the end of the paper under
+“Literature Cited.” For botany, the long form (taxon, author,
+abbreviated journal or book title, volume, page, year, with no
+reference in “Literature Cited”) is optional.
+
+=Text-reference system= (author, year: page used within the text, with
+full citation in “Literature Cited” at the end of the text) must be
+used in place of bibliographic footnotes in all Contributions Series
+and is strongly recommended in the Studies Series: “(Jones, 1910:122)"
+or “...Jones (1910:122)." If bibliographic footnotes are required, use
+the short form (author, brief title, page) with the full citation in
+the bibliography.
+
+=Footnotes=, when few in number, whether annotative or bibliographic,
+should be typed on separate sheets and inserted immediately after the
+text pages on which the references occur. Extensive notes must be
+gathered together and placed at the end of the text in a notes section.
+
+=Bibliography=, depending upon use, is termed “Literature Cited,”
+"References," or "Bibliography.” Spell out titles of books, articles,
+journals, and monographic series. For book and article titles use
+sentence-style capitalization according to the rules of the language
+employed (exception: capitalize all major words in English). For
+journal and series titles, capitalize the initial word and all
+subsequent words except articles, conjunctions, and prepositions.
+Transliterate languages that use a non-Roman alphabet according to the
+Library of Congress system. Underline (for italics) titles of journals
+and series and titles of books that are not part of a series. Use the
+parentheses/colon system for volume (number): pagination: “10(2):5-9,”
+For alignment and arrangement of elements, follow the format of recent
+publications in the series for which the manuscript is intended.
+Guidelines for preparing bibliography may be secured from Series
+Section, SI Press.
+
+=Legends= for illustrations must be submitted at the end of the
+manuscript, with as many legends typed, double-spaced, to a page as
+convenient.
+
+=Illustrations= must be submitted as original art (not copies)
+accompanying, but separate from, the manuscript. Guidelines for
+preparing art may be secured from Series Section, SI Press. Ail
+types of illustrations (photographs, line drawings, maps, etc.) may
+be intermixed throughout the printed text. They should be termed
+=Figures= and should be numbered consecutively as they will appear in
+the monograph. If several illustrations are treated as components of a
+single composite figure, they should be designated by lowercase italic
+letters on the illustration; also, in the legend and in text references
+the italic letters (underlined in copy) should be used: “Figure 9b.”
+Illustrations that are intended to follow the printed text may be
+termed =Plates=, and any components should be similarly lettered and
+referenced: “Plate 9b ” Keys to any symbols within an illustration
+should appear on the art rather than in the legend.
+
+=Some points of style:= Do not use periods after such abbreviations
+as “mm, ft, USNM, NNE.” Spell out numbers "one” through “nine” in
+expository text, but use digits in all other cases if possible.
+Use of the metric system of measurement is preferable; where use
+of the English system is unavoidable, supply metric equivalents in
+parentheses. Use the decimal system for precise measurements and
+relationships, common fractions for approximations. Use day/month/year
+sequence for dates: “9 April 1976." For months in tabular listings or
+data sections, use three-letter abbreviations with no periods: “Jan,
+Mar, Jun,” etc. Omit space between initials of a personal name: “J.B.
+Jones.”
+
+=Arrange and paginate sequentially every sheet of manuscript= in the
+following order: (1) title page, (2) abstract, (3) contents, (4)
+foreword and/or preface, (5) text, (6) appendixes, (7) notes section,
+(8) glossary, (9) bibliography, (10) legends, (11) tables. Index copy
+may be submitted at page proof stage, but plans for an index should be
+indicated when manuscript is submitted.
+
+
+       *       *       *       *       *
+
+
+
+Transcriber Note
+
+The caption for Figure 4 was moved to the page that the figure is on.
+The species _Graculavus pumilis_ appears to have been mistyped in three
+locations as _Graculavus pumilus_ and were corrected.
+
+
+
+*** END OF THE PROJECT GUTENBERG EBOOK THE CRETACEOUS BIRDS OF NEW JERSEY ***
+
+
+    
+
+Updated editions will replace the previous one—the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the United
+States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg™ electronic works to protect the PROJECT GUTENBERG™
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away—you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg™ mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase “Project
+Gutenberg”), you agree to comply with all the terms of the Full
+Project Gutenberg™ License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project Gutenberg™
+electronic works
+
+1.A. By reading or using any part of this Project Gutenberg™
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg™ electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg™ electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the person
+or entity to whom you paid the fee as set forth in paragraph 1.E.8.
+
+1.B. “Project Gutenberg” is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg™ electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg™ electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg™
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation (“the
+Foundation” or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg™ electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg™ mission of promoting
+free access to electronic works by freely sharing Project Gutenberg™
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg™ name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg™ License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg™ work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg™ License must appear
+prominently whenever any copy of a Project Gutenberg™ work (any work
+on which the phrase “Project Gutenberg” appears, or with which the
+phrase “Project Gutenberg” is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+    This eBook is for the use of anyone anywhere in the United States and most
+    other parts of the world at no cost and with almost no restrictions
+    whatsoever. You may copy it, give it away or re-use it under the terms
+    of the Project Gutenberg License included with this eBook or online
+    at www.gutenberg.org. If you
+    are not located in the United States, you will have to check the laws
+    of the country where you are located before using this eBook.
+  
+1.E.2. If an individual Project Gutenberg™ electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase “Project
+Gutenberg” associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg™
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg™ electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg™ License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg™
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg™.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg™ License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg™ work in a format
+other than “Plain Vanilla ASCII” or other format used in the official
+version posted on the official Project Gutenberg™ website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original “Plain
+Vanilla ASCII” or other form. Any alternate format must include the
+full Project Gutenberg™ License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg™ works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg™ electronic works
+provided that:
+
+    • You pay a royalty fee of 20% of the gross profits you derive from
+        the use of Project Gutenberg™ works calculated using the method
+        you already use to calculate your applicable taxes. The fee is owed
+        to the owner of the Project Gutenberg™ trademark, but he has
+        agreed to donate royalties under this paragraph to the Project
+        Gutenberg Literary Archive Foundation. Royalty payments must be paid
+        within 60 days following each date on which you prepare (or are
+        legally required to prepare) your periodic tax returns. Royalty
+        payments should be clearly marked as such and sent to the Project
+        Gutenberg Literary Archive Foundation at the address specified in
+        Section 4, “Information about donations to the Project Gutenberg
+        Literary Archive Foundation.”
+    
+    • You provide a full refund of any money paid by a user who notifies
+        you in writing (or by e-mail) within 30 days of receipt that s/he
+        does not agree to the terms of the full Project Gutenberg™
+        License. You must require such a user to return or destroy all
+        copies of the works possessed in a physical medium and discontinue
+        all use of and all access to other copies of Project Gutenberg™
+        works.
+    
+    • You provide, in accordance with paragraph 1.F.3, a full refund of
+        any money paid for a work or a replacement copy, if a defect in the
+        electronic work is discovered and reported to you within 90 days of
+        receipt of the work.
+    
+    • You comply with all other terms of this agreement for free
+        distribution of Project Gutenberg™ works.
+    
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg™ electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg™ trademark. Contact the Foundation as set
+forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg™ collection. Despite these efforts, Project Gutenberg™
+electronic works, and the medium on which they may be stored, may
+contain “Defects,” such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the “Right
+of Replacement or Refund” described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg™ trademark, and any other party distributing a Project
+Gutenberg™ electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you ‘AS-IS’, WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg™ electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg™
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg™ work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg™ work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg™
+
+Project Gutenberg™ is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg™’s
+goals and ensuring that the Project Gutenberg™ collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg™ and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at www.gutenberg.org.
+
+Section 3. Information about the Project Gutenberg Literary Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation’s EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state’s laws.
+
+The Foundation’s business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation’s website
+and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg™ depends upon and cannot survive without widespread
+public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular state
+visit www.gutenberg.org/donate.
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate.
+
+Section 5. General Information About Project Gutenberg™ electronic works
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg™ concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg™ eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg™ eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org.
+
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+
