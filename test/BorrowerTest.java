@@ -4,20 +4,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import model.Author;
+import model.Book;
+import model.Library;
+
 class BorrowerTest {
-
-	@Test
-	void testBorrowerStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testBorrowerBorrower() {
-		fail("Not yet implemented");
-	}
-
+	
+	Library library = new Library();
+	Author author = new Author("Arthur", 2030, 1999);
+	
 	@Test
 	void testCheckOutBook() {
+		// checkOutBook(Book b, Library l)
+		
 		fail("Not yet implemented");
 	}
 
