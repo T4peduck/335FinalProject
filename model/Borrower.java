@@ -2,21 +2,18 @@ package model;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 
 public class Borrower extends User {
-	private HashMap<String, ArrayList<Book>> history;
-	private HashMap<String, ArrayList<Book>> historyByAuthor;
-	private HashMap<String, ArrayList<Book>> historyByGenre;
+	private ArrayList<Book> history;
 	
 	private ArrayList<Book> checkedOut;
 	private ArrayList<Book> onHold;
 	
     public Borrower (String username, String password) throws NoSuchAlgorithmException {
         super(username, password);
-        history = new HashMap<>();
-        historyByAuthor = new HashMap<>();
-        historyByGenre = new HashMap<>();
+        history = new ArrayList<>();
+        onHold = new ArrayList<>();
         checkedOut = new ArrayList<>();
     }
     
@@ -24,38 +21,73 @@ public class Borrower extends User {
     	super(borrower);
     }
 
-    public void checkOutBook(String id) {
+    /*
+     * @pre - the Book is in the library, and available
+     */
+    public void checkOutBook(Book b, Library l) {
     	// use the library method for checking out
     	
     	// update checkedOut
         return;
     }
     
-    public void checkinBook() {
+    /*
+     * @pre - the Book is in the library, and unavailable
+     */
+    public void checkinBook(Book b, Library l) {
     	// use library method to check in
     	
-    	// update histories and cheked out
+    	// update histories and checked out
     	
     	// automatically check out next book on hold if available??
     }
 
-    public void putBookOnHold(String id) {
+    /*
+     * @pre - the Book is in the library, and unavailable
+     */
+    public void putBookOnHold(Book b, Library l) {
     	// use the library method for holding?
-        return;
+    	onHold.add(0, b);
+    	l.hold(b, this);
     }
     
-    public ArrayList<Book> getRecommendations(){
-    	// find their most common genre from history
-    	
-    	// call a library method for getting books from this genre
+    // getters? History with the different comparators, searching history
+    
+    // chronological
+    public ArrayList<Book> getHistory(){
+    	return history;
+    }
+    
+    public ArrayList<Book> getHistoryByTitle(){
+    	ArrayList<Book> copy = new ArrayList<>(history);
+    	Collections.sort(copy, Book.titleFirstComparator());
+    	return copy;
+    }
+    
+    public ArrayList<Book> getHistoryByAuthor(){
+    	ArrayList<Book> copy = new ArrayList<>(history);
+    	Collections.sort(copy, Book.authorFirstComparator());
+    	return copy;
+    }
+    
+    public ArrayList<Book> checkedOut(){
+    	return new ArrayList<>(checkedOut);
+    }
+    
+    public ArrayList<Book> onHold(){
+    	return new ArrayList<>(onHold);
+    }
+    
+    public boolean hasBook(Book b) {
+    	return checkedOut.contains(b);
     }
 
-	public void checkOutHold(Book b) {
-		// TODO Auto-generated method stub
-		
+    // used by the library after it's been officially checked out to update the user
+	void checkOutHold(Book b) {
+		onHold.remove(b);
+		checkedOut.addFirst(b);
 	}
     
-    // geters? History with the different comparators, searching history
     
-    // calling library methods they have access to: searches, etc
+    
 }
