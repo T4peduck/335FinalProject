@@ -236,6 +236,17 @@ public class Library {
 		return found;
 	}
 	
+	public Book searchAvailBookByID(String id) {
+		Book book = null;
+		for (Book b : getAvailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
 	/*
 	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
 	 * of all unavailable books with the given author (case-insensitive)
