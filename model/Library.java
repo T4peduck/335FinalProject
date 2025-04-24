@@ -392,7 +392,7 @@ public class Library {
 	 */
 
 	// Librarian deals with finding/creating Book object
-	void addBook(Book b) {
+	public void addBook(Book b) {
 		String title = b.title.toLowerCase();
 		String author = b.authors.get(0).NAME.toLowerCase();
 

@@ -50,6 +50,9 @@ public class User {
 		return salt.clone();
 	}
     
+	/*
+     * @pre - password.matches("(?=.*[a-z].*)(?=.*[A-Z].*)(?=.*\\d.*)(?=.*[~!@#$%^&*()_+].*)(?!.*\\s.*).+")
+     */
 	public void setPassword(String password) throws NoSuchAlgorithmException {
     	SecureRandom saltGen = new SecureRandom();
         salt = new byte[2];
