@@ -71,11 +71,11 @@ public class Borrower extends User {
     }
     
     public ArrayList<Book> checkedOut(){
-    	return checkedOut;
+    	return new ArrayList<>(checkedOut);
     }
     
     public ArrayList<Book> onHold(){
-    	return onHold;
+    	return new ArrayList<>(onHold);
     }
     
     public boolean hasBook(Book b) {
