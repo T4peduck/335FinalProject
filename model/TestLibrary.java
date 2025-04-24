@@ -1,14 +1,12 @@
 package model;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
-
 import org.junit.jupiter.api.Test;
 
 class TestLibrary {
 	Library l = new Library();
-
+	
 	@Test
 	void test() {
 		Author melville = new Author("Herman Melville", 0, 0);
@@ -54,21 +52,31 @@ class TestLibrary {
 		assertEquals(1, l.searchAllBooksByAuthor("HERMAN MELVILLE").size());
 		assertEquals(0, l.searchAllBooksByAuthor("na").size());
 		
-		assertEquals(4, l.getAvailBooks().size());
-		assertEquals(0, l.getUnavailBooks().size());
+		assertEquals(4, l.getAvailBooksByTitle().size());
+		assertEquals(0, l.getUnavailBooksByTitle().size());
 		
 		l.checkout(anna);
 		
-		assertEquals(3, l.getAvailBooks().size());
-		assertEquals(1, l.getUnavailBooks().size());
+		assertEquals(3, l.getAvailBooksByTitle().size());
+		assertEquals(1, l.getUnavailBooksByTitle().size());
 		
-		assertEquals(anna, l.getUnavailBooks().get(0));
+		assertEquals(anna, l.getUnavailBooksByTitle().get(0));
 		assertEquals(0, l.searchAvailBooksByTitle("Anna Karenina").size());
 		
 		l.checkin(anna);
 		
-		assertEquals(4, l.getAvailBooks().size());
-		assertEquals(0, l.getUnavailBooks().size());
+		assertEquals(1, l.searchAvailBooksByTitle("Anna Karenina").size());
+		assertEquals(4, l.getAvailBooksByTitle().size());
+		assertEquals(0, l.getUnavailBooksByTitle().size());
+		
+		assertEquals(1, l.getMostPopular().size());
+		
+		l.checkout(anna);
+		l.checkout(mobyDick);
+		l.checkin(mobyDick);
+		l.checkout(mobyDick);
+		l.checkout(ivan);
+		assertEquals(3, l.getMostPopular().size());
 	}
 
 }
