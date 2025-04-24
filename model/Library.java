@@ -89,6 +89,11 @@ public class Library {
 		}
 	}
 
+	/*
+	 * private void updateHolds(Book b) - checks if the book (which has been recently
+	 * 		checked in) is on hold. If so, it automatically checks it out to the first person
+	 * 		on the hold list, and updates the hold list accordingly.
+	 */
 	private void updateHolds(Book b) {
 		ArrayList<Borrower> waiting = holds.get(b);
 		// no one is waiting for this book
@@ -232,8 +237,8 @@ public class Library {
 		if (books != null) {
 			for (Book b: books) {
 				ArrayList<Book> avail = availableBooks.get(b.title.toLowerCase());
-				if (avail.contains(b)) {
-					books.add(b);
+				if (avail != null &&avail.contains(b)) {
+					found.add(b);
 				}
 			}
 		}
@@ -254,8 +259,8 @@ public class Library {
 		if (books != null) {
 			for (Book b: books) {
 				ArrayList<Book> unavail = unavailableBooks.get(b.title.toLowerCase());
-				if (unavail.contains(b)) {
-					books.add(b);
+				if (unavail != null && unavail.contains(b)) {
+					found.add(b);
 				}
 			}
 		}
@@ -413,7 +418,6 @@ public class Library {
 		} else {
 			booksWithAuthor.add(b);
 		}
-
 	}
 
 	/*
@@ -469,6 +473,9 @@ public class Library {
 				booksByAuthor.remove(author);
 			}
 		}
+		
+		// remove from counts
+		checkoutNums.remove(b);
 
 		// remove from holds
 		holds.remove(b);
@@ -501,10 +508,24 @@ public class Library {
 	}
 	
 	// Since both Books and Integers are immutable, we can just return a simple copy
+	/*
+	 * HashMap<Book, Integer> getCheckoutNums() - returns a copy of the checkoutNums
+	 * 		hashmap, which tracks how many times each book has been checked out (only if it has been
+	 * 		checked out at least once). It will be accurate only up to the current moment
+	 */
 	HashMap<Book, Integer> getCheckoutNums(){
 		return new HashMap<>(checkoutNums);
 	}
 	
+	public Integer getCheckoutNum(Book b) {
+		return checkoutNums.get(b);
+	}
+	
+	/*
+	 * public ArrayList<Book> getMostPopular() - returns an arraylist of the top 10 (or less if
+	 * there are less than 10 books in the library) books by checkout numbers. Ties are alphabetically
+	 * by title, then alphabetically by primary author.
+	 */
 	public ArrayList<Book> getMostPopular() {
 		// sort the "entry set" which allows you to sort each PAIR
 		ArrayList<Map.Entry<Book, Integer>> sorted = new ArrayList<>(checkoutNums.entrySet());
