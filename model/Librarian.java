@@ -75,4 +75,12 @@ public class Librarian extends User{
     	
         return bookList;
     }
+    
+    public void recommend(Book book, Library library) {
+    	library.recommend(getUserName(), book);
+    }
+    
+    public void removeRecommend(Book book, Library library) {
+    	library.removeRecommend(getUserName(), book);
+    }
 }
