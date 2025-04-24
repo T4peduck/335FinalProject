@@ -26,7 +26,7 @@ public class Library {
 
 	// TODO: possibly should also be package private, since they are Borrower
 	// specific
-	public int checkout(Book b) {
+	int checkout(Book b) {
 		String title = b.title.toLowerCase();
 		ArrayList<Book> foundBooks = availableBooks.get(title);
 		if (foundBooks == null) {
@@ -51,6 +51,14 @@ public class Library {
 				} else {
 					foundBooks.add(b);
 				}
+				// update checkout number
+				if (checkoutNums.get(b) != null) {
+					checkoutNums.replace(b, checkoutNums.get(b) + 1);
+				}
+				else { // or add new
+					checkoutNums.put(b, 1);
+				}
+				
 				// show it was successfully checked out
 				return 1;
 			}
@@ -61,7 +69,7 @@ public class Library {
 	/*
 	 * @pre - the book put on hold should be checked out currently
 	 */
-	public void hold(Book b, Borrower user) {
+	void hold(Book b, Borrower user) {
 		ArrayList<Borrower> waiting = holds.get(b);
 		// no one currently waiting: create new pair
 		if (waiting == null) {
@@ -74,7 +82,7 @@ public class Library {
 		}
 	}
 
-	public void updateHolds(Book b) {
+	private void updateHolds(Book b) {
 		ArrayList<Borrower> waiting = holds.get(b);
 		// no one is waiting for this book
 		if (waiting == null) {
@@ -97,7 +105,7 @@ public class Library {
 	 * @pre - Book b is a book that has been checked out, so it is unavailable. This
 	 * should be checked when a borrower tries to check in a book.
 	 */
-	public void checkin(Book b) {
+	void checkin(Book b) {
 		String title = b.title.toLowerCase();
 		ArrayList<Book> foundBooks = unavailableBooks.get(title);
 
@@ -167,6 +175,23 @@ public class Library {
 		}
 		return found;
 	}
+	
+	/*
+	 * searchAvailBooksByTitle(String title) - returns an arrayList with a copy of
+	 * all available books with the given title (case-insensitive)
+	 */
+	public ArrayList<Book> searchUnvailBooksByTitle(String title) {
+		// normalize title
+		title = title.toLowerCase().trim();
+
+		ArrayList<Book> found = new ArrayList<>();
+		// copy available books with this title
+		ArrayList<Book> unavail = unavailableBooks.get(title);
+		if (unavail != null) {
+			found.addAll(unavail);
+		}
+		return found;
+	}
 
 	/*
 	 * searchAllBooksByAuthor(String author) - returns an arrayList with a copy of
@@ -177,10 +202,10 @@ public class Library {
 		author = author.toLowerCase().trim();
 
 		ArrayList<Book> found = new ArrayList<>();
-		
+
 		// copy available books with this title
 		ArrayList<Book> books = booksByAuthor.get(author);
-		if (books != null) { 
+		if (books != null) {
 			found.addAll(books);
 		}
 		return found;
@@ -198,7 +223,34 @@ public class Library {
 		// copy available books with this title
 		ArrayList<Book> books = booksByAuthor.get(author);
 		if (books != null) {
-			found.addAll(books);
+			for (Book b: books) {
+				ArrayList<Book> avail = availableBooks.get(b.title.toLowerCase());
+				if (avail.contains(b)) {
+					books.add(b);
+				}
+			}
+		}
+		return found;
+	}
+	
+	/*
+	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
+	 * of all unavailable books with the given author (case-insensitive)
+	 */
+	public ArrayList<Book> searchUnvailBooksByAuthor(String author) {
+		// normalize author
+		author = author.toLowerCase().trim();
+
+		ArrayList<Book> found = new ArrayList<>();
+		// copy available books with this title
+		ArrayList<Book> books = booksByAuthor.get(author);
+		if (books != null) {
+			for (Book b: books) {
+				ArrayList<Book> unavail = unavailableBooks.get(b.title.toLowerCase());
+				if (unavail.contains(b)) {
+					books.add(b);
+				}
+			}
 		}
 		return found;
 	}
@@ -212,9 +264,17 @@ public class Library {
 		Collections.sort(sorted, Book.authorFirstComparator());
 		return sorted;
 	}
-	
-	public ArrayList<Book> getAvailBooksByAuthor(){
-		ArrayList<Book> available = 
+
+	public ArrayList<Book> getAvailBooksByAuthor() {
+		ArrayList<Book> available = getAvailBooks();
+		Collections.sort(available, Book.authorFirstComparator());
+		return available;
+	}
+
+	public ArrayList<Book> getUnvailBooksByAuthor() {
+		ArrayList<Book> unavailable = getUnavailBooks();
+		Collections.sort(unavailable, Book.authorFirstComparator());
+		return unavailable;
 	}
 
 	/*
@@ -227,6 +287,18 @@ public class Library {
 		return sorted;
 	}
 
+	public ArrayList<Book> getAvailBooksByTitle() {
+		ArrayList<Book> available = getAvailBooks();
+		Collections.sort(available, Book.titleFirstComparator());
+		return available;
+	}
+
+	public ArrayList<Book> getUnvailBooksByTitle() {
+		ArrayList<Book> unavailable = getUnavailBooks();
+		Collections.sort(unavailable, Book.titleFirstComparator());
+		return unavailable;
+	}
+
 	/*
 	 * getAllBooks() - returns an ArrayList of copies of all books in the library
 	 */
@@ -237,18 +309,18 @@ public class Library {
 		}
 		return books;
 	}
-	
-	private ArrayList<Book> getAvailBooks(){
+
+	private ArrayList<Book> getAvailBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : availableBooks.values()) {
 			books.addAll(list);
 		}
 		return books;
 	}
-	
-	private ArrayList<Book> getAvailBooks(){
+
+	private ArrayList<Book> getUnavailBooks() {
 		ArrayList<Book> books = new ArrayList<>();
-		for (ArrayList<Book> list : availableBooks.values()) {
+		for (ArrayList<Book> list : unavailableBooks.values()) {
 			books.addAll(list);
 		}
 		return books;
@@ -332,24 +404,13 @@ public class Library {
 				booksByAuthor.remove(author);
 			}
 		}
-		
+
 		// remove from holds
 		holds.remove(b);
 	}
-
-	ArrayList<Book> getAvailBooks() {
-		ArrayList<Book> books = new ArrayList<>();
-		for (ArrayList<Book> list : availableBooks.values()) {
-			books.addAll(list);
-		}
-		return books;
-	}
-
-	ArrayList<Book> getUnavailBooks() {
-		ArrayList<Book> books = new ArrayList<>();
-		for (ArrayList<Book> list : unavailableBooks.values()) {
-			books.addAll(list);
-		}
-		return books;
+	
+	// Since both Books and Integers are immutable, we can just return a simple copy
+	HashMap<Book, Integer> getCheckoutNums(){
+		return new HashMap<>(checkoutNums);
 	}
 }
