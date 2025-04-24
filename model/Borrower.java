@@ -19,6 +19,9 @@ public class Borrower extends User {
     
     public Borrower (Borrower borrower) {
     	super(borrower);
+    	history = borrower.getHistory();
+    	onHold = borrower.onHold();
+    	checkedOut = borrower.checkedOut();
     }
 
     /*
