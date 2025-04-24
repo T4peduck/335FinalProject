@@ -26,8 +26,9 @@ public class Borrower extends User {
      */
     public void checkOutBook(Book b, Library l) {
     	// use the library method for checking out
-    	
+    	l.checkout(b);
     	// update checkedOut
+    	checkedOut.add(b); // Do we deal with the escaping reference here?
         return;
     }
     
@@ -36,9 +37,10 @@ public class Borrower extends User {
      */
     public void checkinBook(Book b, Library l) {
     	// use library method to check in
-    	
+    	l.checkin(b);
+    	checkedOut.remove(b);
     	// update histories and checked out
-    	
+    	history.add(b);
     	// automatically check out next book on hold if available??
     }
 
@@ -55,7 +57,7 @@ public class Borrower extends User {
     
     // chronological
     public ArrayList<Book> getHistory(){
-    	return history;
+    	return new ArrayList<>(history);
     }
     
     public ArrayList<Book> getHistoryByTitle(){
@@ -85,7 +87,7 @@ public class Borrower extends User {
     // used by the library after it's been officially checked out to update the user
 	void checkOutHold(Book b) {
 		onHold.remove(b);
-		checkedOut.addFirst(b);
+		checkedOut.add(b);
 	}
     
     
