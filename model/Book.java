@@ -27,16 +27,18 @@ public class Book {
 
 	public final String title;
 	public final List<Author> authors;
+	public final List<String> genres;
 	public final String id;
 	
 
 	public final String summary;
 	public final String filePath;
 	
-    public Book(String title, ArrayList<Author> authors, String id, 
+    public Book(String title, ArrayList<Author> authors, ArrayList<String> genres, String id, 
     			String summary, String filePath) {
         this.title = title;
         this.authors = Collections.unmodifiableList(new ArrayList<Author>(authors));
+        this.genres = Collections.unmodifiableList(new ArrayList<String>(genres));
         this.id = id;
         this.summary = summary;
         this.filePath = filePath;
@@ -73,7 +75,11 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		return title + " by " + authors.toString();
+		String rstr = title + " by ";
+		for(Author a: authors) {
+			rstr += a.toString() + ", ";
+		}
+		return rstr;
 	}
    
 }
