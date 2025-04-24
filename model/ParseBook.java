@@ -30,10 +30,10 @@ public class ParseBook {
  * -----------------------------------------------
  */
  
-/*
- * NOTE: 	THIS FUNCTION IS ONLY PUBLIC FOR TESTING PURPOSES,
- * 			THIS IS NOT ACTUALLY CALLED
- */
+    /*
+     * Makes the request to the API and returns a JSONObject with resulting
+     * info from call
+     */
     private static JSONObject makeRequest() throws Exception{
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(URIbuilder)).GET().build();
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
@@ -123,6 +123,7 @@ public class ParseBook {
     private static Book makeBook(JSONObject book) {
     	String title = book.get("title").toString();
     	ArrayList<Author> alist = formatAuthor(book);
+    	ArrayList<String> glist = formatGenre(book);
     	String summary;
     	if(((JSONArray) book.get("summaries")).isEmpty()) {
     		summary = "";
@@ -131,7 +132,7 @@ public class ParseBook {
     	}
     	String id = book.get("id").toString();
     	
-    	return new Book(title, alist, id, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
+    	return new Book(title, alist, glist, id, summary, "model/LibraryText/" + cleanTitle(title) + ".txt");
     }
     
     /*
@@ -176,6 +177,21 @@ public class ParseBook {
     		alist.add(new Author(name, Integer.parseInt(birthYear), Integer.parseInt(deathYear)));
     	}
     	return alist;
+    }
+    
+    private static ArrayList<String> formatGenre(JSONObject book) {
+    	ArrayList<String> glist = new ArrayList<>();
+    	JSONArray genreList = (JSONArray) book.get("subjects");
+    	
+    	if(genreList == null) {
+    		return null;
+    	}
+    	
+    	for(Object g : genreList) {
+    		glist.add((String) g);
+    	}
+    	
+    	return glist;
     }
     
     /*
