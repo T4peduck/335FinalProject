@@ -236,17 +236,6 @@ public class Library {
 		return found;
 	}
 	
-	public Book searchAvailBookByID(String id) {
-		Book book = null;
-		for (Book b : getAvailBooks()) {
-			if (b.id.equals(id)) {
-				book = b;
-			}
-		}
-		
-		return book;
-	}
-	
 	/*
 	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
 	 * of all unavailable books with the given author (case-insensitive)
@@ -267,6 +256,39 @@ public class Library {
 			}
 		}
 		return found;
+	}
+	
+	public Book searchAllBookByID(String id) {
+		Book book = null;
+		for (Book b : getAllBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
+	public Book searchAvailBookByID(String id) {
+		Book book = null;
+		for (Book b : getAvailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
+	public Book searchUnavailBookByID(String id) {
+		Book book = null;
+		for (Book b : getUnavailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
 	}
 
 	/*
