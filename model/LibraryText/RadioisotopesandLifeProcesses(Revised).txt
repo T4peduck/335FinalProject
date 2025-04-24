@@ -1,0 +1,2200 @@
+﻿The Project Gutenberg eBook of Radioisotopes and Life Processes (Revised)
+    
+This ebook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this ebook or online
+at www.gutenberg.org. If you are not located in the United States,
+you will have to check the laws of the country where you are located
+before using this eBook.
+
+Title: Radioisotopes and Life Processes (Revised)
+
+Author: Walter E. Kisieleski
+        Renato Baserga
+
+Release date: June 30, 2015 [eBook #49334]
+                Most recently updated: October 24, 2024
+
+Language: English
+
+Credits: Produced by Stephen Hutcheson, Dave Morgan and the Online
+        Distributed Proofreading Team at http://www.pgdp.net
+
+
+*** START OF THE PROJECT GUTENBERG EBOOK RADIOISOTOPES AND LIFE PROCESSES (REVISED) ***
+
+                             Radioisotopes
+                           and Life Processes
+
+
+The Understanding the Atom Series
+
+Nuclear energy is playing a vital role in the life of every man, woman,
+and child in the United States today. In the years ahead it will affect
+increasingly all the peoples of the earth. It is essential that all
+Americans gain an understanding of this vital force if they are to
+discharge thoughtfully their responsibilities as citizens and if they
+are to realize fully the myriad benefits that nuclear energy offers
+them.
+
+The United States Atomic Energy Commission provides this booklet to help
+you achieve such understanding.
+
+                  [Illustration: Edward J. Brunenkant]
+
+                                          Edward J. Brunenkant, Director
+                                       Division of Technical Information
+
+
+UNITED STATES ATOMIC ENERGY COMMISSION
+
+  Dr. Glenn T. Seaborg, Chairman
+  James T. Ramey
+  Wilfrid E. Johnson
+  Dr. Theos J. Thompson
+  Dr. Clarence E. Larson
+
+
+
+
+                            _Radioisotopes_
+                                                      AND LIFE PROCESSES
+
+
+by Walter E. Kisieleski and
+Renato Baserga
+
+
+
+
+                                CONTENTS
+
+
+  INTRODUCTION                                                          1
+  CELL THEORY:
+              DNA IS THE SECRET OF LIFE                                 2
+  RADIOACTIVE ISOTOPES:
+              THE BIOLOGICAL DETECTIVES                                10
+  DNA SYNTHESIS:
+              THE AUTOBIOGRAPHY OF CELLS                               15
+  RNA SYNTHESIS:
+              HOW TO TRANSLATE ONE LANGUAGE INTO ANOTHER               25
+  PROTEIN SYNTHESIS:
+              THE MOLECULES THAT MAKE THE DIFFERENCE                   35
+  CELL CYCLE AND GENE ACTION:
+              LIFE IS THE SECRET OF DNA                                37
+  ISOTOPES IN RESEARCH:
+              PROBING THE CANCER PROBLEM                               43
+  CONCLUSIONS                                                          45
+  SUGGESTED REFERENCES                                                 47
+
+
+                 United States Atomic Energy Commission
+                   Division of Technical Information
+           Library of Congress Catalog Card Number: 66-61908
+                            1966; 1967(Rev.)
+
+
+THE COVER
+
+The cover design portrays the inter-relationships suggested by the title
+of this booklet: On a trefoil symbolizing radiation are superimposed a
+dividing cell, a plant, an animal, and a double helix of a molecule of
+deoxyribonucleic acid, a material unique in and fundamental to all
+living things.
+
+
+THE AUTHORS
+
+[Illustration: WALTER E. KISIELESKI is an Associate Scientist in the
+Division of Biology and Medicine of the Argonne National Laboratory. He
+was formerly associate professor of chemistry at Loyola University in
+Chicago. His undergraduate studies were at James Millikin University in
+Decatur, Illinois, and his graduate studies were at the University of
+Chicago. He received an Honorary Doctor of Science degree from James
+Millikin University in 1962. In 1958 he was a delegate to the Second
+Atoms for Peace Conference in Geneva, Switzerland. He was visiting
+lecturer in the department of biochemistry at the University of Oslo in
+Norway in 1963. Dr. Kisieleski is shown operating an automatic
+windowless strip counter that scans paper chromatograms and thus locates
+labeled substances.]
+
+[Illustration: RENATO BASERGA was born in Milan, Italy, and received a
+medical degree from the University of Milan in 1949. He is presently
+research professor of pathology at the Fels Research Institute at Temple
+University Medical School in Philadelphia, and associate editor of the
+journal, _Cancer Research_. Formerly he was associate professor of
+pathology at Northwestern Medical School in Chicago, where he was the
+recipient of a Research Career Development Award from the National
+Institutes of Health.]
+
+
+
+
+                            _Radioisotopes_
+                                                      AND LIFE PROCESSES
+
+
+                                                 By WALTER E. KISIELESKI
+                                                      and RENATO BASERGA
+
+
+
+
+                              INTRODUCTION
+
+
+  _Here and elsewhere we shall not obtain the best insight into things
+  until we actually see them growing from the beginning._
+
+                                                               Aristotle
+
+The nature of life has excited the interest of human beings from the
+earliest times. Although it is still not known what life is, the
+characteristics that set living things apart from lifeless matter are
+well known. One feature common to all living things, from one-celled
+creatures to complex animals like man, is that they are all composed of
+microscopic units known as cells.
+
+The cell is the smallest portion of any organism that exhibits the
+properties we associate with living material. In spite of the immense
+variety of sizes, shapes, and structures of living things, they all have
+this in common: They are composed of cells, and living cells contain
+similar components that operate in similar ways. One might say that life
+is a single process and that all living things operate on a single plan.
+
+The past few years have been a time of rapid progress in our
+understanding of the mechanisms that control the function of living
+systems. This progress has been made possible by the development of new
+experimental techniques and by the perfection of instruments that detect
+what happens in the tiny world of molecules. Prominent among the methods
+that have contributed to the explosive growth in our understanding of
+biology is the use of radioactive isotopes as laboratory tools.
+
+In this booklet we shall attempt to give an account, in chemical terms,
+of the materials from which living matter is made and of some of the
+chemical reactions that underlie the manifestations and the maintenance
+of life. To accomplish this, we have chosen to describe three types of
+molecules that have become the basis of modern biology: deoxyribonucleic
+acid (DNA), ribonucleic acid (RNA), and proteins. We will show how
+radioactive isotopes can be used to pry into the innermost secrets of
+these substances. Before we can understand the function of these
+precious molecules, however, it will be necessary to review the
+structure of a cell and the physical nature of radioactive isotopes.
+
+
+
+
+                 CELL THEORY: DNA IS THE SECRET OF LIFE
+
+
+  _We have seen that all organisms are composed of essentially like
+  parts, namely cells; that these cells are formed and grow in
+  accordance with essentially the same laws; hence that these processes
+  must everywhere result from the operation of the same forces._
+
+                                                         Theodor Schwann
+
+
+Unit of Life
+
+The cell theory, based on the concept that higher organisms consist of
+smaller units called cells, was formulated in 1838 by two German
+biologists, Mathias-Jacob Schleiden, a botanist, and Theodor Schwann, an
+anatomist. The theory had far-reaching effect upon the study of
+biological phenomena. It suggested that living things had a common basis
+of organization. Appreciation of its full significance, however, had to
+await more precise knowledge of the structure and activities of cells.
+
+Some organisms,[1] for instance, amoebae, consist of a single cell each
+and are therefore called unicellular organisms. Higher animals are
+multicellular, containing aggregations of cells grouped into tissues and
+organs. A man, for instance, consists of millions of many different
+cells performing a variety of different functions. Cells of higher
+animals differ vastly from one another in size, shape, and function;
+they are specialized cells.
+
+[Illustration: Figure 1 _One of the earliest photographs of cells taken
+with a microscope. This photomicrograph shows cells in the blood of a
+pigeon. It was made by J. J. Woodward, U. S. Army surgeon, in 1871.
+Woodward had made the first cell micrograph (a graphic reproduction of
+the image of an object formed by a microscope) in 1866._]
+
+There is a remarkable similarity, moreover, in the molecular composition
+and metabolism[2] of all living things. This similarity has been taken
+to mean that life could have originated only once in the past and had a
+specific chemical composition on which its metabolic processes depended.
+This structure and metabolism were handed down to subsequent living
+things by reproduction, and all variations thereafter resulted from
+occasional mutation, or changes in the nature of the
+heredity-transmitting units. One of the most extraordinary of all the
+attributes of life is its ordered complexity, both in function and
+structure.
+
+It is agreed among biologists that the functional manifestations of life
+include movement, respiration, growth, irritability (reaction to
+environmental changes), and reproduction and that these phenomena are
+therefore possessed by all cells. The first four of these can be grouped
+under a single word: metabolism. We can therefore say that living things
+have two common properties: metabolism and reproduction. Therefore, when
+we say we are studying life processes, we actually are studying the
+metabolism and reproduction of cells. Since metabolism is the sum of the
+biochemical reactions taking place in a living organism, it properly
+belongs to the field of investigation of biochemists. Cell reproduction
+is the concern of both biochemists and morphologists[3] since it can be
+studied by either biochemical or morphological techniques.
+
+
+Cell Structure
+
+[Illustration: Figure 2 _Generalized diagram of a cell, showing the
+organelles, or “little organs”, of its internal structure. The
+organelles that are labeled are important for this booklet._]
+
+  Cell membrane
+  Cytoplasm
+  Chromatin
+  Mitochondrion
+  Nucleolus
+  Endoplasmic reticulum
+  Nucleus
+  Nuclear membrane
+
+The basic structure of a cell is shown in Figure 2. Each cell consists
+of a dense inner structure called the nucleus, which is surrounded by a
+less dense mass of cytoplasm. The nucleus is separated from the
+cytoplasm by a double envelope, called the nuclear membrane, which is
+peppered with perforations. The cytoplasm contains a network of
+membranes, which form the boundaries of countless canals and vesicles
+(or pouches), and is laden with small bodies called ribosomes. This
+membranous network is called the endoplasmic reticulum and is distinct
+from the mitochondria, which are membranous organelles (little organs)
+structurally independent of other components of the cytoplasm. The outer
+coat of the cell is called the cell membrane, or plasma membrane, and
+forms the cell boundary.
+
+[Illustration: Figure 3 _Electron micrograph of a primary spermatocyte
+cell of a grasshopper, showing the nucleus (N), endoplasmic reticulum
+(ER), mitochondrion (M), chromatin (C), nuclear membrane or nuclear
+envelope (NE), cell membrane (CM), and intercellular space (I). The
+magnification is about 25,000 times the actual size._]
+
+The nucleus, which in many cells is the largest and most central body,
+is of special importance. It contains a number of threadlike bodies, or
+chromosomes, that are the carriers of the cell’s heredity-controlling
+system. These contain granules of a material called chromatin, which is
+rich in a nucleic acid, DNA (deoxyribonucleic acid). The chromosomes
+usually are not readily seen in the nucleus except when the cell, along
+with its nucleus, is dividing. When the nucleus is not dividing, a
+spherical body, the nucleolus, can be seen. (In some nuclei there may be
+more than one.) When the nucleus is dividing, the nucleolus disappears.
+
+Not all cells possess all these structures. For instance, the red cells
+of the blood do not have a nucleus, and in other cells the endoplasmic
+reticulum is at a minimum. The diagram (Figure 2) is valid for a great
+majority of the cells of higher organisms.
+
+The cell structures shown in Figure 3 are visible with an electron
+microscope. They contain the chemical components of the cell. The chief
+classes of these constituents are the carbohydrates (sugars), the lipids
+(fats), the proteins, and the nucleic acids. However, a cell also
+contains water (about 70% of the cell weight is due to water) and
+several other organic and inorganic compounds, such as vitamins and
+minerals.
+
+Carbohydrates serve mostly as foodstuff within the cell. They can be
+stored in several related forms. Further, they may serve a number of
+functions outside the cell, especially as structural units. In this way
+structure and function are correlated.
+
+Lipids in the cell occur in a great variety of types: alcohols, fats,
+steroids, phospholipids, and aldehydes. They are found in all fractions
+of the cell. Their most important functions seem to be to form membranes
+and to give these membranes specific permeability. They are also
+important as stores of chemical energy, mostly in the form of neutral
+fats.
+
+[Illustration: Figure 4 _Scientists using an electron microscope (left)
+and an optical microscope (right) in fundamental biochemical research.
+Both instruments are important tools in studies of life processes._]
+
+The proteins occur in many cell structures and are of many kinds:
+Enzymes, the catalysts for the cell’s metabolic processes, are proteins,
+for instance. The nucleic acids are DNA and RNA (ribonucleic acid),
+which function together to manufacture the cell’s proteins. Since a
+large share of the remaining pages will be devoted to a discussion of
+proteins and nucleic acids, at this point we need only emphasize that
+these two types of materials are interrelated in their function and that
+both are essential.
+
+
+The Two Nucleic Acids
+
+It is not very fruitful to discuss whether proteins or nucleic acids are
+more important. That question is something like the one about the
+chicken and the egg. We cannot think of one without thinking of the
+other. Although our insight into the mutual dependence of these two
+materials has greatly increased in recent years and although we know the
+relation between them is a fundamental factor in such events as
+reproduction, mutation, and differentiation (or specialization) of
+cells, our understanding of their interplay is far from complete. Real
+understanding of the relation between them would give us insight into
+the essence of growth—both normal and abnormal—or, indeed, one could
+almost say, into the complexity of life itself.
+
+[Illustration: Figure 5 _Photomicrograph of Paramecia, one-celled
+animals, magnified 1100 times. Many of the same structures that appear
+in Figure 3 can be seen here. This photo was taken with an
+“interference” microscope designed to permit continuous variation of
+contrast in the subject under study._]
+
+Practically all the DNA of most cells is concentrated in the nucleus.
+RNA, on the other hand, is distributed throughout the cell. Some RNA is
+present in the nucleus, but most of it is associated with minute
+particles in the cytoplasm known as microsomes, some of which are
+especially rich in RNA and are accordingly named ribosomes. These are
+much smaller particles than the mitochondria.
+
+[Illustration: Figure 6 _Stages of the mitotic cycle in a hypothetical
+cell with four chromosomes._]
+
+  (a) Interphase
+  (b) Early prophase
+  (c) Prophase
+  (d) Metaphase
+  (e) Anaphase
+  (f) Telophase
+  (g) Interphase, daughter cells
+
+
+Mitosis
+
+One of the most remarkable characteristics of cells is their ability to
+grow and divide. New cells come from preexisting cells. When a cell
+reaches a certain stage in its life, it divides into two parts. These
+parts, after another period of growth, can in turn divide. In this way
+plants and animals grow to their normal size and injured tissues are
+repaired. Cell division occurs when some of the contents of the cell
+have been doubled by replication, or copying (to be discussed later).
+The division of a cell results in two roughly equal new parts, the
+daughter cells. The process of cell division is known as mitosis and is
+diagrammed in Figure 6.
+
+Mitosis is a continuous process; the following stages of the process are
+designated only for convenience. During _interphase_ the cell is busy
+metabolizing, synthesizing new cellular materials, and preparing for
+self-duplication by synthesizing new chromosomes. In _prophase_ the
+chromosomes, each now composed of two identical strands called
+chromatids, shorten by coiling, and the nucleolus and nuclear membrane
+disappear. During _metaphase_ the chromosomes line up in one plane near
+the cell equator. At _anaphase_ the sister chromatids of each chromosome
+separate, and each part moves toward the ends, or poles, of the cell.
+During _telophase_ the chromosomes uncoil and return to invisibility; a
+new nucleus, nucleolus, and nuclear membrane are reconstituted at each
+end, and division of the cell body occurs between the new nuclei,
+forming the two new cells. Each daughter cell thereby receives a full
+set of chromosomes, and, since the genes are in the chromosomes, each
+daughter cell has the same genetic complement.
+
+[Illustration: Figure 7 _Photomicrograph of cells of the Trillium plant,
+which has five chromosomes, in anaphase. Note the duplicate sets of
+chromosomes moving to opposite poles of the cell._]
+
+All life processes use up energy and therefore require fuel. The
+mitochondria have a central role in the reactions by which the energy of
+sugars is supplied for cellular activity. The importance of this vital
+activity is obvious. In this booklet, however, we are concerned with the
+processes, involving nucleic acids and proteins, that can be described
+as making up “the gene-action system”. The gene-action system is the
+series of biochemical events that regulate and direct _all_ life
+processes by “transcription” of the genetic “information” contained in
+molecules of DNA.
+
+
+
+
+            RADIOACTIVE ISOTOPES: THE BIOLOGICAL DETECTIVES
+
+
+  _Man ... has found ways to amplify his senses ... and, with a variety
+  of instruments and techniques, has added kinds of perception that were
+  missing from his original endowment._
+
+                                                        Glenn T. Seaborg
+
+
+Atomic Structure
+
+Practically everyone nowadays is to some extent familiar with the atomic
+structure of matter. Atomic energy, nuclear reactors, and radioisotopes
+are terms in everyday usage. However, to appreciate how radioisotopes
+can be applied to the study of life processes, we must have at least a
+working knowledge of their properties, their preparation, and their
+limitations. It is therefore appropriate to examine them in detail so
+that the succeeding chapters will be more easily understood.
+
+According to present-day theory, an atom consists of a nucleus[4] that
+is made up of protons and neutrons[5] and is surrounded by electrons. In
+each atom there is an equal number of protons (positively charged) in
+the nucleus and electrons (negatively charged) moving concentrically
+around the nucleus; since neutrons have no electrical charge and since
+protons and electrons cancel each other’s charges, the whole atom is
+electrically neutral, or uncharged. Each atom is identified by an atomic
+number and an atomic weight. The atomic number of an element (for
+example, carbon, nitrogen, oxygen) is determined by the number of
+protons, or positive charges, carried by the nucleus (or by the number
+of electrons surrounding the nucleus, which is the same). The atomic
+weight is the weight of an atom as compared with that of the atom of
+carbon, which is taken as a standard. The weight, or mass, of an atom is
+due chiefly to its protons and neutrons because the mass of its
+electrons is negligible.
+
+
+Isotopes
+
+Atoms of the same element, that is, atoms with the same number of
+protons and electrons, may vary slightly in mass because of having
+different numbers of neutrons. Since the chemical behavior of an element
+depends upon its electrons’ electrical charges, extra neutrons (which do
+not have an electrical charge) may affect the mass of an atom without
+disturbing its chemical properties. Atoms having the same atomic number
+but different atomic weights are called isotopes. For example, as shown
+in Figure 8, the isotope ¹H, or ordinary hydrogen, consists of a nucleus
+containing a proton (charge: +1; mass: 1) around which revolves an
+electron (charge: -1; mass: negligible); ²H, known as deuterium,
+contains an additional nuclear particle, a neutron (charge: 0; mass: 1);
+³H, or tritium, contains two neutrons. Since the chemical behavior of an
+element depends upon the number of its electrons, these three atoms,
+although differing in weight, behave identically in chemical reactions.
+For convenience, the atomic weight is written as a superscript to the
+left of the element’s symbol. For instance ¹⁴C is the isotope of carbon
+with an atomic weight of 14 (ordinary carbon is the isotope with an
+atomic weight of 12, and it is written ¹²C).
+
+[Illustration: Figure 8 _Isotopes of hydrogen._]
+
+  Hydrogen (¹H)
+  Deuterium (²H)
+  Tritium (³H)
+
+Practically all elements have more than one isotope. There are two
+general classes of isotopes, stable and radioactive. Stable isotopes
+have no distinguishing characteristic other than their mass; radioactive
+isotopes not only differ from their brothers in mass but also are
+characterized by unstable nuclei. When the nucleus of an atom is
+unstable, because of an unbalanced number of protons and neutrons, a
+redistribution occurs sooner or later, and the atom decomposes
+spontaneously and emits one of several kinds of radiations. Because of
+their common mode of action and effects on living organisms, these
+different kinds of radiations are known collectively as ionizing
+radiations.
+
+All radioactive elements emit one or more of three types of penetrating
+(ionizing) rays. _Alpha rays_ or particles are double-charged helium
+nuclei, ⁴He (atomic number: 2; mass: 4). They are emitted by many heavy
+radioactive elements, such as radium, uranium, and plutonium. _Beta
+rays_ or particles can be either positive or negative. Negative beta
+particles are high-speed electrons and are emitted by many radioactive
+elements. Positive beta particles are positively charged electrons
+(positrons), have only a transitory existence, and are less common.
+_Gamma rays_ are electromagnetic radiations, a term that also describes
+radiowaves, infrared rays, visible light, ultraviolet light, and X rays.
+Gamma rays are usually emitted after the emission of alpha or beta
+particles. In our studies of life processes, we are interested only in
+the radioactive isotopes that emit gamma rays or beta particles.
+
+
+Radioactive Isotopes
+
+Radioactive isotopes occur as minor constituents in many natural
+materials, from which they can be concentrated by fractionation
+procedures. In a very limited number of cases, more significant amounts
+of a radioactive isotope, for example, radium or radioactive lead, can
+be found in nature. Most radioactive isotopes in use today, however, are
+prepared artificially by nuclear reactions. When a high-energy particle,
+such as a proton, a deuteron, an alpha particle, or a neutron, collides
+with an atom, a reaction takes place, leading to the formation of a new,
+unstable compound—a man-made radioactive isotope.
+
+The great usefulness of radioactive isotopes, as we shall see later, is
+that they can be detected and identified by proper instruments.
+Biochemists have long recognized the desirability of “tagging” or
+“labeling” a molecule to permit tracing or keeping track of the “label”
+and consequently of the molecule as it moves through a reaction or
+process. Since the radiations emitted by radioactive isotopes can be
+detected and measured, we can readily follow a molecule tagged with a
+radioactive atom.
+
+[Illustration: Figure 9 _A laboratory technologist preparing dissolved
+biological materials as part of a study of the uptake of radioactive
+substances in living organisms. Note the radiation-detection instrument
+at right._]
+
+The earliest biochemical studies employing radioactive isotopes go back
+to 1924, when George de Hevesy used natural radioactive lead to
+investigate a biological process. It was only after World War II,
+however, when artificially made radioactive isotopes were readily
+available, that the technique of using isotopic tracers became popular.
+
+In our investigations of life processes, we are especially interested in
+three radioactive isotopes: ³H, the hydrogen atom of mass 3; ¹⁴C, the
+atom of carbon with atomic weight 14; and ³²P, the atom of phosphorus
+with atomic weight 32. These radioactive isotopes are important because
+the corresponding stable isotopes of hydrogen, carbon, and phosphorus
+are present in practically all cellular components that are important in
+maintaining life. With the three radioactive isotopes, therefore, we can
+tag or label the molecules that participate in life processes.
+
+[Illustration: Figure 10 _A visiting scientist at an AEC laboratory uses
+radioactive tritium (³H) to study the effect of radiation on bean
+chromosomes. The famous scientist, George de Hevesy, also used beans in
+conducting the first biological studies ever made with radioisotopes._]
+
+Hydrogen-3 is a weak beta emitter; that is, it emits beta particles with
+a very low energy (0.018 Mev[6]) and therefore with a very short range.
+Carbon-14 is also a weak beta emitter (0.154 Mev), although the beta
+particles emitted by ¹⁴C have a higher energy and therefore a longer
+range than those emitted by ³H. The beta particles emitted by
+phosphorus-32 are quite energetic (1.69 Mev) and have a longer range.
+
+
+Radioactive Isotopes’ Value in Biological Studies
+
+To biologists, then, the essential feature in the use of radioactive
+isotopes is the possibility of preparing “labeled” samples of any
+organic molecule involved in biological processes. With labeled samples
+it is possible to distinguish the behavior and keep track of the course
+of molecules involved in a particular biological function.
+
+In this capacity the isotope may be likened to a dynamic and
+revolutionary type of “atomic microscope”, which can actually be
+incorporated into a living process or a specific cell. Just as a real
+microscope permits examination of the structural details of cells,
+isotopes permit examination of the chemical _activities_ of molecules,
+atoms, and ions as they react within cells. (Neither optical nor
+electron microscopes are powerful enough for us to see anything as small
+as a molecule clearly.)
+
+
+
+
+               DNA SYNTHESIS: THE AUTOBIOGRAPHY OF CELLS
+
+
+  _Here, surely, is the prime substance of life itself._
+
+                                                            Isaac Asimov
+
+The many characteristic features of each living species, its complex
+architecture, its particular behavior patterns, the ingenious
+modifications of structure and function that enable it to compete and
+survive—all these must pass, figuratively speaking, through the eye of
+an ultramicroscopic needle before they are brought together as a new,
+individual organism. The thread that passes through the eye of this
+needle is a strand of the filamentous molecule, deoxyribonucleic acid
+(DNA). Let us now outline the research that led to these conclusions.
+
+
+DNA in Somatic and Germinal Cells
+
+One of the fundamental laws of modern biology—which states that the DNA
+content of somatic cells is constant for any given species—was first set
+forth in a research report of 1948. This finding means that in any given
+species, such as a mouse or a man, all cells except the germinal cells
+contain the same amount of DNA. Germinal cells, that is, the sperm cells
+of the male semen and the female egg, contain exactly half the amount of
+DNA of the somatic cells. This must be the case, since DNA is the
+hereditary material, and each individual’s heredity is shaped half by
+his father and half by his mother. One ten-trillionth of an ounce of DNA
+from a father and one ten-trillionth of an ounce of DNA from the mother
+together contain all the specifications to produce a new human being.
+
+A large amount of DNA must be manufactured by an individual organism as
+it develops from a fertilized egg (one single cell) to an adult
+containing several million cells. For instance, a mouse cell contains
+about 7 picograms of DNA (one picogram is one millionth of a microgram,
+or one millionth of one millionth of a gram). A whole mouse contains in
+its body approximately 25 milligrams (25 thousandths of a gram) of DNA,
+and all this DNA was synthesized by the cells as the mouse grew to
+adulthood. Since the amount of DNA per cell remains constant and since
+each cell divides into two cells, it is apparent that each new cell
+receives the amount of DNA characteristic of that species.
+
+Once we realize that a cell that is making new DNA (as most cells do)
+must divide to keep the amount of DNA per cell constant, it follows that
+a cell that is making DNA is one that is soon destined to divide. If we
+can now mark newly made DNA with a radioactive isotope, we can actually
+mark and thus identify cells that are preparing to divide. The task can
+be divided into two parts: (1) to label the newly made DNA and (2) to
+detect the newly made, labeled DNA.
+
+
+Replication of DNA
+
+Figure 11 is a diagram showing the essential structure of the large DNA
+molecule. According to the Watson-Crick model,[7] the molecule consists
+of two strands of smaller molecules twisted around each other to form a
+double helix. Each strand consists of a sequence of the smaller
+molecules linked linearly to each other. These smaller molecules are
+called nucleotides, and each consists of three still smaller molecules,
+a sugar (deoxyribose), phosphoric acid, and a nitrogen base. Each
+nucleotide and its nearest neighbor are linked together (between the
+sugar of one and the phosphoric acid of the neighbor). This leaves the
+nitrogen base free to attach itself, through hydrogen bonding, to
+another nitrogen base in the opposite strand of the helix.
+
+In the DNA of higher organisms, there are only four types of nitrogen
+bases: adenine, guanine, thymine, and cytosine. Adenine in either strand
+of the helix pairs only with thymine in the opposite strand, and vice
+versa, and guanine pairs only with cytosine, and vice versa, so that
+each strand is complementary in structure to the other strand (see
+Figure 12). The full structure resembles a long twisted ladder, with the
+sugar and phosphate molecules of the nucleotides forming the uprights
+and the linked nitrogen bases forming the rungs. Each upright strand is
+essentially a mirror image of the other, although the two ends of any
+one rung are dissimilar.
+
+[Illustration: Figure 11 _Diagrammatic structure of the DNA molecule as
+proposed by the Watson-Crick model._]
+
+  DNA: Diagrammatic single-strand chemical formula
+  DNA: Structural arrangement
+
+When DNA is replicated, or copied, as the organism grows, the two
+nucleotide strands separate from each other by disjoining the rungs at
+the point where the bases meet, and each strand then makes a new and
+similarly complementary strand. The result is two double-stranded DNA
+molecules, each of which is identical to the parent molecule and
+contains the same genetic material. When the cell divides, each of the
+two daughter cells gets one of the new double strands; each new cell
+thus always has the same amount of DNA and the same genetic material as
+the parent cell.
+
+(All that has been said so far about DNA replication depends upon an
+assumption that the DNA molecule is in some way untwisted to allow
+separation of two helical strands, but there is no compelling reason to
+believe that such an untwisting does indeed take place, nor do we know,
+if the untwisting does take place, how it is accomplished. Much that has
+been said in the last few paragraphs is therefore purely speculative. It
+is, however, based on sound observation and is a more logical
+explanation than others that have been advanced.)
+
+[Illustration: Figure 12 _The pairing of the nucleotide bases that make
+up DNA._]
+
+[Illustration: Figure 13 _The DNA molecule and how it replicates. (a)
+The constituent submolecules. (b) Assembly of subunits in complete DNA
+molecule. (c) “Unzipping” of the double nucleotide strand. (d) and (e)
+The forming of a new strand by each individual strand. (f) DNA molecule
+in twisted double-strand configuration._
+
+Adapted from _Viruses and the Nature of Life_, Wendell M. Stanley and
+Evans C. Valens, E. P. Dutton & Co., Inc., 1961, with permission.]
+
+
+Labeling DNA with a Radioactive Isotope
+
+Of the four bases in DNA, three are also found in the other nucleic
+acid, RNA; but the fourth, thymine, is found only in DNA. Therefore, if
+thymine could be labeled and introduced into a number of cells,
+including a cell in which DNA is being formed, we would specifically
+label the newly synthesized DNA, since neither the old DNA nor the RNA
+would make use of the thymine. We could in this way mark cells preparing
+to divide. (Actually, thymine itself is not taken up in mammalian cells,
+but its nucleoside is. A nucleoside is the base plus the sugar, or, in
+other words, the nucleotide minus the phosphoric acid.) The nucleoside
+of thymine is called thymidine, and we say that thymidine is a specific
+component of DNA and can be used, both in laboratory studies and in
+living organisms, for labeling DNA.
+
+Thymidine labeled with radioactive compounds is available as
+¹⁴C-thymidine (thymidine with a stable carbon atom replaced by a
+radioactive carbon atom) and as ³H-thymidine (thymidine in which a
+stable hydrogen atom has been replaced by tritium). Thus, when cells
+actively making DNA are exposed to radioactive thymidine, they
+incorporate it, and the DNA becomes radioactive.
+
+We have thus found a way to complete the first part of the task, the
+labeling of new DNA. We still must find out how to distinguish labeled
+DNA among the many components of the cell. We might do it with a system
+based on measuring the amount of radioactivity incorporated into the DNA
+of cells exposed to radioactive thymidine, as an approximation of the
+frequency of cell division in the group of cells. However, a better
+method for studying cells synthesizing DNA, and thus preparing to
+divide, is the use of high-resolution autoradiography.
+
+
+Detecting DNA with Autoradiography
+
+Autoradiography is based on the same principle as photography. Just as
+photons of light impinging on a photographic emulsion produce an image,
+so do beta particles (or alpha particles) emitted by decomposing
+radioactive atoms. A photographic emulsion is a suspension of crystals
+of a silver halide (usually silver bromide) embedded in gelatin. When
+crystals of silver bromide are struck by beta particles, the silver
+atoms are ionized and form a latent image, so called because it is
+invisible to our eyes. After the emulsion is developed and fixed, each
+little aggregate of reduced silver atoms becomes a visible black speck
+on the emulsion. The distribution and combination of the specks make up
+the photographic image (see Figure 14). In ordinary photography such an
+image is a negative, which has to be converted into the positive
+photograph by printing. In autoradiography we are satisfied to look at
+the negative image since the clusters of developed silver atoms,
+appearing under a light microscope as black dots, supply all the
+information we need.
+
+[Illustration: Figure 14 _Schematic diagram of a radioautograph._]
+
+The distinction of having made the first autoradiograph belongs to the
+French physicist, Antoine Henri Becquerel; and to another Frenchman, A.
+Lacassagne, goes the credit for having introduced this technique into
+biological studies. Lacassagne used autoradiography to study
+distribution of radioactive polonium in animal organs. After World War
+II, when radioactive isotopes were first available in appreciable
+quantities, autoradiography was further perfected through the efforts of
+such scientists as C. P. Leblond in Canada, S. R. Pelc in England, and
+P. R. Fitzgerald in the United States.
+
+Today autoradiography is sufficiently precise to locate radioactively
+labeled substances in individual cells and even in chromosomes and other
+structures within the cell. Two conditions must be met to achieve this
+high resolution: (1) The radiation from the radioactive element in the
+cells must be of very short range. (2) The cells must remain in close
+contact with the photographic emulsion throughout the various
+experimental manipulations. When these conditions are met, the black
+dots will appear in the emulsion directly above the cell or cell part
+from which the radiation came (see Figure 14).
+
+Shortness of range is satisfied by use of tritium, since its beta
+particles travel only about 1 micron (one thousandth of a millimeter)
+and the diameters of mammalian cells range from 15 to 40 or more
+microns. A mammalian-cell nucleus is at least 7 to 8 microns in
+diameter.
+
+[Illustration: Figure 15 _Cells being prepared for autoradiography. (a)
+Cells being coated with a photographic emulsion. (b) Coated cells being
+exposed to produce a latent image._]
+
+The condition of close contact between cells and emulsion is achieved by
+the technique of dip-coating autoradiography. In this process the glass
+slide on which the cells are carried is dipped into a melted
+photographic emulsion (see Figure 15a), a thin film of which clings to
+the slide. After it has been dried, the slide is placed in a lighttight
+box and kept in a refrigerator for the desired period of exposure,
+usually several days or weeks. During this period disintegrating
+radioactive atoms within the cells continue to emit beta particles,
+which, in turn, produce a latent image in the overlying emulsion. After
+the exposure is complete, the slide is developed and fixed like a
+photographic plate, and a stain is applied which penetrates the emulsion
+so that the outlines of the cells and their internal structures can be
+seen. The fixing process removes all silver bromide that has not been
+ionized so that the emulsion is reduced to a thin, transparent film of
+gelatin covering the stained cells and containing only the clusters of
+silver grains that were struck by the beta particles.
+
+[Illustration: Figure 16 _Radioautographs of tumor cells. Above, tumor
+cells and blood cells. Below, magnification of tumor cells._]
+
+When the finished autoradiograph is examined under the microscope, it
+will look like the radioautographs of tumor cells in Figure 16. In the
+upper micrograph the tumor cells are the larger ones and the smaller
+ones are blood cells. The dense structures in the center of the tumor
+cells are nuclei. The cells were exposed to tritium-labeled thymidine,
+and those synthesizing DNA at the time of exposure took up the thymidine
+and became radioactive. They can be identified by the black dots
+overlying the nuclei; the dots are the aggregates of silver grains
+struck by the beta particles.
+
+Notice that only the nuclei contain radioactivity; the reason for this
+is that radioactive thymidine is incorporated only into DNA localized in
+the nuclei of cells. This picture identifies not only the cells that
+were making DNA at the time the label was administered but also the
+cells that were destined to divide in the immediate future, since cells
+synthesize DNA in preparation for cell division.
+
+If we want to compare two populations of cells to find out which is
+proliferating (dividing) more actively, counting the fraction of cells
+labeled will give the number of cells synthesizing DNA in preparation
+for cell division. Of course, a rough approximation of the proliferating
+activity can be obtained by simply counting the number of cells actually
+dividing. But with tritiated thymidine we can obtain not only much more
+accurate measurements but also considerable information that cannot be
+obtained by simply counting the number of cells in mitosis. We shall
+discuss the cell cycle later on, but for the moment we should emphasize
+that much of our knowledge of the cell cycle stems from the use of
+high-resolution autoradiography.
+
+It is clear that autoradiography enables us to find out _which_ cells
+are dividing in a cell population and _how many_ of them do so. For
+instance, in a given tissue or organ, not all cells are capable of
+dividing into two daughter cells. In the epidermis, which is the thin
+outer layer of the skin, only cells in the deepest portion can divide.
+The other cells, although originating from cells in the deep layer, have
+lost the capacity to divide, and eventually die without further
+division. If we take a bit of skin, expose it to tritiated thymidine,
+and determine the amount of radioactivity incorporated into the skin
+cells’ DNA, we obtain a fair measurement of the amount of DNA being
+synthesized. However, this purely biochemical investigation cannot
+possibly give any information on which specific cells are synthesizing
+DNA. For this, autoradiography provides the information we need.
+
+
+
+
+       RNA SYNTHESIS: HOW TO TRANSLATE ONE LANGUAGE INTO ANOTHER
+
+
+  _Mathematicians are like Frenchmen: whatever you say to them they
+  translate into their own language, and forthwith it is something
+  entirely different._
+
+                                                     Wolfgang von Goethe
+
+We have mentioned previously that there are two main types of nucleic
+acids: DNA, the genetic material itself, and RNA, the molecule that
+translates the genetic message from DNA into terms the cell can use as
+“instructions” for making protein. Cells differ from each other on the
+basis of kinds of proteins they contain, and, since differences among
+cells determine differences among organisms, it follows that differences
+in the composition of DNA serve to explain the variety in living
+organisms populating the world. However, if differences between two
+organisms can be explained by differences in the chemical composition of
+their respective DNA’s, how can we explain differences between cells of
+the same organism? How can we explain that cells of the human pancreas
+secrete insulin, whereas other cells in man produce no insulin? Or how
+can we explain that certain cells make bone and others make fat? If
+indeed all cells in the same organism contain the same amount and kind
+of DNA (since all DNA in an organism derives from the duplication of the
+DNA of the fertilized egg cell and its descendants), it would seem, at
+first glance, that DNA is not the molecule responsible for differences
+among the cells. The clarification of this apparent contradiction is
+found in the remarkable properties of the other nucleic acid, the
+translator molecule, RNA.
+
+
+Three Kinds of RNA
+
+In the first place, there are at least three different kinds of RNA. The
+largest quantity is a special kind called ribosomal RNA, or r-RNA. It is
+found in close conjunction with proteins and makes up the structural
+frame upon which the protein-synthesizing machinery is built. The r-RNA
+and the proteins to which it is firmly bound form the ribosomes, the
+RNA-rich microsomes that are attached to the endoplasmic reticulum.
+Proteins are synthesized on ribosomes. We shall see later what
+determines the differences among proteins and how these differences are
+dictated directly by RNA and indirectly by DNA.
+
+Besides r-RNA, there is a kind of RNA called soluble RNA, or transfer
+RNA, or s-RNA. It combines with r-RNA to complete the sequence of events
+that synthesizes the proteins. A bond between r-RNA and s-RNA is
+established by a third RNA molecule called messenger RNA, or template
+RNA, or m-RNA. This m-RNA molecule is truly the messenger that carries
+the genetic message from DNA to the protein-synthesizing apparatus.
+
+Dr. Michael Shimkin, a Temple University scientist, in his analogy has
+compared the DNA → RNA → protein sequence to the activities of a
+newspaper staff. DNA is the editor; m-RNA molecules are copyboys who
+carry the editorials to the typesetters, the r-RNA and s-RNA, who then
+take the “letters” of nucleic acid and set them into slots in accordance
+with the editor’s directions. There are also workers who melt down
+outworn letters and still other workers who make new letters for further
+use; these are the enzymes, special kinds of proteins. If we wish to
+continue the analogy, we may say that each kind of cell in the organism
+has a different subeditor, who writes that cell’s own editorial.
+Actually we might say that all cells have the same board of editors in
+common, but only one editor functions in any given type of cell. In
+biological terms this means that only a portion of all the cellular DNA
+is active in each cell.
+
+The active DNA is the DNA that makes m-RNA that will carry instructions
+to the protein-synthesizing machinery of that type of cell. Cells of the
+same organism therefore differ from each other on the basis of the
+segment of DNA that is active in making m-RNA. Let us now see how we can
+use radioactive isotopes to investigate the synthesis of RNA.
+
+
+Labeling RNA with a Radioactive Isotope
+
+RNA synthesis is investigated with radioactive tracers in the same way
+as DNA synthesis. If we can mark, with a radioactive atom, a small
+molecule that is incorporated into newly formed RNA, we can then trace
+the course of the labeled RNA molecule with a radiation-detection
+device. DNA had one advantage in this regard—the fact that one compound,
+thymidine, was a precursor of DNA, a specific material that could be
+incorporated only into DNA. We do not know similar specific precursors
+of RNA. But we know several precursors that are predominantly
+incorporated into RNA; the most common of these are the nucleosides
+adenine, cytidine, and uridine, and the smaller molecule, orotic acid.
+All these precursors can be labeled with either ³H or ¹⁴C, and their
+incorporation into RNA can be measured.
+
+
+Detecting RNA with Autoradiography
+
+As in DNA synthesis, we can use autoradiography to follow the
+incorporation of precursors into RNA. By proper treatment of the
+tissues, we can make sure that all the radioactivity visible by
+autoradiography is due to labeled RNA, even though some of the precursor
+also enters DNA molecules. Even so, the kind of information obtained
+from autoradiographs of tissues exposed to RNA precursors is different
+from that obtained with DNA precursors. The advantage of high-resolution
+autoradiography in DNA studies is the possibility of identifying
+particular cells that are synthesizing nucleic acid. This advantage is
+apparently lost in the case of RNA. The reason is that, at any given
+time, only a few cells are making DNA, whereas practically all cells are
+synthesizing RNA constantly. The only exceptions are cells in the
+midpoint of mitosis. At the beginning (prophase) and at the end of cell
+division (telophase), RNA is synthesized. If we want a quantitative
+measurement of RNA synthesis, other methods, to be examined presently,
+are considerably more precise. But autoradiography can still give us
+valuable information.
+
+
+Other Methods of Detecting RNA
+
+If we look at cells soon after they have been exposed to an RNA
+precursor, we find that the radioactivity detectable by autoradiography
+is only in the nuclei of the cells. No radioactivity can be detected in
+the cytoplasm, although we know that the cytoplasm of living cells
+contains large amounts of r-RNA and s-RNA. One or two hours later,
+however, radioactive RNA appears in the cytoplasm as well as in the
+nucleus. What autoradiography is telling us is that RNA is made in the
+nucleus and then is slowly transferred to the cytoplasm.
+
+Autoradiography cannot tell us whether the RNA that has been newly
+synthesized in the nuclei of cells is m-RNA, s-RNA, or r-RNA. The
+methods necessary to make this distinction are based on the chemical
+fractionation of the tissue, isolation of RNA, determination of its
+amount by quantitative analysis, and determination of the amount of
+radioactivity by physical methods. Let us examine these steps
+separately.
+
+[Illustration: Figure 17 _Injecting a mouse with a radioactive
+solution._]
+
+Chemical Fractionation of Tissue
+
+After an animal has been injected with a radioactive precursor of RNA,
+some of it will be incorporated into DNA as well as into RNA (remember
+that the precursors of RNA lack specificity), and part of the precursor
+will be broken down into smaller molecules. The injected animal can be
+sacrificed, and an organ or another tissue, for instance, the liver, can
+be removed. Then the liver is homogenized, that is, ground to a pulp
+with a modern version of the mortar and pestle. The homogenate (pulp) is
+treated with cold (weak) acid. Proteins and nucleic acids are insoluble
+in cold acids and therefore precipitate to the bottom of the test tube.
+All molecules that are soluble in a cold acid are left in the
+supernatant (the remaining liquid); among these are small molecules,
+like those of the RNA precursor. The precipitate (the solid material
+that settles to the bottom), now containing proteins and nucleic acids,
+is then treated with a strong alkali, for instance, sodium hydroxide.
+Alkali will digest RNA into smaller molecules but does not affect DNA.
+If we now add acid to the solution, DNA, being insoluble in acid, will
+precipitate again; RNA, having been broken down into small molecules,
+will remain in the supernatant. DNA can then be extracted from the
+precipitate by boiling in strong acid. Proteins from the tissue remain
+in the final residue.
+
+We have now fractionated the tissue into four portions: the acid-soluble
+fraction (containing small molecules), RNA, DNA, and proteins. (The
+cell’s lipids and sugars come out during alcohol rinses between the weak
+acid and the alkali steps.) Chemical analysis allows us to measure
+precisely the amount of RNA or DNA in its respective fraction and
+therefore in the tissue or organ. The amount of radioactivity in the RNA
+fraction can then be determined by a technique known as liquid
+scintillation counting.
+
+Liquid Scintillation Counting
+
+Liquid scintillation counting is the preferred method for the
+measurement of low-energy beta-emitting radioisotopes commonly used in
+cell-fractionation studies (see Figure 18). It is convenient, sensitive,
+and rapid for routine measurement of radiation in hydrocarbons, other
+organic compounds, and aqueous solutions containing such isotopes as ³H,
+¹⁴C, and ³²P.
+
+Liquid scintillation solutions share with other scintillating materials
+the property of converting into visible light the energy deposited in
+them by ionizing radiation. In theory, if a sample of a beta emitter is
+dissolved in a liquid scintillator solution, every beta particle emitted
+will be absorbed completely because the range of penetration of beta
+particles in liquids is quite short (ranging from 0.008 millimicron for
+³H to 7.9 millimicrons for ³²P in a medium of unit density). The kinetic
+energy of the beta particles is largely used up in the ionization and
+excitation of the most abundant molecular species present, the solvent
+in which the scintillating material was dissolved. A fraction of the
+energy thus expended by each beta particle is transferred from excited
+solvent molecules to scintillator molecules; thus the electrons in the
+atoms of the scintillator molecules are raised to an excited (higher
+energy) state. When these electrons return to the ground, or unexcited,
+state, a fraction of them emit a photon of light. Thus each beta
+particle produces a burst of photons.
+
+[Illustration: Figure 18 _Technician placing a tray of samples in a
+liquid scintillation counter. The radioactivity of each sample is
+recorded as the trays revolve._]
+
+If a vessel containing the liquid scintillator and the radioactive
+sample is placed near a suitably sensitive instrument known as a
+photomultiplier tube, each burst of scintillator photons activates this
+device and causes it to release a burst of photoelectrons. Each burst of
+photoelectrons is multiplied successively in a series of electronic
+steps; as a result, there is a suitably large electrical-output pulse to
+be recorded.
+
+One of the principal advantages of the liquid scintillation method is
+the ease of sample preparation. We need only transfer a known volume of
+a liquid sample or weigh a given mass of a solid sample into a sample
+bottle, add a known amount of the liquid scintillator solution, and stir
+until there is a homogeneous solution. Samples thus prepared are placed
+in a refrigerated counting apparatus. After a short waiting period to
+allow time for the samples to cool and for a natural, short-lived
+phosphorescence (due to exposure to room light) to subside, the samples
+are ready to be measured.
+
+[Illustration: Figure 19 _Placing radioactive samples in a refrigerated
+unit for liquid scintillation counting._]
+
+One disadvantage of liquid scintillation counting is that different
+compounds show different degrees of quenching (loss of emitted photons),
+and the effect must be checked for each class of compounds in each
+concentration range. This checking is usually done with an internal
+standard technique, the sample being counted before and after a
+standard, or known, emitter is added.
+
+Another difficulty is that the best scintillating solvents are not the
+best chemical solvents for most biological materials. The solubility
+problem is also aggravated by the low temperatures at which liquid
+scintillation counters are usually operated for more effective
+instrument performance.
+
+With the method we have described, we can obtain a fairly accurate idea
+of the rate of RNA synthesis in a given tissue. There are other things
+we would like to know about RNA. The first of these is the kind of RNA
+being synthesized. During alkaline digestion all kinds of RNA are broken
+down into their component nucleotides; we must therefore use other
+methods if we wish to know the kind of RNA in which the radioactivity of
+the precursor has been incorporated.
+
+Isolation of RNA
+
+Native RNA, that is, RNA not broken down into its smaller constituents,
+can be obtained in a variety of ways, but the most popular one makes use
+of phenol extraction, which removes DNA and proteins and leaves RNA in
+solution. If this phenol-purified RNA is dissolved in a concentrated
+sugar solution and spun in a centrifuge at a very high velocity, it will
+separate into three major components. These components separate because
+they have different molecular weights, and the larger the molecule, the
+faster it forms a sediment in the centrifugal field. Two of these
+components are s-RNA, the lightest of all, and r-RNA, which is divided
+into two subfractions. We can also identify a third component, m-RNA,
+with the centrifuge system but only with some difficulty and only after
+labeling it with a radioactive precursor, because the amount of m-RNA in
+a cell is very small.
+
+[Illustration: Figure 20 _Diagram of ascending paper chromatography._]
+
+Quantitative Analysis
+
+Another important feature of RNA (or DNA, for that matter) is its base
+composition, that is, the percentage of each of the nucleotides that
+make it up. The four bases that, with ribose and phosphoric acid,
+comprise the RNA molecule are guanine, adenine, cytosine, and uracil. It
+will be noted that three of the four—guanine, adenine, and cytosine—are
+the same as those in DNA, but thymidine in DNA has been replaced by
+another base, uracil. To determine the percentage of each base in a
+given RNA molecule, we must digest RNA with alkali to produce
+mononucleotides, which are smaller molecules, each consisting of a base,
+ribose, and phosphoric acid. We can now separate the four nucleotides by
+using paper chromatography (see Figure 20).
+
+[Illustration: Figure 21 _A paper chromatography showing separation of
+amino acids in two directions. Radioactivity in samples then produced
+this record by radioautography._]
+
+In this technique a mixture of compounds is deposited on the edge of a
+special type of paper. This edge is then immersed in a solvent that
+slowly permeates the paper (at a constant speed) by capillary action. As
+the solvent moves from the immersed edge toward the other edge, which is
+hanging freely, it carries the mixture of nucleotides with it. Each of
+the compounds in the mixture travels at a different speed, however;
+thus, as the solvent front moves along the paper, the dissolved
+compounds are separated from each other and appear as distinct spots on
+the paper. To locate the nucleotides on the paper and to determine the
+percentage composition, we can use a chromatogram scanner, a device that
+scans the paper chromatograms, measures the radiation from them, and
+thus locates the labeled substances (see Figure 22).
+
+[Illustration: Figure 22 _Recording of radioactivity in a sample by
+radioautography and paper chromatography. The peaks of the trace
+prepared by a chromatogram scanner coincide with the areas of separated
+components on the same chromatogram, as revealed by radioautography. The
+radioautograph is superimposed on the chromatogram recording._]
+
+Another technique used to separate the nucleotides of RNA is column
+chromatography. In this method mixtures of nucleotides are separated as
+they pass down a column of chemicals (see Figure 23).
+
+[Illustration: Figure 23 _Students visiting Argonne National Laboratory
+listen to a scientist explain the column chromatography process, in
+which mixtures of nucleotides are separated as they pass down a column
+of chemicals._]
+
+We have now learned how to use radioisotopes to investigate the
+synthesis of RNA, the molecule that translates the DNA message into the
+language of proteins. Let us now see what we can learn about the
+synthesis and function of proteins.
+
+
+
+
+       PROTEIN SYNTHESIS: THE MOLECULES THAT MAKE THE DIFFERENCE
+
+
+  _If a man will begin with certainties he shall end in doubts; but if
+  he will be content to begin with doubts he shall end in certainties._
+
+                                                           Francis Bacon
+
+Proteins occupy a central position in the structure and functioning of
+living matter and are intimately connected with all the metabolic
+reactions that maintain life. Some proteins serve as structural elements
+of the body, for instance, hair, wool, and the scleroproteins of bone
+and collagen, the latter an important constituent of connective tissue.
+Other proteins are enzymes, which are extremely important since they
+regulate all metabolic reactions. Most of the proteins in the tissues of
+actively functioning organs, such as the liver and the kidney, are
+enzymes. Other proteins participate in muscular contraction, and still
+others are hormones or oxygen carriers. Special proteins called histones
+are associated with gene function, and the antibodies that an organism
+produces to defend itself from bacteria are also proteins.
+
+The differences in proteins, especially in enzymes, account for
+differences among cells. It is now appropriate to ask what makes one
+protein different from another. We know that the structure of a protein
+depends upon several factors, such as the molecular weight. But the main
+differences among proteins depend upon the sequence, or order, of the
+amino acids that are linked together in the protein molecules.
+
+
+Amino Acids and Protein Structure
+
+Amino acids are the fundamental structural units of proteins. There are
+20 amino acids found frequently in mammalian proteins, and these
+molecules may be linked to one another to form a chain called a
+polypeptide chain. The structure of a protein then depends on: (1) the
+quantity of each amino acid present; (2) the sequence of amino acids in
+the polypeptide chain; (3) the length of the polypeptide chain, that is,
+the molecular weight; and (4) the folding and the side (nonlinear)
+arrangement of the polypeptide chain molecules, that is, the secondary
+and tertiary structures.
+
+How can we investigate protein synthesis by using radioactive isotopes?
+Since proteins are made up of amino acids, the logical conclusion, after
+what we have learned about DNA synthesis and RNA synthesis, is that the
+best way would be to mark an amino acid and follow its incorporation
+into a molecule of protein. We could label a mixture of several amino
+acids, but, for the sake of clarity, we will describe the incorporation
+of a single labeled amino acid.
+
+
+Labeling an Amino Acid with a Radioactive Isotope
+
+Suppose we have the amino acid leucine labeled with ¹⁴C and we inject a
+solution containing it into an experimental animal. Since leucine is
+incorporated into proteins, if we isolate the proteins and determine
+both the amount of proteins and the amount of radioactivity, we can
+measure fairly accurately the rate of protein synthesis.
+Autoradiography, by the way, is of little help in studying most protein
+synthesis because all cells are always synthesizing proteins and so are
+all labeled after a single exposure to a radioactive amino acid. With
+RNA precursors autoradiography at least told us where RNA was being
+made, but with amino acids we do not even get this information because
+proteins are synthesized both in the nucleus and in the cytoplasm.
+
+Under these circumstances radiochemical methods are better for studying
+protein synthesis. Proteins are isolated from the residue left after a
+nucleic-acid extraction process similar to that described previously,
+and the amount of protein is determined by a simple colorimetric
+analysis based on comparison of the color of the solution with a
+standard color. The amount of radioactivity (remember that we are now
+using a precursor labeled with ¹⁴C) can be determined with a gas-flow
+counter, which is probably more widely used at present than any other
+instrument for counting beta emitters, chiefly because of its
+reliability and low cost.
+
+[Illustration: Figure 24 _A college chemistry major analyzing a sample
+of radioactive materials with an instrument known as a proportional beta
+counter._]
+
+
+
+
+         CELL CYCLE AND GENE ACTION: LIFE IS THE SECRET OF DNA
+
+
+  _Some circumstantial evidence is very strong, as when you find a trout
+  in the milk._
+
+                                                     Henry David Thoreau
+
+For a biologist interested in the mechanism of cell proliferation, the
+most important event in the life of a cell was, until very recently,
+cell division. As we mentioned, when a cell divides into two daughter
+cells, it undergoes a process called mitosis; mitosis itself is
+subdivided into four stages called prophase, metaphase, anaphase, and
+telophase. Mitosis in most cells takes less than one hour. Between one
+mitosis and the next, there can be an interval, from a few hours to
+several days in length, during which a cell is said to be in interphase.
+The entire period between the midpoints of two successive mitoses is
+called the cell cycle.
+
+
+Interphase
+
+Until a few years ago, we knew very little about interphase. In fact, in
+one classic book on histology,[8] while a description of mitosis
+required almost 12 pages, interphase was dismissed in less than six
+lines! The reason for this lack of interest was, of course, the fact
+that no adequate methods were available for studying metabolic
+activities of cells in interphase. The methods of high-resolution
+autoradiography and radiochemical analysis of synchronized cell
+populations have become available only in the past few years.
+
+We now know that metabolic activities during interphase are of primary
+importance in understanding the mechanism of cell division. It is, in
+fact, the orderly sequence of metabolic events occurring in interphase
+that leads from one mitosis to the next.
+
+
+The Cell Cycle
+
+Figure 25 is a diagram of the cell cycle. Try to imagine the cell cycle
+as a race track and individual cells as cars that race around it. You
+are sitting at the finish wire, which is mitosis (we chose mitosis
+because it is easy to recognize when the cell is observed with the aid
+of a microscope). At a certain time during the race, all the cars in a
+portion of the track, say a 200-yard sector of the backstretch, are
+sprayed with a blue dye as they race by. These cars are now marked, just
+as cells synthesizing DNA are marked if briefly exposed to tritiated
+thymidine, the common radioactive precursor of DNA. As soon as these
+cars have been sprayed, you observe all the cars as they pass the finish
+line in front of you. At first, you will see cars that were nearest the
+wire and were not sprayed; then the dye-marked cars will pass; and
+finally more unmarked cars, those that had passed the finish line but
+had not reached the spray area when the marking was done, will come by.
+If you replace the words spray, cars, and wire with the words
+radioactivity, cells, and mitosis, you have described the cell cycle and
+the flow of cells in the cycle.
+
+Now, if all cars were going at the same speed, you could calculate with
+great accuracy the time taken for any one car to go around the track, or
+from the finish line to the backstretch, or through the spray sector,
+and so on. However, since cars move at different speeds, you can only
+obtain an average time for all sprayed cars. Similarly, since individual
+cells behave differently, you can only obtain averages of the times
+these cells spend in the various portions of the cell cycle.
+
+[Illustration: Figure 25
+THE CELL CYCLE]
+
+These cell-cycle portions are four in number, according to nomenclature
+originated by A. Howard and S. R. Pelc, two English investigators who
+first described the cycle: (1) mitosis; (2) G₁, which is the period
+between mitosis and DNA synthesis; (3) S phase, which is the period
+during which DNA is replicated; and (4) G₂, which is the period between
+DNA synthesis and the next mitosis. Only cells in the S phase (DNA
+synthesis) are marked when exposed to a radioactive precursor of DNA.
+
+
+DNA Synthesis and the Cell Cycle
+
+Because it has several important implications in biology and medicine,
+it is important to remember that DNA synthesis occurs only during the
+short, well-defined S period of the cell cycle. Other synthetic
+processes go on throughout the cycle. We mentioned, for instance, that
+all cells can be labeled by a brief exposure to a radioactive amino
+acid, a precursor of proteins; this means that protein synthesis occurs
+throughout the entire cell cycle, including mitosis. When we use a
+radioactive RNA precursor, all cells except those in anaphase and
+metaphase are labeled; this means that RNA synthesis occurs throughout
+the entire cycle except during anaphase and metaphase. But a radioactive
+tag on a DNA precursor reveals that only during the S phase is there DNA
+synthesis.[9]
+
+It is also important to remember that a cell that has synthesized DNA is
+a cell that, with a few exceptions, will divide in the very near future.
+Thus, for an understanding of the mechanisms that control cellular
+proliferation, it is important to investigate the factors that control
+DNA synthesis. Our recent knowledge of the cell cycle has therefore led
+to a shift in the focus of investigation from mitosis to DNA synthesis.
+
+Another point to remember is that not all cells keep going through the
+cell cycle indefinitely. As shown in Figure 25, when a cell divides, the
+daughter cells have two alternatives, either to go through another cycle
+or to leave it altogether. Cells that leave the cycle are called
+differentiated cells and will eventually die without any further
+division. Many cells in an adult organism also have lost the capacity to
+make DNA and therefore the capacity to divide. These cells often have
+other specialized functions in the body; examples are nerve cells and
+muscle cells.
+
+The synthesis of other macromolecules (giant molecules, like DNA)
+connected with the gene-action system is another field of active
+investigation. We have described how we can investigate the synthesis of
+proteins and RNA with radioactive isotopes, and we have given some
+information on the gene-action system, which is also shown in Figure 26.
+
+The genetic material of a cell is DNA. The DNA molecule is in the form
+of a double-stranded helix that is supported by a protein backbone.
+Genes are often described as simply segments of DNA. They differ from
+each other only in the order in which the four nucleotide bases that
+make up DNA are arranged. (Look at Figure 13 again.) Since a single gene
+is usually made up of several hundred bases, it is easy to imagine the
+infinite variety of genes that could exist by simply changing the order
+of the four bases several hundred times.
+
+[Illustration: Figure 26
+THE GENE-ACTION SYSTEM]
+
+Not all genes in the cells of a living organism are active. In fact,
+most of them are inactive, or, as geneticists say, repressed. What
+represses genes to make them inactive is not known, but many
+investigators believe the activity, or lack of it, is regulated by
+proteins called histones. If a gene is repressed, nothing happens; it
+remains inactive, presumably until something removes the repressing
+factor. But an active gene sets in motion a train of events that results
+in activation of one of the processes of life: The gene’s DNA directs
+the manufacture of RNA, which in turn brings about the synthesis of a
+specific protein to carry out a specific metabolic process. In other
+words, all the activities of the cell are dictated by active genes (the
+DNA molecules) through the mediation of RNA and are executed by
+proteins.
+
+Here is what happens as nearly as scientists can reconstruct it:
+
+
+Translation of the Genetic Message
+
+The DNA of a particular active gene manufactures a molecule of m-RNA by
+the same kind of replication that it uses for making more DNA. In m-RNA
+the sequence of bases is the same as in the parent DNA segment; for this
+reason, m-RNA is also called DNA-like RNA. As shown in Figure 12, a
+cytosine molecule in m-RNA corresponds to a cytosine molecule in DNA, a
+guanine to a guanine, and so on, except that the m-RNA has uracil in all
+the places where thymine occurs in DNA. The order of the nucleotides in
+the m-RNA is the same as that in the DNA, so the m-RNA carries the
+genetic code of the gene that made it. This process, all of which occurs
+in the cell nucleus, is one of copying, or transcription, rather than
+translation, since the same “codewords” (the nucleic-acid bases) are
+reproduced.
+
+The new m-RNA molecule then travels from the nucleus to the cytoplasm
+and attaches itself to an unoccupied ribosome (see Figure 27). Here it
+fits to a molecule of r-RNA and blends its shape geometrically, or
+spatially, with the shape of the r-RNA in lock-and-key, or
+jigsaw-puzzle, fashion. The combined new RNA molecule is now capable of
+manufacturing a specific protein.
+
+[Illustration: Figure 27 _Protein synthesis in a ribosome (microsome),
+and its control by DNA in the nucleus, using RNA as an intermediary._
+
+ Adapted from _Principles of Biology_, Neal D. Buffaloe, Prentice-Hall,
+Inc., 1962, with permission.]
+
+At this point an s-RNA molecule arrives, bringing with it one amino-acid
+molecule, which then combines with other amino acids in the specific
+order dictated by the RNA to form a specific protein. After the amino
+acids have been formed into the protein molecule, they detach themselves
+from the s-RNA molecule. The s-RNA molecule has two recognition sites by
+which it matches up to its neighbors: One recognizes, or “fits”, the
+amino acid, and the other recognizes a corresponding triplet of bases on
+m-RNA. There is thus a particular s-RNA molecule for each amino acid and
+a particular triplet of bases on the m-RNA molecule for each triplet of
+bases that is specific to the s-RNA molecule.
+
+In this process the machinery has translated the nucleic-acid code into
+the protein code; that is, it has translated a sequence of the bases
+into a sequence of amino acids. This process is therefore called
+translation of the genetic message. Once the protein has been
+synthesized, it will become active in performing some of the cell’s
+metabolic activities.
+
+The gene-action system actually is somewhat more elaborate than this.
+There are feedback mechanisms, genes that control the activity of other
+genes, either directly or through the production of specific proteins,
+and so on. However, the scheme just outlined gives a fair, if
+simplified, idea of how the genetic message is carried to the entire
+cell and how it is translated into actual life processes.
+
+
+
+
+            ISOTOPES IN RESEARCH: PROBING THE CANCER PROBLEM
+
+
+  _... a riddle wrapped in a mystery inside an enigma._
+
+                                                       Winston Churchill
+
+The various procedures in which radioactive isotopes play a major role
+have been applied to many studies and investigations in the fields of
+biology and medicine. In fact, most of the concepts of modern biology
+that we have been discussing in this booklet owe their discovery to the
+judicious use of radioisotopes. To illustrate how radioisotopes can be
+used to solve a practical problem, we have chosen a typical example, the
+investigation, at a molecular level, of the effectiveness of an
+anti-cancer drug.
+
+Several drugs that exert a beneficial effect, at least temporarily, on
+the course of certain cancers have been used by doctors for several
+years. Most of them were discovered empirically, that is, by accident,
+during routine trials against cancers. Doctors know they work but do not
+always know how. They would also like to know the mechanism of the
+drugs’ action at the molecular level so that the knowledge might open
+the way to the discovery of other drugs more effective against cancer
+and less toxic against normal cells. The following experiment shows how
+the molecular effect of an anti-cancer drug is studied.
+
+[Illustration: Figure 28 _Technician preparing tissues for comparative
+studies._]
+
+Cells growing in tissue cultures are often used to test anti-cancer
+drugs (see Figure 28). These cells, derived from human cell lines, are
+grown in glass or plastic bottles as a suspension in a nutrient medium.
+To begin, a culture is divided into halves. To one half is added the
+anti-cancer drug Actinomycin D. The other half will continue to grow
+without addition of other substances and will serve as a control, or
+comparison. After a suitable time has elapsed for the drug to act on the
+cultured cells, similar portions of the drug-treated cells and the
+control cells will be tested in several ways. One portion of each kind
+of cells is incubated with ³H-thymidine to determine the effect of the
+drug on DNA synthesis. Two other portions are incubated with ³H-cytidine
+to study the effect on RNA synthesis. Another pair will be tested with
+¹⁴C-leucine to investigate protein synthesis. The effect of the drug, of
+course, is determined by comparing the untreated control with the
+drug-treated culture.
+
+The biochemical, autoradiographic, and counting techniques that we
+described previously are all used to determine the uptake of the
+radioisotopes into the cell’s components. Chromatography is used to
+ascertain if the drug has changed the concentration of precursors
+(thymidine, cytidine, or leucine) in the nutrient medium, since a change
+in these could produce misleading results. Finally, if the drug is found
+to have an effect on RNA, we can investigate the type of RNA that is
+affected by centrifuging phenol-purified RNA.
+
+The results will disclose the primary site (DNA, RNA, or proteins) of
+the drug action on cell metabolism. More elaborate experiments can
+pinpoint more intimately the mechanism of action. By studying the life
+processes of cells, we can advance toward a common denominator in
+anti-cancer drugs that will lead to an effective anti-cancer treatment.
+
+
+
+
+                              CONCLUSIONS
+
+
+  _Thus, the task is, not so much to see what no one has seen yet; but
+  to think what nobody has thought yet, about what everybody sees._
+
+                                                     Arthur Schopenhauer
+
+The use of radioactive isotopes in the study of life processes is of
+importance in understanding them. With the use of autoradiographic and
+radiochemical techniques, it is possible to obtain valuable information
+regarding the life of cells and the intimate mechanisms by which life
+processes determine the fate of the entire organism.
+
+Our knowledge of the cell cycle and of the gene-action system has been
+useful in determining how organisms grow and how cancer cells behave. It
+has been determined that certain normal adult cells divide more
+frequently than some cancer cells and that the growth of cancers depends
+not so much on the speed of cellular proliferation as on the number of
+cells actually dividing.
+
+[Illustration: Figure 29 _Radioautograph showing DNA synthesis during
+chromosome replication. Chromosomes from cells in the root tip of the
+Tradescantia plant were labeled with ³H-thymidine. In A and B, the
+midportion of DNA synthesis, the radioisotope is distributed throughout
+the chromosome arms; in C, near the end of DNA synthesis, it is confined
+mainly to the end of the arms._]
+
+Knowledge of the cell cycle has also brought new insight to the control
+of cell division, as in studies related to the therapy of cancer. The
+most important problem now is, not the control of cell division, but the
+control of the synthesis of DNA.
+
+Our information on the gene-action system provides broad new opportunity
+for the investigation of many life processes. Hormone action, processes
+by which the body develops immunity to disease, and even cell division
+itself are apparently regulated through the gene-action system. This, in
+turn, offers possibilities for investigations meant to control these
+processes.
+
+It is difficult to chart the future course of modern molecular biology,
+but it is not difficult to predict that the next few years will bring to
+biology the same kind of sweeping advances that revolutionized physics a
+few decades ago. The DNA molecule has been called the atom of life. When
+we have harnessed it, the harnessing of the uranium atom will seem, in
+comparison, a result of scientific adolescence. When man has mastered
+the genetic code, he’ll hold a vast power in his hands—power over the
+nature of coming generations.
+
+
+
+
+                          SUGGESTED REFERENCES
+
+
+Books
+
+_The Cell_, Carl P. Swanson, Prentice-Hall, Inc., Englewood Cliffs, New
+  Jersey, 1964, 114 pp., $1.75.
+
+_Inside the Living Cell_, J. A. V. Butler, Basic Books, Inc., New York,
+  1959, 174 pp., $3.95.
+
+_Life and Energy_, Isaac Asimov, Doubleday & Company, Inc., Garden City,
+  New York, 1962, 380 pp., $4.95.
+
+_Applied Nuclear Physics_, Ernest C. Pollard and William L. Davidson,
+  John Wiley & Sons, Inc., New York, 1956, 352 pp., $6.00.
+
+_Adventures in Radioisotope Research_, the collected works, with recent
+  annotations, of George de Hevesy, Pergamon Press, Inc., New York,
+  1961, 1047 pp. (2 volumes), $30.00.
+
+_The Biochemistry of Nucleic Acids_, J. N. Davidson, John Wiley & Sons,
+  Inc., New York, 4th edition, 1960, 287 pp., $4.25.
+
+_The Machinery of the Body_, A. J. Carlson and C. Johnson, The
+  University of Chicago Press, Chicago, Illinois, 1961, 752 pp., $6.50.
+
+_Life: An Introduction to Biology_, George G. Simpson and William S.
+  Beck, Harcourt, Brace & World, Inc., New York, 2nd edition, 1965, 869
+  pp., $8.95.
+
+_From Cell to Test Tube_, Robert W. Chambers and Alma Payne, Charles
+  Scribner’s Sons, New York, 1962, 216 pp., $1.45.
+
+_Isotopic Tracers in Biology_, M. D. Kamen, Academic Press Inc., New
+  York, 3rd edition, 1957, 474 pp., $9.50.
+
+_Autoradiography in Biology and Medicine_, G. A. Boyd, Academic Press
+  Inc., New York, 1955, 399 pp., $10.00.
+
+_A Tracer Experiment: Tracing Biochemical Reactions with Radioisotopes_,
+  Martin D. Kamen, Holt, Rinehart & Winston, Inc., New York, 1964, 127
+  pp., $1.28.
+
+_Molecular Biology: Genes and the Chemical Control of Living Cells_, J.
+  M. Barry, Prentice-Hall, Inc., Englewood Cliffs, New Jersey, 1964, 139
+  pp., $3.35.
+
+_Elementary Biophysics: Selected Topics_, Herman T. Epstein,
+  Addison-Wesley Publishing Company, Inc., Reading, Massachusetts, 1963,
+  122 pp., $2.95 (hardback), $1.75 (paperback).
+
+
+Articles
+
+Autobiographies of Cells, R. Baserga and W. Kisieleski, _Scientific
+  American_, 209: 103 (August 1963).
+
+Electrons, Enzymes, and Energy, Michael G. Del Duca and John M. Fuscoe,
+  _International Science and Technology_, 39: 56 (March 1965).
+
+_Scientific American_, 205 (September 1961). This is a special issue on
+  the living cell. The two articles cited below are of particular
+  interest:
+
+  How Cells Divide, Daniel Mazia, 205: 101.
+  The Living Cell, Jean Brachet, 205: 50.
+
+
+Reports
+
+_Liquid Scintillation Counting: Proceedings of a Conference Held at
+  Northwestern University, August 20-22, 1957_, C. G. Bell, Jr. and F.
+  N. Hayes (Eds.), Pergamon Press, Inc., New York, 1957, 292 pp.,
+  $10.00.
+
+_Atomic Energy Research: Life and Physical Sciences; Reactor
+  Development; and Waste Management_, A Special Report of the U. S.
+  Atomic Energy Commission (December 1961), Superintendent of Documents,
+  U. S. Government Printing Office, Washington, D. C. 20402, 333 pp.,
+  $2.25.
+
+
+Booklets
+
+_Radioisotopes in the Service of Man_, Fernand Lot, National Agency for
+  International Publications, 317 East 34th Street, New York 10016,
+  1958, 82 pp., $1.00.
+
+_Science and Cancer_, M. B. Shimkin, Public Health Service Publication
+  No. 1162, Superintendent of Documents, U. S. Government Printing
+  Office, Washington, D. C. 20402, 1964, 137 pp., $0.60.
+
+
+Motion Pictures
+
+_The Cell: Structural Unit of Life_, 10 minutes, sound, color or black
+  and white, 1949, Coronet Films, Inc., 65 E. South Water Street,
+  Chicago, Illinois 60601.
+
+_Continuity of Life: Characteristics of Plants and Animals_, 11 minutes,
+  sound, color or black and white, 1954, Audio-Visual Center, Indiana
+  University, Bloomington, Indiana 47405.
+
+_DNA: Molecule of Heredity_, 16 minutes, sound, color (No. 1825), black
+  and white (No. 1826). 1960, Encyclopaedia Britannica Films, Inc.,
+  Wilmette, Illinois 60091.
+
+_The Science of Genetics_, AIBS Secondary School Film Series, No. 13280,
+  25 minutes, sound, color, 1962, McGraw-Hill Book Company, Inc., 330
+  West 42nd Street, New York 10036.
+
+
+Available for loan without charge from the AEC Headquarters Film
+  Library, Division of Public Information, U. S. Atomic Energy
+  Commission, Washington, D. C. 20545, and other AEC film libraries:
+
+_Tracing Living Cells_, Challenge Film No. 11, 29 minutes, sound, black
+  and white, 1962. Produced by Ross-McElroy Productions for the National
+  Educational Television and Radio Center under a grant from Argonne
+  National Laboratory. This nontechnical film demonstrates some of the
+  uses of radioisotopes in the study of cell division and in medical
+  therapy.
+
+_The Eternal Cycle_, 12½ minutes, sound, black and white, 1954. Produced
+  by the Handel Film Corporation. This nontechnical film illustrates the
+  use of radioisotope tracers in biological research and is suitable for
+  intermediate- through college-level audiences.
+
+_Chromosome Labeling by Tritium_, 15 minutes, sound, color, 1958.
+  Produced by the Jam Handy Organization for the U. S. Atomic Energy
+  Commission. This technical film discusses the advantages of tritium
+  over other radioisotopes as labeling material in autoradiography.
+
+_A is for Atom_, 15 minutes, sound, color, 1953. Produced by the General
+  Electric Company. This nontechnical film explains the structure of the
+  atom, natural and artificially produced elements, stable and unstable
+  atoms, principles and applications of nuclear reactors, and the
+  benefits of atomic radiation to biology, medicine, industry, and
+  agriculture. It is suitable for elementary- through high-school
+  audiences.
+
+
+
+
+                               FOOTNOTES
+
+
+[1]An organism is a complete living plant or animal.
+
+[2]Metabolism is the sum of the life-sustaining activities in a living
+    organism, including nutrition, production of energy, and synthesis
+    (building) of new living material.
+
+[3]Morphologists are biologists specializing in the structure of
+    organisms or in the study of whole organisms. Biochemists, by
+    contrast, study chemical reactions of biological materials.
+
+[4]This is not to be confused with a cell nucleus. This word was
+    borrowed from biology for atomic theory, however.
+
+[5]An exception is the hydrogen atom, which has no neutron in its
+    nucleus.
+
+[6]Mev is the abbreviation for million electron volts.
+
+[7]A concept for which James D. Watson of the United States and Francis
+    H. C. Crick of England shared a Nobel Prize in 1962.
+
+[8]The study of tissues.
+
+[9]There are additional, more subtle metabolic events that lead to the
+    synthesis of DNA, but they are not important in this discussion.
+
+
+PHOTO CREDITS
+
+  Figure 1  Armed Forces Institute of Pathology Negative No. 4156
+  Figure 3  Dr. T. Tahmisian, Argonne National Laboratory
+  Figure 4  Oak Ridge National Laboratory (photo on right)
+  Figure 5  Oscar W. Richards, American Optical Company
+  Figure 7  Brookhaven National Laboratory
+  Figure 9  Battelle-Northwest Laboratory
+  Figure 10 Oak Ridge National Laboratory
+  Figure 19 Argonne National Laboratory
+  Figure 23 Argonne National Laboratory
+  Figure 24 Argonne National Laboratory
+  Figure 28 Argonne National Laboratory
+  Figure 29 Brookhaven National Laboratory
+
+
+This booklet is one of the “Understanding the Atom” Series. Comments are
+invited on this booklet and others in the series; please send them to
+the Division of Technical Information, U. S. Atomic Energy Commission,
+Washington, D. C. 20545.
+
+Published as part of the AEC’s educational assistance program, the
+series includes these titles:
+
+  _Accelerators_
+  _Animals in Atomic Research_
+  _Atomic Fuel_
+  _Atomic Power Safety_
+  _Atoms at the Science Fair_
+  _Atoms in Agriculture_
+  _Atoms, Nature, and Man_
+  _Books on Atomic Energy for Adults and Children_
+  _Careers in Atomic Energy_
+  _Computers_
+  _Controlled Nuclear Fusion_
+  _Cryogenics, The Uncommon Cold_
+  _Direct Conversion of Energy_
+  _Fallout From Nuclear Tests_
+  _Food Preservation by Irradiation_
+  _Genetic Effects of Radiation_
+  _Index to the UAS Series_
+  _Lasers_
+  _Microstructure of Matter_
+  _Neutron Activation Analysis_
+  _Nondestructive Testing_
+  _Nuclear Clocks_
+  _Nuclear Energy for Desalting_
+  _Nuclear Power and Merchant Shipping_
+  _Nuclear Power Plants_
+  _Nuclear Propulsion for Space_
+  _Nuclear Reactors_
+  _Nuclear Terms, A Brief Glossary_
+  _Our Atomic World_
+  _Plowshare_
+  _Plutonium_
+  _Power from Radioisotopes_
+  _Power Reactors in Small Packages_
+  _Radioactive Wastes_
+  _Radioisotopes and Life Processes_
+  _Radioisotopes in Industry_
+  _Radioisotopes in Medicine_
+  _Rare Earths_
+  _Research Reactors_
+  _SNAP, Nuclear Space Reactors_
+  _Sources of Nuclear Fuel_
+  _Space Radiation_
+  _Spectroscopy_
+  _Synthetic Transuranium Elements_
+  _The Atom and the Ocean_
+  _The Chemistry of the Noble Gases_
+  _The Elusive Neutrino_
+  _The First Reactor_
+  _The Natural Radiation Environment_
+  _Whole Body Counters_
+  _Your Body and Radiation_
+
+A single copy of any one booklet, or of no more than three different
+booklets, may be obtained free by writing to:
+
+           USAEC, P. O. BOX 62, OAK RIDGE, TENNESSEE    37830
+
+Complete sets of the series are available to school and public
+librarians, and to teachers who can make them available for reference or
+for use by groups. Requests should be made on school or library
+letterheads and indicate the proposed use.
+
+Students and teachers who need other material on specific aspects of
+nuclear science, or references to other reading material, may also write
+to the Oak Ridge address. Requests should state the topic of interest
+exactly, and the use intended.
+
+In all requests, include “Zip Code” in return address.
+
+
+                Printed in the United Slates of America
+USAEC Division of Technical Information Extension, Oak Ridge, Tennessee
+
+
+
+
+                          Transcriber’s Notes
+
+
+--Retained publication information from the printed edition: this eBook
+  is public-domain in the country of publication.
+
+--Where possible, UTF superscript and subscript numbers are used; some
+  e-reader fonts may not support these characters.
+
+--In the text version only, underlined or italicized text is delimited
+  by _underscores_.
+
+--In the text version only, superscript text is preceded by caret and
+  delimited by ^{brackets}.
+
+--In the text version only, subscripted text is preceded by underscore
+  and delimited by _{brackets}.
+
+
+
+
+
+
+
+
+
+*** END OF THE PROJECT GUTENBERG EBOOK RADIOISOTOPES AND LIFE PROCESSES (REVISED) ***
+
+
+    
+
+Updated editions will replace the previous one—the old editions will
+be renamed.
+
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the United
+States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg™ electronic works to protect the PROJECT GUTENBERG™
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away—you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG LICENSE
+
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg™ mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase “Project
+Gutenberg”), you agree to comply with all the terms of the Full
+Project Gutenberg™ License available with this file or online at
+www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project Gutenberg™
+electronic works
+
+1.A. By reading or using any part of this Project Gutenberg™
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg™ electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg™ electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the person
+or entity to whom you paid the fee as set forth in paragraph 1.E.8.
+
+1.B. “Project Gutenberg” is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg™ electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg™ electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg™
+electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation (“the
+Foundation” or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg™ electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg™ mission of promoting
+free access to electronic works by freely sharing Project Gutenberg™
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg™ name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg™ License when
+you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg™ work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg™ License must appear
+prominently whenever any copy of a Project Gutenberg™ work (any work
+on which the phrase “Project Gutenberg” appears, or with which the
+phrase “Project Gutenberg” is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+
+    This eBook is for the use of anyone anywhere in the United States and most
+    other parts of the world at no cost and with almost no restrictions
+    whatsoever. You may copy it, give it away or re-use it under the terms
+    of the Project Gutenberg License included with this eBook or online
+    at www.gutenberg.org. If you
+    are not located in the United States, you will have to check the laws
+    of the country where you are located before using this eBook.
+  
+1.E.2. If an individual Project Gutenberg™ electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase “Project
+Gutenberg” associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg™
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg™ electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg™ License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg™
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg™.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg™ License.
+
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg™ work in a format
+other than “Plain Vanilla ASCII” or other format used in the official
+version posted on the official Project Gutenberg™ website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original “Plain
+Vanilla ASCII” or other form. Any alternate format must include the
+full Project Gutenberg™ License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg™ works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg™ electronic works
+provided that:
+
+    • You pay a royalty fee of 20% of the gross profits you derive from
+        the use of Project Gutenberg™ works calculated using the method
+        you already use to calculate your applicable taxes. The fee is owed
+        to the owner of the Project Gutenberg™ trademark, but he has
+        agreed to donate royalties under this paragraph to the Project
+        Gutenberg Literary Archive Foundation. Royalty payments must be paid
+        within 60 days following each date on which you prepare (or are
+        legally required to prepare) your periodic tax returns. Royalty
+        payments should be clearly marked as such and sent to the Project
+        Gutenberg Literary Archive Foundation at the address specified in
+        Section 4, “Information about donations to the Project Gutenberg
+        Literary Archive Foundation.”
+    
+    • You provide a full refund of any money paid by a user who notifies
+        you in writing (or by e-mail) within 30 days of receipt that s/he
+        does not agree to the terms of the full Project Gutenberg™
+        License. You must require such a user to return or destroy all
+        copies of the works possessed in a physical medium and discontinue
+        all use of and all access to other copies of Project Gutenberg™
+        works.
+    
+    • You provide, in accordance with paragraph 1.F.3, a full refund of
+        any money paid for a work or a replacement copy, if a defect in the
+        electronic work is discovered and reported to you within 90 days of
+        receipt of the work.
+    
+    • You comply with all other terms of this agreement for free
+        distribution of Project Gutenberg™ works.
+    
+
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg™ electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg™ trademark. Contact the Foundation as set
+forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg™ collection. Despite these efforts, Project Gutenberg™
+electronic works, and the medium on which they may be stored, may
+contain “Defects,” such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the “Right
+of Replacement or Refund” described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg™ trademark, and any other party distributing a Project
+Gutenberg™ electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you ‘AS-IS’, WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg™ electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg™
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg™ work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg™ work, and (c) any
+Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg™
+
+Project Gutenberg™ is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg™’s
+goals and ensuring that the Project Gutenberg™ collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg™ and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at www.gutenberg.org.
+
+Section 3. Information about the Project Gutenberg Literary Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation’s EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state’s laws.
+
+The Foundation’s business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation’s website
+and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg™ depends upon and cannot survive without widespread
+public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular state
+visit www.gutenberg.org/donate.
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate.
+
+Section 5. General Information About Project Gutenberg™ electronic works
+
+Professor Michael S. Hart was the originator of the Project
+Gutenberg™ concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg™ eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg™ eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org.
+
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+

@@ -35,7 +35,6 @@ public class ParseBook {
  * 			THIS IS NOT ACTUALLY CALLED
  */
     private static JSONObject makeRequest() throws Exception{
-        System.out.println(URIbuilder);
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(URIbuilder)).GET().build();
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 
@@ -48,7 +47,7 @@ public class ParseBook {
     private static String replaceSpaces(String s) {
         int i;
         while((i = s.indexOf(" ")) != -1) {
-            s = s.substring(0, i) + "%20" + s.substring(i+1, 0);
+            s = s.substring(0, i) + "%20" + s.substring(i+1);
         }
 
         return s;
@@ -101,12 +100,11 @@ public class ParseBook {
     	}
     	
     	ArrayList<Book> resultList = new ArrayList<>();
+    	System.out.print(arr.toJSONString());
     	
     	for(Object n: arr) {
-			JSONObject book = (JSONObject) n;
-			
+			JSONObject book = (JSONObject) n;			
 			Book b = makeBook(book);
-			
 			String bookurl = "https://www.gutenberg.org/cache/epub/" + 
 							book.get("id") + "/pg" + book.get("id") + ".txt";
 			
@@ -151,6 +149,7 @@ public class ParseBook {
     
     /*
      * creates a list of authors if book has multiple
+     * NOTE: If birthyear and deathyear are null, will set them to 0;
      */
     private static ArrayList<Author> formatAuthor(JSONObject book) {
     	ArrayList<Author> alist = new ArrayList<Author>();
@@ -159,8 +158,21 @@ public class ParseBook {
     	for(Object a : authorList) {
     		JSONObject author = (JSONObject) a;
     		String name = (String) author.get("name");
-    		String birthYear = author.get("birth_year").toString();
-    		String deathYear = author.get("death_year").toString();
+    		String birthYear = "";
+    		String deathYear = "";
+    		
+    		if(author.get("birth_year") != null) {
+    			birthYear = author.get("birth_year").toString();
+    		} else {
+    			birthYear = "0";
+    		}
+    		
+    		if(author.get("death_year") != null) {
+    			deathYear = author.get("death_year").toString();
+    		} else {
+    			deathYear = "0";
+    		}
+    		
     		alist.add(new Author(name, Integer.parseInt(birthYear), Integer.parseInt(deathYear)));
     	}
     	return alist;
