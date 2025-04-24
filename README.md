@@ -5,7 +5,7 @@ In order to add books to the library and textfiles to the actual folder, we use 
 
 In order to view the books as a user, we are using a GUI. This way it'll be far easier to interact with our internal system at hand. Both the Librarian and Borrower have a different GUI to represent the different ways they can interact with the Library System.
 
-NOTE: As project Gutenberg is a Free Public Library, a vast majority of the books are those that are out of copyright, so sadly no <u>Love Hypothesis<u>. Additionally, if a certain time perdiod is searched for, say 2010-2020, and text that obviously predate it are returned, its still working. Some texts are reuploaded to Project Gutenberg several times, for example <u>The Modern Prometheus<u> is on there 8 time. Lastly, while books in other languages can be searched for, it may have some unintended consequences.
+NOTE: As project Gutenberg is a Free Public Library, a vast majority of the books are those that are out of copyright, so sadly no <u>Love Hypothesis</u>. Additionally, if a certain time period is searched for, say 2010-2020, and text that obviously predate it are returned, its still working. Some texts are reuploaded to Project Gutenberg several times in different years, for example <u>The Modern Prometheus</u> is on there 8 time. Lastly, while books in other languages can be searched for, it may have some unintended consequences.
 
 
 
