@@ -1,10 +1,13 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Map;
+
 import model.Book;
 import model.Borrower;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Library {
 
@@ -16,12 +19,16 @@ public class Library {
 
 	// keep track of how often a book is checked out?
 	private HashMap<Book, Integer> checkoutNums;
+	
+	private HashMap<String, ArrayList<Book>> librarianRecs;
 
 	public Library() {
 		availableBooks = new HashMap<>();
 		unavailableBooks = new HashMap<>();
 		booksByAuthor = new HashMap<>();
+		checkoutNums = new HashMap<>();
 		holds = new HashMap<>();
+		librarianRecs = new HashMap<>();
 	}
 
 	// TODO: possibly should also be package private, since they are Borrower
@@ -180,7 +187,7 @@ public class Library {
 	 * searchAvailBooksByTitle(String title) - returns an arrayList with a copy of
 	 * all available books with the given title (case-insensitive)
 	 */
-	public ArrayList<Book> searchUnvailBooksByTitle(String title) {
+	public ArrayList<Book> searchUnavailBooksByTitle(String title) {
 		// normalize title
 		title = title.toLowerCase().trim();
 
@@ -237,7 +244,7 @@ public class Library {
 	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
 	 * of all unavailable books with the given author (case-insensitive)
 	 */
-	public ArrayList<Book> searchUnvailBooksByAuthor(String author) {
+	public ArrayList<Book> searchUnavailBooksByAuthor(String author) {
 		// normalize author
 		author = author.toLowerCase().trim();
 
@@ -253,6 +260,39 @@ public class Library {
 			}
 		}
 		return found;
+	}
+	
+	public Book searchAllBookByID(String id) {
+		Book book = null;
+		for (Book b : getAllBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
+	public Book searchAvailBookByID(String id) {
+		Book book = null;
+		for (Book b : getAvailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
+	}
+	
+	public Book searchUnavailBookByID(String id) {
+		Book book = null;
+		for (Book b : getUnavailBooks()) {
+			if (b.id.equals(id)) {
+				book = b;
+			}
+		}
+		
+		return book;
 	}
 
 	/*
@@ -271,10 +311,16 @@ public class Library {
 		return available;
 	}
 
-	public ArrayList<Book> getUnvailBooksByAuthor() {
+	public ArrayList<Book> getUnavailBooksByAuthor() {
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.authorFirstComparator());
 		return unavailable;
+	}
+	
+	public ArrayList<Book> getRecBooksByAuthor() {
+		ArrayList<Book> recs = getRecBooks();
+		Collections.sort(recs, Book.authorFirstComparator());
+		return recs;
 	}
 
 	/*
@@ -293,10 +339,17 @@ public class Library {
 		return available;
 	}
 
-	public ArrayList<Book> getUnvailBooksByTitle() {
+	public ArrayList<Book> getUnavailBooksByTitle() {
+
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.titleFirstComparator());
 		return unavailable;
+	}
+	
+	public ArrayList<Book> getRecBooksByTitle() {
+		ArrayList<Book> recs = getRecBooks();
+		Collections.sort(recs, Book.titleFirstComparator());
+		return recs;
 	}
 
 	/*
@@ -323,6 +376,14 @@ public class Library {
 		for (ArrayList<Book> list : unavailableBooks.values()) {
 			books.addAll(list);
 		}
+		return books;
+	}
+	
+	private ArrayList<Book> getRecBooks() {
+		ArrayList<Book> books = new ArrayList<>();
+		for (ArrayList<Book> list : librarianRecs.values())
+			books.addAll(list);
+		
 		return books;
 	}
 
@@ -355,6 +416,10 @@ public class Library {
 
 	}
 
+	/*
+	 * @pre- this book is currently available, so that it is not checked out
+	 * to any user at the time it's called
+	 */
 	void removeBook(Book b) {
 		String title = b.title.toLowerCase();
 		String author = b.authors.get(0).NAME.toLowerCase();
@@ -409,8 +474,66 @@ public class Library {
 		holds.remove(b);
 	}
 	
+	void recommend(String recommender, Book book) {
+		if (librarianRecs.containsKey(recommender))
+			librarianRecs.get(recommender).add(book);
+		
+		else {
+			ArrayList<Book> recs = new ArrayList<>();
+			recs.add(book);
+			librarianRecs.put(recommender, recs);
+		}
+	}
+	
+	void removeRecommend(String recommender, Book book) {
+		// Won't crash if recommender doesn't exist
+		if (librarianRecs.containsKey(recommender)) {
+			librarianRecs.get(recommender).remove(book);
+			if (librarianRecs.get(recommender).size() == 0)
+				librarianRecs.remove(recommender);
+		}
+	}
+	
+	void removeLibraryRec(String recommender) {
+		if (librarianRecs.containsKey(recommender)) {
+			librarianRecs.remove(recommender);
+		}
+	}
+	
 	// Since both Books and Integers are immutable, we can just return a simple copy
 	HashMap<Book, Integer> getCheckoutNums(){
 		return new HashMap<>(checkoutNums);
+	}
+	
+	public ArrayList<Book> getMostPopular() {
+		// sort the "entry set" which allows you to sort each PAIR
+		ArrayList<Map.Entry<Book, Integer>> sorted = new ArrayList<>(checkoutNums.entrySet());
+		
+		// sort the pairs in descending order by integer (the value part of the pair)
+		sorted.sort(new Comparator<Map.Entry<Book, Integer>>() {
+			// anonymous inner class comparator: count -> title -> primary author name
+		    @Override
+		    public int compare(Map.Entry<Book, Integer> e1, Map.Entry<Book, Integer> e2) {
+		    	int comp = e2.getValue().compareTo(e1.getValue()); // descending order
+		    	if (comp == 0) {
+		    		comp = e1.getKey().title.compareTo(e2.getKey().title); // ascending order
+		    		if (comp == 0) {
+		    			comp = e1.getKey().authors.get(0).NAME.compareTo(e2.getKey().authors.get(0).NAME);
+		    		}
+		    	}
+		        return comp;
+		    }
+		});
+		
+		// extract only the top 10 (or if there are less than that many) books from the sorted pairs
+		int max = 10;
+		if (sorted.size() < 10) max = sorted.size();
+		
+		ArrayList<Book> mostPopular = new ArrayList<>();
+		for (int i = 0; i < max; i++) {
+			mostPopular.add(i, sorted.get(i).getKey());
+		}
+		
+		return mostPopular;
 	}
 }
