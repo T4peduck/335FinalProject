@@ -6,12 +6,10 @@ import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -24,7 +22,6 @@ import javax.swing.JTextField;
 import javax.swing.Scrollable;
 import javax.swing.border.EmptyBorder;
 
-import model.Author;
 import model.Book;
 
 public class View extends JFrame {
@@ -138,6 +135,7 @@ public class View extends JFrame {
 		
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
+				controller.exit();
 				System.exit(0);
 			}
 		});
@@ -541,18 +539,6 @@ public class View extends JFrame {
 		JLabel checkedOutMessage = new JLabel("Checked Out:");
 		checkedOutMessage.setBorder(new EmptyBorder(0, (this.getWidth() - checkedOutMessage.getWidth()) / 2, 0, (this.getWidth() - checkedOutMessage.getWidth()) / 2));
 		mainPanel.add(checkedOutMessage);
-		
-		ArrayList<Book> checkedOut = new ArrayList<Book>();
-		ArrayList<Author> authors = new ArrayList<Author>();
-		authors.add(new Author("Stephen King", 1, 1));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
-
 		
 		for(Book b : controller.getCheckedOut()) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
@@ -1301,11 +1287,64 @@ public class View extends JFrame {
 	}
 	
 	private void setUpStaffSearchBar(boolean title) {
-		this.setUpSearchBar(title);
-		if(title) 
-			controller.text.setActionCommand("stafftitlesearchentered");
-		else
-			controller.text.setActionCommand("staffauthorsearchentered");
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+		
+		JMenuBar menuBar = new JMenuBar();
+		JMenu searchMenu = new JMenu("Search Type Menu");
+		JMenuItem menuItem = new JMenuItem("Search by Title");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("bytitle");
+		searchMenu.add(menuItem);
+		menuItem = new JMenuItem("Search by Author");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("byauthor");
+		searchMenu.add(menuItem);
+		menuBar.add(searchMenu);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 230));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		JLabel instructionLabel = new JLabel("Enter Full Keyword Below");
+		instructionLabel.setBorder(new EmptyBorder(0, (this.getWidth() - instructionLabel.getPreferredSize().width) / 2, 50, (this.getWidth() - instructionLabel.getPreferredSize().width) / 2));
+		mainPanel.add(instructionLabel);
+		
+		if(title) {
+			JLabel titleLabel = new JLabel("Enter title: ");
+			titleLabel.setBorder(new EmptyBorder(0, 0, 0, 5));
+			JTextField text = controller.text;
+			text.setText("");
+			text.setEditable(true);
+			text.setToolTipText("Enter the full title of the desired book");
+			text.setActionCommand("stafftitlesearchentered");
+			if(text.getActionListeners().length == 0)
+				text.addActionListener(controller);
+			mainPanel.add(titleLabel);
+			mainPanel.add(text);
+		}
+		else {
+			JLabel titleLabel = new JLabel("Enter author: ");
+			titleLabel.setBorder(new EmptyBorder(0, 0, 0, 5));
+			JTextField text = controller.text;
+			text.setText("");
+			text.setEditable(true);
+			text.setToolTipText("Enter the full name of the author of the desired book");
+			text.setActionCommand("staffauthorsearchentered");
+			if(text.getActionListeners().length == 0)
+				text.addActionListener(controller);
+			mainPanel.add(titleLabel);
+			mainPanel.add(text);
+		}
+			
+		
+		this.setVisible(true);
 	}
 	
 	private void setUpStaffSearchResults(String search, boolean title) {
