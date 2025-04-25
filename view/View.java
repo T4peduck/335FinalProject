@@ -85,7 +85,8 @@ public class View extends JFrame {
 		@Override
 		public Component add(Component component) {
 			super.add(component);
-			this.height += component.getPreferredSize().height;
+			if(component.getClass().equals(JLabel.class) || component.getClass().equals(JMenuBar.class))
+				this.height += component.getPreferredSize().height;
 			return(component);
 		}
 		
