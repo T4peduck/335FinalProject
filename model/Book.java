@@ -74,9 +74,11 @@ public class Book {
 	@Override
 	public String toString() {
 		String rstr = title + " by ";
+		ArrayList<String> authorStrs = new ArrayList<>();
 		for(Author a: authors) {
-			rstr += a.toString() + ", ";
+			authorStrs.add(a.NAME);
 		}
+		rstr += String.join(", ", authorStrs);
 		return rstr;
 	}
    

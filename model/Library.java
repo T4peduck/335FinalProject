@@ -62,9 +62,6 @@ public class Library {
 				if (checkoutNums.get(b) != null) {
 					checkoutNums.replace(b, checkoutNums.get(b) + 1);
 				}
-				else { // or add new
-					checkoutNums.put(b, 1);
-				}
 				
 				// show it was successfully checked out
 				return 1;
@@ -181,8 +178,8 @@ public class Library {
 		ArrayList<Book> unavail = availableBooks.get(title);
 		if (unavail != null) {
 			found.addAll(unavail);
-
 		}
+		Collections.sort(found, Book.titleFirstComparator());
 		return found;
 	}
 
@@ -200,6 +197,7 @@ public class Library {
 		if (avail != null) {
 			found.addAll(avail);
 		}
+		Collections.sort(found, Book.titleFirstComparator());
 		return found;
 	}
 	
@@ -217,6 +215,7 @@ public class Library {
 		if (unavail != null) {
 			found.addAll(unavail);
 		}
+		Collections.sort(found, Book.titleFirstComparator());
 		return found;
 	}
 
@@ -235,6 +234,7 @@ public class Library {
 		if (books != null) {
 			found.addAll(books);
 		}
+		Collections.sort(found, Book.titleFirstComparator());
 		return found;
 	}
 
@@ -257,6 +257,7 @@ public class Library {
 				}
 			}
 		}
+		Collections.sort(found, Book.titleFirstComparator());
 		return found;
 	}
 	
@@ -279,6 +280,7 @@ public class Library {
 				}
 			}
 		}
+		Collections.sort(found, Book.titleFirstComparator());
 		return found;
 	}
 	
@@ -434,7 +436,7 @@ public class Library {
 			booksWithAuthor.add(b);
 		}
 		
-		checkoutNums.put(b,0);
+		checkoutNums.put(b, 0);
 	}
 
 	/*
@@ -516,7 +518,9 @@ public class Library {
 	
 	public ArrayList<Book> getRecommendationsByLibrarian(String recommender) {
 		if (librarianRecs.containsKey(recommender)) {
-			return librarianRecs.get(recommender);
+			ArrayList<Book> recs = librarianRecs.get(recommender);
+			Collections.sort(recs, Book.titleFirstComparator());
+			return recs;
 		}
 		return new ArrayList<>();
 	}
@@ -557,7 +561,14 @@ public class Library {
 	 */
 	public ArrayList<Book> getMostPopular() {
 		// sort the "entry set" which allows you to sort each PAIR
-		ArrayList<Map.Entry<Book, Integer>> sorted = new ArrayList<>(checkoutNums.entrySet());
+		
+		ArrayList<Map.Entry<Book, Integer>> sorted = new ArrayList<>();
+		
+		for (Map.Entry<Book, Integer> entry: checkoutNums.entrySet()) {
+			if (entry.getValue()> 0) {
+				sorted.add(entry);
+			}
+		}
 		
 		// sort the pairs in descending order by integer (the value part of the pair)
 		sorted.sort(new Comparator<Map.Entry<Book, Integer>>() {
