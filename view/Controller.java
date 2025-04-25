@@ -85,8 +85,17 @@ public class Controller implements ActionListener{
 		}
 		else if(command.equals("StaffPWentered")) {
 			if(librarianList.get(text.getText()) != null) {
-				currentUser = librarianList.get(text.getText());
-				view.loginUser(true);
+				try {
+					if(librarianList.get(text.getText()).passwordMatched(String.valueOf(password.getPassword())) == true) {
+						currentUser = librarianList.get(text.getText());
+						view.loginUser(true);
+					}
+					else {
+						view.changePage("staffloginagain");
+					}
+				} catch (NoSuchAlgorithmException e1) {
+					System.exit(1);
+				}
 			}
 			else
 				view.changePage("staffloginagain");
