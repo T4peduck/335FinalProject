@@ -1,0 +1,72 @@
+Frankenstein
+Shelley, Mary Wollstonecraft~1797~1851=
+6542
+model/LibraryText/Frankenstein.txt
+
+
+Frankenstein, ou le Prométhée moderne Volume 1 (of 3)
+Shelley, Mary Wollstonecraft~1797~1851=
+62404
+model/LibraryText/FrankensteinouleProméthéemoderneVolume1(of3).txt
+"Frankenstein, ou le Prométhée moderne Volume 1" by Shelley is a novel written in the early 19th century. The story explores profound themes of creation, ambition, and the consequences of tampering with nature, primarily focusing on the character of Victor Frankenstein, a scientist driven by an insatiable desire to conquer the secrets of life and death.   The opening of the book introduces us to Robert Walton, an explorer writing letters to his sister, Marguerite, as he embarks on a perilous Arctic expedition. Walton expresses his enthusiasm for discovery and solitude but reveals a deep longing for companionship. Throughout the letters, he describes both the beauty and the dangers he encounters in the icy wilderness, eventually witnessing a mysterious figure on a sled pursued by an immense creature. Walton’s fate intertwines with that of Victor Frankenstein, whose tragic tale he is destined to learn, setting the stage for the exploration of human ambition and the haunting consequences of unchecked scientific experimentation. (This is an automatically generated summary.)
+
+Frankenstein, ou le Prométhée moderne Volume 2 (of 3)
+Shelley, Mary Wollstonecraft~1797~1851=
+62405
+model/LibraryText/FrankensteinouleProméthéemoderneVolume2(of3).txt
+"Frankenstein, ou le Prométhée moderne Volume 2" by Shelley is a novel written in the early 19th century. It continues the story of Victor Frankenstein and the consequences of creating a being that ultimately leads to tragedy and destruction. The narrative explores themes of ambition, responsibility, and the nature of humanity through the complex relationship between the creator and his creation.  At the start of this volume, we find Victor Frankenstein grappling with profound guilt and despair after a series of tragic events that he feels responsible for, including the death of his brother William and the wrongful execution of Justine Moritz. As he retreats into solitude at his family's home, he struggles with inner turmoil and is haunted by visions of the monster he created. Meanwhile, the narrative shifts to introduce the creature's own experiences, which reflect its longing for companionship and acceptance in a world that has rejected it. As Victor embarks on a journey that leads him to confront his creation, the tensions between creator and creature intensify, setting the stage for further conflict and exploration of moral themes. (This is an automatically generated summary.)
+
+Frankenstein, ou le Prométhée moderne Volume 3 (of 3)
+Shelley, Mary Wollstonecraft~1797~1851=
+62406
+model/LibraryText/FrankensteinouleProméthéemoderneVolume3(of3).txt
+"Frankenstein, ou le Prométhée moderne Volume 3 (of 3)" by Shelley is a Gothic novel written in the early 19th century. The book explores themes of isolation, creation, and the consequences of ambition through the tragic story of Victor Frankenstein, a scientist who creates a sentient being. Its exploration of moral dilemmas surrounding creation and responsibility resonates deeply with readers.  At the start of this volume, Victor Frankenstein grapples with immense guilt and horror over the implications of his past actions, particularly the promise he made to create a companion for the creature he brought to life. As he returns to Geneva, he is tormented by the weight of his responsibilities and the fear of retribution from the monster. The opening highlights Victor's internal struggle as he discusses his impending marriage with his father while concealing his dreadful secret. The tension mounts as Victor prepares for a journey to England, seeking knowledge while feeling increasingly haunted by the presence of his creation, which threatens those he loves. This complex emotional landscape sets the stage for a tale steeped in dread and moral questioning, urging readers to ponder the ramifications of scientific ambition gone awry. (This is an automatically generated summary.)
+
+Frankenstein; Or, The Modern Prometheus
+Shelley, Mary Wollstonecraft~1797~1851=
+84
+model/LibraryText/FrankensteinOrTheModernPrometheus.txt
+"Frankenstein; Or, The Modern Prometheus" by Mary Wollstonecraft Shelley is a novel written in the early 19th century. The story explores themes of ambition, the quest for knowledge, and the consequences of man's hubris through the experiences of Victor Frankenstein and the monstrous creation of his own making.   The opening of the book introduces Robert Walton, an ambitious explorer on a quest to discover new lands and knowledge in the icy regions of the Arctic. In his letters to his sister Margaret, he expresses both enthusiasm and the fear of isolation in his grand venture. As Walton's expedition progresses, he encounters a mysterious, emaciated stranger who has faced great suffering—furthering the intrigue of his narrative. This stranger ultimately reveals his tale of creation, loss, and the profound consequences of seeking knowledge that lies beyond human bounds. The narrative is set up in a manner that suggests a deep examination of the emotions and ethical dilemmas faced by those who dare to defy the natural order. (This is an automatically generated summary.)
+
+Homer: The Iliad; The Odyssey
+Collins, W. Lucas (William Lucas)~1817~1887=
+59306
+model/LibraryText/HomerTheIliadTheOdyssey.txt
+"Homer: The Iliad; The Odyssey" by W. Lucas Collins is a classical literary work that serves as a guided introduction to two of ancient Greece's most significant epic poems, written in the late 19th century. This compilation explores the themes, characters, and narratives of Homer's works, particularly focusing on the famed Trojan War and the adventures of Odysseus. The likely audience includes readers with incomplete classical education who seek to understand the broader cultural references of these legendary tales.  At the start of the volume, the author provides a comprehensive overview of the background and significance of Homer's works, delving into the historical context and the enduring legacy of the timeless themes found within them. The opening chapters initiate the reader into the narrative arc, introducing major characters such as Achilles, Agamemnon, and the event that catalyzes the conflict—the abduction of Helen. The quarrel between Achilles and Agamemnon highlights the themes of pride, honor, and the repercussions of personal choices against the backdrop of war. Here, the audience is set to explore not only the intricate relationships between the key figures but also the elemental struggles of heroism that define heroic literature. (This is an automatically generated summary.)
+
+L'Iliade
+Homer~-750~-650=
+14285
+model/LibraryText/L'Iliade.txt
+"L'Iliade" by Homer is an epic poem composed in the 8th century BC. The narrative centers around the events of the Trojan War, focusing on the struggle and wrath of the Greek hero Achilles, and explores themes of honor, pride, and the impact of human emotions in both war and peace.  The opening of "L'Iliade" introduces the conflict triggered by Agamemnon's disrespect towards Apollo's priest, which results in a plague against the Greek forces. Achilles, the mightiest Greek warrior, is in a rage over the loss of his war prize, Breisèis, to Agamemnon. This jealousy and pride lead to a pivotal quarrel between the two, highlighting the tension among the Greek leaders and foreshadowing the dire consequences of their discord. As Achilles withdraws from battle, he seeks the help of his divine mother, Thetis, to plead with Zeus for revenge against Agamemnon, setting into motion the tragic events to follow in the epic saga. (This is an automatically generated summary.)
+
+The Iliad
+Homer~-750~-650=
+6130
+model/LibraryText/TheIliad.txt
+"The Iliad" by Homer is an epic poem traditionally attributed to the 8th century BC. The narrative centers around the breathtaking events of the Trojan War, focusing particularly on the wrath of Achilles, a Greek hero, as well as themes of honor, glory, and the interplay between mortals and deities. The work is often lauded as one of the cornerstones of Western literature, laying the foundation for numerous literary traditions and influences.  The opening of "The Iliad" introduces readers to a world steeped in myth and legendary struggle, beginning with an invocation to the Muse, typical of epic poetry. It sets the stage for the conflict between the Greek and Trojan forces, highlighting Achilles' fierce pride and anguish over personal slights that lead to dire consequences on the battlefield. The text establishes a rich tapestry of characters, divine interventions, and emotional turmoil, beckoning readers to explore the complex relationships and moral dilemmas faced by the warriors of both sides. This immersion into the epic's grand themes and character-driven drama makes the opening a captivating precursor to the intense narrative that unfolds throughout the poem. (This is an automatically generated summary.)
+
+The Iliad for Boys and Girls
+Homer~-750~-650=Church, Alfred John~1829~1912=
+21584
+model/LibraryText/TheIliadforBoysandGirls.txt
+
+
+The Iliad of Homer: Translated into English Blank Verse by William Cowper
+Homer~-750~-650=
+16452
+model/LibraryText/TheIliadofHomerTranslatedintoEnglishBlankVersebyWilliamCowper.txt
+"The Iliad of Homer" by Homer is an ancient epic poem that recounts events during the Trojan War, likely written in the 8th century BC. The narrative centers on the wrath of Achilles, the greatest Greek warrior, and his conflict with Agamemnon, the leader of the Greek forces, providing insights into themes of pride, honor, and the impact of divine powers on human affairs.  At the start of the poem, a pestilence strikes the Greek camp as a result of Agamemnon's dishonor towards Apollo's priest. This prompts Achilles to call for a council, where tensions rise between him and Agamemnon, leading to Achilles withdrawing from battle. In an effort to restore honor and seek vengeance, Achilles seeks the help of his mother, Thetis, to plead with Zeus to support the Trojans in battle, setting the stage for the catastrophic consequences of their conflict. The opening establishes the epic's themes of anger, pride, and the intermingling of fate and divine influence. (This is an automatically generated summary.)
+
+The Iliads of Homer: Translated according to the Greek
+Homer~-750~-650=
+51355
+model/LibraryText/TheIliadsofHomerTranslatedaccordingtotheGreek.txt
+"The Iliads of Homer" by Homer is an epic poem written in ancient Greece, likely during the 8th century BC. This seminal work chronicles the events of the Trojan War, focusing particularly on the conflict between Achilles and Agamemnon. The story delves into themes of honor, revenge, fate, and the influence of the gods on human affairs, showcasing the valor and tragedy of its heroic characters.  At the start of "The Iliads of Homer," the focus is on the wrath of Achilles, who feels deeply wronged after Agamemnon, the leader of the Greek forces, takes away his war prize, Briseis. The opening chapters depict the devastating consequences of this insult, as Apollo punishes the Greek army with a plague, prompting a council where Achilles speaks out against Agamemnon. This sets the stage for the epic conflict characterized by anger, pride, and a desire for recognition among the mighty warriors. As tensions rise, the narrative hints at the larger themes of fate and divine intervention that will play a crucial role throughout the poem. (This is an automatically generated summary.)
+
+The story of the Iliad
+Homer~-750~-650=Church, Alfred John~1829~1912=
+74231
+model/LibraryText/ThestoryoftheIliad.txt
+"The Story of the Iliad" by Alfred John Church is a retelling of the ancient Greek epic poem, the Iliad, crafted for educational purposes during the early 20th century. This version focuses on the significant events of the Trojan War, highlighting the themes of heroism, honor, and the interplay of mortal and divine. The narrative centers around key figures such as Achilles, Hector, and Agamemnon, recounting their struggles during the protracted siege of Troy.  The opening portion introduces the context of the story, describing the origins of the conflict that led to the Trojan War, mainly triggered by Paris's abduction of Helen, the wife of Menelaus. It establishes the weight of pride, vengeance, and themes of honor as Greek kings rally their forces to save Helen. Church outlines the initial quarrel between Achilles and Agamemnon, which sets the stage for the ensuing battles. The text touches on divine involvement through the gods, who take sides in the conflict, as well as the intense emotions and heroic ideals that characterize these legendary figures. Overall, it paints a vivid picture of the epic's foundational moments while preparing the reader for the larger narrative that follows. (This is an automatically generated summary.)
+
