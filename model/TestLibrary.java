@@ -405,7 +405,7 @@ class TestLibrary {
 		
 		l.removeLibraryRec("someone");
 		
-		l.recommend("someone else", CoK);
+		l.recommend("someone else", DwD);
 		output = "";
 		for (Book b: l.getRecBooksByAuthor()) {
 			output += b.title + "\n";
