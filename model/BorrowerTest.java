@@ -1,4 +1,4 @@
-package test;
+package model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,12 +6,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
-
-import model.Author;
-import model.Book;
-import model.Borrower;
-import model.Library;
-import model.User;
 
 class BorrowerTest {
 	
