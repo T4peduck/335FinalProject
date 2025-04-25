@@ -1,8 +1,9 @@
 package model;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
-
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -399,11 +400,11 @@ public class Library {
 	}
 	
 	private ArrayList<Book> getRecBooks() {
-		ArrayList<Book> books = new ArrayList<>();
+		Set<Book> books = new HashSet<>();
 		for (ArrayList<Book> list : librarianRecs.values())
-			books.addAll(list);
+			books.addAll(new HashSet<>(list));
 		
-		return books;
+		return new ArrayList<>(books);
 	}
 
 	/*
