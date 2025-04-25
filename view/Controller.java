@@ -236,7 +236,7 @@ public class Controller implements ActionListener{
 			Librarian librarian = (Librarian) currentUser;
 			String[] authorNames = text.getText().split(" ");
 			if(authorNames.length < 2) {
-				view.changePage("addspecificagain");
+				ParseBook.addAuthorAndTitle(authorNames[0], "", title);
 			}
 			else {
 				ParseBook.addAuthorAndTitle(authorNames[0], authorNames[1], title);

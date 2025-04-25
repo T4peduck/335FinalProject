@@ -518,6 +518,9 @@ public class View extends JFrame {
 	}
 	
 	private void setUpUserLibrary() {
+		if(scroller != null) 
+			this.remove(scroller);
+		scroller = null;
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
 		
