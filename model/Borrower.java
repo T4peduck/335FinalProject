@@ -92,7 +92,11 @@ public class Borrower extends User {
 		onHold.remove(b);
 		checkedOut.add(b);
 	}
-    
-    
-    
+	
+	/*
+	 * @pre - this user has this book 
+	 */
+	public int getHoldPosition(Book b, Library l) {
+		return l.getHoldPosition(b, this);
+	}  
 }
