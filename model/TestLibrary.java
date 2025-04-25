@@ -1,7 +1,10 @@
 package model;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,6 +17,7 @@ class TestLibrary {
 	private Book GoT, CoK, SoW, FfC, DwD;
 	private Book dummy, sameName;
 	private Library l = null;
+	private Borrower b1, b2, b3, b4;
 	
 	@BeforeEach
 	void setup() {
@@ -22,7 +26,7 @@ class TestLibrary {
 		ArrayList<Author> authors = new ArrayList<>();
 		
 		authors.add(melville);
-		mobyDick = new Book("Moby Dick", authors, "", "", "");
+		mobyDick = new Book("Moby Dick", authors, "35624", "", "");
 		
 		authors = new ArrayList<>();
 		authors.add(new Author("dummy", 0, 0));
@@ -33,7 +37,7 @@ class TestLibrary {
 		Author tolstoy = new Author("Leo Tolstoy", 0, 0);
 		authors = new ArrayList<>();
 		authors.add(tolstoy);
-		warAndPeace = new Book("War and Peace", authors, "", "", "");
+		warAndPeace = new Book("War and Peace", authors, "123523", "", "");
 		anna = new Book("Anna Karenina", authors, "", "", "");
 		ivan = new Book("The Death of Ivan Ilyich", authors, "", "", "");
 		
@@ -57,6 +61,17 @@ class TestLibrary {
 		l.addBook(SoW);
 		l.addBook(FfC);
 		l.addBook(DwD);
+		
+		try {
+			b1 = new Borrower("user1", "pass");
+			b2 = new Borrower("user2", "pass");
+			b3 = new Borrower("user3", "pass");
+			b4 = new Borrower("user4", "pass");
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
@@ -297,17 +312,225 @@ class TestLibrary {
 	
 	@Test
 	void testHolds() {
+		l.checkout(anna);
 		
+		l.hold(anna, b1);
+		l.hold(anna, b2);
+		l.hold(anna, b3);
+		l.hold(anna, b4);
+		
+		assertEquals(1, l.getHoldPosition(anna, b1));
+		assertEquals(2, l.getHoldPosition(anna, b2));
+		assertEquals(3, l.getHoldPosition(anna, b3));
+		assertEquals(4, l.getHoldPosition(anna, b4));
+		
+		assertEquals(4, l.getNumHolds(anna));
+		
+		l.checkin(anna);
+		assertEquals(1, l.getHoldPosition(anna, b2));
+		assertEquals(2, l.getHoldPosition(anna, b3));
+		assertEquals(3, l.getHoldPosition(anna, b4));
+		
+		assertEquals(1, l.searchUnavailBooksByTitle("Anna karenina").size());
+		
+		assertEquals(3, l.getNumHolds(anna));
+		
+		l.checkin(anna);
+		l.checkin(anna);
+		l.checkin(anna);
 	}
 	
 	@Test
 	void testRecs() {
+		l.recommend("Marissa", CoK);
+		l.recommend("Marissa", GoT);
+		l.recommend("Marissa", FfC);
+		l.recommend("Marissa", DwD);
+		l.recommend("Marissa", SoW);
 		
+		String output, expected;
+		output = "";
+		expected =
+				 "A Clash of Kings\n"
+				+ "A Dance with Dragons\n"
+				+ "A Feast for Crows\n"
+				+ "A Game of Thrones\n"
+				+ "A Storm of Swords\n";
+		for (Book b: l.getRecommendationsByLibrarian("Marissa")) {
+			output += b.title + "\n";
+		}
+		
+		assertEquals(expected, output);
+		
+		
+		assertEquals(0, l.getRecommendationsByLibrarian("").size());
+		
+		l.recommend("someone", anna);
+		
+		output = "";
+		expected =
+				 "A Clash of Kings\n"
+				+ "A Dance with Dragons\n"
+				+ "A Feast for Crows\n"
+				+ "A Game of Thrones\n"
+				+ "A Storm of Swords\n"
+				+ "Anna Karenina\n";
+		for (Book b: l.getRecBooksByTitle()) {
+			output += b.title + "\n";
+		}
+		
+		assertEquals(expected, output);
+		
+		l.recommend("someone", mobyDick);
+		l.removeRecommend("Marissa", CoK);
+		l.removeRecommend(" ", CoK);
+		l.removeLibraryRec(" ");
+		
+		l.recommend("blank", CoK);
+		l.removeRecommend("blank", CoK);
+		
+		output = "";
+		for (Book b: l.getRecBooksByAuthor()) {
+			output += b.title + "\n";
+		}
+		
+		expected = "A Dance with Dragons\n"
+				+ "A Feast for Crows\n"
+				+ "A Game of Thrones\n"
+				+ "A Storm of Swords\n"
+				+ "Moby Dick\n"
+				+ "Anna Karenina\n";
+		
+		assertEquals(expected, output);
+		
+		l.removeLibraryRec("someone");
+		
+		l.recommend("someone else", CoK);
+		output = "";
+		for (Book b: l.getRecBooksByAuthor()) {
+			output += b.title + "\n";
+		}
+		
+		expected = "A Dance with Dragons\n"
+				+ "A Feast for Crows\n"
+				+ "A Game of Thrones\n"
+				+ "A Storm of Swords\n";
+		
+		assertEquals(expected, output);
 	}
 	
 	@Test
 	void testRemove() {
+		l.recommend("Marissa", CoK);
+		l.recommend("Marissa", GoT);
+		l.recommend("Marissa", FfC);
+		l.recommend("Marissa", DwD);
+		l.recommend("Marissa", SoW);
 		
+		l.checkout(CoK);
+		l.checkin(CoK);
+		
+		l.checkout(CoK); // checked out twice
+		l.checkin(CoK);
+		
+		l.checkout(GoT); // checked out once
+		
+		l.checkout(anna);
+		l.checkin(anna);
+		l.checkout(anna); // checked out twice
+		
+		l.removeBook(CoK);
+	
+		// check it's removed from recommendations
+		String output, expected;
+		output = "";
+		for (Book b: l.getRecBooksByAuthor()) {
+			output += b.title + "\n";
+		}
+		
+		expected = "A Dance with Dragons\n"
+				+ "A Feast for Crows\n"
+				+ "A Game of Thrones\n"
+				+ "A Storm of Swords\n";
+		
+		assertEquals(expected, output);
+		
+		// check it's removed from all lists
+		output = "";
+		for (Book b: l.searchAllBooksByAuthor("george r.r. martin")) {
+			output += b.title + "\n";
+		}
+		
+		expected = "A Dance with Dragons\n"
+				+ "A Feast for Crows\n"
+				+ "A Game of Thrones\n"
+				+ "A Storm of Swords\n";
+		
+		assertEquals(expected, output);
+		
+		// check it's removed from popularity
+		output = "";
+		for (Book b: l.getMostPopular()) {
+			output += b.title + "\n";
+		}
+		
+		expected  = "Anna Karenina\n"
+					+ "A Game of Thrones\n";
+		assertEquals(expected, output);
+		
+		// check its removed from avail books
+		assertEquals(0, l.searchAvailBooksByTitle("A CLASH OF KINGS").size());
+		assertEquals(0, l.searchUnavailBooksByTitle("A CLASH OF KINGS").size());
+	}
+	
+	@Test
+	void testCheckoutNums() {
+		l.checkout(CoK);
+		l.checkin(CoK);
+		l.checkout(CoK);
+		
+		l.checkout(anna);
+		
+		for (int i = 0; i < 13; i++) {
+			l.checkout(GoT);
+			l.checkin(GoT);
+		}
+		
+		assertEquals(2, l.getCheckoutNum(CoK));
+		assertEquals(1, l.getCheckoutNum(anna));
+		assertEquals(13, l.getCheckoutNum(GoT));
+		
+		HashMap<Book, Integer> checkouts = l.getCheckoutNums();
+		
+		assertEquals(checkouts.entrySet().size(), 9);
+		
+		assertEquals(2, checkouts.get(CoK));
+		assertEquals(13, checkouts.get(GoT));
+		assertEquals(0, checkouts.get(FfC));
+		assertEquals(0, checkouts.get(SoW));
+		assertEquals(0, checkouts.get(DwD));
+		assertEquals(1, checkouts.get(anna));
+		assertEquals(0, checkouts.get(ivan));
+		assertEquals(0, checkouts.get(warAndPeace));
+		assertEquals(0, checkouts.get(mobyDick));
+	}
+	
+	@Test
+	
+	void testSearchByID() {
+		l.checkout(warAndPeace); // id: 123523
+		l.checkout(mobyDick); // id: 35624
+	
+		assertEquals(mobyDick, l.searchAllBookByID("35624"));
+		assertEquals(warAndPeace, l.searchAllBookByID("123523"));
+		
+		assertEquals(null,l.searchAvailBookByID("35624") );
+		
+		assertEquals(mobyDick, l.searchUnavailBookByID("35624"));
+		assertEquals(warAndPeace, l.searchUnavailBookByID("123523"));
+		
+		l.checkin(mobyDick);
+		assertEquals(mobyDick, l.searchAvailBookByID("35624"));
 	}
 
 }
