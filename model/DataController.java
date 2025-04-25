@@ -43,7 +43,7 @@ public class DataController {
 				bw.write(b.title + "\n");
 				
 				for(Author a: b.authors) {
-					bw.write(a.NAME + "~" + a.BIRTH_YEAR + "~" + a.DEATH_YEAR + "-");
+					bw.write(a.NAME + "~" + a.BIRTH_YEAR + "~" + a.DEATH_YEAR + "=");
 				}
 				bw.write("\n");
 				
@@ -77,7 +77,7 @@ public class DataController {
 				i++;
 				String title = line;
 				
-				String[] aList = br.readLine().split("-");
+				String[] aList = br.readLine().split("=");
 				ArrayList<Author> authors = new ArrayList<>();
 				for(String aStr: aList) {
 					String[] aInfo = aStr.split("~");
