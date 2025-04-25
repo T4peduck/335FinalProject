@@ -433,6 +433,8 @@ public class Library {
 		} else {
 			booksWithAuthor.add(b);
 		}
+		
+		checkoutNums.put(b,0);
 	}
 
 	/*

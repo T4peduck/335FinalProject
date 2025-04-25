@@ -42,6 +42,7 @@ public class Controller implements ActionListener{
 		} catch (NoSuchAlgorithmException e) {
 			System.exit(1);
 		}
+
 		DataController.loadBookData(library);
 	}
 
