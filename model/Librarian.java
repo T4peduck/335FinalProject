@@ -62,7 +62,7 @@ public class Librarian extends User{
     
     public ArrayList<String> getUnavailBookListByAuthor(Library library) {
     	ArrayList<String> bookList = new ArrayList<>();
-    	for (Book book : library.getUnvailBooksByAuthor())
+    	for (Book book : library.getUnavailBooksByAuthor())
     		bookList.add(book.toString());
     	
         return bookList;
@@ -70,7 +70,7 @@ public class Librarian extends User{
     
     public ArrayList<String> getUnavailBookListByTitle(Library library) {
     	ArrayList<String> bookList = new ArrayList<>();
-    	for (Book book : library.getUnvailBooksByTitle())
+    	for (Book book : library.getUnavailBooksByTitle())
     		bookList.add(book.toString());
     	
         return bookList;
@@ -82,5 +82,9 @@ public class Librarian extends User{
     
     public void removeRecommend(Book book, Library library) {
     	library.removeRecommend(getUserName(), book);
+    }
+    
+    public ArrayList<Book> getRecommendations(Library library){
+    	return library.getRecommendationsByLibrarian(getUserName());
     }
 }

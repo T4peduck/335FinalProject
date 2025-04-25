@@ -88,6 +88,21 @@ public class Library {
 			waiting.add(user);
 		}
 	}
+	
+	/*
+	 * @pre - this borrower has this book on hold
+	 */
+	public int getHoldPosition(Book b, Borrower borrower) {
+		// fix to non-zero indexing
+		return holds.get(b).indexOf(borrower) + 1;
+	}
+	
+	/*
+	 * @pre - this book is currently on hold by at least one person
+	 */
+	public int getNumHolds(Book b) {
+		return holds.get(b).size();
+	}
 
 	/*
 	 * private void updateHolds(Book b) - checks if the book (which has been recently
@@ -474,6 +489,11 @@ public class Library {
 			}
 		}
 		
+		// remove from recommendations
+		for (ArrayList<Book> list: librarianRecs.values()) {
+			list.remove(b);
+		}
+		
 		// remove from counts
 		checkoutNums.remove(b);
 
@@ -490,6 +510,13 @@ public class Library {
 			recs.add(book);
 			librarianRecs.put(recommender, recs);
 		}
+	}
+	
+	public ArrayList<Book> getRecommendationsByLibrarian(String recommender) {
+		if (librarianRecs.containsKey(recommender)) {
+			return librarianRecs.get(recommender);
+		}
+		return new ArrayList<>();
 	}
 	
 	void removeRecommend(String recommender, Book book) {
@@ -557,4 +584,6 @@ public class Library {
 		
 		return mostPopular;
 	}
+
+
 }
