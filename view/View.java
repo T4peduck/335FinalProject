@@ -1562,7 +1562,7 @@ public class View extends JFrame {
 		menuItem.setActionCommand("staffmain");
 		backMenu.add(menuItem);
 		JLabel emptyLabel = new JLabel("");
-		emptyLabel.setBorder(new EmptyBorder(0, this.getWidth() - 15 - listLabel.getPreferredSize().width - backMenu.getPreferredSize().width, 0, 0));
+		emptyLabel.setBorder(new EmptyBorder(0, this.getWidth() - 20 - listLabel.getPreferredSize().width - backMenu.getPreferredSize().width, 0, 0));
 		menuBar.add(emptyLabel);
 		menuBar.add(backMenu);
 		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));

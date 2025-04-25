@@ -39,6 +39,7 @@ public class Controller implements ActionListener{
 		borrowers = new ArrayList<Borrower>();
 		try {
 			librarianList.put("StaffMember", new Librarian("StaffMember", "StaffPW8*", borrowers));
+			librarianList.put("Admin", new Librarian("Admin", "Admin1!", borrowers));
 		} catch (NoSuchAlgorithmException e) {
 			System.exit(1);
 		}
@@ -237,6 +238,7 @@ public class Controller implements ActionListener{
 			String[] authorNames = text.getText().split(" ");
 			if(authorNames.length < 2) {
 				ParseBook.addAuthorAndTitle(authorNames[0], "", title);
+				view.changePage("staffmain");
 			}
 			else {
 				ParseBook.addAuthorAndTitle(authorNames[0], authorNames[1], title);
@@ -274,10 +276,15 @@ public class Controller implements ActionListener{
 				Librarian librarian = (Librarian) currentUser;
 				ParseBook.addYearEnd(text.getText());
 				ArrayList<Book> books = ParseBook.downloadBooks();
-				for(Book b: books) {
-					librarian.addBook(b, library);
+				if(books == null) {
+					view.changePage("addspecificagain");
 				}
-				view.changePage("staffmain");
+				else {
+					for(Book b: books) {
+						librarian.addBook(b, library);
+					}
+					view.changePage("staffmain");
+				}
 			}
 		}
 		else if(command.equals("staffsearch")) {
