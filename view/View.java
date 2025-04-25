@@ -408,7 +408,6 @@ public class View extends JFrame {
 			newPassword.addActionListener(controller);
 		mainPanel.add(newPassword);
 		
-		
 		this.setVisible(true);
 	}
 	
@@ -1699,25 +1698,25 @@ public class View extends JFrame {
 	
 	public void search(String search, boolean title) {
 		this.setTitle("Search Results");
-		this.setSize(800, 400);
+		this.setSize(800, 600);
 		this.setUpSearchResults(search, title);
 	}
 	
 	public void staffSearch(String search, boolean title) {
 		this.setTitle("Search Results");
-		this.setSize(800, 400);
+		this.setSize(800, 600);
 		this.setUpStaffSearchResults(search, title);
 	}
 	
 	public void list(boolean title) {
 		this.setTitle("List Results");
-		this.setSize(800, 400);
+		this.setSize(800, 600);
 		this.setUpListResults(title);
 	}
 	
 	public void staffList(boolean title) {
 		this.setTitle("List Results");
-		this.setSize(800, 400);
+		this.setSize(800, 600);
 		this.setUpStaffListResults(title);
 	}
 	
@@ -1786,7 +1785,7 @@ public class View extends JFrame {
 		}
 		else if(page.toLowerCase().equals("mylibrary")) {
 			this.setTitle("Library");
-			this.setSize(600, 400);
+			this.setSize(800, 600);
 			this.setUpUserLibrary();
 		}
 		else if(page.toLowerCase().equals("borrowersearch")) {
