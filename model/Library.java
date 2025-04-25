@@ -3,8 +3,6 @@ package model;
 import java.util.HashMap;
 import java.util.Map;
 
-import model.Book;
-import model.Borrower;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -362,7 +360,6 @@ public class Library {
 	}
 
 	public ArrayList<Book> getUnavailBooksByTitle() {
-
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.titleFirstComparator());
 		return unavailable;
