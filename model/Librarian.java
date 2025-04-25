@@ -24,11 +24,7 @@ public class Librarian extends User{
     	
         return borrowerList;
     }
-
-    public Borrower inspectBorrower() {
-        return null;
-    }
-
+    
     /*
      * @pre - Borrower borrower is an existing user
      */

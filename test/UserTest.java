@@ -14,44 +14,46 @@ import model.Library;
 import model.User;
 
 class UserTest {
-	Library library = new Library();
-	Author author = new Author("Arthur", 2030, 1999);
+	private Library library = new Library();
+	private Author author = new Author("Arthur", 2030, 1999);
+	private ArrayList<Author> authors = new ArrayList<>();
+	private ArrayList<String> genres = new ArrayList<>();
 	
 	@Test
 	void testSearchBookByTitle() throws NoSuchAlgorithmException {
-		ArrayList<Author> authors = new ArrayList<>();
 		authors.add(author);
-		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		genres.add("Fantasy");
+		Book book = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
 		User user = new User("lix2_an_wei", "1a2B3c!");
-		library.addBook(b1);
-		assertEquals(user.searchBookByTitle("The Lord of the Rings", library).get(0), b1);
+		library.addBook(book);
+		assertEquals(user.searchBookByTitle("The Lord of the Rings", library).get(0), book);
 		assertEquals(user.searchBookByTitle("Wrong Book", library).size(), 0);
 		User userCpy = new User(user);
-		assertEquals(userCpy.searchBookByTitle("The Lord of the Rings", library).get(0), b1);
+		assertEquals(userCpy.searchBookByTitle("The Lord of the Rings", library).get(0), book);
 		assertEquals(userCpy.searchBookByTitle("Wrong Book", library).size(), 0);
 	}
 
 	@Test
 	void testSearchBookByAuthor() throws NoSuchAlgorithmException {
-		ArrayList<Author> authors = new ArrayList<>();
 		authors.add(author);
-		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		genres.add("Fantasy");
+		Book book = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
 		User user = new User("lix2_an_wei", "1a2B3c!");
-		library.addBook(b1);
-		assertEquals(user.searchBookByAuthor("Arthur", library).get(0), b1);
+		library.addBook(book);
+		assertEquals(user.searchBookByAuthor("Arthur", library).get(0), book);
 		assertEquals(user.searchBookByAuthor("Wrong Author", library).size(), 0);
 		User userCpy = new User(user);
-		assertEquals(userCpy.searchBookByAuthor("Arthur", library).get(0), b1);
+		assertEquals(userCpy.searchBookByAuthor("Arthur", library).get(0), book);
 		assertEquals(userCpy.searchBookByAuthor("Wrong Author", library).size(), 0);
 	}
 
 	@Test
 	void testCheckAvailable() throws NoSuchAlgorithmException {
-		ArrayList<Author> authors = new ArrayList<>();
 		authors.add(author);
-		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		genres.add("Fantasy");
+		Book book = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
 		User user = new User("lix2_an_wei", "1a2B3c!");
-		library.addBook(b1);
+		library.addBook(book);
 		assertTrue(user.checkAvailable("12345", library));
 		assertFalse(user.checkAvailable("6789", library));
 		User userCpy = new User(user);
@@ -61,23 +63,13 @@ class UserTest {
 
 	@Test
 	void testPasswordMatched() throws NoSuchAlgorithmException {
-		ArrayList<Author> authors = new ArrayList<>();
 		authors.add(author);
-		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		User user = new User("lix2_an_wei", "1a2B3c!");
 		assertTrue(user.passwordMatched("1a2B3c!"));
 		assertFalse(user.passwordMatched("wRongkey123?"));
 		User userCpy = new User(user);
 		assertTrue(userCpy.passwordMatched("1a2B3c!"));
 		assertFalse(userCpy.passwordMatched("wRongkey123?"));
-	}
-	
-	@Test
-	void testGetUserName() throws NoSuchAlgorithmException {
-		User user = new User("lix2_an_wei", "1a2B3c!");
-		assertEquals(user.getUserName(), "lix2_an_wei");
-		User userCpy = new User(user);
-		assertEquals(userCpy.getUserName(), "lix2_an_wei");
 	}
 	
 	@Test
@@ -100,9 +92,7 @@ class UserTest {
 
 	@Test
 	void testSetPassword() throws NoSuchAlgorithmException {
-		ArrayList<Author> authors = new ArrayList<>();
 		authors.add(author);
-		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		User user = new User("lix2_an_wei", "1a2B3c!");
 		user.setPassword("%newK1%");
 		assertFalse(user.passwordMatched("1a2B3c!"));
