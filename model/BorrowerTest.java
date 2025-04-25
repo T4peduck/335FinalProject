@@ -357,8 +357,6 @@ class BorrowerTest {
 		u1.checkOutHold(b1);
 		assertFalse(u1.onHold().contains(b1));
 		assertTrue(u1.checkedOut().contains(b1));
-//		assertTrue(library.searchUnavailBooksByTitle("The Lord of the Rings").contains(b1));
-//		assertFalse(library.searchAvailBooksByTitle("The Lord of the Rings").contains(b1));
 	}
 
 }
