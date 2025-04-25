@@ -138,6 +138,7 @@ public class View extends JFrame {
 		
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
+				controller.exit();
 				System.exit(0);
 			}
 		});
@@ -1542,7 +1543,7 @@ public class View extends JFrame {
 			removeButton.setActionCommand("remove");
 			removeButton.addActionListener(controller);
 			removeButton.setBook(b);
-			if(!controller.mostPopular().contains(b)) {
+			if(!controller.getLibrarianRecommended().contains(b)) {
 				BookButton recommendButton = new BookButton("Recommend Book");
 				recommendButton.setActionCommand("recommend");
 				recommendButton.addActionListener(controller);

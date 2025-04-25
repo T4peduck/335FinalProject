@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 
 import model.Book;
 import model.Borrower;
+import model.DataController;
 import model.Librarian;
 import model.Library;
 import model.ParseBook;
@@ -41,6 +42,8 @@ public class Controller implements ActionListener{
 		} catch (NoSuchAlgorithmException e) {
 			System.exit(1);
 		}
+		
+		DataController.loadBookData(library);
 	}
 
 	@Override
@@ -395,5 +398,9 @@ public class Controller implements ActionListener{
 	public ArrayList<Book> getLibrarianRecommended() {
 		Librarian librarian = (Librarian) currentUser;
 		return librarian.getRecommendations(library);
+	}
+	
+	public void exit() {
+		DataController.saveBookData(library);
 	}
 }

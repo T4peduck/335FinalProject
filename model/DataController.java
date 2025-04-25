@@ -2,20 +2,17 @@ package model;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Set;
+import java.util.Arrays;
 
 /*
  * FILE FORMAT
  * -------------------------
  * bookTitle 
- * bookAuthor1 bookAuthor2 ... bookAuthorN
+ * bookAuthor1-bookAuthor2-...-bookAuthorN
  * bookId
  * bookFilePath
  * bookSummary
@@ -32,19 +29,21 @@ import java.util.Set;
  * between uses
  */
 public class DataController {
-	private static String FILEPATH = "BookData";
+	private static String FILEPATH = "BookData.txt";
 	
 	public static void saveBookData(Library lib) {
 		try {
 			FileWriter bw = new FileWriter(new File(FILEPATH));
 			ArrayList<Book> books = lib.getAllBooksByTitle();
 			
+			int i = 0;
+			
 			//SAVES AVAILABLE BOOKS
 			for(Book b: books) {
 				bw.write(b.title + "\n");
 				
 				for(Author a: b.authors) {
-					bw.write(a.NAME + "," + a.BIRTH_YEAR + "," + a.DEATH_YEAR + " ");
+					bw.write(a.NAME + "," + a.BIRTH_YEAR + "," + a.DEATH_YEAR + "-");
 				}
 				bw.write("\n");
 				
@@ -54,7 +53,10 @@ public class DataController {
 				
 				//ASSUMING SUMMARIES DO NOT HAVE BLANK LINES
 				bw.write(b.summary + "\n\n");
+				i++;
 			}
+			
+			System.out.println(i + " BOOKS SAVED");
 			
 			bw.close();
 			
@@ -68,11 +70,14 @@ public class DataController {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(FILEPATH));
 			
+			int i = 0;
+			
 			String line = br.readLine();
-			while(line != null) {
+			while(line != null && line != "") {
+				i++;
 				String title = line;
 				
-				String[] aList = br.readLine().split(" ");
+				String[] aList = br.readLine().split("-");
 				ArrayList<Author> authors = new ArrayList<>();
 				for(String aStr: aList) {
 					String[] aInfo = aStr.split(",");
@@ -93,9 +98,10 @@ public class DataController {
 				
 				lib.addBook(b);
 				
-				br.readLine();
 				line = br.readLine();
 			}
+			
+			System.out.println(i + "BOOKS LOADED");
 			
 			br.close();
 		} catch (IOException e) {

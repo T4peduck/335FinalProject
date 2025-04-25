@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -100,7 +99,6 @@ public class ParseBook {
     	}
     	
     	ArrayList<Book> resultList = new ArrayList<>();
-    	System.out.print(arr.toJSONString());
     	
     	for(Object n: arr) {
 			JSONObject book = (JSONObject) n;			
@@ -113,6 +111,8 @@ public class ParseBook {
 				resultList.add(b);
 			}
     	}
+    	
+    	System.out.println("BOOK(S) SUCCESSFULY DOWNLOADED");
     	
     	return resultList;
     }
