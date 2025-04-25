@@ -239,16 +239,18 @@ public class Controller implements ActionListener{
 			String[] authorNames = text.getText().split(" ");
 			if(authorNames.length < 2) {
 				ParseBook.addAuthorAndTitle(authorNames[0], "", title);
-				view.changePage("staffmain");
 			}
 			else {
 				ParseBook.addAuthorAndTitle(authorNames[0], authorNames[1], title);
+			}
 				ArrayList<Book> books = ParseBook.downloadBooks();
+				if(books == null) {
+					view.changePage("addspecificagain");
+				}
 				for(Book b: books) {
 					librarian.addBook(b, library);
 				}
 				view.changePage("staffmain");
-			}
 		}
 		else if(command.equals("addstartrangeentered")) {
 			boolean badInt = false;
@@ -278,7 +280,7 @@ public class Controller implements ActionListener{
 				ParseBook.addYearEnd(text.getText());
 				ArrayList<Book> books = ParseBook.downloadBooks();
 				if(books == null) {
-					view.changePage("addspecificagain");
+					view.changePage("addrangeagain");
 				}
 				else {
 					for(Book b: books) {
