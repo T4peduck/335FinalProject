@@ -24,10 +24,8 @@ import javax.swing.JTextField;
 import javax.swing.Scrollable;
 import javax.swing.border.EmptyBorder;
 
+import model.Author;
 import model.Book;
-import model.Borrower;
-import model.Library;
-import model.User;
 
 public class View extends JFrame {
 	
@@ -96,14 +94,12 @@ public class View extends JFrame {
 		
 	}
 	
-	private static Library library = new Library();
-	private User currentUser;
 	private Controller controller;
 	private JPanel mainPanel;
 	private JScrollPane scroller = null;
 	
 	public View() {
-		controller = new Controller(library, this);
+		controller = new Controller(this);
 		this.setTitle("Home Page");
 		this.setSize(400, 400);
 		this.setUpHome(true);
@@ -162,6 +158,7 @@ public class View extends JFrame {
 		if(first == false) {
 			JLabel errorLabel = new JLabel("Invalid Login. Please enter a valid login or return to the main page and create an account");
 			errorLabel.setBorder(new EmptyBorder(0, (this.getWidth() - errorLabel.getWidth()) / 2, 100, (this.getWidth() - errorLabel.getWidth()) / 2));
+			errorLabel.setForeground(new Color(139, 0 ,0));
 			mainPanel.add(errorLabel);
 		}
 		else {
@@ -204,6 +201,15 @@ public class View extends JFrame {
 		passwordField.setText("");
 		mainPanel.add(passwordField);
 		
+		emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(25, (this.getWidth() - emptyLabel.getWidth()) /2, 25, (this.getWidth() - emptyLabel.getWidth()) /2));
+		mainPanel.add(emptyLabel);
+		
+		JButton resetButton = new JButton("Reset Password");
+		resetButton.setActionCommand("resetpw");
+		resetButton.addActionListener(controller);
+		mainPanel.add(resetButton);
+		
 		this.setVisible(true);
 	}
 	
@@ -220,6 +226,7 @@ public class View extends JFrame {
 		if(first == false) {
 			JLabel errorLabel = new JLabel("Invalid Login. Please enter a valid login or return to the main page and create an account");
 			errorLabel.setBorder(new EmptyBorder(0, (this.getWidth() - errorLabel.getWidth()) / 2, 100, (this.getWidth() - errorLabel.getWidth()) / 2));
+			errorLabel.setForeground(new Color(139, 0, 0));
 			mainPanel.add(errorLabel);
 		}
 		else {
@@ -282,7 +289,7 @@ public class View extends JFrame {
 			controller.text.setText("");
 		}
 		else {
-			JLabel loginLabel = new JLabel("Please enter your login in the fields below");
+			JLabel loginLabel = new JLabel("Please enter your new account info in the fields below");
 			loginLabel.setBorder(new EmptyBorder(0, (this.getWidth() - loginLabel.getWidth()) / 2, 100, (this.getWidth() - loginLabel.getWidth()) / 2));
 			mainPanel.add(loginLabel);
 		}
@@ -304,9 +311,53 @@ public class View extends JFrame {
 	private void setUpCreateAccountPW(boolean first) {
 		if(!first) {
 			setUpCreateAccount(true);
+		}
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, (this.getWidth() - emptyLabel.getWidth()) /2, 0, (this.getWidth() - emptyLabel.getWidth()) /2));
+		mainPanel.add(emptyLabel);
+		controller.password.setText("");
+		controller.text.removeActionListener(controller);
+		controller.text.setEditable(false);
+		
+		JLabel passwordInstructions = new JLabel("Passwords must contain at least 1 uppercase letter, lowercase letter,");
+		passwordInstructions.setBorder(new EmptyBorder(0, (this.getWidth() - passwordInstructions.getPreferredSize().width) / 2, 0, (this.getWidth() - passwordInstructions.getPreferredSize().width) / 2));
+		mainPanel.add(passwordInstructions);
+		JLabel passwordInstructions2 = new JLabel("numerical character, and special character");
+		passwordInstructions2.setBorder(new EmptyBorder(0, (this.getWidth() - passwordInstructions2.getPreferredSize().width) / 2, 0, (this.getWidth() - passwordInstructions2.getPreferredSize().width) / 2));
+		mainPanel.add(passwordInstructions2);
+		
+		JLabel passwordLabel = new JLabel("Password:");
+		mainPanel.add(passwordLabel);
+		
+		JPasswordField passwordField = controller.password;
+		passwordField.setToolTipText("Enter a valid password containing at least 1 uppercase letter, lowercase letter, numerical character, and special character");
+		passwordField.setActionCommand("NewPW");
+		passwordField.setText("");
+		if(passwordField.getActionListeners().length == 0)
+			passwordField.addActionListener(controller);
+		mainPanel.add(passwordField);
+		
+		if(!first) {
 			JLabel errorLabel = new JLabel("Error: Invalid Password.");
+			errorLabel.setBorder(new EmptyBorder(0, (this.getWidth() - errorLabel.getWidth()) / 2, 0, (this.getWidth() - errorLabel.getWidth()) / 2));
+			errorLabel.setForeground(new Color(139, 0, 0));
+			mainPanel.add(errorLabel);
+		}
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpResetPassword(boolean first) {
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+		
+		setUpCreateAccount(true);
+		
+		if(!first) {
+			JLabel errorLabel = new JLabel("Error: Incorrect Password.");
 			JLabel emptyLabel = new JLabel("");
-			emptyLabel.setBorder(new EmptyBorder(50 - errorLabel.getHeight(), (this.getWidth() - emptyLabel.getWidth()) /2, 0, (this.getWidth() - emptyLabel.getWidth()) /2));
+			emptyLabel.setBorder(new EmptyBorder(35 - errorLabel.getPreferredSize().height, (this.getWidth() - emptyLabel.getWidth()) /2, 0, (this.getWidth() - emptyLabel.getWidth()) /2));
 			mainPanel.add(emptyLabel);
 			errorLabel.setBorder(new EmptyBorder(0, (this.getWidth() - errorLabel.getWidth()) / 2, 0, (this.getWidth() - errorLabel.getWidth()) / 2));
 			mainPanel.add(errorLabel);
@@ -316,21 +367,49 @@ public class View extends JFrame {
 		}
 		else {
 			JLabel emptyLabel = new JLabel("");
-			emptyLabel.setBorder(new EmptyBorder(70, (this.getWidth() - emptyLabel.getWidth()) /2, 0, (this.getWidth() - emptyLabel.getWidth()) /2));
+			emptyLabel.setBorder(new EmptyBorder(35, (this.getWidth() - emptyLabel.getWidth()) /2, 0, (this.getWidth() - emptyLabel.getWidth()) /2));
 			mainPanel.add(emptyLabel);
 			controller.text.removeActionListener(controller);
 			controller.text.setEditable(false);
 		}
 		
-		JLabel passwordLabel = new JLabel("Password:");
+		JLabel passwordLabel = new JLabel("Old Password:");
 		mainPanel.add(passwordLabel);
 		
 		JPasswordField passwordField = controller.password;
-		passwordField.setToolTipText("Enter a valid, alphanumeric passowrd");
-		passwordField.setActionCommand("NewPW");
+		passwordField.setToolTipText("");
+		passwordField.setActionCommand("oldpwentered");
+		passwordField.setText("");
 		if(passwordField.getActionListeners().length == 0)
 			passwordField.addActionListener(controller);
 		mainPanel.add(passwordField);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpNewPassword(boolean first) {
+		this.setUpResetPassword(true);
+		this.remove(controller.password);
+		
+		JPasswordField oldPassword = new JPasswordField(20);
+		oldPassword.setText("aaaaaaaaaaaa");
+		oldPassword.setEditable(false);
+		mainPanel.add(oldPassword);
+		
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(35, (this.getWidth() - emptyLabel.getWidth()) /2, 0, (this.getWidth() - emptyLabel.getWidth()) /2));
+		mainPanel.add(emptyLabel);
+		
+		JLabel passwordLabel = new JLabel("New Password:");
+		mainPanel.add(passwordLabel);
+		
+		JPasswordField newPassword = controller.password;
+		newPassword.setToolTipText("Enter a valid password containing at least 1 uppercase letter, lowercase letter, numerical character, and special character");
+		newPassword.setActionCommand("resetpwnewpw");
+		if(newPassword.getActionListeners().length == 0)
+			newPassword.addActionListener(controller);
+		mainPanel.add(newPassword);
+		
 		
 		this.setVisible(true);
 	}
@@ -344,13 +423,13 @@ public class View extends JFrame {
 		this.add(mainPanel);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JLabel welcomeMessage = new JLabel("Welcome, " + currentUser.getUserName());
+		JLabel welcomeMessage = new JLabel("Welcome, " + controller.getUserName());
 		menuBar.add(welcomeMessage);
 		JButton logoutButton = new JButton("Logout");
 		logoutButton.setActionCommand("logout");
 		logoutButton.addActionListener(controller);
 		JLabel emptyLabel = new JLabel("");
-		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - welcomeMessage.getWidth() - logoutButton.getWidth() - 187));
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - welcomeMessage.getPreferredSize().width - logoutButton.getPreferredSize().width - 20));
 		menuBar.add(emptyLabel);
 		menuBar.add(logoutButton);
 		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
@@ -376,27 +455,34 @@ public class View extends JFrame {
 		JButton recommendButton = new JButton("Recommendations");
 		recommendButton.setActionCommand("recommended");
 		recommendButton.addActionListener(controller);
+		JButton mostPopularButton = new JButton("Most Popular");
+		mostPopularButton.setActionCommand("mostpopular");
+		mostPopularButton.addActionListener(controller);
 		mainPanel.add(libraryButton);
 		mainPanel.add(searchButton);
 		mainPanel.add(listButton);
 		mainPanel.add(recommendButton);
+		mainPanel.add(mostPopularButton);
 		
 		this.setVisible(true);
 	}
 	
 	private void setUpStaffMain() {
+		if(scroller != null)
+			this.remove(scroller);
+		scroller = null;
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
 		this.add(mainPanel);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JLabel welcomeMessage = new JLabel("Welcome, " + currentUser.getUserName());
+		JLabel welcomeMessage = new JLabel("Welcome, " + controller.getUserName());
 		menuBar.add(welcomeMessage);
 		JButton logoutButton = new JButton("Logout");
 		logoutButton.setActionCommand("logout");
 		logoutButton.addActionListener(controller);
 		JLabel emptyLabel = new JLabel("");
-		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - welcomeMessage.getWidth() - logoutButton.getWidth() - 187));
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - welcomeMessage.getPreferredSize().width - logoutButton.getPreferredSize().width - 20));
 		menuBar.add(emptyLabel);
 		menuBar.add(logoutButton);
 		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
@@ -409,6 +495,27 @@ public class View extends JFrame {
 		JLabel menuLabel = new JLabel("Please select from the options below");
 		menuLabel.setBorder(new EmptyBorder(0, (this.getWidth() - menuLabel.getWidth()) / 2, 50, (this.getWidth() - menuLabel.getWidth()) / 2));
 		mainPanel.add(menuLabel);
+		
+		JButton libraryButton = new JButton("Add Books to Library");
+		libraryButton.setActionCommand("addbooks");
+		libraryButton.addActionListener(controller);
+		JButton searchButton = new JButton("Search");
+		searchButton.setActionCommand("staffsearch");
+		searchButton.addActionListener(controller);
+		JButton listButton = new JButton("List Library");
+		listButton.setActionCommand("stafflist");
+		listButton.addActionListener(controller);
+		JButton recommendButton = new JButton("Recommendations");
+		recommendButton.setActionCommand("staffrecommended");
+		recommendButton.addActionListener(controller);
+		JButton mostPopularButton = new JButton("Most Popular");
+		mostPopularButton.setActionCommand("staffmostpopular");
+		mostPopularButton.addActionListener(controller);
+		mainPanel.add(libraryButton);
+		mainPanel.add(searchButton);
+		mainPanel.add(listButton);
+		mainPanel.add(recommendButton);
+		mainPanel.add(mostPopularButton);
 		
 		this.setVisible(true);
 	}
@@ -436,8 +543,18 @@ public class View extends JFrame {
 		mainPanel.add(checkedOutMessage);
 		
 		ArrayList<Book> checkedOut = new ArrayList<Book>();
+		ArrayList<Author> authors = new ArrayList<Author>();
+		authors.add(new Author("Stephen King", 1, 1));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+		checkedOut.add(new Book("It", authors, "IDK", "IDK", "IDK"));
+
 		
-		for(Book b : /*currentUser.getCheckedOut()*/ checkedOut) {
+		for(Book b : controller.getCheckedOut()) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
@@ -455,12 +572,11 @@ public class View extends JFrame {
 		onHoldMessage.setBorder(new EmptyBorder(0, (this.getWidth() - onHoldMessage.getWidth()) / 2, 0, (this.getWidth() - onHoldMessage.getWidth()) / 2));
 		mainPanel.add(onHoldMessage);
 		
-		for(Book b : /*currentUser.getHolds()*/ checkedOut) {
+		for(Book b : controller.getHolds()) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
-			JLabel holdsLabel = new JLabel("Holds in front of you: ");
-			holdsLabel.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+			JLabel holdsLabel = new JLabel("Holds in front of you: " + controller.getHoldPosition(b));
 			mainPanel.add(holdsLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
@@ -471,15 +587,10 @@ public class View extends JFrame {
 		historyMessage.setBorder(new EmptyBorder(0, (this.getWidth() - historyMessage.getPreferredSize().width) / 2, 0, (this.getWidth() - historyMessage.getPreferredSize().width) / 2));
 		mainPanel.add(historyMessage);
 		
-		for(Book b : /*currentUser.getHistory()*/ checkedOut) {
+		for(Book b : controller.getHistory()) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
-			BookButton checkOutButton = new BookButton("Check out");
-			checkOutButton.addActionListener(controller);
-			checkOutButton.setActionCommand("checkout");
-			checkOutButton.setBook(b);
-			mainPanel.add(checkOutButton);
 			emptyLabel = new JLabel();
 			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
 			mainPanel.add(emptyLabel);
@@ -646,12 +757,12 @@ public class View extends JFrame {
 		ArrayList<Book> availResults;
 		
 		if(title) {
-			searchResults = library.searchAllBooksByTitle(search);
-			availResults = library.searchAvailBooksByTitle(search);
+			searchResults = controller.searchAllBooksByTitle(search);
+			availResults = controller.searchAvailBooksByTitle(search);
 		}
 		else {
-			searchResults = library.searchAllBooksByAuthor(search);
-			availResults = library.searchAvailBooksByAuthor(search);
+			searchResults = controller.searchAllBooksByAuthor(search);
+			availResults = controller.searchAvailBooksByAuthor(search);
 		}
 		
 		if(searchResults.size() == 0) {
@@ -799,20 +910,20 @@ public class View extends JFrame {
 		ArrayList<Book> books;
 		
 		if(title)
-			books = library.getAllBooksByTitle();
+			books = controller.getAllBooksByTitle();
 		else
-			books = library.getAllBooksByAuthor();
+			books = controller.getAllBooksByAuthor();
 		
-		Borrower borrower = (Borrower) currentUser;
 		for(Book b : books) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
-			if(borrower.hasBook(b)) {
+			int status = controller.checkBookStatus(b);
+			if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
-			else if(library.searchAvailBooksByTitle(b.title).contains(b)) {
+			else if(status == 1) {
 				BookButton checkoutButton = new BookButton("Checkout");
 				checkoutButton.addActionListener(controller);
 				checkoutButton.setActionCommand("checkout");
@@ -843,13 +954,13 @@ public class View extends JFrame {
 		
 		
 		JMenuBar menuBar = new JMenuBar();
-		JLabel recommendationsMessage = new JLabel("Your Recommendations");
+		JLabel recommendationsMessage = new JLabel("Recommended");
 		menuBar.add(recommendationsMessage);
 		JButton menuButton = new JButton("Main Menu");
 		menuButton.setActionCommand("borrowermain");
 		menuButton.addActionListener(controller);
 		JLabel emptyLabel = new JLabel("");
-		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 255));
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 260));
 		menuBar.add(emptyLabel);
 		menuBar.add(menuButton);
 		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
@@ -858,22 +969,22 @@ public class View extends JFrame {
 		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		this.add(scroller);
 		
-		JLabel resultsLabel = new JLabel("The Following Books are Recommended Based on Other Users' Activity:");
+		JLabel resultsLabel = new JLabel("The Following Books are the Recommended by Our Librarians:");
 		resultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2, 25, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2));
 		mainPanel.add(resultsLabel);
-		
-		Borrower borrower = (Borrower) currentUser;
-		ArrayList<Book> books = library.mostPopular();
+	
+		ArrayList<Book> books = controller.getRecommended();
 		
 		for(Book b : books) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
-			if(borrower.hasBook(b)) {
+			int status = controller.checkBookStatus(b);
+			if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
-			else if(library.searchAvailBooksByTitle(b.title).contains(b)) {
+			else if(status == 1) {
 				BookButton checkoutButton = new BookButton("Checkout");
 				checkoutButton.addActionListener(controller);
 				checkoutButton.setActionCommand("checkout");
@@ -895,16 +1006,677 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	private void setUpMostPopular() {
+		this.remove(mainPanel);
+		mainPanel = new BookPanel(this.getWidth());
+		
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel recommendationsMessage = new JLabel("Most Popular");
+		menuBar.add(recommendationsMessage);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("borrowermain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 190));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
+		
+		JLabel resultsLabel = new JLabel("The Following Books are the Most Popular in Our Library:");
+		resultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2, 25, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2));
+		mainPanel.add(resultsLabel);
+	
+		ArrayList<Book> books = controller.mostPopular();
+		
+		for(Book b : books) {
+			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			mainPanel.add(bookLabel);
+			int status = controller.checkBookStatus(b);
+			if(status == -1) {
+				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
+				mainPanel.add(alreadyCheckedOutButton);
+			}
+			else if(status == 1) {
+				BookButton checkoutButton = new BookButton("Checkout");
+				checkoutButton.addActionListener(controller);
+				checkoutButton.setActionCommand("checkout");
+				checkoutButton.setBook(b);
+				mainPanel.add(checkoutButton);
+			}
+			else {
+				BookButton holdButton = new BookButton("Place Hold");
+				holdButton.addActionListener(controller);
+				holdButton.setActionCommand("putonhold");
+				holdButton.setBook(b);
+				mainPanel.add(holdButton);
+			}
+			emptyLabel = new JLabel();
+			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			mainPanel.add(emptyLabel);
+		}
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpAddBooks() {
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+
+		JMenuBar menuBar = new JMenuBar();
+		JLabel libraryMessage = new JLabel("Add Books");
+		menuBar.add(libraryMessage);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - libraryMessage.getPreferredSize().width - menuButton.getPreferredSize().width - 20));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		JLabel menuLabel = new JLabel("Please select from the options below");
+		menuLabel.setBorder(new EmptyBorder(0, (this.getWidth() - menuLabel.getWidth()) / 2, 50, (this.getWidth() - menuLabel.getWidth()) / 2));
+		mainPanel.add(menuLabel);
+		
+		JButton specificButton = new JButton("Add with Author and Title");
+		specificButton.setActionCommand("addspecific");
+		specificButton.addActionListener(controller);
+		JButton rangeButton = new JButton("Add with Time Range");
+		rangeButton.setActionCommand("addrange");
+		rangeButton.addActionListener(controller);
+		mainPanel.add(specificButton);
+		mainPanel.add(rangeButton);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpAddSpecific() {
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+		
+		JMenuBar menuBar = new JMenuBar();
+		JMenu searchMenu = new JMenu("Add Type Menu");
+		JMenuItem menuItem = new JMenuItem("Add by Specifics");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("addspecific");
+		searchMenu.add(menuItem);
+		menuItem = new JMenuItem("Add by Range");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("addrange");
+		searchMenu.add(menuItem);
+		menuBar.add(searchMenu);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 220));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		JLabel titleLabel = new JLabel("Enter title: ");
+		titleLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
+		mainPanel.add(titleLabel);
+		
+		JTextField text = controller.text;
+		text.setText("");
+		text.setEditable(true);
+		text.setToolTipText("");
+		text.setActionCommand("addtitleentered");
+		if(text.getActionListeners().length == 0)
+			text.addActionListener(controller);
+		mainPanel.add(text);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpAddAuthor(String title) {
+		this.setUpAddSpecific();
+		mainPanel.remove(controller.text);
+		
+		JTextField titleField = new JTextField(20);
+		titleField.setText(title);
+		titleField.setEditable(false);
+		mainPanel.add(titleField);
+		
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		JLabel authorLabel = new JLabel("Enter author: ");
+		authorLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
+		mainPanel.add(authorLabel);
+		
+		JTextField authorField = controller.text;
+		authorField.setText("");
+		authorField.setEditable(true);
+		authorField.setToolTipText("Enter the primary author's name, first and last separated by a space");
+		authorField.setActionCommand("addauthorentered");
+		if(authorField.getActionListeners().length == 0)
+			authorField.addActionListener(controller);
+		mainPanel.add(authorField);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpAddRange(boolean first) {
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+		
+		JMenuBar menuBar = new JMenuBar();
+		JMenu searchMenu = new JMenu("Add Type Menu");
+		JMenuItem menuItem = new JMenuItem("Add by Specifics");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("addspecific");
+		searchMenu.add(menuItem);
+		menuItem = new JMenuItem("Add by Range");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("addrange");
+		searchMenu.add(menuItem);
+		menuBar.add(searchMenu);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 220));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(40, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		if(!first) {
+			JLabel errorLabel = new JLabel("Error: Invalid Input");
+			errorLabel.setBorder(new EmptyBorder(0, (this.getWidth() - errorLabel.getPreferredSize().width) / 2, 0, (this.getWidth() - errorLabel.getPreferredSize().width) / 2));
+			mainPanel.add(errorLabel);
+		}
+		
+		JLabel titleLabel = new JLabel("Enter start of range: ");
+		titleLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
+		mainPanel.add(titleLabel);
+		
+		JTextField text = controller.text;
+		text.setText("");
+		text.setEditable(true);
+		text.setToolTipText("Enter a string of numbers corresponding to a year");
+		text.setActionCommand("addstartrangeentered");
+		if(text.getActionListeners().length == 0)
+			text.addActionListener(controller);
+		mainPanel.add(text);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpAddEndRange(String start) {
+		this.setUpAddRange(true);
+		mainPanel.remove(controller.text);
+		
+		JTextField startField = new JTextField(20);
+		startField.setText(start);
+		startField.setEditable(false);
+		mainPanel.add(startField);
+		
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		JLabel endLabel = new JLabel("Enter end of range: ");
+		endLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
+		mainPanel.add(endLabel);
+		
+		JTextField endField = controller.text;
+		endField.setText("");
+		endField.setEditable(true);
+		endField.setToolTipText("Enter a string of numbers corresponding to a year");
+		endField.setActionCommand("addendrangeentered");
+		if(endField.getActionListeners().length == 0)
+			endField.addActionListener(controller);
+		mainPanel.add(endField);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpStaffSearch() {
+		if(scroller != null)
+			this.remove(scroller);
+		scroller = null;
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+		
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel libraryMessage = new JLabel("Search");
+		menuBar.add(libraryMessage);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - libraryMessage.getWidth() - menuButton.getWidth() - 155));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		JLabel menuLabel = new JLabel("Please select from the options below");
+		menuLabel.setBorder(new EmptyBorder(0, (this.getWidth() - menuLabel.getWidth()) / 2, 50, (this.getWidth() - menuLabel.getWidth()) / 2));
+		mainPanel.add(menuLabel);
+		
+		JButton byAuthorButton = new JButton("Search by Author");
+		byAuthorButton.setActionCommand("staffbyauthor");
+		byAuthorButton.addActionListener(controller);
+		JButton byTitleButton = new JButton("Search by Title");
+		byTitleButton.setActionCommand("staffbytitle");
+		byTitleButton.addActionListener(controller);
+		mainPanel.add(byAuthorButton);
+		mainPanel.add(byTitleButton);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpStaffSearchBar(boolean title) {
+		this.setUpSearchBar(title);
+		if(title) 
+			controller.text.setActionCommand("stafftitlesearchentered");
+		else
+			controller.text.setActionCommand("staffauthorsearchentered");
+	}
+	
+	private void setUpStaffSearchResults(String search, boolean title) {
+		this.remove(mainPanel);
+		mainPanel = new BookPanel(this.getWidth());
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel searchLabel = new JLabel("Search Results");
+		menuBar.add(searchLabel);
+		JMenu backMenu = new JMenu("Go Back");
+		JMenuItem menuItem = new JMenuItem("Back to Search");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("staffsearch");
+		backMenu.add(menuItem);
+		menuItem = new JMenuItem("Main Menu");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("staffmain");
+		backMenu.add(menuItem);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, this.getWidth() - 10 - searchLabel.getPreferredSize().width - backMenu.getPreferredSize().width, 0, 0));
+		menuBar.add(emptyLabel);
+		menuBar.add(backMenu);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		if(title) {
+			JLabel titleLabel = new JLabel("Enter title: ");
+			titleLabel.setBorder(new EmptyBorder(0, 0, 0, 5));
+			JTextField text = controller.text;
+			text.setToolTipText("Enter the full title of the desired book");
+			text.removeActionListener(controller);
+			text.setEditable(false);
+			mainPanel.add(titleLabel);
+			mainPanel.add(text);
+		}
+		else {
+			JLabel titleLabel = new JLabel("Enter author: ");
+			titleLabel.setBorder(new EmptyBorder(0, 0, 0, 5));
+			JTextField text = controller.text;
+			text.setToolTipText("Enter the full name of the author of the desired book");
+			text.removeActionListener(controller);
+			text.setEditable(false);
+			mainPanel.add(titleLabel);
+			mainPanel.add(text);
+		}
+		
+		JLabel resultsLabel = new JLabel("Search Results:");
+		resultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2, 25, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2));
+		mainPanel.add(resultsLabel);
+		
+		ArrayList<Book> searchResults;
+		ArrayList<Book> availResults;
+		
+		if(title) {
+			searchResults = controller.searchAllBooksByTitle(search);
+			availResults = controller.searchAvailBooksByTitle(search);
+		}
+		else {
+			searchResults = controller.searchAllBooksByAuthor(search);
+			availResults = controller.searchAvailBooksByAuthor(search);
+		}
+		
+		if(searchResults.size() == 0) {
+			JLabel noResultsLabel = new JLabel("Search returned no results");
+			noResultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - noResultsLabel.getPreferredSize().width) / 2, 0, (this.getWidth() - noResultsLabel.getPreferredSize().width) / 2));
+			mainPanel.add(noResultsLabel);
+		}
+		else {
+			JLabel availLabel = new JLabel("Available Books:");
+			availLabel.setBorder(new EmptyBorder(0, (this.getWidth() - availLabel.getPreferredSize().width) / 2, 10, (this.getWidth() - availLabel.getPreferredSize().width) / 2));
+			mainPanel.add(availLabel);
+			if(availResults.size() == 0) {
+				JLabel noAvailLabel = new JLabel("No Available Books Meet this Query");
+				noAvailLabel.setBorder(new EmptyBorder(0, (this.getWidth() - noAvailLabel.getPreferredSize().width) / 2, 10, (this.getWidth() - noAvailLabel.getPreferredSize().width) / 2));
+				mainPanel.add(noAvailLabel);
+			}
+			else {
+				for(Book b : availResults) {
+					JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME + " Number of Checkouts: " + controller.getCheckoutNum(b));
+					bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+					mainPanel.add(bookLabel);
+					BookButton checkOutButton = new BookButton("Remove Book from Library");
+					checkOutButton.addActionListener(controller);
+					checkOutButton.setActionCommand("remove");
+					checkOutButton.setBook(b);
+					mainPanel.add(checkOutButton);
+					if(!controller.mostPopular().contains(b)) {
+						BookButton recommendButton = new BookButton("Recommend Book");
+						recommendButton.setActionCommand("recommend");
+						recommendButton.addActionListener(controller);
+						recommendButton.setBook(b);
+						mainPanel.add(recommendButton);
+					}
+					emptyLabel = new JLabel();
+					emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+					mainPanel.add(emptyLabel);
+				}
+			}
+			JLabel notAvailLabel = new JLabel("Books Not Currently Available:");
+			notAvailLabel.setBorder(new EmptyBorder(0, (this.getWidth() - notAvailLabel.getPreferredSize().width) / 2, 10, (this.getWidth() - notAvailLabel.getPreferredSize().width) / 2));
+			mainPanel.add(notAvailLabel);
+			boolean anyBooksNotAvailable = false;
+			for(Book b : searchResults) {
+				if(!availResults.contains(b)) {
+					anyBooksNotAvailable = true;
+				}
+			}
+			if(anyBooksNotAvailable) {
+				for(Book b : searchResults) {
+					if(!availResults.contains(b)) {
+						JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME + " Number of Holds: " + controller.getNumHolds(b) + " Number of checkouts: " + controller.getCheckoutNum(b));
+						bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+						mainPanel.add(bookLabel);
+						BookButton holdButton = new BookButton("Remove Book from Library");
+						holdButton.addActionListener(controller);
+						holdButton.setActionCommand("remove");
+						holdButton.setBook(b);
+						mainPanel.add(holdButton);
+						if(!controller.mostPopular().contains(b)) {
+							BookButton recommendButton = new BookButton("Recommend Book");
+							recommendButton.setActionCommand("recommend");
+							recommendButton.addActionListener(controller);
+							recommendButton.setBook(b);
+							mainPanel.add(recommendButton);
+						}
+						emptyLabel = new JLabel();
+						emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+						mainPanel.add(emptyLabel);
+					}
+				}
+			}
+			else {
+				JLabel noUnavailLabel = new JLabel("No Unavailable Books Meet this Query");
+				noUnavailLabel.setBorder(new EmptyBorder(0, (this.getWidth() - noUnavailLabel.getPreferredSize().width) / 2, 10, (this.getWidth() - noUnavailLabel.getPreferredSize().width) / 2));
+				mainPanel.add(noUnavailLabel);
+			}
+		}
+		
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpStaffList() {
+		if(scroller != null)
+			this.remove(scroller);
+		scroller = null;
+		this.remove(mainPanel);
+		mainPanel = new JPanel();
+		this.add(mainPanel);
+		
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel libraryMessage = new JLabel("List Library");
+		menuBar.add(libraryMessage);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - libraryMessage.getWidth() - menuButton.getWidth() - 180));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+		mainPanel.add(emptyLabel);
+		
+		JLabel menuLabel = new JLabel("Please select from the options below");
+		menuLabel.setBorder(new EmptyBorder(0, (this.getWidth() - menuLabel.getWidth()) / 2, 50, (this.getWidth() - menuLabel.getWidth()) / 2));
+		mainPanel.add(menuLabel);
+		
+		JButton byAuthorButton = new JButton("List All, Sorted By Author");
+		byAuthorButton.setActionCommand("stafflistauthor");
+		byAuthorButton.addActionListener(controller);
+		JButton byTitleButton = new JButton("List All, Sorted by Title");
+		byTitleButton.setActionCommand("stafflisttitle");
+		byTitleButton.addActionListener(controller);
+		mainPanel.add(byAuthorButton);
+		mainPanel.add(byTitleButton);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpStaffListResults(boolean title) {
+		this.remove(mainPanel);
+		mainPanel = new BookPanel(this.getWidth());
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel listLabel = new JLabel("List Results");
+		menuBar.add(listLabel);
+		JMenu backMenu = new JMenu("Go Back");
+		JMenuItem menuItem = new JMenuItem("Back to List");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("stafflist");
+		backMenu.add(menuItem);
+		menuItem = new JMenuItem("Main Menu");
+		menuItem.addActionListener(controller);
+		menuItem.setActionCommand("staffmain");
+		backMenu.add(menuItem);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, this.getWidth() - 15 - listLabel.getPreferredSize().width - backMenu.getPreferredSize().width, 0, 0));
+		menuBar.add(emptyLabel);
+		menuBar.add(backMenu);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		JLabel resultsLabel = new JLabel("List Results:");
+		resultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2, 25, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2));
+		mainPanel.add(resultsLabel);
+		
+		ArrayList<Book> books;
+		
+		if(title)
+			books = controller.getAllBooksByTitle();
+		else
+			books = controller.getAllBooksByAuthor();
+		
+		for(Book b : books) {
+			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
+			bookLabel.setBorder(new EmptyBorder(0, (this.getWidth() - bookLabel.getPreferredSize().width) / 2, 0, (this.getWidth() - bookLabel.getPreferredSize().width) / 2));
+			mainPanel.add(bookLabel);
+			String information = "Available: ";
+			if(controller.searchAvailBooksByTitle(b.title).contains(b)) 
+				information += "Yes. Number of Checkouts: " + controller.getCheckoutNum(b);
+			else
+				information += "No. Number of Holds: " + controller.getNumHolds(b) + " Number of Checkouts: " + controller.getCheckoutNum(b);
+			JLabel informationLabel = new JLabel(information);
+			informationLabel.setBorder(new EmptyBorder(0, 0, 0, 5));
+			mainPanel.add(informationLabel);
+			BookButton removeButton = new BookButton("Remove Book from Library");
+			removeButton.setActionCommand("remove");
+			removeButton.addActionListener(controller);
+			removeButton.setBook(b);
+			if(!controller.mostPopular().contains(b)) {
+				BookButton recommendButton = new BookButton("Recommend Book");
+				recommendButton.setActionCommand("recommend");
+				recommendButton.addActionListener(controller);
+				recommendButton.setBook(b);
+				mainPanel.add(recommendButton);
+			}
+			mainPanel.add(removeButton);
+			emptyLabel = new JLabel();
+			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			mainPanel.add(emptyLabel);
+		}
+		
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpStaffMostPopular() {
+		this.remove(mainPanel);
+		mainPanel = new BookPanel(this.getWidth());
+		
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel recommendationsMessage = new JLabel("Most Popular");
+		menuBar.add(recommendationsMessage);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 190));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
+		
+		JLabel resultsLabel = new JLabel("The Following Books are the Most Popular in the Library:");
+		resultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2, 25, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2));
+		mainPanel.add(resultsLabel);
+	
+		ArrayList<Book> books = controller.mostPopular();
+		
+		for(Book b : books) {
+			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			mainPanel.add(bookLabel);
+			emptyLabel = new JLabel();
+			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			mainPanel.add(emptyLabel);
+		}
+		
+		this.setVisible(true);
+	}
+	
+	private void setUpStaffRecommended() {
+		this.remove(mainPanel);
+		mainPanel = new BookPanel(this.getWidth());
+		
+		
+		JMenuBar menuBar = new JMenuBar();
+		JLabel recommendationsMessage = new JLabel("Recommended");
+		menuBar.add(recommendationsMessage);
+		JButton menuButton = new JButton("Main Menu");
+		menuButton.setActionCommand("staffmain");
+		menuButton.addActionListener(controller);
+		JLabel emptyLabel = new JLabel("");
+		emptyLabel.setBorder(new EmptyBorder(0, 0, 0, this.getWidth() - 210));
+		menuBar.add(emptyLabel);
+		menuBar.add(menuButton);
+		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+		mainPanel.add(menuBar);
+		
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
+		
+		JLabel resultsLabel = new JLabel("These are the Books You Currently Recommend:");
+		resultsLabel.setBorder(new EmptyBorder(0, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2, 25, (this.getWidth() - resultsLabel.getPreferredSize().width) / 2));
+		mainPanel.add(resultsLabel);
+		
+		for(Book b: controller.getLibrarianRecommended()) {
+			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
+			mainPanel.add(bookLabel);
+			BookButton stopRecommendButton = new BookButton("Stop Recommending");
+			stopRecommendButton.setActionCommand("stoprecommend");
+			stopRecommendButton.addActionListener(controller);
+			stopRecommendButton.setBook(b);
+			mainPanel.add(stopRecommendButton);
+			emptyLabel = new JLabel();
+			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			mainPanel.add(emptyLabel);
+		}
+		
+		this.setVisible(true);
+	}
+	
+	public void switchAddPage(String page, String input1) {
+		if(page.toLowerCase().equals("addauthor")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddAuthor(input1);
+		}
+		else if(page.toLowerCase().equals("addendrange")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddEndRange(input1);
+		}
+	}
+	
 	public void search(String search, boolean title) {
 		this.setTitle("Search Results");
 		this.setSize(600, 400);
 		this.setUpSearchResults(search, title);
 	}
 	
+	public void staffSearch(String search, boolean title) {
+		this.setTitle("Search Results");
+		this.setSize(600, 400);
+		this.setUpStaffSearchResults(search, title);
+	}
+	
 	public void list(boolean title) {
 		this.setTitle("List Results");
 		this.setSize(600, 400);
 		this.setUpListResults(title);
+	}
+	
+	public void staffList(boolean title) {
+		this.setTitle("List Results");
+		this.setSize(600, 400);
+		this.setUpStaffListResults(title);
 	}
 	
 	public void changePage(String page) {
@@ -966,7 +1738,6 @@ public class View extends JFrame {
 			this.setUpBorrowerMain();
 		}
 		else if(page.toLowerCase().equals("homeagain")) { 
-			this.currentUser = null;
 			this.setTitle("Home Page");
 			this.setSize(400, 400);
 			this.setUpHome(false);
@@ -1001,10 +1772,84 @@ public class View extends JFrame {
 			this.setSize(600, 400);
 			this.setUpRecommendations();
 		}
+		else if(page.toLowerCase().equals("mostpopular")) {
+			this.setTitle("Most Popular");
+			this.setSize(600, 400);
+			this.setUpMostPopular();
+		}
+		else if(page.toLowerCase().equals("resetpassword")) {
+			this.setTitle("Reset Password");
+			this.setSize(600, 400);
+			this.setUpResetPassword(true);
+		}
+		else if(page.toLowerCase().equals("resetpwagain")) {
+			this.setTitle("Reset Password");
+			this.setSize(600, 400);
+			this.setUpResetPassword(false);
+		}
+		else if(page.toLowerCase().equals("resetpwnewpw")) {
+			this.setTitle("Reset Password");
+			this.setSize(600, 400);
+			this.setUpNewPassword(true);
+		}
+		else if(page.toLowerCase().equals("resetpwnewpwagain")) {
+			this.setTitle("Reset Password");
+			this.setSize(600, 400);
+			this.setUpNewPassword(false);
+		}
+		else if(page.toLowerCase().equals("addbooks")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddBooks();
+		}
+		else if(page.toLowerCase().equals("addspecific")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddSpecific();
+		}
+		else if(page.toLowerCase().equals("addrange")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddRange(true);
+		}
+		else if(page.toLowerCase().equals("addrangeagain")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddRange(false);
+		}
+		else if(page.toLowerCase().equals("staffsearch")) {
+			this.setTitle("Search");
+			this.setSize(600, 400);
+			this.setUpStaffSearch();
+		}
+		else if(page.toLowerCase().equals("staffsearchbartitle")) {
+			this.setTitle("Search");
+			this.setSize(600, 400);
+			this.setUpStaffSearchBar(true);
+		}
+		else if(page.toLowerCase().equals("staffsearchbarauthor")) {
+			this.setTitle("Search");
+			this.setSize(600, 400);
+			this.setUpStaffSearchBar(false);
+		}
+		else if(page.toLowerCase().equals("stafflist")) {
+			this.setTitle("List Library");
+			this.setSize(600, 400);
+			this.setUpStaffList();
+		}
+		else if(page.toLowerCase().equals("staffmostpopular")) {
+			this.setTitle("Most Popular");
+			this.setSize(600, 400);
+			this.setUpStaffMostPopular();
+		}
+		else if(page.toLowerCase().equals("staffrecommended")) {
+			this.setTitle("Recommended");
+			this.setSize(600, 400);
+			this.setUpStaffRecommended();
+		}
 	}
 	
-	public void loginUser(User u, boolean staff) {
-		this.currentUser = u;
+	public void loginUser(boolean staff) {
 		if(staff) {
 			this.changePage("staffmain");
 		}
@@ -1015,12 +1860,5 @@ public class View extends JFrame {
 	
 	public static void main(String[] args) {
 		View view = new View();
-		/*User u = null;
-		try {
-			u = new Borrower("Etefen", "Etefen");
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		}
-		view.loginUser(u, false);*/
 	}
 }
