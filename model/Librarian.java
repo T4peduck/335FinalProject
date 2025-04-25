@@ -83,4 +83,8 @@ public class Librarian extends User{
     public void removeRecommend(Book book, Library library) {
     	library.removeRecommend(getUserName(), book);
     }
+    
+    public ArrayList<Book> getRecommendations(Library library){
+    	return library.getRecommendationsByLibrarian(getUserName());
+    }
 }
