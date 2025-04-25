@@ -259,7 +259,7 @@ public class View extends JFrame {
 		JLabel passwordLabel = new JLabel("Password:");
 		mainPanel.add(passwordLabel);
 		
-		JPasswordField passwordField = new JPasswordField(20);
+		JPasswordField passwordField = controller.password;
 		passwordField.setActionCommand("StaffPWentered");
 		if(passwordField.getActionListeners().length == 0)
 			passwordField.addActionListener(controller);
@@ -1581,7 +1581,7 @@ public class View extends JFrame {
 			removeButton.setActionCommand("remove");
 			removeButton.addActionListener(controller);
 			removeButton.setBook(b);
-			if(!controller.mostPopular().contains(b)) {
+			if(!controller.getLibrarianRecommended().contains(b)) {
 				BookButton recommendButton = new BookButton("Recommend Book");
 				recommendButton.setActionCommand("recommend");
 				recommendButton.addActionListener(controller);
@@ -1640,6 +1640,9 @@ public class View extends JFrame {
 	}
 	
 	private void setUpStaffRecommended() {
+		if(scroller != null)
+			this.remove(scroller);
+		scroller = null;
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
 		
@@ -1696,25 +1699,25 @@ public class View extends JFrame {
 	
 	public void search(String search, boolean title) {
 		this.setTitle("Search Results");
-		this.setSize(600, 400);
+		this.setSize(800, 400);
 		this.setUpSearchResults(search, title);
 	}
 	
 	public void staffSearch(String search, boolean title) {
 		this.setTitle("Search Results");
-		this.setSize(600, 400);
+		this.setSize(800, 400);
 		this.setUpStaffSearchResults(search, title);
 	}
 	
 	public void list(boolean title) {
 		this.setTitle("List Results");
-		this.setSize(600, 400);
+		this.setSize(800, 400);
 		this.setUpListResults(title);
 	}
 	
 	public void staffList(boolean title) {
 		this.setTitle("List Results");
-		this.setSize(600, 400);
+		this.setSize(800, 400);
 		this.setUpStaffListResults(title);
 	}
 	
