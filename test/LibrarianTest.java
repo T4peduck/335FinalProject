@@ -128,5 +128,17 @@ class LibrarianTest {
 		l1.removeRecommend(book1, library);
 		assertFalse(library.getRecBooksByAuthor().contains(book1));
 	}
+	
+	@Test
+	void testGetRecommendations() throws NoSuchAlgorithmException {
+		authors.add(a1);
+		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
+		borrowers.add(borrow1);
+		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		l1.addBook(book1, library);
+		l1.recommend(book1, library);
+		assertEquals(l1.getRecommendations(library).get(0), book1);
+	}
 
 }
