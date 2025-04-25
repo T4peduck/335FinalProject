@@ -88,6 +88,21 @@ public class Library {
 			waiting.add(user);
 		}
 	}
+	
+	/*
+	 * @pre - this borrower has this book on hold
+	 */
+	public int getHoldPosition(Book b, Borrower borrower) {
+		// fix to non-zero indexing
+		return holds.get(b).indexOf(borrower) + 1;
+	}
+	
+	/*
+	 * @pre - this book is currently on hold by at least one person
+	 */
+	public int getNumHolds(Book b) {
+		return holds.get(b).size();
+	}
 
 	/*
 	 * private void updateHolds(Book b) - checks if the book (which has been recently
