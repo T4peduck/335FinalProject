@@ -489,6 +489,11 @@ public class Library {
 			}
 		}
 		
+		// remove from recommendations
+		for (ArrayList<Book> list: librarianRecs.values()) {
+			list.remove(b);
+		}
+		
 		// remove from counts
 		checkoutNums.remove(b);
 
@@ -505,6 +510,13 @@ public class Library {
 			recs.add(book);
 			librarianRecs.put(recommender, recs);
 		}
+	}
+	
+	public ArrayList<Book> getRecommendationsByLibrarian(String recommender) {
+		if (librarianRecs.containsKey(recommender)) {
+			return librarianRecs.get(recommender);
+		}
+		return new ArrayList<>();
 	}
 	
 	void removeRecommend(String recommender, Book book) {
@@ -572,4 +584,6 @@ public class Library {
 		
 		return mostPopular;
 	}
+
+
 }
