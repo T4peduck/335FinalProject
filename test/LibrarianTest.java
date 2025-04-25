@@ -19,13 +19,11 @@ class LibrarianTest {
 	private Library library = new Library();
 	private Author a1 = new Author("Arthur", 2030, 1999);
 	private ArrayList<Author> authors = new ArrayList<>();
-	private ArrayList<String> genres = new ArrayList<>();
 	private ArrayList<Borrower> borrowers = new ArrayList<>();
 	
 	@Test
 	void testRemoveBorrower() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -36,8 +34,7 @@ class LibrarianTest {
 	@Test
 	void testAddBook() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -48,8 +45,7 @@ class LibrarianTest {
 	@Test
 	void testRemoveBook() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -61,8 +57,7 @@ class LibrarianTest {
 	@Test
 	void testGetAvailBookListByAuthor() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -75,8 +70,7 @@ class LibrarianTest {
 	@Test
 	void testGetAvailBookListByTitle() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -89,8 +83,7 @@ class LibrarianTest {
 	@Test
 	void testGetUnavailBookListByAuthor() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -102,8 +95,7 @@ class LibrarianTest {
 	@Test
 	void testGetUnavailBookListByTitle() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -115,8 +107,7 @@ class LibrarianTest {
 	@Test
 	void testRecommend() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);
@@ -128,8 +119,7 @@ class LibrarianTest {
 	@Test
 	void testRemoveRecommend() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book book1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book book1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower borrow1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		borrowers.add(borrow1);
 		Librarian l1 = new Librarian("librarian1", "1a2B3c!", borrowers);

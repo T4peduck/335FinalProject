@@ -15,3 +15,5 @@ test/UserTest.class
 view/Main.class
 
 ./LibraryText/*.txt
+model/Book$1.class
+model/Book$2.class

@@ -13,13 +13,11 @@ class BorrowerTest {
 	private Author a1 = new Author("Arthur", 2030, 1999);
 	private Author a2 = new Author("weirdo", 1973, 2025);
 	private ArrayList<Author> authors = new ArrayList<>();
-	private ArrayList<String> genres = new ArrayList<>();
 	
 	@Test
 	void testCheckOutBook() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		u1.checkOutBook(b1, library);
@@ -33,8 +31,7 @@ class BorrowerTest {
 	@Test
 	void testCheckInBook() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		u1.checkOutBook(b1, library);
@@ -49,8 +46,7 @@ class BorrowerTest {
 	@Test
 	void testPutBookOnHold() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		u1.putBookOnHold(b1, library);
@@ -62,9 +58,8 @@ class BorrowerTest {
 	@Test
 	void testGetHistory() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
-		Book b2 = new Book("The Founder of Diabolism", authors, genres, "103115", "summary2", "mxtx");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		Book b2 = new Book("The Founder of Diabolism", authors, "103115", "summary2", "mxtx");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		library.addBook(b2);
@@ -89,15 +84,14 @@ class BorrowerTest {
 	@Test
 	void testGetHistoryByTitle() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
-		Book b2 = new Book("The Founder of Diabolism", authors, genres, "103115", "summary2", "mxtx");
-		Book b3 = new Book("The G", authors, genres, "7147107", "summary3", "dir");
-		Book b4 = new Book("The G", authors, genres, "173465", "summary4", "dir");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		Book b2 = new Book("The Founder of Diabolism", authors, "103115", "summary2", "mxtx");
+		Book b3 = new Book("The G", authors, "7147107", "summary3", "dir");
+		Book b4 = new Book("The G", authors, "173465", "summary4", "dir");
 		
 		ArrayList<Author> differentName = new ArrayList<>();
 		differentName.add(a2);
-		Book b5 = new Book("The G", differentName, genres, "173465", "summary4", "dir");
+		Book b5 = new Book("The G", differentName, "173465", "summary4", "dir");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		library.addBook(b2);
@@ -207,17 +201,16 @@ class BorrowerTest {
 	@Test
 	void testGetHistoryByAuthor() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
 		ArrayList<Author> authors2 = new ArrayList<>();
 		ArrayList<Author> authors3 = new ArrayList<>();
 		authors2.add(a2);
 		Author a3 = new Author("noname", 0, 0);
 		authors3.add(a3);
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
-		Book b2 = new Book("The Founder of Diabolism", authors2, genres, "103115", "summary2", "mxtx");
-		Book b3 = new Book("The G", authors3, genres, "7147107", "summary3", "dir");
-		Book b4 = new Book("The G", authors, genres, "173465", "summary4", "dir");
-		Book b5 = new Book("The G", authors, genres, "173465", "summary4", "dir");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		Book b2 = new Book("The Founder of Diabolism", authors2, "103115", "summary2", "mxtx");
+		Book b3 = new Book("The G", authors3, "7147107", "summary3", "dir");
+		Book b4 = new Book("The G", authors, "173465", "summary4", "dir");
+		Book b5 = new Book("The G", authors, "173465", "summary4", "dir");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		library.addBook(b2);
@@ -335,8 +328,7 @@ class BorrowerTest {
 	@Test
 	void testCheckedOut() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		assertEquals(u1.checkedOut().size(), 0);
@@ -349,8 +341,7 @@ class BorrowerTest {
 	@Test
 	void testCheckOutHold() throws NoSuchAlgorithmException {
 		authors.add(a1);
-		genres.add("Fantasy");
-		Book b1 = new Book("The Lord of the Rings", authors, genres, "12345", "summary", "path");
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
 		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
 		library.addBook(b1);
 		u1.putBookOnHold(b1, library);
