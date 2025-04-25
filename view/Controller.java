@@ -155,6 +155,7 @@ public class Controller implements ActionListener{
 				} catch (NoSuchAlgorithmException e1) {
 					System.exit(1);
 				}
+				currentUser = u;
 				view.loginUser(false);
 			}
 		}
