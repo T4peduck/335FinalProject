@@ -101,7 +101,7 @@ public class DataController {
 				line = br.readLine();
 			}
 			
-			System.out.println(i + "BOOKS LOADED");
+			System.out.println(i + " BOOKS LOADED");
 			
 			br.close();
 		} catch (IOException e) {
