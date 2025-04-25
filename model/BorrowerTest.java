@@ -349,5 +349,14 @@ class BorrowerTest {
 		assertFalse(u1.onHold().contains(b1));
 		assertTrue(u1.checkedOut().contains(b1));
 	}
-
+	
+	@Test
+	void testGetHoldPosition() throws NoSuchAlgorithmException {
+		authors.add(a1);
+		Book b1 = new Book("The Lord of the Rings", authors, "12345", "summary", "path");
+		Borrower u1 = new Borrower("lix2_an_wei", "1a2B3c!");
+		library.addBook(b1);
+		library.hold(b1, u1);
+		assertEquals(u1.getHoldPosition(b1, library), 1);
+	}
 }

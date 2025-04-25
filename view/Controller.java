@@ -236,12 +236,17 @@ public class Controller implements ActionListener{
 		else if(command.equals("addauthorentered")) {
 			Librarian librarian = (Librarian) currentUser;
 			String[] authorNames = text.getText().split(" ");
-			ParseBook.addAuthorAndTitle(authorNames[0], authorNames[1], title);
-			ArrayList<Book> books = ParseBook.downloadBooks();
-			for(Book b: books) {
-				librarian.addBook(b, library);
+			if(authorNames.length < 2) {
+				view.changePage("addspecificagain");
 			}
-			view.changePage("staffmain");
+			else {
+				ParseBook.addAuthorAndTitle(authorNames[0], authorNames[1], title);
+				ArrayList<Book> books = ParseBook.downloadBooks();
+				for(Book b: books) {
+					librarian.addBook(b, library);
+				}
+				view.changePage("staffmain");
+			}
 		}
 		else if(command.equals("addstartrangeentered")) {
 			boolean badInt = false;

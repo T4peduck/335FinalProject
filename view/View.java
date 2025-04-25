@@ -1087,7 +1087,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
-	private void setUpAddSpecific() {
+	private void setUpAddSpecific(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
 		this.add(mainPanel);
@@ -1113,9 +1113,21 @@ public class View extends JFrame {
 		menuBar.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
 		mainPanel.add(menuBar);
 		
-		emptyLabel = new JLabel("");
-		emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
-		mainPanel.add(emptyLabel);
+		if(first) {
+			emptyLabel = new JLabel("");
+			emptyLabel.setBorder(new EmptyBorder(50, this.getWidth(), 0, 0));
+			mainPanel.add(emptyLabel);
+		}
+		else {
+			JLabel errorLabel = new JLabel("Error: Invalid Input Entered");
+			errorLabel.setForeground(new Color(139, 0, 0));
+			mainPanel.add(errorLabel);
+			emptyLabel = new JLabel();
+			emptyLabel.setBorder(new EmptyBorder(30, this.getWidth(), 0, 0));
+			mainPanel.add(emptyLabel);
+		}
+		
+		
 		
 		JLabel titleLabel = new JLabel("Enter title: ");
 		titleLabel.setBorder(new EmptyBorder(0, 0, 0, 10));
@@ -1134,7 +1146,7 @@ public class View extends JFrame {
 	}
 	
 	private void setUpAddAuthor(String title) {
-		this.setUpAddSpecific();
+		this.setUpAddSpecific(true);
 		mainPanel.remove(controller.text);
 		
 		JTextField titleField = new JTextField(20);
@@ -1846,7 +1858,7 @@ public class View extends JFrame {
 		else if(page.toLowerCase().equals("addspecific")) {
 			this.setTitle("Add Books");
 			this.setSize(600, 400);
-			this.setUpAddSpecific();
+			this.setUpAddSpecific(true);
 		}
 		else if(page.toLowerCase().equals("addrange")) {
 			this.setTitle("Add Books");
@@ -1887,6 +1899,11 @@ public class View extends JFrame {
 			this.setTitle("Recommended");
 			this.setSize(600, 400);
 			this.setUpStaffRecommended();
+		}
+		else if(page.toLowerCase().equals("addspecificagain")) {
+			this.setTitle("Add Books");
+			this.setSize(600, 400);
+			this.setUpAddSpecific(false);
 		}
 	}
 	
