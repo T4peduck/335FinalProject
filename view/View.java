@@ -928,7 +928,7 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				if(controller.getHoldPosition(b) != -1) {
+				if(controller.getHoldPosition(b) != 0) {
 					JButton alreadyOnHoldButton = new JButton("Already on Hold");
 					mainPanel.add(alreadyOnHoldButton);
 				}
@@ -1059,7 +1059,7 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				if(controller.getHoldPosition(b) != -1) {
+				if(controller.getHoldPosition(b) != 0) {
 					JButton alreadyOnHoldButton = new JButton("Already on Hold");
 					mainPanel.add(alreadyOnHoldButton);
 				}

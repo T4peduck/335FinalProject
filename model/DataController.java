@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /*
  * FILE FORMAT
@@ -111,5 +110,16 @@ public class DataController {
 		}
 	}
 	
-	
+	/*
+	 * @PRE b.filepath is in model/libraryText
+	 */
+	public static void removeBook(Book b) {
+		File bookFile = new File(b.filePath);
+		if(bookFile.delete()) {
+			System.out.println(b.toString() + " SUCCESSFULLY DELETED");
+		} else {
+			System.out.println(b.toString() + " NOT DELETED");
+		}
+		
+	}
 }

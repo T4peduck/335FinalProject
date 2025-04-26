@@ -124,12 +124,6 @@ Figueiredo, Cândido de~1846~1925=
 model/LibraryText/Novodicionáriodalínguaportuguesa.txt
 "Novo Dicionário da Língua Portuguesa" by Cândido de Figueiredo is a comprehensive dictionary written in the early 20th century. This lexicographic work seeks to compile and standardize Portuguese vocabulary, reflecting contemporary linguistic practices while also incorporating historical and regional terms. The book aims to enrich the language by acknowledging popular and scientific terminology, promoting a unified understanding of Portuguese across different regions and cultures.  The opening of the dictionary outlines the author's motivation for creating a new lexicon and reflects on past dictionaries’ shortcomings. Cândido de Figueiredo criticizes previous works for their lack of completeness and alignment with modern usage, noting that many common and valuable terms, especially from popular and scientific contexts, were missing. He emphasizes the importance of including a diverse array of terms to reflect the richness of the Portuguese language and its evolution, particularly highlighting the lexicon's role in bridging regional dialects and contemporary vocabulary. (This is an automatically generated summary.)
 
-Peter Pan
-Barrie, J. M. (James Matthew)~1860~1937=
-16
-model/LibraryText/PeterPan.txt
-"Peter and Wendy" by J.M. Barrie is a classic children's novel first published in the early 20th century. The story revolves around the beloved character Peter Pan and follows his adventures in the fantastical Neverland, along with a young girl named Wendy Darling and her brothers, John and Michael. The themes of childhood, innocence, and the challenges of growing up are prevalent throughout the narrative.  At the start of the story, we are introduced to the Darling family and their idyllic life in London. Wendy, the eldest child, grapples with the idea of growing up while her parents, Mr. and Mrs. Darling, navigate the challenges of parenthood. As the narrative unfolds, Peter Pan breaks into their nursery, and the children's imaginations ignite as they prepare for an adventure in Neverland. Wendy, along with her brothers, is enchanted by Peter's promise of flying and the magical world that awaits them. The opening sets the stage for a tale filled with whimsical characters, such as Tinker Bell, and introduces dark undertones through the presence of Captain Hook, foreshadowing the conflicts and trials that will unfold in their journey. (This is an automatically generated summary.)
-
 Plays
 Glaspell, Susan~1876~1948=
 10623

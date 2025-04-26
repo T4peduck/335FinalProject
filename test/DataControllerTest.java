@@ -1,7 +1,12 @@
 package test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
@@ -30,5 +35,29 @@ public class DataControllerTest {
 		ArrayList<Book> bList = lib2.getAllBooksByTitle();
 		
 		assertEquals(bList.size(), 7);
+	}
+	
+	@Test
+	void testDeleteBook() {
+		ArrayList<Author> authors = new ArrayList<Author>();
+		File p = new File("model/LibraryText/IDK.txt");
+		try {
+			FileWriter fw = new FileWriter(p);
+			fw.write("hi\n");
+			fw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Book b = new Book("It", authors, "IDK", "IDK", "model/LibraryText/IDK.txt");
+		assertTrue(p.exists());
+		
+		DataController.removeBook(b);
+		
+		File f = new File("model/LibraryText/IDK.txt");
+		assertFalse(f.exists());
+		
+		
+		
 	}
 }
