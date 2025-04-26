@@ -1,3 +1,9 @@
+/*
+ * File: View.java
+ * Author: Ethan Cushner
+ * Purpose: Creates a GUI environment to interact with our 335 E-Library
+ */
+
 package view;
 
 import java.awt.Color;
@@ -26,6 +32,7 @@ import model.Book;
 
 public class View extends JFrame {
 	
+	// A JButton which can hold a book as an instance variable
 	public class BookButton extends JButton {
 		private Book b;
 		
@@ -42,6 +49,7 @@ public class View extends JFrame {
 		}
 	}
 	
+	// A JButton which can hold a String for a user's username as an instance variable
 	public class UserButton extends JButton {
 		private String username;
 		
@@ -58,6 +66,7 @@ public class View extends JFrame {
 		}
 	}
 	
+	// A JButton which can hold both a username and a book as instance variables
 	public class BookUserButton extends JButton {
 		private Book b;
 		private String username;
@@ -83,6 +92,7 @@ public class View extends JFrame {
 		}
 	}
 	
+	// A JPanel that implements the Scrollable interface to create a scrollable page.
 	private class BookPanel extends JPanel implements Scrollable {
 		
 		private int height;
@@ -92,6 +102,12 @@ public class View extends JFrame {
 			super();
 			this.width = width;
 			this.height = 50;
+		}
+		
+		public BookPanel(int width, int height) {
+			super();
+			this.width = width;
+			this.height = height;
 		}
 		
 		public Dimension getPreferredScrollableViewportSize() {
@@ -143,6 +159,7 @@ public class View extends JFrame {
 		this.setUpHome(true);
 	}
 	
+	// Sets up the home page
 	private void setUpHome(boolean first) {
 		if(!first)
 			this.remove(mainPanel);
@@ -174,6 +191,7 @@ public class View extends JFrame {
 		staffLogButton.addActionListener(controller);
 		mainPanel.add(staffLogButton);
 		
+		// Have the code go through cleanup and terminate upon closing the GUI window
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent windowEvent) {
 				controller.exit();
@@ -184,6 +202,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first half of the user login page for entering username
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpLogin(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -221,6 +241,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second half of the user login page for entering password
 	private void setUpLoginPW() {
 		controller.text.removeActionListener(controller);
 		controller.text.setEditable(false);
@@ -252,6 +273,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first half of the staff login page for entering username
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpStaffLogin(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -289,6 +312,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second half of the staff login page for entering password
 	private void setUpStaffLoginPW() {
 		controller.text.removeActionListener(controller);
 		controller.text.setEditable(false);
@@ -311,6 +335,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first page of the user create account for entering username
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpCreateAccount(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -347,6 +373,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second page of the user create account for entering password
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpCreateAccountPW(boolean first) {
 		if(!first) {
 			setUpCreateAccount(true);
@@ -386,6 +414,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first part of the reset password page for entering the old password
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpResetPassword(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -426,6 +456,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second page of the reset password page for entering a new password
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpNewPassword(boolean first) {
 		this.setUpResetPassword(true);
 		this.remove(controller.password);
@@ -452,6 +484,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the main menu page for a Borrower
 	private void setUpBorrowerMain() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -505,6 +538,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the main menu page for a Librarian
 	private void setUpStaffMain() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -562,12 +596,13 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	//Sets up a page for a borrower to see their individual checkouts, holds, and history
 	private void setUpUserLibrary() {
 		if(scroller != null) 
 			this.remove(scroller);
 		scroller = null;
 		this.remove(mainPanel);
-		mainPanel = new BookPanel(this.getWidth());
+		mainPanel = new BookPanel(this.getWidth(), 200);
 		
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -622,7 +657,7 @@ public class View extends JFrame {
 		
 		for(Book b : controller.getHistory()) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
-			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 0));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
@@ -635,6 +670,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first part of the borrower's search page, where a borrower chooses search type
 	private void setUpBorrowerSearch() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -677,6 +713,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second part of borrower searching, where the user can enter an appropriate query
+	// title tells the method whether the search is by title (true) or by author (false)
 	private void setUpSearchBar(boolean title) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -738,6 +776,9 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the final page of the borrower search, the results of the search
+	// search is the query entered in the previous page
+	// title tells the method whether the search is by title (true) or by author (false)
 	private void setUpSearchResults(String search, boolean title) {
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
@@ -842,7 +883,11 @@ public class View extends JFrame {
 						JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 						bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 						mainPanel.add(bookLabel);
-						if(controller.getHoldPosition(b) != 0) {
+						if(controller.checkBookStatus(b) == -1) {
+							JButton alreadyCheckedOutButton = new JButton("Already Checked Out");
+							mainPanel.add(alreadyCheckedOutButton);
+						}
+						else if(controller.getHoldPosition(b) != 0) {
 							JButton alreadyButton = new JButton("Already on Hold");
 							mainPanel.add(alreadyButton);
 						}
@@ -872,6 +917,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the menu for listing for a borrower, which lets the borrower choose whether to sort by title or author
 	private void setUpListMenu() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -915,7 +961,7 @@ public class View extends JFrame {
 	}
 	
 	/*
-	 * void setUpListResults(boolean all, boolean title) -- sets up the view to show the results
+	 * void setUpListResults(boolean title) -- sets up the view to show the results
 	 * of listing the library. If title is true, lists the library by title. If title is false, lists the
 	 * library by author.
 	 */
@@ -993,6 +1039,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the user recommendations page, which shows the user all books recommended by librarians
 	private void setUpRecommendations() {
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
@@ -1057,6 +1104,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the user most popular page, which shows up to 10 of the most checked out books in the library
 	private void setUpMostPopular() {
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
@@ -1121,6 +1169,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up first part of the add books page, which lets a librarian choose whether to add by title and author or a time range
 	private void setUpAddBooks() {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -1159,6 +1208,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first page for adding a specific book, which allows the librarian to input the book's title
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpAddSpecific(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -1217,6 +1268,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second page for adding a specific book, which allows the librarian to enter the author of the book
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpAddAuthor(String title) {
 		this.setUpAddSpecific(true);
 		mainPanel.remove(controller.text);
@@ -1246,6 +1299,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first part of the add by time range page, which allows a librarian to input the start of a time range
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpAddRange(boolean first) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -1298,6 +1353,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the second part of the add by time range page, which allows the librarian to input the end of the time range
+	// first tells the method whether or not this is the first time to the page -- if not, prints according error message
 	private void setUpAddEndRange(String start) {
 		this.setUpAddRange(true);
 		mainPanel.remove(controller.text);
@@ -1327,6 +1384,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the first part of the staff search page, which allows a librarian to choose between a search by title and a search by author
 	private void setUpStaffSearch() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -1369,6 +1427,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the search bar for staff searching, where a librarian can input a proper query
+	// title tells the method whether the search is by title (true) or by author (false)
 	private void setUpStaffSearchBar(boolean title) {
 		this.remove(mainPanel);
 		mainPanel = new JPanel();
@@ -1430,6 +1490,9 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the page to show the results of the librarians search
+	// search is the query entered
+	// title tells the method whether the search is by title (true) or by author (false)
 	private void setUpStaffSearchResults(String search, boolean title) {
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
@@ -1572,6 +1635,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the menu for staff listing, which lets a librarian choose between listing sorted by title or by author
 	private void setUpStaffList() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -1614,6 +1678,8 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the page to show the results of listing for staff
+	// title tells the method whether the search is by title (true) or by author (false)
 	private void setUpStaffListResults(boolean title) {
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
@@ -1685,6 +1751,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the page for the staff to see the up to 10 most popular books in the library
 	private void setUpStaffMostPopular() {
 		this.remove(mainPanel);
 		mainPanel = new BookPanel(this.getWidth());
@@ -1724,6 +1791,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the page for a librarian to see their recommended and stop recommending books on the list if they so choose
 	private void setUpStaffRecommended() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -1769,6 +1837,7 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Sets up the page for the librarians to be able to see all active accounts
 	private void setUpManageUsers() {
 		if(scroller != null)
 			this.remove(scroller);
@@ -1810,9 +1879,14 @@ public class View extends JFrame {
 		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		this.add(scroller);
 		
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
+		
 		this.setVisible(true);
 	}
 	
+	// Sets up the page for the librarian to be able to see a user's library, including checkouts, holds, and history
+	// username is the username of the currently viewed user's library
 	private void setUpManageUserLibrary(String username) {
 		if(scroller != null) 
 			this.remove(scroller);
@@ -1838,7 +1912,7 @@ public class View extends JFrame {
 		checkedOutMessage.setBorder(new EmptyBorder(0, (this.getWidth() - checkedOutMessage.getWidth()) / 2, 0, (this.getWidth() - checkedOutMessage.getWidth()) / 2));
 		mainPanel.add(checkedOutMessage);
 		
-		for(Book b : controller.getCheckedOut()) {
+		for(Book b : controller.getCheckedOut(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
@@ -1857,12 +1931,10 @@ public class View extends JFrame {
 		onHoldMessage.setBorder(new EmptyBorder(0, (this.getWidth() - onHoldMessage.getWidth()) / 2, 0, (this.getWidth() - onHoldMessage.getWidth()) / 2));
 		mainPanel.add(onHoldMessage);
 		
-		for(Book b : controller.getHolds()) {
+		for(Book b : controller.getHolds(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
-			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 0));
 			mainPanel.add(bookLabel);
-			JLabel holdsLabel = new JLabel("Holds in front of them: " + controller.getHoldPosition(b));
-			mainPanel.add(holdsLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
@@ -1872,9 +1944,9 @@ public class View extends JFrame {
 		historyMessage.setBorder(new EmptyBorder(0, (this.getWidth() - historyMessage.getPreferredSize().width) / 2, 0, (this.getWidth() - historyMessage.getPreferredSize().width) / 2));
 		mainPanel.add(historyMessage);
 		
-		for(Book b : controller.getHistory()) {
+		for(Book b : controller.getHistory(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
-			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 0));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
@@ -1887,12 +1959,14 @@ public class View extends JFrame {
 		this.setVisible(true);
 	}
 	
+	// Calls for changing the page to view a user's library
 	public void openUserLibrary(String username) {
 		this.setTitle(username +"'s Library");
 		this.setSize(800, 600);
 		this.setUpManageUserLibrary(username);
 	}
 	
+	// Allows the controller to switch the add page while taking in the previously input data
 	public void switchAddPage(String page, String input1) {
 		if(page.toLowerCase().equals("addauthor")) {
 			this.setTitle("Add Books");
@@ -1906,30 +1980,34 @@ public class View extends JFrame {
 		}
 	}
 	
+	// Calls for search results to be displayed for borrowers
 	public void search(String search, boolean title) {
 		this.setTitle("Search Results");
 		this.setSize(800, 600);
 		this.setUpSearchResults(search, title);
 	}
 	
+	// Calls for search results to be displayed for librarians
 	public void staffSearch(String search, boolean title) {
 		this.setTitle("Search Results");
 		this.setSize(800, 600);
 		this.setUpStaffSearchResults(search, title);
 	}
 	
+	// Calls for list results to be displayed for borrowers
 	public void list(boolean title) {
 		this.setTitle("List Results");
 		this.setSize(800, 600);
 		this.setUpListResults(title);
 	}
-	
+	// Calls for list results to be displayed for librarians
 	public void staffList(boolean title) {
 		this.setTitle("List Results");
 		this.setSize(800, 600);
 		this.setUpStaffListResults(title);
 	}
 	
+	// Calls to change the current page according to the String passed in
 	public void changePage(String page) {
 		if(page.toLowerCase().equals("home")) {
 			this.setTitle("Home Page");
@@ -2110,6 +2188,8 @@ public class View extends JFrame {
 		}
 	}
 	
+	// Logs in a user
+	// staff tells the method if it is a staff member (true) or a borrower(false) logging in
 	public void loginUser(boolean staff) {
 		if(staff) {
 			this.changePage("staffmain");
