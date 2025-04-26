@@ -63,8 +63,10 @@ public class Library {
 				}
 
 				// Add to wating with no holds for the GUI to work
-				ArrayList<Borrower> waiting = new ArrayList<Borrower>();
-				holds.put(b, waiting);
+				if(holds.get(b) == null) {
+					ArrayList<Borrower> waiting = new ArrayList<Borrower>();
+					holds.put(b, waiting);
+				}
 				
 				// show it was successfully checked out
 				return 1;
