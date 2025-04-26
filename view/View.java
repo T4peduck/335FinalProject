@@ -1926,8 +1926,6 @@ public class View extends JFrame {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
-			JLabel holdsLabel = new JLabel("Holds in front of them: " + controller.getHoldPosition(b));
-			mainPanel.add(holdsLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
