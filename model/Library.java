@@ -112,7 +112,7 @@ public class Library {
 	private void updateHolds(Book b) {
 		ArrayList<Borrower> waiting = holds.get(b);
 		// no one is waiting for this book
-		if (waiting == null) {
+		if (waiting == null || waiting.size() == 0) {
 			return;
 		} else {
 			// check out to the first person
