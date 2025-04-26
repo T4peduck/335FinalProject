@@ -17,6 +17,8 @@ import model.Library;
 import model.ParseBook;
 import model.User;
 import view.View.BookButton;
+import view.View.BookUserButton;
+import view.View.UserButton;
 
 public class Controller implements ActionListener{
 	
@@ -340,6 +342,18 @@ public class Controller implements ActionListener{
 			librarian.removeRecommend(b.getBook(), library);
 			view.changePage("staffrecommended");
 		}
+		else if(command.equals("manageusers")) {
+			view.changePage("manageusers");
+		}
+		else if(command.equals("viewuserlibrary")) {
+			UserButton b = (UserButton) e.getSource();
+			view.openUserLibrary(b.getUsername());
+		}
+		else if(command.equals("forcereturn")) {
+			BookUserButton button = (BookUserButton) e.getSource();
+			Borrower b = borrowerList.get(button.getUsername());
+			b.checkinBook(button.getBook(), library);
+		}
 	}
 	
 	/*
@@ -428,5 +442,13 @@ public class Controller implements ActionListener{
 	
 	public void exit() {
 		DataController.saveBookData(library);
+	}
+	
+	public ArrayList<String> getUsernames() {
+		ArrayList<String> usernames = new ArrayList<String>();
+		for(Borrower b : borrowerList.values()) {
+			usernames.add(b.getUserName());
+		}
+		return usernames;
 	}
 }
