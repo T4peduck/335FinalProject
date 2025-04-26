@@ -1,3 +1,10 @@
+/*
+ * File: Controller.java
+ * Author: Ethan Cushner
+ * Purpose: Controls the back-end of our 335 library model based upon requests made
+ * from the view and updates the view.
+ */
+
 package view;
 
 import java.awt.event.ActionEvent;
@@ -45,10 +52,14 @@ public class Controller implements ActionListener{
 		} catch (NoSuchAlgorithmException e) {
 			System.exit(1);
 		}
-
 		DataController.loadBookData(library);
 	}
-
+	
+	/*
+	 * void actionPerformed(ActionEvent e) -- responds to input in the view to change the model accordingly and
+	 * update the view
+	 */
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();
@@ -248,10 +259,9 @@ public class Controller implements ActionListener{
 				ArrayList<Book> books = ParseBook.downloadBooks();
 				if(books == null) {
 					view.changePage("addspecificagain");
-				} else {
-					for(Book b: books) {
-						librarian.addBook(b, library);
-					}
+				}
+				for(Book b: books) {
+					librarian.addBook(b, library);
 				}
 				view.changePage("staffmain");
 		}
@@ -371,79 +381,141 @@ public class Controller implements ActionListener{
 		return 0;
 	}
 	
+	/*
+	 * String getUserName() -- returns the username of the current user
+	 */
 	public String getUserName() {
 		return currentUser.getUserName();
 	}
 	
+	/*
+	 * ArrayList<Book> getCheckedOut() -- returns all the Books the current user has
+	 * checked out
+	 */
 	public ArrayList<Book> getCheckedOut() {
 		Borrower borrower = (Borrower) currentUser;
 		return borrower.checkedOut();
 	}
 	
+	/*
+	 * ArrayList<Book> getHolds() -- returns all of the Books the current user has
+	 * on hold
+	 */
 	public ArrayList<Book> getHolds() {
 		Borrower borrower = (Borrower) currentUser;
 		return borrower.onHold();
 	}
 	
+	/*
+	 * ArrayList<Book> getHistory() -- returns the history of a user's previously checked
+	 * out books
+	 */
 	public ArrayList<Book> getHistory() {
 		Borrower borrower = (Borrower) currentUser;
 		return borrower.getHistory();
 	}
 	
+	/*
+	 * ArrayList<Book> searchAllBooksByTitle(String search) -- returns all books in the library
+	 * when searched with keyword search
+	 */
 	public ArrayList<Book> searchAllBooksByTitle(String search) {
 		return library.searchAllBooksByTitle(search);
 	}
 	
+	/*
+	 * ArrayList<Book> searchAvailBooksByTitle(String search) -- returns all available books in the
+	 * library when searched with keyword search
+	 */
 	public ArrayList<Book> searchAvailBooksByTitle(String search) {
 		return library.searchAvailBooksByTitle(search);
 	}
-
+	
+	/*
+	 * ArrayList<Book> searchAllBooksByAuthor(String search) -- returns all books in the library
+	 * when searched by author with keyword search
+	 */
 	public ArrayList<Book> searchAllBooksByAuthor(String search) {
 		return library.searchAllBooksByAuthor(search);
 	}
-
+	
+	/*
+	 * ArrayList<Book> searchAvailBooksByAuthor(String search) -- returns all available books in the 
+	 * library when searched by author with keyword search
+	 */
 	public ArrayList<Book> searchAvailBooksByAuthor(String search) {
 		return library.searchAvailBooksByAuthor(search);
 	}
 	
+	/*
+	 * ArrayList<Book> getAllBooksByTitle() -- returns all books in the library sorted by title
+	 */
 	public ArrayList<Book> getAllBooksByTitle() {
 		return library.getAllBooksByTitle();
 	}
 	
+	/*
+	 * ArrayList<Book> getAllBooksByAuthor() -- returns all books in the library sorted by author
+	 */
 	public ArrayList<Book> getAllBooksByAuthor() {
 		return library.getAllBooksByAuthor();
 	}
 	
+	/*
+	 * ArrayList<Book> mostPopular() -- returns the at most 10 most popular books in the library
+	 */
 	public ArrayList<Book> mostPopular() {
 		return library.getMostPopular();
 	}
 	
+	/*
+	 * int getCheckoutNum(Book b) -- returns the number of times b has been checked out
+	 */
 	public int getCheckoutNum(Book b) {
 		return library.getCheckoutNum(b);
 	}
 	
+	/*
+	 * int getHoldPosition(Book b) -- returns the number of holds on book b ahead of the current user's hold
+	 */
 	public int getHoldPosition(Book b) {
 		Borrower borrower = (Borrower) currentUser;
 		return library.getHoldPosition(b, borrower);
 	}
 	
+	/*
+	 * int getNumHolds(Book b) -- returns the number of holds on book b
+	 */
 	public int getNumHolds(Book b) {
 		return library.getNumHolds(b);
 	}
 	
+	/*
+	 * ArrayList<Book> getRecommended() -- returns all the books recommended by librarians
+	 */
 	public ArrayList<Book> getRecommended() {
 		return library.getRecBooksByTitle();
 	}
 	
+	/*
+	 * ArrayList<Book> getLibrarianRecommended() -- returns the books recommended by the currently logged
+	 * in librarian
+	 */
 	public ArrayList<Book> getLibrarianRecommended() {
 		Librarian librarian = (Librarian) currentUser;
 		return librarian.getRecommendations(library);
 	}
 	
+	/*
+	 * void exit() -- Calls the data controller to save the books added to the library
+	 */
 	public void exit() {
 		DataController.saveBookData(library);
 	}
 	
+	/*
+	 * ArrayList<String> getUsernames() -- returns the usernames of every active borrower account
+	 */
 	public ArrayList<String> getUsernames() {
 		ArrayList<String> usernames = new ArrayList<String>();
 		for(Borrower b : borrowerList.values()) {
