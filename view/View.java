@@ -104,6 +104,12 @@ public class View extends JFrame {
 			this.height = 50;
 		}
 		
+		public BookPanel(int width, int height) {
+			super();
+			this.width = width;
+			this.height = height;
+		}
+		
 		public Dimension getPreferredScrollableViewportSize() {
 			return super.getPreferredSize();
 		}
@@ -596,7 +602,7 @@ public class View extends JFrame {
 			this.remove(scroller);
 		scroller = null;
 		this.remove(mainPanel);
-		mainPanel = new BookPanel(this.getWidth());
+		mainPanel = new BookPanel(this.getWidth(), 200);
 		
 		
 		JMenuBar menuBar = new JMenuBar();
