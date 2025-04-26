@@ -120,11 +120,6 @@ public class Library {
 			user.checkOutHold(b); // check in to the user
 
 			checkout(b); // check it out of the library
-
-			// remove from holds if no one is waiting anymore
-			if (waiting.size() == 0) {
-				holds.remove(b);
-			}
 		}
 	}
 
