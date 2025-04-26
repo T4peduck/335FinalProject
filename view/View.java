@@ -1806,6 +1806,9 @@ public class View extends JFrame {
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
+
+		scroller = new JScrollPane(mainPanel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		this.add(scroller);
 		
 		this.setVisible(true);
 	}
