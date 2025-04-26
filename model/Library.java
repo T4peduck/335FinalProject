@@ -505,6 +505,9 @@ public class Library {
 
 		// remove from holds
 		holds.remove(b);
+		
+		// remove book from database
+		DataController.removeBook(b);
 	}
 	
 	void recommend(String recommender, Book book) {

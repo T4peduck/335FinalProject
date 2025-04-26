@@ -111,7 +111,7 @@ public class DataController {
 	}
 	
 	/*
-	 * @PRE b.filepath is in model/libraryText
+	 * @PRE b.filepath is a real file in model/libraryText
 	 */
 	public static void removeBook(Book b) {
 		File bookFile = new File(b.filePath);
