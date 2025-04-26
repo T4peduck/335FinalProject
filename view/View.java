@@ -85,7 +85,7 @@ public class View extends JFrame {
 		@Override
 		public Component add(Component component) {
 			super.add(component);
-			if(component.getClass().equals(JLabel.class) || component.getClass().equals(JMenuBar.class))
+			if(!component.getClass().equals(JButton.class) && !component.getClass().equals(BookButton.class))
 				this.height += component.getPreferredSize().height;
 			return(component);
 		}
@@ -798,11 +798,17 @@ public class View extends JFrame {
 						JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 						bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 						mainPanel.add(bookLabel);
-						BookButton holdButton = new BookButton("Place Hold");
-						holdButton.addActionListener(controller);
-						holdButton.setActionCommand("putonhold");
-						holdButton.setBook(b);
-						mainPanel.add(holdButton);
+						if(controller.getHoldPosition(b) == -1) {
+							JButton alreadyButton = new JButton("Already on Hold");
+							mainPanel.add(alreadyButton);
+						}
+						else {
+							BookButton holdButton = new BookButton("Place Hold");
+							holdButton.addActionListener(controller);
+							holdButton.setActionCommand("putonhold");
+							holdButton.setBook(b);
+							mainPanel.add(holdButton);
+						}
 						emptyLabel = new JLabel();
 						emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
 						mainPanel.add(emptyLabel);
@@ -908,7 +914,11 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			int status = controller.checkBookStatus(b);
-			if(status == -1) {
+			if(controller.getHoldPosition(b) != -1) {
+				JButton alreadyOnHoldButton = new JButton("Already on Hold");
+				mainPanel.add(alreadyOnHoldButton);
+			}
+			else if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
@@ -969,7 +979,11 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			int status = controller.checkBookStatus(b);
-			if(status == -1) {
+			if(controller.getHoldPosition(b) != -1) {
+				JButton alreadyOnHoldButton = new JButton("Already on Hold");
+				mainPanel.add(alreadyOnHoldButton);
+			}
+			else if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
@@ -1027,7 +1041,11 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			int status = controller.checkBookStatus(b);
-			if(status == -1) {
+			if(controller.getHoldPosition(b) != -1) {
+				JButton alreadyOnHoldButton = new JButton("Already on Hold");
+				mainPanel.add(alreadyOnHoldButton);
+			}
+			else if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
@@ -1438,9 +1456,12 @@ public class View extends JFrame {
 			}
 			else {
 				for(Book b : availResults) {
-					JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME + " Number of Checkouts: " + controller.getCheckoutNum(b));
-					bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+					JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
+					JLabel infoLabel = new JLabel("Number of Checkouts: " + controller.getCheckoutNum(b));
+					bookLabel.setBorder(new EmptyBorder(0, (this.getWidth() - bookLabel.getPreferredSize().width) / 2, 0, (this.getWidth() - bookLabel.getPreferredSize().width) / 2));
+					infoLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 					mainPanel.add(bookLabel);
+					mainPanel.add(infoLabel);
 					BookButton checkOutButton = new BookButton("Remove Book from Library");
 					checkOutButton.addActionListener(controller);
 					checkOutButton.setActionCommand("remove");
