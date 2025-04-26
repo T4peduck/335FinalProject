@@ -1,6 +1,3 @@
-#used to import json-jar, not sure how it works on eclipse
-.vscode
-
 /Book.class
 /Borrower.class
 /Librarian.class
@@ -16,3 +13,9 @@
 .DS_Store
 test/UserTest.class
 view/Main.class
+
+./LibraryText/*.txt
+model/Book$1.class
+model/Book$2.class
+model/Book$1.class
+model/Book$2.class

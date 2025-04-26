@@ -22,12 +22,16 @@ public class User {
     	salt = user.getSalt();
     }
     
-	public ArrayList<Book> searchBook(String name, String author) {
-        return null;
+	public ArrayList<Book> searchBookByTitle(String name, Library library) {
+        return library.searchAllBooksByTitle(name);
+    }
+	
+	public ArrayList<Book> searchBookByAuthor(String author, Library library) {
+        return library.searchAllBooksByAuthor(author);
     }
 
-    public boolean checkAvailable(String id) {
-        return false;
+    public boolean checkAvailable(String id, Library library) {
+        return library.searchAvailBookByID(id) != null;
     }
     
     public boolean passwordMatched(String password) throws NoSuchAlgorithmException {
@@ -46,6 +50,9 @@ public class User {
 		return salt.clone();
 	}
     
+	/*
+     * @pre - password.matches("(?=.*[a-z].*)(?=.*[A-Z].*)(?=.*\\d.*)(?=.*[~!@#$%^&*()_+].*)(?!.*\\s.*).+")
+     */
 	public void setPassword(String password) throws NoSuchAlgorithmException {
     	SecureRandom saltGen = new SecureRandom();
         salt = new byte[2];
