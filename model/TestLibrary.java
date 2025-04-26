@@ -9,7 +9,7 @@ import java.util.HashMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TestLibrary {
+public class TestLibrary {
 	private Book mobyDick = null;
 	private Book warAndPeace = null;
 	private Book anna = null;
@@ -272,7 +272,7 @@ class TestLibrary {
 		l.checkout(mobyDick);
 		l.checkin(mobyDick);
 		l.checkout(mobyDick); // checkout 2x
-		l.checkout(ivan); // checkout 1x
+		l.checkout(ivan);// checkout 1x
 		l.checkout(warAndPeace);
 		l.checkin(warAndPeace);
 		l.checkout(warAndPeace); // checkout 2x
@@ -292,6 +292,7 @@ class TestLibrary {
 		
 		assertEquals(expected, output );
 		
+		l.checkin(mobyDick);
 		l.removeBook(mobyDick);
 		
 		assertEquals(0, l.searchAllBooksByTitle("MOBY DICK").size());

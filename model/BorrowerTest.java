@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-class BorrowerTest {
+public class BorrowerTest {
 	
 	private Library library = new Library();
 	private Author a1 = new Author("Arthur", 2030, 1999);
