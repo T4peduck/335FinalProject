@@ -497,6 +497,10 @@ public class Library {
 			list.add(b);
 			availableBooks.put(title, list);
 		} else {
+			//avoids adding duplicates
+			if(booksWithTitle.contains(b)) {
+				return;
+			}
 			booksWithTitle.add(b);
 		}
 
