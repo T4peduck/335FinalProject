@@ -30,8 +30,10 @@ public class Library {
 		librarianRecs = new HashMap<>();
 	}
 
-	// TODO: possibly should also be package private, since they are Borrower
-	// specific
+	/*
+	 * checkout(Book b) - makes the book unavailable, and returns an int of whether or not this book was
+	 * 		successfully checked out
+	 */
 	int checkout(Book b) {
 		String title = b.title.toLowerCase();
 		ArrayList<Book> foundBooks = availableBooks.get(title);
@@ -71,6 +73,10 @@ public class Library {
 
 	/*
 	 * @pre - the book put on hold should be checked out currently
+	 *      - the user should not have the book on hold already
+	 * 
+	 * void hold(Book b, Borrower user) - adds the user to the list of users with this
+	 * book on hold (added to the end)
 	 */
 	void hold(Book b, Borrower user) {
 		ArrayList<Borrower> waiting = holds.get(b);
@@ -86,7 +92,9 @@ public class Library {
 	}
 	
 	/*
-	 * @pre - this borrower has this book on hold
+	 * @pre - this book is currently checked out
+	 * int getHoldPosition(Book b, Borrower borrower) - returns the current hold position of
+	 * 		this borrower for the book given.
 	 */
 	public int getHoldPosition(Book b, Borrower borrower) {
 		// fix to non-zero indexing
@@ -94,13 +102,19 @@ public class Library {
 	}
 	
 	/*
-	 * @pre - this book is currently on hold by at least one person
+	 * public int getNumHolds(Book b) - returns the number of people who currently have a hold for this 
+	 * 		book
 	 */
 	public int getNumHolds(Book b) {
+		if (holds.get(b) == null) {
+			return 0;
+		}
 		return holds.get(b).size();
 	}
 
 	/*
+	 * @pre - this book was just checked in, and is current available
+	 * 
 	 * private void updateHolds(Book b) - checks if the book (which has been recently
 	 * 		checked in) is on hold. If so, it automatically checks it out to the first person
 	 * 		on the hold list, and updates the hold list accordingly.
@@ -110,7 +124,12 @@ public class Library {
 		// no one is waiting for this book
 		if (waiting == null) {
 			return;
-		} else {
+		} 
+		// remove it because no one is "next up"
+		if (waiting.size() == 0) {
+			holds.remove(b);
+		}
+		else {
 			// check out to the first person
 			Borrower user = waiting.remove(0);
 			user.checkOutHold(b); // check in to the user
@@ -127,6 +146,9 @@ public class Library {
 	/*
 	 * @pre - Book b is a book that has been checked out, so it is unavailable. This
 	 * should be checked when a borrower tries to check in a book.
+	 * 
+	 * void checkin(Book b) - checks the book back into the library, making it available.
+	 * 		if anyone has it on hold, checks it out to the next person waiting
 	 */
 	void checkin(Book b) {
 		String title = b.title.toLowerCase();
@@ -159,8 +181,9 @@ public class Library {
 	}
 
 	/*
-	 * searchAllBooksByTitle(String title) - returns an arrayList of copies of all
-	 * books available or unavailable, with the given title (case-insensitive)
+	 * public ArrayList<Book> searchAllBooksByTitle(String title) - returns an arrayList 
+	 *  	of all books available or unavailable, with the given title (case-insensitive)
+	 *  	 sorted by author
 	 */
 	public ArrayList<Book> searchAllBooksByTitle(String title) {
 		// normalize title
@@ -183,8 +206,8 @@ public class Library {
 	}
 
 	/*
-	 * searchAvailBooksByTitle(String title) - returns an arrayList with a copy of
-	 * all available books with the given title (case-insensitive)
+	 * public ArrayList<Book> searchAvailBooksByTitle(String title) - returns an arrayList of
+	 * 		all available books with the given title (case-insensitive)  sorted by author
 	 */
 	public ArrayList<Book> searchAvailBooksByTitle(String title) {
 		// normalize title
@@ -201,8 +224,8 @@ public class Library {
 	}
 	
 	/*
-	 * searchAvailBooksByTitle(String title) - returns an arrayList with a copy of
-	 * all available books with the given title (case-insensitive)
+	 * public ArrayList<Book> searchAvailBooksByTitle(String title) - returns an arrayList of
+	 * 		all available books with the given title (case-insensitive), sorted by author
 	 */
 	public ArrayList<Book> searchUnavailBooksByTitle(String title) {
 		// normalize title
@@ -219,8 +242,9 @@ public class Library {
 	}
 
 	/*
-	 * searchAllBooksByAuthor(String author) - returns an arrayList with a copy of
-	 * all books (available or unavailable) with the given author (case-insensitive)
+	 * public ArrayList<Book> searchAllBooksByAuthor(String author) - returns an arrayList of
+	 * 		all books (available or unavailable) with the given author (case-insensitive)
+	 * 		sorted by title
 	 */
 	public ArrayList<Book> searchAllBooksByAuthor(String author) {
 		// normalize author
@@ -238,8 +262,8 @@ public class Library {
 	}
 
 	/*
-	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
-	 * of all available books with the given author (case-insensitive)
+	 * public ArrayList<Book> searchAvaillBooksByAuthor(String author) - returns an arrayList
+	 * 		of all available books with the given author (case-insensitive) sorted by title
 	 */
 	public ArrayList<Book> searchAvailBooksByAuthor(String author) {
 		// normalize author
@@ -261,8 +285,9 @@ public class Library {
 	}
 	
 	/*
-	 * searchAvaillBooksByAuthor(String author) - returns an arrayList with a copy
-	 * of all unavailable books with the given author (case-insensitive)
+	 * searchAvaillBooksByAuthor(String author) - returns an arrayList 
+	 * 		of all unavailable books with the given author (case-insensitive)
+	 * 		sorted by title
 	 */
 	public ArrayList<Book> searchUnavailBooksByAuthor(String author) {
 		// normalize author
@@ -283,6 +308,10 @@ public class Library {
 		return found;
 	}
 	
+	/*
+	 * public Book searchAllBookByID(String id) - returns the book (available or unavailable) 
+	 * 		if it is in the library. Returns null if it is not in the library
+	 */
 	public Book searchAllBookByID(String id) {
 		Book book = null;
 		for (Book b : getAllBooks()) {
@@ -294,6 +323,10 @@ public class Library {
 		return book;
 	}
 	
+	/*
+	 * public Book searchAvailBookByID(String id) - returns the book with the given ID
+	 * 		if it is in the library and available. Returns null if it is not in the library and available
+	 */
 	public Book searchAvailBookByID(String id) {
 		Book book = null;
 		for (Book b : getAvailBooks()) {
@@ -305,6 +338,10 @@ public class Library {
 		return book;
 	}
 	
+	/*
+	 * public Book searchUnavailBookByID(String id) - returns the book with the given ID
+	 * 		if it is in the library and unavailable. Returns null if it is not in the library and unavailable
+	 */
 	public Book searchUnavailBookByID(String id) {
 		Book book = null;
 		for (Book b : getUnavailBooks()) {
@@ -317,8 +354,8 @@ public class Library {
 	}
 
 	/*
-	 * getAllBooksByAuthor() - returns a sorted ArrayList of all books in the
-	 * library sorted by author first, then title (full of copies)
+	 * public ArrayList<Book> getAllBooksByAuthor() - returns a sorted ArrayList of all books in the
+	 * 		library sorted by author first, then title
 	 */
 	public ArrayList<Book> getAllBooksByAuthor() {
 		ArrayList<Book> sorted = getAllBooks();
@@ -326,18 +363,30 @@ public class Library {
 		return sorted;
 	}
 
+	/*
+	 * public ArrayList<Book> getAvailooksByAuthor() - returns a sorted ArrayList of all available books
+	 * 		in the library sorted by author first, then title
+	 */
 	public ArrayList<Book> getAvailBooksByAuthor() {
 		ArrayList<Book> available = getAvailBooks();
 		Collections.sort(available, Book.authorFirstComparator());
 		return available;
 	}
 
+	/*
+	 * public ArrayList<Book> getUnavailooksByAuthor() - returns a sorted ArrayList of all 
+	 * 		unavailable books in the library sorted by author first, then title
+	 */
 	public ArrayList<Book> getUnavailBooksByAuthor() {
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.authorFirstComparator());
 		return unavailable;
 	}
 	
+	/*
+	 * unavailable books in the getRecBooksByAuthor() - returns a sorted ArrayList of all 
+	 * 		recommended books in the library sorted by author first, then title
+	 */
 	public ArrayList<Book> getRecBooksByAuthor() {
 		ArrayList<Book> recs = getRecBooks();
 		Collections.sort(recs, Book.authorFirstComparator());
@@ -345,8 +394,8 @@ public class Library {
 	}
 
 	/*
-	 * getAllBooksByTitle() - returns a sorted ArrayList of all books in the library
-	 * sorted by title first, then author (full of copies)
+	 * public ArrayList<Book> getAllBooksByTitle() - returns a sorted ArrayList of all books
+	 * 		 in the library sorted by title first, then author
 	 */
 	public ArrayList<Book> getAllBooksByTitle() {
 		ArrayList<Book> sorted = getAllBooks();
@@ -354,18 +403,30 @@ public class Library {
 		return sorted;
 	}
 
+	/*
+	 * public ArrayList<Book> getAllBooksByTitle() - returns a sorted ArrayList of all available
+	 * 		 books in the library sorted by title first, then author
+	 */
 	public ArrayList<Book> getAvailBooksByTitle() {
 		ArrayList<Book> available = getAvailBooks();
 		Collections.sort(available, Book.titleFirstComparator());
 		return available;
 	}
 
+	/*
+	 * public ArrayList<Book> getUnavailBooksByTitle() - returns a sorted ArrayList of all unavailable
+	 *    books in the library sorted by title first, then author
+	 */
 	public ArrayList<Book> getUnavailBooksByTitle() {
 		ArrayList<Book> unavailable = getUnavailBooks();
 		Collections.sort(unavailable, Book.titleFirstComparator());
 		return unavailable;
 	}
 	
+	/*
+	 * public ArrayList<Book> getRecBooksByTitle() - returns a sorted ArrayList of all recommended 
+	 * 		books in the library sorted by title first, then author
+	 */
 	public ArrayList<Book> getRecBooksByTitle() {
 		ArrayList<Book> recs = getRecBooks();
 		Collections.sort(recs, Book.titleFirstComparator());
@@ -373,7 +434,7 @@ public class Library {
 	}
 
 	/*
-	 * getAllBooks() - returns an ArrayList of copies of all books in the library
+	 * private ArrayList<Book> getAllBooks() - returns an ArrayList of copies of all books in the library
 	 */
 	private ArrayList<Book> getAllBooks() {
 		ArrayList<Book> books = new ArrayList<>();
@@ -383,6 +444,10 @@ public class Library {
 		return books;
 	}
 
+	/*
+	 * private ArrayList<Book> getAvailBooks() - returns an ArrayList of copies of all available 
+	 * 		books in the library
+	 */
 	private ArrayList<Book> getAvailBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : availableBooks.values()) {
@@ -391,6 +456,10 @@ public class Library {
 		return books;
 	}
 
+	/*
+	 * private ArrayList<Book> getUnavailBooks() - returns an ArrayList of copies of all unavailable
+	 * 		 books in the library
+	 */
 	private ArrayList<Book> getUnavailBooks() {
 		ArrayList<Book> books = new ArrayList<>();
 		for (ArrayList<Book> list : unavailableBooks.values()) {
@@ -399,6 +468,10 @@ public class Library {
 		return books;
 	}
 	
+	/*
+	 * private ArrayList<Book> getRecBooks() - returns an ArrayList of copies of all 
+	 * 		recommended books in the library
+	 */
 	private ArrayList<Book> getRecBooks() {
 		Set<Book> books = new HashSet<>();
 		for (ArrayList<Book> list : librarianRecs.values())
@@ -407,11 +480,12 @@ public class Library {
 		return new ArrayList<>(books);
 	}
 
+	// package private methods for the other classes in the model to use
+	 
 	/*
-	 * package private methods for the other classes in the model to use
+	 * public void addBook(Book b) - adds this book to the library, appropriately initializing 
+	 * 		all information related to it, and making it available to be checked out
 	 */
-
-	// Librarian deals with finding/creating Book object
 	public void addBook(Book b) {
 		String title = b.title.toLowerCase();
 		String author = b.authors.get(0).NAME.toLowerCase();
@@ -439,7 +513,8 @@ public class Library {
 
 	/*
 	 * @pre- this book is currently available, so that it is not checked out
-	 * to any user at the time it's called
+	 * 
+	 * removeBook(Book b) - removes the book completely from the library
 	 */
 	void removeBook(Book b) {
 		String title = b.title.toLowerCase();
@@ -459,23 +534,7 @@ public class Library {
 				availableBooks.remove(title);
 			}
 		}
-
-		// remove from unavailbooks
-		booksWithTitle = unavailableBooks.get(title);
-		if (booksWithTitle != null) {
-			// remove from unavailbooks
-			for (Book book : booksWithTitle) {
-				if (b.equals(book)) {
-					booksWithTitle.remove(book);
-					break;
-				}
-			}
-			// remove totally if no more books with this title
-			if (booksWithTitle.size() == 0) {
-				unavailableBooks.remove(title);
-			}
-		}
-
+		
 		// remove from authorlist
 		ArrayList<Book> booksWithAuthor = booksByAuthor.get(author);
 		if (booksWithAuthor != null) {
@@ -498,11 +557,14 @@ public class Library {
 		
 		// remove from counts
 		checkoutNums.remove(b);
-
-		// remove from holds
-		holds.remove(b);
 	}
-	
+
+	/* 
+	 * @pre - this recommender has not already recommended the book
+	 * 
+	 * void recommend(String recommender, Book book) - adds this book to the recommended
+	 * 		list for this recommender
+	 */
 	void recommend(String recommender, Book book) {
 		if (librarianRecs.containsKey(recommender))
 			librarianRecs.get(recommender).add(book);
@@ -514,6 +576,10 @@ public class Library {
 		}
 	}
 	
+	/*
+	 * public ArrayList<Book> getRecommendationsByLibrarian(String recommender) -
+	 * 		returns an arraylist of all books recommended by this librarian, sorted by title, then author
+	 */
 	public ArrayList<Book> getRecommendationsByLibrarian(String recommender) {
 		if (librarianRecs.containsKey(recommender)) {
 			ArrayList<Book> recs = librarianRecs.get(recommender);
@@ -523,6 +589,11 @@ public class Library {
 		return new ArrayList<>();
 	}
 	
+	/*
+	 * void removeRecommend(String recommender, Book book) - removes this book from the given librarian's
+	 * 		list of recommendations (or does nothing if this user hasn't recommended anything or has not
+	 * 		recommended this book)
+	 */
 	void removeRecommend(String recommender, Book book) {
 		// Won't crash if recommender doesn't exist
 		if (librarianRecs.containsKey(recommender)) {
@@ -532,13 +603,13 @@ public class Library {
 		}
 	}
 	
+	/*
+	 * void removeLibraryRec(String recommender) - removes all recommended books for this recommender
+	 */
 	void removeLibraryRec(String recommender) {
-		if (librarianRecs.containsKey(recommender)) {
-			librarianRecs.remove(recommender);
-		}
+		librarianRecs.remove(recommender);
 	}
 	
-	// Since both Books and Integers are immutable, we can just return a simple copy
 	/*
 	 * HashMap<Book, Integer> getCheckoutNums() - returns a copy of the checkoutNums
 	 * 		hashmap, which tracks how many times each book has been checked out (only if it has been
