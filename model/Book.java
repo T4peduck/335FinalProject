@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-public class Book {
+public final class Book {
 	@Override
 	public int hashCode() {
 		return Objects.hash(authors.get(0), title);

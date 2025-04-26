@@ -30,6 +30,9 @@ import java.util.ArrayList;
 public class DataController {
 	private static String FILEPATH = "BookData.txt";
 	
+	/*
+	 * Saves the book metadata to bookData.txt from Library lib
+	 */
 	public static void saveBookData(Library lib) {
 		try {
 			FileWriter bw = new FileWriter(new File(FILEPATH));
@@ -65,6 +68,9 @@ public class DataController {
 		}
 	}
 	
+	/*
+	 * Loads book metadata from bookData.txt to Library lib
+	 */
 	public static void loadBookData(Library lib) {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(FILEPATH));
@@ -111,7 +117,9 @@ public class DataController {
 	}
 	
 	/*
-	 * @PRE b.filepath is a real file in model/libraryText
+	 * Removes book b textFile from model/LibraryText
+	 * 
+	 * @PRE b.filepath is a real file in model/LibraryText
 	 */
 	public static void removeBook(Book b) {
 		File bookFile = new File(b.filePath);
