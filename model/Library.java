@@ -61,6 +61,10 @@ public class Library {
 				if (checkoutNums.get(b) != null) {
 					checkoutNums.replace(b, checkoutNums.get(b) + 1);
 				}
+
+				// Add to wating with no holds for the GUI to work
+				ArrayList<Borrower> waiting = new ArrayList<Borrower>();
+				holds.put(b, waiting);
 				
 				// show it was successfully checked out
 				return 1;
