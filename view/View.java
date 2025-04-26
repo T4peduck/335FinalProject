@@ -914,11 +914,7 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			int status = controller.checkBookStatus(b);
-			if(controller.getHoldPosition(b) != -1) {
-				JButton alreadyOnHoldButton = new JButton("Already on Hold");
-				mainPanel.add(alreadyOnHoldButton);
-			}
-			else if(status == -1) {
+			if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
@@ -930,11 +926,17 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				BookButton holdButton = new BookButton("Place Hold");
-				holdButton.addActionListener(controller);
-				holdButton.setActionCommand("putonhold");
-				holdButton.setBook(b);
-				mainPanel.add(holdButton);
+				if(controller.getHoldPosition(b) != -1) {
+					JButton alreadyOnHoldButton = new JButton("Already on Hold");
+					mainPanel.add(alreadyOnHoldButton);
+				}
+				else {
+					BookButton holdButton = new BookButton("Place Hold");
+					holdButton.addActionListener(controller);
+					holdButton.setActionCommand("putonhold");
+					holdButton.setBook(b);
+					mainPanel.add(holdButton);
+				}
 			}
 			emptyLabel = new JLabel();
 			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
@@ -979,11 +981,7 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			int status = controller.checkBookStatus(b);
-			if(controller.getHoldPosition(b) != -1) {
-				JButton alreadyOnHoldButton = new JButton("Already on Hold");
-				mainPanel.add(alreadyOnHoldButton);
-			}
-			else if(status == -1) {
+			if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
@@ -995,11 +993,17 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				BookButton holdButton = new BookButton("Place Hold");
-				holdButton.addActionListener(controller);
-				holdButton.setActionCommand("putonhold");
-				holdButton.setBook(b);
-				mainPanel.add(holdButton);
+				if(controller.getHoldPosition(b) != -1) {
+					JButton alreadyOnHoldButton = new JButton("Already on Hold");
+					mainPanel.add(alreadyOnHoldButton);
+				}
+				else {
+					BookButton holdButton = new BookButton("Place Hold");
+					holdButton.addActionListener(controller);
+					holdButton.setActionCommand("putonhold");
+					holdButton.setBook(b);
+					mainPanel.add(holdButton);
+				}
 			}
 			emptyLabel = new JLabel();
 			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
@@ -1041,11 +1045,7 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			int status = controller.checkBookStatus(b);
-			if(controller.getHoldPosition(b) != -1) {
-				JButton alreadyOnHoldButton = new JButton("Already on Hold");
-				mainPanel.add(alreadyOnHoldButton);
-			}
-			else if(status == -1) {
+			if(status == -1) {
 				BookButton alreadyCheckedOutButton = new BookButton("Already Checked Out");
 				mainPanel.add(alreadyCheckedOutButton);
 			}
@@ -1057,11 +1057,17 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				BookButton holdButton = new BookButton("Place Hold");
-				holdButton.addActionListener(controller);
-				holdButton.setActionCommand("putonhold");
-				holdButton.setBook(b);
-				mainPanel.add(holdButton);
+				if(controller.getHoldPosition(b) != -1) {
+					JButton alreadyOnHoldButton = new JButton("Already on Hold");
+					mainPanel.add(alreadyOnHoldButton);
+				}
+				else {
+					BookButton holdButton = new BookButton("Place Hold");
+					holdButton.addActionListener(controller);
+					holdButton.setActionCommand("putonhold");
+					holdButton.setBook(b);
+					mainPanel.add(holdButton);
+				}
 			}
 			emptyLabel = new JLabel();
 			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
