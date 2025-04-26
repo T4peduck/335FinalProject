@@ -1903,7 +1903,7 @@ public class View extends JFrame {
 		checkedOutMessage.setBorder(new EmptyBorder(0, (this.getWidth() - checkedOutMessage.getWidth()) / 2, 0, (this.getWidth() - checkedOutMessage.getWidth()) / 2));
 		mainPanel.add(checkedOutMessage);
 		
-		for(Book b : controller.getCheckedOut()) {
+		for(Book b : controller.getCheckedOut(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
@@ -1922,7 +1922,7 @@ public class View extends JFrame {
 		onHoldMessage.setBorder(new EmptyBorder(0, (this.getWidth() - onHoldMessage.getWidth()) / 2, 0, (this.getWidth() - onHoldMessage.getWidth()) / 2));
 		mainPanel.add(onHoldMessage);
 		
-		for(Book b : controller.getHolds()) {
+		for(Book b : controller.getHolds(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
@@ -1935,7 +1935,7 @@ public class View extends JFrame {
 		historyMessage.setBorder(new EmptyBorder(0, (this.getWidth() - historyMessage.getPreferredSize().width) / 2, 0, (this.getWidth() - historyMessage.getPreferredSize().width) / 2));
 		mainPanel.add(historyMessage);
 		
-		for(Book b : controller.getHistory()) {
+		for(Book b : controller.getHistory(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
