@@ -1,8 +1,13 @@
-# 335FinalProject
-Final Project for CSC335
+# E-Library
+This project is our submission for our final project in CSC335, it represents a library system composed of text files and corresponding book objects representing books and user objects representing both the Librarians running the library and the Borrowers checking out book from. The Librarians and Borrowers have access to different tools, representing the different ways they interact with the Library system, with the Librarian having greater authority over the borrowers. This lets the hypothetical librarians manage the "behind the scenes" of the library, while the Borrowers can only interact very minimally. Additionally, we are represnting the resovoir of books using a folder of textfiles of different books, who's file location plus important metadata is saved in a hashmap of Book Objects in Library.java.
 
-In this project, we used Project Gutenberg, a free public elibrary, and the associated API https://gutendex.com/.
+To access the E-Library, each user must create a borrower account in order to utilize the full range of library services. Once registered, users can log back into their accounts as needed. During account creation, the user is required to enter a valid password that includes at least one uppercase letter, one lowercase letter, one special character, and one digit. The system uses the MD5 hashing algorithm to cryptographically hash the password. To enhance security and prevent predictable random number generation, a salt is generated using the SecureRandom class.
 
-Inorder to use the json package,
-Follow this video for vscode
-https://www.youtube.com/watch?v=g6vvEEm2hhs
+In order to add books to the library and textfiles to the actual folder, we use Project Gutenberg, a free public E-Library, and its associated API (https://gutendex.com/). From this, the Library.java class builds an api call using public methods in ParseBooks.java, then downloads the books and adds the metadata that result from the call. All of this is done using public methods of ParseBooks.java in order to perserve encapsulation. From here, the library can then hold all the books, as well as sort them in a variety of ways depending on how the Borrower would like to view them. 
+
+In order to view the books as a user, we are using a GUI. This way it'll be far easier to interact with our internal system at hand. Both the Librarian and Borrower have a different GUI to represent the different ways they can interact with the Library System.
+
+NOTE: As project Gutenberg is a Free Public Library, a vast majority of the books are those that are out of copyright, so sadly no <u>Love Hypothesis</u>. Additionally, if a certain time period is searched for, say 2010-2020, and text that obviously predate it are returned, its still working. Some texts are reuploaded to Project Gutenberg several times in different years, for example <u>The Modern Prometheus</u> is on there 8 time. Lastly, while books in other languages can be searched for, it may have some unintended consequences.
+
+For Testing Uses: StaffID: StaffMember  Staff Password: StaffPW8*
+

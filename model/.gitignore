@@ -6,5 +6,13 @@
 /ParseBook.class
 /User.class
 /testParseBook.class
-/Book$1.class
-/Book$2.class
+/TestParseBook.class
+/LibraryController.class
+/LibraryText/*.txt
+
+/Author.class
+/TestLibrary.class
+/UserTest.class
+/DataController.class
+/Library$1.class
+/BorrowerTest.class

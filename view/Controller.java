@@ -43,6 +43,7 @@ public class Controller implements ActionListener{
 		} catch (NoSuchAlgorithmException e) {
 			System.exit(1);
 		}
+
 		DataController.loadBookData(library);
 	}
 
@@ -245,9 +246,10 @@ public class Controller implements ActionListener{
 				ArrayList<Book> books = ParseBook.downloadBooks();
 				if(books == null) {
 					view.changePage("addspecificagain");
-				}
-				for(Book b: books) {
-					librarian.addBook(b, library);
+				} else {
+					for(Book b: books) {
+						librarian.addBook(b, library);
+					}
 				}
 				view.changePage("staffmain");
 		}
