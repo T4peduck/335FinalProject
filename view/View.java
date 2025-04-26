@@ -552,7 +552,6 @@ public class View extends JFrame {
 			returnButton.setBook(b);
 			mainPanel.add(returnButton);
 			emptyLabel = new JLabel();
-			//emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
@@ -568,7 +567,6 @@ public class View extends JFrame {
 			JLabel holdsLabel = new JLabel("Holds in front of you: " + controller.getHoldPosition(b));
 			mainPanel.add(holdsLabel);
 			emptyLabel = new JLabel();
-			//emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
@@ -582,7 +580,6 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
-			//emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
@@ -781,7 +778,7 @@ public class View extends JFrame {
 					checkOutButton.setBook(b);
 					mainPanel.add(checkOutButton);
 					emptyLabel = new JLabel();
-					emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+					emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 					mainPanel.add(emptyLabel);
 				}
 			}
@@ -800,7 +797,7 @@ public class View extends JFrame {
 						JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 						bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 						mainPanel.add(bookLabel);
-						if(controller.getHoldPosition(b) != -1) {
+						if(controller.getHoldPosition(b) != 0) {
 							JButton alreadyButton = new JButton("Already on Hold");
 							mainPanel.add(alreadyButton);
 						}
@@ -812,7 +809,7 @@ public class View extends JFrame {
 							mainPanel.add(holdButton);
 						}
 						emptyLabel = new JLabel();
-						emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+						emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 						mainPanel.add(emptyLabel);
 					}
 				}
@@ -928,7 +925,7 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				if(controller.getHoldPosition(b) != -1) {
+				if(controller.getHoldPosition(b) != 0) {
 					JButton alreadyOnHoldButton = new JButton("Already on Hold");
 					mainPanel.add(alreadyOnHoldButton);
 				}
@@ -941,7 +938,7 @@ public class View extends JFrame {
 				}
 			}
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -995,7 +992,7 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				if(controller.getHoldPosition(b) != -1) {
+				if(controller.getHoldPosition(b) != 0) {
 					JButton alreadyOnHoldButton = new JButton("Already on Hold");
 					mainPanel.add(alreadyOnHoldButton);
 				}
@@ -1008,7 +1005,7 @@ public class View extends JFrame {
 				}
 			}
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -1059,7 +1056,7 @@ public class View extends JFrame {
 				mainPanel.add(checkoutButton);
 			}
 			else {
-				if(controller.getHoldPosition(b) != -1) {
+				if(controller.getHoldPosition(b) != 0) {
 					JButton alreadyOnHoldButton = new JButton("Already on Hold");
 					mainPanel.add(alreadyOnHoldButton);
 				}
@@ -1072,7 +1069,7 @@ public class View extends JFrame {
 				}
 			}
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -1483,7 +1480,7 @@ public class View extends JFrame {
 						mainPanel.add(recommendButton);
 					}
 					emptyLabel = new JLabel();
-					emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+					emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 					mainPanel.add(emptyLabel);
 				}
 			}
@@ -1515,7 +1512,7 @@ public class View extends JFrame {
 							mainPanel.add(recommendButton);
 						}
 						emptyLabel = new JLabel();
-						emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+						emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 						mainPanel.add(emptyLabel);
 					}
 				}
@@ -1634,7 +1631,7 @@ public class View extends JFrame {
 			}
 			mainPanel.add(removeButton);
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -1676,7 +1673,7 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -1721,7 +1718,7 @@ public class View extends JFrame {
 			stopRecommendButton.setBook(b);
 			mainPanel.add(stopRecommendButton);
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
