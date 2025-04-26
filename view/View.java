@@ -85,8 +85,7 @@ public class View extends JFrame {
 		@Override
 		public Component add(Component component) {
 			super.add(component);
-			if(!component.getClass().equals(JButton.class) && !component.getClass().equals(BookButton.class))
-				this.height += component.getPreferredSize().height;
+			this.height += component.getPreferredSize().height;
 			return(component);
 		}
 		
@@ -553,7 +552,8 @@ public class View extends JFrame {
 			returnButton.setBook(b);
 			mainPanel.add(returnButton);
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			//emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -568,7 +568,8 @@ public class View extends JFrame {
 			JLabel holdsLabel = new JLabel("Holds in front of you: " + controller.getHoldPosition(b));
 			mainPanel.add(holdsLabel);
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			//emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
@@ -581,7 +582,8 @@ public class View extends JFrame {
 			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
-			emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			//emptyLabel.setBorder(new EmptyBorder(0, 0, 25, this.getWidth()));
+			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
 			mainPanel.add(emptyLabel);
 		}
 		
