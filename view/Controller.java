@@ -261,7 +261,8 @@ public class Controller implements ActionListener{
 					view.changePage("addspecificagain");
 				}
 				for(Book b: books) {
-					librarian.addBook(b, library);
+					if(!library.getAllBooksByTitle().contains(b))
+						librarian.addBook(b, library);
 				}
 				view.changePage("staffmain");
 		}
@@ -297,7 +298,8 @@ public class Controller implements ActionListener{
 				}
 				else {
 					for(Book b: books) {
-						librarian.addBook(b, library);
+						if(!library.getAllBooksByTitle().contains(b))
+							librarian.addBook(b, library);
 					}
 					view.changePage("staffmain");
 				}
