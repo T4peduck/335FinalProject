@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class Author {
+public final class Author {
 	public final String NAME;
 	public final int BIRTH_YEAR;
 	public final int DEATH_YEAR;

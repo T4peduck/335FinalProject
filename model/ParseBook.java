@@ -42,7 +42,10 @@ public class ParseBook {
         return (JSONObject) parser.parse(response.body());
     }
 
-    //augment search
+    /*
+     * cleans a string so it uses HTML URL Encoding of spaces (%20)
+     * instead of actual spaces
+     */
     private static String replaceSpaces(String s) {
         int i;
         while((i = s.indexOf(" ")) != -1) {
@@ -51,6 +54,10 @@ public class ParseBook {
 
         return s;
     }
+    
+    /*
+     * These methods add terms to the search query
+     */
 
     public static void addAuthorAndTitle(String firstName, String lastName, String title) {
         URIbuilder += "search=" + replaceSpaces(firstName) + "%20" +
@@ -92,6 +99,7 @@ public class ParseBook {
     		return null;
     	}
  
+    	//arr holds all the books from the query
     	JSONArray arr = (JSONArray) result.get("results");
     	if(arr.isEmpty()) {
     		System.out.println("ERROR: no results found");
@@ -100,6 +108,7 @@ public class ParseBook {
     	
     	ArrayList<Book> resultList = new ArrayList<>();
     	
+    	//iterates through and creates book Objects from the JSON data
     	for(Object n: arr) {
 			JSONObject book = (JSONObject) n;			
 			Book b = makeBook(book);
@@ -107,6 +116,7 @@ public class ParseBook {
 							book.get("id") + "/pg" + book.get("id") + ".txt";
 			
 			if(!resultList.contains(b)) {
+				//downloads the books from Project Gutenberg
 				addBookToLibaryFolder(b, bookurl);
 				resultList.add(b);
 			}
