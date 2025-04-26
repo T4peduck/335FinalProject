@@ -363,6 +363,7 @@ public class Controller implements ActionListener{
 			BookUserButton button = (BookUserButton) e.getSource();
 			Borrower b = borrowerList.get(button.getUsername());
 			b.checkinBook(button.getBook(), library);
+			view.openUserLibrary(b.getUserName());
 		}
 	}
 	

@@ -22,6 +22,10 @@ public class User {
     	salt = user.getSalt();
     }
     
+    /*
+	 * public ArrayList<Book> searchBookByTitle(String name, Library library) -
+	 * 		returns an arraylist of all books written by the specified author
+	 */
 	public ArrayList<Book> searchBookByTitle(String name, Library library) {
         return library.searchAllBooksByTitle(name);
     }
