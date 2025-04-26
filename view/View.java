@@ -877,7 +877,11 @@ public class View extends JFrame {
 						JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
 						bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
 						mainPanel.add(bookLabel);
-						if(controller.getHoldPosition(b) != 0) {
+						if(controller.checkBookStatus(b) == -1) {
+							JButton alreadyCheckedOutButton = new JButton("Already Checked Out");
+							mainPanel.add(alreadyCheckedOutButton);
+						}
+						else if(controller.getHoldPosition(b) != 0) {
 							JButton alreadyButton = new JButton("Already on Hold");
 							mainPanel.add(alreadyButton);
 						}
