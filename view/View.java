@@ -104,6 +104,12 @@ public class View extends JFrame {
 			this.height = 50;
 		}
 		
+		public BookPanel(int width, int height) {
+			super();
+			this.width = width;
+			this.height = height;
+		}
+		
 		public Dimension getPreferredScrollableViewportSize() {
 			return super.getPreferredSize();
 		}
@@ -596,7 +602,7 @@ public class View extends JFrame {
 			this.remove(scroller);
 		scroller = null;
 		this.remove(mainPanel);
-		mainPanel = new BookPanel(this.getWidth());
+		mainPanel = new BookPanel(this.getWidth(), 200);
 		
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -651,7 +657,7 @@ public class View extends JFrame {
 		
 		for(Book b : controller.getHistory()) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
-			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 0));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
@@ -1927,7 +1933,7 @@ public class View extends JFrame {
 		
 		for(Book b : controller.getHolds(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
-			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 0));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));
@@ -1940,7 +1946,7 @@ public class View extends JFrame {
 		
 		for(Book b : controller.getHistory(username)) {
 			JLabel bookLabel = new JLabel(b.title + " by " + b.authors.get(0).NAME);
-			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 25));
+			bookLabel.setBorder(new EmptyBorder(0, 0, 0, 0));
 			mainPanel.add(bookLabel);
 			emptyLabel = new JLabel();
 			emptyLabel.setPreferredSize(new Dimension(this.getWidth(), 25));

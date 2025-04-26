@@ -558,6 +558,13 @@ public class Library {
 		
 		// remove from counts
 		checkoutNums.remove(b);
+
+		// remove from holds
+		holds.remove(b);
+		
+		// remove book from database
+		DataController.removeBook(b);
+
 	}
 
 	/* 
