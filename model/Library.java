@@ -198,7 +198,7 @@ public class Library {
 
 		}
 		// copy unavailable books with this title
-		ArrayList<Book> unavail = availableBooks.get(title);
+		ArrayList<Book> unavail = unavailableBooks.get(title);
 		if (unavail != null) {
 			found.addAll(unavail);
 		}
