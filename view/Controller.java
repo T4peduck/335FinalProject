@@ -398,6 +398,14 @@ public class Controller implements ActionListener{
 	}
 	
 	/*
+	 * ArrayList<Book> getCheckedOut(String username) -- returns the checkouts of borrower with input username
+	 */
+	public ArrayList<Book> getCheckedOut(String username){
+		Borrower b = borrowerList.get(username);
+		return b.checkedOut();
+	}
+	
+	/*
 	 * ArrayList<Book> getHolds() -- returns all of the Books the current user has
 	 * on hold
 	 */
@@ -407,12 +415,28 @@ public class Controller implements ActionListener{
 	}
 	
 	/*
+	 * ArrayList<Book> getHolds(String username) -- returns the holds of borrower with input username
+	 */
+	public ArrayList<Book> getHolds(String username){
+		Borrower b = borrowerList.get(username);
+		return b.onHold();
+	}
+	
+	/*
 	 * ArrayList<Book> getHistory() -- returns the history of a user's previously checked
 	 * out books
 	 */
 	public ArrayList<Book> getHistory() {
 		Borrower borrower = (Borrower) currentUser;
 		return borrower.getHistory();
+	}
+	
+	/*
+	 * ArrayList<Book> getHistory(String username) -- returns the history of borrower with input username
+	 */
+	public ArrayList<Book> getHistory(String username){
+		Borrower b = borrowerList.get(username);
+		return b.getHistory();
 	}
 	
 	/*
